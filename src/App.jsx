@@ -37,10 +37,7 @@ export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
 
-  // Newsletter Flow States
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [newsletterStatus, setNewsletterStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'already' | 'error'
-  const [newsletterMessage, setNewsletterMessage] = useState('');
+
 
   const t = TRANSLATIONS[lang] || TRANSLATIONS.fr;
 
@@ -149,29 +146,7 @@ export default function App() {
     ]
   };
 
-  const handleNewsletterSubmit = (e) => {
-    e.preventDefault();
-    if (!newsletterEmail || !/^\S+@\S+\.\S+$/.test(newsletterEmail)) {
-      setNewsletterStatus('error');
-      setNewsletterMessage(t.footer.newsletterInvalid);
-      return;
-    }
 
-    setNewsletterStatus('submitting');
-    setTimeout(() => {
-      const subs = JSON.parse(localStorage.getItem('newsletter_subs') || '[]');
-      if (subs.includes(newsletterEmail)) {
-        setNewsletterStatus('already');
-        setNewsletterMessage(t.footer.newsletterAlready);
-      } else {
-        subs.push(newsletterEmail);
-        localStorage.setItem('newsletter_subs', JSON.stringify(subs));
-        setNewsletterStatus('success');
-        setNewsletterMessage(t.footer.newsletterSuccess);
-        setNewsletterEmail('');
-      }
-    }, 1200);
-  };
 
   const currentFaqData = faqData[lang] || faqData.fr;
 
@@ -747,7 +722,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-white/5">
             
-            {/* Column 1 - Brand Info & Newsletter */}
+            {/* Column 1 - Brand Info */}
             <div className="lg:col-span-4 space-y-4 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-2.5">
                 <img 
@@ -762,50 +737,6 @@ export default function App() {
               <p className="text-xs text-slate-400 leading-relaxed max-w-sm mx-auto md:mx-0">
                 {t.footer.brandDesc}
               </p>
-              
-              {/* Highly Operational Newsletter system */}
-              <div className="pt-2">
-                {newsletterStatus === 'success' ? (
-                  <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-3.5 text-xs text-emerald-400 leading-relaxed text-left animate-fade-in flex gap-2 items-start max-w-sm mx-auto md:mx-0">
-                    <CheckCircle2 size={16} className="shrink-0 text-emerald-400 mt-0.5" />
-                    <div>
-                      <span className="font-extrabold block text-white mb-0.5">{t.footer.subscribeBtn} OK</span>
-                      {newsletterMessage}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="space-y-2">
-                    <form className="flex gap-2 max-w-xs mx-auto md:mx-0" onSubmit={handleNewsletterSubmit}>
-                      <input 
-                        type="email" 
-                        value={newsletterEmail}
-                        onChange={(e) => setNewsletterEmail(e.target.value)}
-                        placeholder={t.footer.newsletterPlaceholder} 
-                        disabled={newsletterStatus === 'submitting'}
-                        className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-pink-500 transition-all duration-300 w-full disabled:opacity-50 disabled:cursor-not-allowed"
-                      />
-                      <button 
-                        type="submit"
-                        disabled={newsletterStatus === 'submitting'}
-                        className="bg-white/5 border border-white/10 hover:border-pink-500/30 text-xs px-3 rounded-lg text-white font-bold transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed min-w-[80px] flex items-center justify-center"
-                      >
-                        {newsletterStatus === 'submitting' ? (
-                          <div className="size-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        ) : t.footer.subscribeBtn}
-                      </button>
-                    </form>
-                    
-                    {/* Error or Already subscribed message */}
-                    {newsletterMessage && (
-                      <p className={`text-[10px] text-left max-w-xs mx-auto md:mx-0 ${
-                        newsletterStatus === 'error' ? 'text-pink-500 font-bold' : 'text-yellow-400'
-                      }`}>{newsletterMessage}</p>
-                    )}
-
-                    <p className="text-[10px] text-slate-600 mt-1.5 text-center md:text-left">{t.footer.newsletterSubNote}</p>
-                  </div>
-                )}
-              </div>
             </div>
 
             {/* Column 2 - Product quick links */}
