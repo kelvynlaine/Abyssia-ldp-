@@ -193,11 +193,15 @@ export default function App() {
               {isLangDropdownOpen && (
                 <>
                   <div className="fixed inset-0 z-40" onClick={() => setIsLangDropdownOpen(false)} />
-                  <div className="absolute right-0 mt-2 w-32 bg-[#07080d]/95 backdrop-blur-md border border-white/10 rounded-xl p-1.5 shadow-2xl z-50 animate-fade-in flex flex-col gap-1">
+                  <div className="absolute right-0 mt-2 w-36 bg-[#07080d]/95 backdrop-blur-md border border-white/10 rounded-xl p-1.5 shadow-2xl z-50 animate-fade-in flex flex-col gap-1">
                     {[
                       { code: 'fr', label: '🇫🇷 Français' },
                       { code: 'en', label: '🇬🇧 English' },
-                      { code: 'es', label: '🇪🇸 Español' }
+                      { code: 'es', label: '🇪🇸 Español' },
+                      { code: 'zh', label: '🇨🇳 中文' },
+                      { code: 'it', label: '🇮🇹 Italiano' },
+                      { code: 'ru', label: '🇷🇺 Русский' },
+                      { code: 'uk', label: '🇺🇦 Українська' }
                     ].map((item) => (
                       <button
                         key={item.code}
@@ -278,11 +282,15 @@ export default function App() {
             </a>
 
             {/* Language Toggle Selector - Mobile */}
-            <div className="flex justify-center gap-2 py-3 border-b border-white/5">
+            <div className="flex flex-wrap justify-center gap-2 py-3 border-b border-white/5">
               {[
                 { code: 'fr', label: '🇫🇷 FR' },
                 { code: 'en', label: '🇬🇧 EN' },
-                { code: 'es', label: '🇪🇸 ES' }
+                { code: 'es', label: '🇪🇸 ES' },
+                { code: 'zh', label: '🇨🇳 中文' },
+                { code: 'it', label: '🇮🇹 IT' },
+                { code: 'ru', label: '🇷🇺 RU' },
+                { code: 'uk', label: '🇺🇦 UK' }
               ].map((item) => (
                 <button
                   key={item.code}
@@ -623,12 +631,20 @@ export default function App() {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
                 {lang === 'fr' ? <>Optimisez Votre Temps Dès <span className="gradient-text">Aujourd'hui</span></> : 
                  lang === 'en' ? <>Optimize Your Time <span className="gradient-text">Today</span></> :
-                 <>Optimice su tiempo <span className="gradient-text">hoy mismo</span></>}
+                 lang === 'es' ? <>Optimice su tiempo <span className="gradient-text">hoy mismo</span></> :
+                 lang === 'zh' ? <>从今天起 <span className="gradient-text">优化您的时间</span></> :
+                 lang === 'it' ? <>Ottimizza il tuo tempo <span className="gradient-text">oggi stesso</span></> :
+                 lang === 'ru' ? <>Оптимизируйте свое время <span className="gradient-text">уже сегодня</span></> :
+                 <>Оптимізуйте свій час <span className="gradient-text">уже сьогодні</span></>}
               </h2>
               <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed">
                 {lang === 'fr' ? "Téléchargez dès maintenant l'application Abyss IA et intégrez la puissance de l'intelligence artificielle au service de votre réussite." :
                  lang === 'en' ? "Download the Abyss IA app now and integrate the power of artificial intelligence to support your success." :
-                 "Descargue la aplicación Abyss IA ahora e integre el poder de la inteligencia artificial al servicio de su éxito."}
+                 lang === 'es' ? "Descargue la aplicación Abyss IA ahora e integre el poder de la inteligencia artificial al servicio de su éxito." :
+                 lang === 'zh' ? "立即下载 Abyss IA 应用程序，融入人工智能的力量，为您的成功提供助力。" :
+                 lang === 'it' ? "Scarica subito l'app Abyss IA e integra la potenza dell'intelligenza artificiale per supportare il tuo successo." :
+                 lang === 'ru' ? "Скачайте приложение Abyss IA прямо сейчас и используйте всю мощь искусственного интеллекта для достижения успеха." :
+                 "Завантажте додаток Abyss IA прямо зараз та інтегруйте силу штучного інтелекту для вашого успіху."}
               </p>
               
               <div className="pt-2">

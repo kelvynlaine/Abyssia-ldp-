@@ -65,12 +65,6 @@ export const TRANSLATIONS = {
       colProduct: "Produit",
       colCommunity: "Communauté",
       colSupport: "Contact & Support",
-      newsletterPlaceholder: "Votre email...",
-      subscribeBtn: "S'abonner",
-      newsletterSubNote: "Inscrivez-vous à nos newsletters pour recevoir nos astuces de productivité.",
-      newsletterSuccess: "Inscription réussie ! Un e-mail de bienvenue contenant vos conseils de productivité IA a été envoyé.",
-      newsletterAlready: "Vous êtes déjà abonné à notre newsletter !",
-      newsletterInvalid: "Veuillez entrer une adresse e-mail valide.",
       copyright: "Abyss IA. Tous droits réservés.",
       legal: "Mentions Légales",
       cgu: "CGU & Confidentialité",
@@ -143,12 +137,6 @@ export const TRANSLATIONS = {
       colProduct: "Product",
       colCommunity: "Community",
       colSupport: "Contact & Support",
-      newsletterPlaceholder: "Your email...",
-      subscribeBtn: "Subscribe",
-      newsletterSubNote: "Subscribe to our newsletters to receive our top productivity tips.",
-      newsletterSuccess: "Subscription successful! A welcome email containing your AI productivity tips has been sent.",
-      newsletterAlready: "You are already subscribed to our newsletter!",
-      newsletterInvalid: "Please enter a valid email address.",
       copyright: "Abyss IA. All rights reserved.",
       legal: "Legal Notice",
       cgu: "TOS & Privacy",
@@ -221,16 +209,298 @@ export const TRANSLATIONS = {
       colProduct: "Producto",
       colCommunity: "Comunidad",
       colSupport: "Contacto y Soporte",
-      newsletterPlaceholder: "Su correo electrónico...",
-      subscribeBtn: "Suscribirse",
-      newsletterSubNote: "Suscríbase a nuestros boletines para recibir nuestros mejores consejos de productividad.",
-      newsletterSuccess: "¡Suscripción exitosa! Se ha enviado un correo de bienvenida con sus consejos de productividad de IA.",
-      newsletterAlready: "¡Ya está suscrito a nuestro boletín de noticias!",
-      newsletterInvalid: "Por favor, introduzca una dirección de correo electrónico válida.",
       copyright: "Abyss IA. Todos los derechos reservados.",
       legal: "Aviso Legal",
       cgu: "TOS y Privacidad",
       subNote: "Aplicación de IA de productividad - Sistema inteligente de concentración y seguimiento de hábitos."
+    }
+  },
+  zh: {
+    nav: {
+      features: "功能特点",
+      demos: "实时演示",
+      faq: "常见问题",
+      contact: "联系我们",
+      install: "安装应用"
+    },
+    hero: {
+      microBadge: "革命性 AI 个人助手",
+      headline: "与我们一起追求卓越",
+      subtitle: "探索 Abyss IA，您的全能智能高效应用。管理日常任务，用智能番茄钟优化时间，跟踪习惯，粉碎所有目标。",
+      ctaInstall: "安装应用程序",
+      ctaDemo: "试用实时演示",
+      trustBadge1: "2024年最佳 AI 应用",
+      trustBadge2: "Google Play Protect 认证"
+    },
+    demos: {
+      sectionTitle: "亲身体验 Abyss IA 实时演示",
+      sectionSubtitle: "通过这些交互式实时演示组件，探索我们工具的流畅性。"
+    },
+    features: {
+      sectionTitle: "由人工智能驱动",
+      sectionSubtitle: "Abyss IA 集成了旨在最大化工作时间并消除拖延的革命性功能。",
+      feat1Title: "智能任务管理",
+      feat1Desc: "Abyss 的 AI 助手会分析您的任务并自动创建可管理的子任务，估计持续时间，并根据您的 SMART 目标进行智能优先级排序。",
+      feat2Title: "游戏化习惯 tracking",
+      feat2Desc: "将您的日常习惯变成一场迷人的角色扮演游戏。通过完成日常习惯赚取 EXP、升级并解锁独家奖励。",
+      feat3Title: "智能连接番茄钟",
+      feat3Desc: "将您的专注会话直接链接到正在进行的任务。AI 会自动调整休息时间，以保持您的心理专注和健康。",
+      feat4Title: "AI 统计与洞察",
+      feat4Desc: "通过 AI 生成的报告清晰地查看您的进度。发现您的效率高峰并接收量身定制的改进建议。",
+      feat5Title: "安全与云同步",
+      feat5Desc: "您的进度数据、任务和习惯都经过端端加密，并与完全安全的云端在所有设备上实时同步。",
+      feat6Title: "预告与测试版扩展",
+      feat6Desc: "我们的团队每天都在开发新的智能扩展。加入我们的渠道，对下一项主要功能进行投票！"
+    },
+    dashboard: {
+      microBadge: "习惯连击与报告",
+      title: "通过清晰的统计数据跟踪您的进度",
+      subtitle: "我们的 AI 驱动习惯跟踪器会分析您的每周习惯，并提供相关的洞察，以预测能量下降并优化专注高峰。",
+      bullet1: "可持续的日常习惯推荐",
+      bullet2: "智能疲劳与节奏下降检测",
+      bullet3: "自适应番茄钟会话规划",
+      bullet4: "完成主要里程碑的额外 EXP 奖金"
+    },
+    faq: {
+      sectionTitle: "您的问题，我们的解答",
+      sectionSubtitle: "您需要了解的关于我们 AI 效率助手的一切。"
+    },
+    contact: {
+      microBadge: "支持与协助",
+      sectionTitle: "遇到问题？联系我们",
+      sectionSubtitle: "我们的团队将全力为您解决技术问题或解答您的建议。",
+      emailTitle: "通过电子邮件",
+      emailDesc: "随时向我们发送电子邮件。我们通常在 24 小时内回复技术支持或应用反馈咨询。",
+      phoneTitle: "通过电话",
+      phoneDesc: "需要直接解答？我们的电话支持服务时间为周一至周五上午 9 点至下午 6 点，以应对任何技术紧急情况。",
+      phoneBtn: "立即致电",
+      emailBtn: "发送电子邮件"
+    },
+    footer: {
+      brandDesc: "下一代智能效率助手。我们的生态系统整合了习惯跟踪器、番茄钟工具和 AI，以最大化您的时间。",
+      colProduct: "产品",
+      colCommunity: "社区",
+      colSupport: "联系与支持",
+      copyright: "Abyss IA. 保留所有权利。",
+      legal: "法律声明",
+      cgu: "服务条款与隐私",
+      subNote: "效率 AI 应用程序 - 智能专注与习惯跟踪系统。"
+    }
+  },
+  it: {
+    nav: {
+      features: "Funzionalità",
+      demos: "Demo in Vivo",
+      faq: "FAQ",
+      contact: "Contatto",
+      install: "Installa App"
+    },
+    hero: {
+      microBadge: "Rivoluzionario Assistente Personale IA",
+      headline: "Punta all'eccellenza con",
+      subtitle: "Scopri Abyss IA, la tua applicazione intelligente per la produttività tutto in uno. Gestisci le tue attività quotidiane, ottimizza il tuo tempo con il Pomodoro intelligente e monitora le tue abitudini per raggiungere tutti i tuoi obiettivi.",
+      ctaInstall: "Installa l'applicazione",
+      ctaDemo: "Scopri la demo interattiva",
+      trustBadge1: "Migliore App IA 2024",
+      trustBadge2: "Certificato Google Play Protect"
+    },
+    demos: {
+      sectionTitle: "Prova l'Esperienza di Abyss IA dal Vivo",
+      sectionSubtitle: "Scopri la fluidità dei nostri strumenti con questi componenti dimostrativi interattivi in tempo reale."
+    },
+    features: {
+      sectionTitle: "Alimentato da Intelligenza Artificiale",
+      sectionSubtitle: "Abyss IA integra funzionalità rivoluzionarie progettate per massimizzare il tempo di lavoro ed eliminare la procrastinazione.",
+      feat1Title: "Gestione Intelligente dei Compiti",
+      feat1Desc: "L'assistente IA di Abyss analizza i tuoi compiti e crea automaticamente sotto-compiti gestibili, stima la durata e stabilisce le priorità in modo intelligente in base ai tuoi obiettivi SMART.",
+      feat2Title: "Rilevatore di Abitudini Gamificato",
+      feat2Desc: "Trasforma le tue routine in un avvincente gioco di ruolo. Guadagna EXP, sali di livello e sblocca ricompense esclusive completando le tue abitudini quotidiane.",
+      feat3Title: "Pomodoro Connesso e Intelligente",
+      feat3Desc: "Associa le tue sessioni di concentrazione direttamente alle tue attività in corso. L'IA regola automaticamente le pause per preservare la tua salute mentale.",
+      feat4Title: "Statistiche e Approfondimenti IA",
+      feat4Desc: "Visualizza chiaramente i tuoi progressi con i report generati dall'IA. Scopri i tuoi picchi di produttività e ricevi consigli su misura per migliorare.",
+      feat5Title: "Sicurezza e Sincronizzazione Cloud",
+      feat5Desc: "I dati sui progressi, le attività e le abitudini sono crittografati end-to-end e sincronizzati in tempo reale su tutti i dispositivi in totale sicurezza.",
+      feat6Title: "Anteprime ed Estensioni Beta",
+      feat6Desc: "Il nostro team lavora ogni giorno a nuove estensioni intelligenti. Unisciti ai nostri canali per votare le prossime funzionalità!"
+    },
+    dashboard: {
+      microBadge: "Strisce di Abitudini e Report",
+      title: "Monitora i Progressi Con Statistiche Chiare",
+      subtitle: "Il nostro tracker di abitudini basato su IA analizza le tue routine settimanali e fornisce approfondimenti utili per anticipare i cali di energia e ottimizzare i picchi di attenzione.",
+      bullet1: "Raccomandazioni per routine sostenibili",
+      bullet2: "Rilevamento intelligente di stanchezza e cali di ritmo",
+      bullet3: "Pianificazione adattiva delle sessioni Pomodoro",
+      bullet4: "EXP bonus per il completamento di traguardi importanti"
+    },
+    faq: {
+      sectionTitle: "Le Tue Domande, Le Nostre Risposte",
+      sectionSubtitle: "Tutto quello che c'è da sapere sul nostro assistente alla produttività IA."
+    },
+    contact: {
+      microBadge: "Supporto e Assistenza",
+      sectionTitle: "Un Problema? Contattaci",
+      sectionSubtitle: "Il nostro team è a tua completa disposizione per risolvere problemi tecnici o rispondere ai tuoi suggerimenti.",
+      emailTitle: "Via E-mail",
+      emailDesc: "Inviaci un'e-mail in qualsiasi momento. Rispondiamo generalmente in meno di 24 ore alle richieste di supporto tecnico o di feedback sull'app.",
+      phoneTitle: "Per Telefono",
+      phoneDesc: "Hai bisogno di una risposta diretta? Il nostro supporto telefonico è raggiungibile dal lunedì al venerdì dalle 9:00 alle 18:00 per qualsiasi emergenza tecnica.",
+      phoneBtn: "Chiama Ora",
+      emailBtn: "Invia E-mail"
+    },
+    footer: {
+      brandDesc: "L'assistente alla produttività intelligente di nuova generazione. Il nostro ecosistema integra tracker di abitudini, strumenti Pomodoro e IA per massimizzare il tuo tempo.",
+      colProduct: "Prodotto",
+      colCommunity: "Comunità",
+      colSupport: "Contatto e Supporto",
+      copyright: "Abyss IA. Tutti i diritti riservati.",
+      legal: "Note Legali",
+      cgu: "CGU & Privacy",
+      subNote: "Applicazione IA per la produttività - Sistema intelligente di concentrazione e tracciamento delle abitudini."
+    }
+  },
+  ru: {
+    nav: {
+      features: "Возможности",
+      demos: "Демо-версия",
+      faq: "FAQ",
+      contact: "Контакты",
+      install: "Установить"
+    },
+    hero: {
+      microBadge: "Революционный персональный ИИ-ассистент",
+      headline: "Стремитесь к совершенству с",
+      subtitle: "Откройте для себя Abyss IA — ваше умное универсальное приложение для продуктивности. Управляйте задачами, оптимизируйте время с помощью Pomodoro и отслеживайте привычки для достижения всех целей.",
+      ctaInstall: "Установить приложение",
+      ctaDemo: "Попробовать интерактивное демо",
+      trustBadge1: "Лучшее ИИ-приложение 2024",
+      trustBadge2: "Сертифицировано Google Play Protect"
+    },
+    demos: {
+      sectionTitle: "Попробуйте Abyss IA в действии",
+      sectionSubtitle: "Оцените плавность работы наших инструментов с помощью интерактивных компонентов в реальном времени."
+    },
+    features: {
+      sectionTitle: "На базе искусственного интеллекта",
+      sectionSubtitle: "Abyss IA объединяет в себе революционные функции для максимального использования рабочего времени и борьбы с прокрастинацией.",
+      feat1Title: "Умное управление задачами",
+      feat1Desc: "ИИ-помощник Abyss анализирует ваши задачи и автоматически разбивает их на управляемые подзадачи, оценивает длительность и расставляет приоритеты согласно целям SMART.",
+      feat2Title: "Геймифицированный трекер привычек",
+      feat2Desc: "Превратите свои рутинные дела в увлекательную ролевую игру. Зарабатывайте EXP, повышайте уровень и открывайте эксклюзивные награды за выполнение привычек.",
+      feat3Title: "Интегрированный умный Pomodoro",
+      feat3Desc: "Связывайте сессии концентрации с текущими задачами. ИИ автоматически регулирует перерывы для поддержания вашей ментальной свежести.",
+      feat4Title: "ИИ-статистика и аналитика",
+      feat4Desc: "Наглядно отслеживайте свой прогресс с помощью отчетов ИИ. Узнайте пики своей продуктивности и получайте персонализированные советы.",
+      feat5Title: "Безопасность и облачная синхронизация",
+      feat5Desc: "Данные вашего прогресса, задачи и привычки защищены сквозным шифрованием и синхронизируются на всех устройствах в реальном времени.",
+      feat6Title: "Анонсы и бета-расширения",
+      feat6Desc: "Наша команда ежедневно работает над новыми интеллектуальными расширениями. Присоединяйтесь к нашим каналам, чтобы голосовать за новые функции!"
+    },
+    dashboard: {
+      microBadge: "Серии привычек и отчеты",
+      title: "Отслеживайте свой прогресс с ясной статистикой",
+      subtitle: "Наш трекер привычек на базе ИИ анализирует ваши еженедельные показатели и предлагает советы для предотвращения спадов энергии и улучшения концентрации.",
+      bullet1: "Рекомендации по устойчивым рутинам",
+      bullet2: "Умное обнаружение спадов ритма и усталости",
+      bullet3: "Адаптивное планирование сессий Pomodoro",
+      bullet4: "Бонусные EXP за достижение ключевых этапов"
+    },
+    faq: {
+      sectionTitle: "Вопросы и ответы",
+      sectionSubtitle: "Все, что вам нужно знать о нашем ИИ-помощнике для продуктивности."
+    },
+    contact: {
+      microBadge: "Поддержка и помощь",
+      sectionTitle: "Возникли проблемы? Свяжитесь с нами",
+      sectionSubtitle: "Наша команда в вашем полном распоряжении для решения технических неполадок или обсуждения ваших предложений.",
+      emailTitle: "По электронной почте",
+      emailDesc: "Отправьте нам e-mail в любое время. Обычно мы отвечаем в течение 24 часов на запросы технической поддержки.",
+      phoneTitle: "По телефону",
+      phoneDesc: "Нужен быстрый ответ? Наша телефонная поддержка доступна с понедельника по пятницу с 9:00 до 18:00 для любых экстренных случаев.",
+      phoneBtn: "Позвонить",
+      emailBtn: "Написать письмо"
+    },
+    footer: {
+      brandDesc: "Умный помощник для продуктивности нового поколения. Наша экосистема объединяет трекеры привычек, Pomodoro и ИИ для максимальной эффективности.",
+      colProduct: "Продукт",
+      colCommunity: "Сообщество",
+      colSupport: "Контакты и поддержка",
+      copyright: "Abyss IA. Все права защищены.",
+      legal: "Правовая информация",
+      cgu: "Пользовательское соглашение",
+      subNote: "ИИ-приложение для продуктивности - Интеллектуальная система концентрации и отслеживания привычек."
+    }
+  },
+  uk: {
+    nav: {
+      features: "Функції",
+      demos: "Демо-версія",
+      faq: "FAQ",
+      contact: "Контакти",
+      install: "Встановити"
+    },
+    hero: {
+      microBadge: "Революційний персональний ШІ-асистент",
+      headline: "Прагніть до досконалості з",
+      subtitle: "Відкрийте для себе Abyss IA — ваш розумний універсальний додаток для продуктивності. Керуйте щоденними завданнями, оптимізуйте час за допомогою Pomodoro та відстежуйте звички для досягнення цілей.",
+      ctaInstall: "Встановити додаток",
+      ctaDemo: "Спробувати інтерактивне демо",
+      trustBadge1: "Найкращий ШІ-додаток 2024",
+      trustBadge2: "Сертифіковано Google Play Protect"
+    },
+    demos: {
+      sectionTitle: "Спробуйте Abyss IA в дії",
+      sectionSubtitle: "Оцініть плавність роботи наших інструментів за допомогою інтерактивних компонентів у реальному часі."
+    },
+    features: {
+      sectionTitle: "На базі штучного інтелекту",
+      sectionSubtitle: "Abyss IA об'єднує в собі революційні функції, створені для максимального використання робочого часу та боротьби з прокрастинацією.",
+      feat1Title: "Розумне керування завданнями",
+      feat1Desc: "ШІ-помічник Abyss аналізує ваші завдання й автоматично розбиває їх на керовані підзавдання, оцінює тривалість та розставляє пріоритети відповідно до SMART-цілей.",
+      feat2Title: "Гейміфікований трекер звичок",
+      feat2Desc: "Перетворіть свої рутинні справи на захоплюючу рольову гру. Заробляйте EXP, підвищуйте рівень та відкривайте ексклюзивні нагороди за виконання звичок.",
+      feat3Title: "Інтегрований розумний Pomodoro",
+      feat3Desc: "Пов'язуйте сесії концентрації з поточними завданнями. ШІ автоматично регулює перерви для підтримки вашої ментальної свіжості.",
+      feat4Title: "ШІ-статистика та аналітика",
+      feat4Desc: "Наочно відстежуйте свій прогрес за допомогою звітів ШІ. Дізнайтеся піки своєї продуктивності та отримуйте персоналізовані поради.",
+      feat5Title: "Безпека та хмарна синхронізація",
+      feat5Desc: "Дані вашого прогресу, завдання та звички захищені наскрізным шифруванням та синхронізуються на всіх пристроях у реальному часі.",
+      feat6Title: "Анонси та бета-розширення",
+      feat6Desc: "Наша команда щодня працює над новими інтелектуальними розширеннями. Приєднуйтесь до наших каналів, щоб голосувати за нові функції!"
+    },
+    dashboard: {
+      microBadge: "Серії звичок та звіти",
+      title: "Відстежуйте свій прогрес із чіткою статистикою",
+      subtitle: "Наш трекер звичок на базі ШІ аналізує ваші щотижневі показники та пропонує поради для запобігання спадам енергії та покращення концентрації.",
+      bullet1: "Рекомендації щодо стійких рутин",
+      bullet2: "Розумне виявлення спадів ритму та втоми",
+      bullet3: "Адаптивне планування сесій Pomodoro",
+      bullet4: "Бонусні EXP за досягнення ключових етапів"
+    },
+    faq: {
+      sectionTitle: "Запитання та відповіді",
+      sectionSubtitle: "Все, що вам потрібно знати про нашого ШІ-помічника для продуктивності."
+    },
+    contact: {
+      microBadge: "Підтримка та допомога",
+      sectionTitle: "Виникли проблеми? Зв'яжіться з нами",
+      sectionSubtitle: "Наша команда у вашому повному розпорядженні для вирішення технічних негараздів або обговорення ваших пропозицій.",
+      emailTitle: "Електронною поштою",
+      emailDesc: "Надішліть нам e-mail у будь-який час. Зазвичай ми відповідаємо протягом 24 годин на запити технічної підтримки.",
+      phoneTitle: "Телефоном",
+      phoneDesc: "Потрібна швидка відповідь? Наша телефонна підтримка доступна з понеділка по п'ятницю з 9:00 до 18:00 для будь-яких екстрених випадків.",
+      phoneBtn: "Зателефонувати",
+      emailBtn: "Написати листа"
+    },
+    footer: {
+      brandDesc: "Розумний помічник для продуктивності нового покоління. Наша екосистема об'єднує трекери звичок, Pomodoro та ШІ для максимальної ефективності.",
+      colProduct: "Продукт",
+      colCommunity: "Спільнота",
+      colSupport: "Контакти та підтримка",
+      copyright: "Abyss IA. Всі права захищені.",
+      legal: "Правова інформація",
+      cgu: "Умови використання",
+      subNote: "ШІ-додаток для продуктивності - Інтелектуальна система концентрації та відстеження звичок."
     }
   }
 };
