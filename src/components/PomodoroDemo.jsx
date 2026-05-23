@@ -1,11 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { Play, Pause, RotateCcw, Flame, Coffee, Moon } from 'lucide-react';
 
-export default function PomodoroDemo() {
+const LABELS = {
+  fr: {
+    work: "Focus Work",
+    break: "Pause Récup",
+    workTitle: "Temps de travail",
+    breakTitle: "Pause détente",
+    note: "* Essayez le chronomètre ! Ce composant est 100% interactif."
+  },
+  en: {
+    work: "Focus Work",
+    break: "Rest Break",
+    workTitle: "Work time",
+    breakTitle: "Rest time",
+    note: "* Try the timer! This component is 100% interactive."
+  },
+  es: {
+    work: "Focus Trabajo",
+    break: "Descanso Corto",
+    workTitle: "Tiempo de trabajo",
+    breakTitle: "Tiempo de descanso",
+    note: "* ¡Pruebe el cronómetro! Este componente es 100% interactivo."
+  }
+};
+
+export default function PomodoroDemo({ lang = 'fr' }) {
   const [minutes, setMinutes] = useState(25);
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
   const [mode, setMode] = useState('work'); // 'work' or 'break'
+
+  const labels = LABELS[lang] || LABELS.fr;
 
   useEffect(() => {
     let interval = null;
@@ -81,7 +107,7 @@ export default function PomodoroDemo() {
           }`}
         >
           <Flame size={14} className={mode === 'work' ? 'animate-pulse text-violet-400' : ''} />
-          Focus Work
+          {labels.work}
         </button>
         <button
           onClick={() => setTimerMode('break')}
@@ -92,7 +118,7 @@ export default function PomodoroDemo() {
           }`}
         >
           <Coffee size={14} className={mode === 'break' ? 'animate-bounce text-cyan-400' : ''} />
-          Pause Récup
+          {labels.break}
         </button>
       </div>
 
@@ -127,7 +153,7 @@ export default function PomodoroDemo() {
             {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
           </span>
           <span className="text-[10px] tracking-widest uppercase font-bold text-slate-400 mt-2">
-            {mode === 'work' ? 'Temps de travail' : 'Pause détente'}
+            {mode === 'work' ? labels.workTitle : labels.breakTitle}
           </span>
         </div>
       </div>
@@ -161,7 +187,7 @@ export default function PomodoroDemo() {
 
       {/* Tiny live note */}
       <p className="text-[10px] text-slate-500 text-center mt-6 select-none italic">
-        * Essayez le chronomètre ! Ce composant est 100% interactif.
+        {labels.note}
       </p>
     </div>
   );

@@ -19,54 +19,161 @@ import {
   Phone,
   ExternalLink,
   Shield,
-  FileText
+  FileText,
+  Globe,
+  Check
 } from 'lucide-react';
 
 import PomodoroDemo from './components/PomodoroDemo';
 import HabitTrackerDemo from './components/HabitTrackerDemo';
 import AppMockupShowcase from './components/AppMockupShowcase';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
-import { INSTALL_DEEPLINK_URL, SUPPORT_DISCORD_URL, BRAND_EMAIL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
-
+import { TRANSLATIONS } from './config/translations';
+import { INSTALL_DEEPLINK_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
 
 export default function App() {
+  const [lang, setLang] = useState('fr');
+  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
 
-  const faqData = [
-    {
-      question: "Qu'est-ce qu'Abyss IA et comment fonctionne cet assistant IA personnel ?",
-      answer: "Abyss IA est un assistant intelligent premium propulsé par l'IA générative pour personnaliser votre expérience de productivité. Il combine la gestion intelligente de tâches, le suivi d'habitudes et la technique Pomodoro optimisée pour vous aider à atteindre vos objectifs SMART plus rapidement, en apprenant continuellement de vos patterns d'utilisation."
-    },
-    {
-      question: "Comment utiliser Abyss IA efficacement pour améliorer ma productivité ?",
-      answer: "Pour maximiser votre productivité, commencez par définir vos objectifs SMART dans l'application. Utilisez notre tracker d'habitudes avec IA pour développer des routines durables et lancez notre chronomètre Pomodoro pour des sessions de travail focalisées. L'analyse de productivité IA identifiera ensuite vos moments les plus performants pour vous suggérer des plannings optimaux."
-    },
-    {
-      question: "Comment développer de bonnes habitudes avec le tracker d'habitudes Abyss IA ?",
-      answer: "Notre tracker d'habitudes avec IA analyse vos patterns comportementaux et vous propose des recommandations personnalisées IA pour créer des routines durables. L'application détecte également vos obstacles potentiels (ex: fatigue, retards cumulés) et ajuste automatiquement vos objectifs quotidiens pour maximiser vos chances de réussite."
-    },
-    {
-      question: "Abyss IA vs autres applications de productivité - Quelle est la différence ?",
-      answer: "Abyss IA se distingue comme meilleure application IA 2024 grâce à son écosystème tout-en-un. Au lieu d'avoir un outil pour vos tâches, un autre pour vos habitudes, et un troisième pour le Pomodoro, notre solution unifie l'ensemble grâce à un assistant intelligent qui fait le pont entre vos tâches quotidiennes et votre santé cognitive."
-    },
-    {
-      question: "Comment arrêter la procrastination avec l'assistant IA d'Abyss IA ?",
-      answer: "Notre application utilise plusieurs techniques éprouvées amplifiées par l'IA. La technique Pomodoro découpe vos tâches en sessions gérables, la gamification rend le travail engageant, et l'assistant IA personnel vous envoie des encouragements motivants personnalisés. De plus, l'analyse comportementale identifie vos déclencheurs de procrastination pour vous aider à les surmonter."
-    },
-    {
-      question: "Comment installer Abyss IA sur mon appareil Android ?",
-      answer: "Vous pouvez installer l'application en cliquant sur n'importe quel bouton 'Installer l'application' de notre site. Vous serez alors redirigé directement vers notre page officielle de test Google Play Store, garantissant un téléchargement et une installation 100% sécurisés et certifiés par Google Play Protect."
-    },
-    {
-      question: "Quels sont les prérequis système pour cette application IA productivité ?",
-      answer: "L'application Abyss IA est extrêmement légère et fonctionne sur n'importe quel appareil Android équipé d'Android 8.0 ou supérieur, avec un minimum de 50 Mo d'espace de stockage disponible. Notre logiciel IA est optimisé pour être extrêmement économe en batterie."
-    },
-    {
-      question: "Mes données sont-elles sécurisées dans cette solution IA pour la productivité ?",
-      answer: "Absolument. Vos requêtes et données personnelles sont chiffrées de bout en bout et nous ne revendons aucune information à des tiers. La confidentialité est notre priorité absolue. Toutes les analyses de productivité IA sont effectuées de manière sécurisée et respectueuse de votre vie privée."
+  // Newsletter Flow States
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'already' | 'error'
+  const [newsletterMessage, setNewsletterMessage] = useState('');
+
+  const t = TRANSLATIONS[lang] || TRANSLATIONS.fr;
+
+  const faqData = {
+    fr: [
+      {
+        question: "Qu'est-ce qu'Abyss IA et comment fonctionne cet assistant IA personnel ?",
+        answer: "Abyss IA est un assistant intelligent premium propulsé par l'IA générative pour personnaliser votre expérience de productivité. Il combine la gestion intelligente de tâches, le suivi d'habitudes et la technique Pomodoro optimisée pour vous aider à atteindre vos objectifs SMART plus rapidement, en apprenant continuellement de vos patterns d'utilisation."
+      },
+      {
+        question: "Comment utiliser Abyss IA efficacement pour améliorer ma productivité ?",
+        answer: "Pour maximiser votre productivité, commencez par définir vos objectifs SMART dans l'application. Utilisez notre tracker d'habitudes avec IA pour développer des routines durables et lancez notre chronomètre Pomodoro pour des sessions de travail focalisées. L'analyse de productivité IA identifiera ensuite vos moments les plus performants pour vous suggérer des plannings optimaux."
+      },
+      {
+        question: "Comment développer de bonnes habitudes avec le tracker d'habitudes Abyss IA ?",
+        answer: "Notre tracker d'habitudes avec IA analyse vos patterns comportementaux et vous propose des recommandations personnalisées IA pour créer des routines durables. L'application détecte également vos obstacles potentiels (ex: fatigue, retards cumulés) et ajuste automatiquement vos objectifs quotidiens pour maximiser vos chances de réussite."
+      },
+      {
+        question: "Abyss IA vs autres applications de productivité - Quelle est la différence ?",
+        answer: "Abyss IA se distingue comme meilleure application IA 2024 grâce à son écosystème tout-en-un. Au lieu d'avoir un outil pour vos tâches, un autre pour vos habitudes, et un troisième pour le Pomodoro, notre solution unifie l'ensemble grâce à un assistant intelligent qui fait le pont entre vos tâches quotidiennes et votre santé cognitive."
+      },
+      {
+        question: "Comment arrêter la procrastination avec l'assistant IA d'Abyss IA ?",
+        answer: "Notre application utilise plusieurs techniques éprouvées amplifiées par l'IA. La technique Pomodoro découpe vos tâches en sessions gérables, la gamification rend le travail engageant, et l'assistant IA personnel vous envoie des encouragements motivants personnalisés. De plus, l'analyse comportementale identifie vos déclencheurs de procrastination pour vous aider à les surmonter."
+      },
+      {
+        question: "Comment installer Abyss IA sur mon appareil Android ?",
+        answer: "Vous pouvez installer l'application en cliquant sur n'importe quel bouton 'Installer l'application' de notre site. Vous serez alors redirigé directement vers notre page officielle de test Google Play Store, garantissant un téléchargement et une installation 100% sécurisés et certifiés par Google Play Protect."
+      },
+      {
+        question: "Quels sont les prérequis système pour cette application IA productivité ?",
+        answer: "L'application Abyss IA est extrêmement légère et fonctionne sur n'importe quel appareil Android équipé d'Android 8.0 ou supérieur, avec un minimum de 50 Mo d'espace de stockage disponible. Notre logiciel IA est optimisé pour être extrêmement économe en batterie."
+      },
+      {
+        question: "Mes données sont-elles sécurisées dans cette solution IA pour la productivité ?",
+        answer: "Absolument. Vos requêtes et données personnelles sont chiffrées de bout en bout et nous ne revendons aucune information à des tiers. La confidentialité est notre priorité absolue. Toutes les analyses de productivité IA sont effectuées de manière sécurisée et respectueuse de votre vie privée."
+      }
+    ],
+    en: [
+      {
+        question: "What is Abyss IA and how does this personal AI assistant work?",
+        answer: "Abyss IA is a premium smart assistant powered by generative AI to customize your productivity experience. It combines intelligent task management, habit tracking, and optimized Pomodoro techniques to help you achieve your SMART goals faster, continuously learning from your usage patterns."
+      },
+      {
+        question: "How to use Abyss IA effectively to improve my productivity?",
+        answer: "To maximize your productivity, start by setting your SMART goals in the application. Use our AI-powered habit tracker to build sustainable routines and launch our Pomodoro timer for focused work sessions. The AI productivity analysis will then identify your peak performance moments to suggest optimal schedules."
+      },
+      {
+        question: "How to develop good habits with the Abyss IA habit tracker?",
+        answer: "Our AI-powered habit tracker analyzes your behavioral patterns and provides personalized AI recommendations to create sustainable routines. The app also detects your potential obstacles (e.g., fatigue, cumulative delays) and automatically adjusts your daily goals to maximize your chances of success."
+      },
+      {
+        question: "Abyss IA vs other productivity apps - What is the difference?",
+        answer: "Abyss IA stands out as the best 2024 AI application thanks to its all-in-one ecosystem. Instead of having one tool for your tasks, another for your habits, and a third for Pomodoro, our solution unifies everything through a smart assistant that bridges the gap between your daily tasks and your cognitive health."
+      },
+      {
+        question: "How to stop procrastinating with the Abyss IA assistant?",
+        answer: "Our app uses several proven techniques amplified by AI. The Pomodoro technique cuts your tasks into manageable sessions, gamification makes work engaging, and the personal AI assistant sends you customized motivational encouragement. Additionally, behavioral analysis identifies your procrastination triggers to help you overcome them."
+      },
+      {
+        question: "How to install Abyss IA on my Android device?",
+        answer: "You can install the app by clicking any 'Install App' button on our site. You will be redirected directly to our official Google Play Store testing page, guaranteeing a 100% secure download and installation certified by Google Play Protect."
+      },
+      {
+        question: "What are the system requirements for this productivity AI app?",
+        answer: "The Abyss IA app is extremely lightweight and works on any Android device running Android 8.0 or higher, with a minimum of 50 MB of available storage space. Our AI software is optimized to be extremely battery-efficient."
+      },
+      {
+        question: "Is my data secure in this productivity AI solution?",
+        answer: "Absolutely. Your queries and personal data are end-to-end encrypted and we do not sell any information to third parties. Privacy is our top priority. All AI productivity analyses are performed securely and with respect for your privacy."
+      }
+    ],
+    es: [
+      {
+        question: "¿Qué es Abyss IA y cómo funciona este asistente personal de IA?",
+        answer: "Abyss IA es un asistente inteligente premium impulsado por IA generativa para personalizar su experiencia de productividad. Combina la gestión inteligente de tareas, el seguimiento de hábitos y la técnica Pomodoro optimizada para ayudarle a alcanzar sus objetivos SMART más rápido, aprendiendo continuamente de sus patrones de uso."
+      },
+      {
+        question: "¿Cómo usar Abyss IA de manera efectiva para mejorar mi productividad?",
+        answer: "Para maximizar su productividad, comience por definir sus objetivos SMART en la aplicación. Utilice nuestro rastreador de hábitos con IA para desarrollar rutinas sostenibles y active nuestro temporizador Pomodoro para sesiones de trabajo enfocadas. El análisis de productividad de IA identificará sus momentos de mayor rendimiento para sugerir horarios óptimos."
+      },
+      {
+        question: "¿Cómo desarrollar buenos hábitos con el rastreador de hábitos de Abyss IA?",
+        answer: "Nuestro rastreador de hábitos con IA analiza sus patrones de comportamiento y ofrece recomendaciones personalizadas de IA para crear rutinas sostenibles. La aplicación también detecta sus obstáculos potenciales (por ejemplo, fatiga, retrasos acumulados) y ajusta automáticamente sus objetivos diarios para maximizar sus posibilidades de éxito."
+      },
+      {
+        question: "Abyss IA vs otras aplicaciones de productividad - ¿Cuál es la diferencia?",
+        answer: "Abyss IA se destaca como la mejor aplicación de IA de 2024 gracias a su ecosistema todo en uno. En lugar de tener una herramienta para sus tareas, otra para sus hábitos y una tercera para Pomodoro, nuestra solución unifica todo a través de un asistente inteligente que une sus tareas diarias y su salud cognitiva."
+      },
+      {
+        question: "¿Cómo dejar de procrastinar con el asistente de Abyss IA?",
+        answer: "Nuestra aplicación utiliza varias técnicas probadas amplificadas por IA. La técnica Pomodoro divide sus tareas en sesiones manejables, la gamificación hace que el trabajo sea atractivo y el asistente de IA personal le envía mensajes motivacionales personalizados. Además, el análisis de comportamiento identifica sus desencadenantes de procrastinación para ayudarle a deponerlos."
+      },
+      {
+        question: "¿Cómo instalar Abyss IA en mi dispositivo Android?",
+        answer: "Puede instalar la aplicación haciendo clic en cualquier botón 'Instalar App' de nuestro sitio. Se le redirigirá directamente a nuestra página oficial de pruebas de Google Play Store, lo que garantiza una descarga e instalación 100% seguras y certificadas por Google Play Protect."
+      },
+      {
+        question: "¿Cuáles son los requisitos del sistema para esta aplicación de IA de productividad?",
+        answer: "La aplicación Abyss IA es extremadamente ligera y funciona en cualquier dispositivo Android con Android 8.0 o superior, con un mínimo de 50 MB de espacio de almacenamiento disponible. Nuestro software de IA está optimizado para ser muy eficiente en el consumo de batería."
+      },
+      {
+        question: "¿Están seguros mis datos en esta solución de IA de productividad?",
+        answer: "Absolutamente. Sus consultas y datos personales están cifrados de extremo a extremo y no vendemos ninguna información a terceros. La privacidad es nuestra máxima prioridad. Todos los análisis de productividad de IA se realizan de forma segura y respetando su privacidad."
+      }
+    ]
+  };
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    if (!newsletterEmail || !/^\S+@\S+\.\S+$/.test(newsletterEmail)) {
+      setNewsletterStatus('error');
+      setNewsletterMessage(t.footer.newsletterInvalid);
+      return;
     }
-  ];
+
+    setNewsletterStatus('submitting');
+    setTimeout(() => {
+      const subs = JSON.parse(localStorage.getItem('newsletter_subs') || '[]');
+      if (subs.includes(newsletterEmail)) {
+        setNewsletterStatus('already');
+        setNewsletterMessage(t.footer.newsletterAlready);
+      } else {
+        subs.push(newsletterEmail);
+        localStorage.setItem('newsletter_subs', JSON.stringify(subs));
+        setNewsletterStatus('success');
+        setNewsletterMessage(t.footer.newsletterSuccess);
+        setNewsletterEmail('');
+      }
+    }, 1200);
+  };
+
+  const currentFaqData = faqData[lang] || faqData.fr;
 
   return (
     <div className="gradient-bg min-h-screen text-slate-100 flex flex-col font-sans select-none w-full overflow-x-hidden">
@@ -89,14 +196,56 @@ export default function App() {
 
           {/* Nav links - Desktop */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">Fonctionnalités</a>
-            <a href="#demo" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">Démonstrations</a>
-            <a href="#faq" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">FAQ</a>
-            <a href="#contact" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">Contact</a>
+            <a href="#features" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">{t.nav.features}</a>
+            <a href="#demo" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">{t.nav.demos}</a>
+            <a href="#faq" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">{t.nav.faq}</a>
+            <a href="#contact" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">{t.nav.contact}</a>
           </nav>
 
-          {/* CTA header button - Desktop */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* CTA & Language selector - Desktop */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Language Selector Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 hover:border-pink-500/30 text-xs font-bold text-slate-300 hover:text-white transition-all duration-300 focus:outline-none"
+              >
+                <Globe size={14} className="text-pink-500 animate-pulse" />
+                <span>{lang.toUpperCase()}</span>
+                <ChevronDown size={12} className={`transition-transform duration-300 ${isLangDropdownOpen ? 'rotate-180 text-pink-400' : ''}`} />
+              </button>
+              
+              {isLangDropdownOpen && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setIsLangDropdownOpen(false)} />
+                  <div className="absolute right-0 mt-2 w-32 bg-[#07080d]/95 backdrop-blur-md border border-white/10 rounded-xl p-1.5 shadow-2xl z-50 animate-fade-in flex flex-col gap-1">
+                    {[
+                      { code: 'fr', label: '🇫🇷 Français' },
+                      { code: 'en', label: '🇬🇧 English' },
+                      { code: 'es', label: '🇪🇸 Español' }
+                    ].map((item) => (
+                      <button
+                        key={item.code}
+                        onClick={() => {
+                          setLang(item.code);
+                          setIsLangDropdownOpen(false);
+                        }}
+                        className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 flex items-center justify-between ${
+                          lang === item.code 
+                            ? 'bg-gradient-to-r from-pink-500/10 to-violet-500/10 text-pink-400 border border-pink-500/20' 
+                            : 'text-slate-400 hover:text-white hover:bg-white/5 border border-transparent'
+                        }`}
+                      >
+                        <span>{item.label}</span>
+                        {lang === item.code && <Check size={12} strokeWidth={3} className="text-pink-500" />}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* Install Button */}
             <a 
               href={INSTALL_DEEPLINK_URL}
               target="_blank"
@@ -104,7 +253,7 @@ export default function App() {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white gradient-button shadow-lg shadow-pink-500/10 cursor-pointer"
             >
               <Smartphone size={14} />
-              Installer l'App
+              {t.nav.install}
             </a>
           </div>
 
@@ -122,44 +271,69 @@ export default function App() {
 
       {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-16 bg-[#07080d]/95 backdrop-blur-2xl border-b border-white/10 z-30 py-6 px-4 animate-in fade-in-0 slide-in-from-top-4 duration-300">
+        <div className="md:hidden fixed inset-x-0 top-16 bg-[#07080d]/95 backdrop-blur-2xl border-b border-white/10 z-30 py-6 px-4 animate-in fade-in-0 slide-in-from-top-4 duration-300 select-none">
           <nav className="flex flex-col gap-4 text-center">
             <a 
               href="#features" 
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-sm font-semibold text-slate-300 hover:text-white py-2 border-b border-white/5"
             >
-              Fonctionnalités
+              {t.nav.features}
             </a>
             <a 
               href="#demo" 
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-sm font-semibold text-slate-300 hover:text-white py-2 border-b border-white/5"
             >
-              Démonstrations
+              {t.nav.demos}
             </a>
             <a 
               href="#faq" 
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-sm font-semibold text-slate-300 hover:text-white py-2 border-b border-white/5"
             >
-              FAQ
+              {t.nav.faq}
             </a>
             <a 
               href="#contact" 
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-sm font-semibold text-slate-300 hover:text-white py-2 border-b border-white/5"
             >
-              Contact
+              {t.nav.contact}
             </a>
+
+            {/* Language Toggle Selector - Mobile */}
+            <div className="flex justify-center gap-2 py-3 border-b border-white/5">
+              {[
+                { code: 'fr', label: '🇫🇷 FR' },
+                { code: 'en', label: '🇬🇧 EN' },
+                { code: 'es', label: '🇪🇸 ES' }
+              ].map((item) => (
+                <button
+                  key={item.code}
+                  onClick={() => {
+                    setLang(item.code);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition-all duration-300 ${
+                    lang === item.code 
+                      ? 'bg-gradient-to-r from-pink-500/10 to-violet-500/10 text-pink-400 border-pink-500/20 shadow-md' 
+                      : 'bg-black/20 border-white/5 text-slate-400 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+
             <a 
               href={INSTALL_DEEPLINK_URL}
               target="_blank"
               rel="noreferrer"
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold text-white gradient-button mt-4 shadow-lg"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold text-white gradient-button mt-2 shadow-lg"
             >
               <Smartphone size={16} />
-              Installer l'Application
+              {t.nav.install}
             </a>
           </nav>
         </div>
@@ -180,20 +354,20 @@ export default function App() {
             <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
               
               {/* Premium micro badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-300">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-300 animate-fade-in">
                 <span className="flex size-2 rounded-full bg-pink-500 animate-ping" />
-                Assistant Personnel IA Révolutionnaire
+                {t.hero.microBadge}
               </div>
 
               {/* Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight sm:leading-none tracking-tight text-white">
-                Visez l'excellence avec <br />
+                {t.hero.headline} <br />
                 <span className="gradient-text">Abyss IA</span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-base sm:text-lg text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                Découvrez Abyss IA, votre application de productivité intelligente tout-en-un. Gérez vos tâches quotidiennes, optimisez votre temps avec le Pomodoro intelligent et suivez vos habitudes pour pulvériser tous vos objectifs.
+                {t.hero.subtitle}
               </p>
 
               {/* CTAs */}
@@ -205,14 +379,14 @@ export default function App() {
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-white gradient-button shadow-xl shadow-pink-500/15 cursor-pointer text-base"
                 >
                   <Smartphone size={18} />
-                  Installer l'application
+                  {t.hero.ctaInstall}
                   <ArrowRight size={16} />
                 </a>
                 <a 
                   href="#demo" 
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 text-slate-300 hover:text-white transition-all duration-300 text-base"
                 >
-                  Découvrir la démo interactive
+                  {t.hero.ctaDemo}
                 </a>
               </div>
 
@@ -222,12 +396,12 @@ export default function App() {
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => <Star key={i} size={14} className="fill-current" />)}
                   </div>
-                  <span>Meilleure App IA 2024</span>
+                  <span>{t.hero.trustBadge1}</span>
                 </div>
                 <div className="h-4 w-px bg-white/10 hidden sm:block" />
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck size={16} className="text-emerald-400" />
-                  <span>Google Play Protect Certifié</span>
+                  <span>{t.hero.trustBadge2}</span>
                 </div>
               </div>
 
@@ -246,10 +420,10 @@ export default function App() {
             {/* Header section */}
             <div className="text-center max-w-2xl mx-auto space-y-4">
               <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-                Essayez l'Expérience <span className="gradient-text">Abyss IA</span> en Direct
+                {t.demos.sectionTitle}
               </h2>
               <p className="text-sm sm:text-base text-slate-400">
-                Découvrez la fluidité de nos outils avec ces composants de démonstration interactifs en temps réel.
+                {t.demos.sectionSubtitle}
               </p>
             </div>
 
@@ -258,12 +432,12 @@ export default function App() {
               
               {/* Pomodoro Demo Panel */}
               <div id="pomodoro" className="lg:col-span-5 flex flex-col justify-center">
-                <PomodoroDemo />
+                <PomodoroDemo lang={lang} />
               </div>
 
               {/* Habit Tracker Demo Panel */}
               <div id="habits" className="lg:col-span-7 flex flex-col justify-center">
-                <HabitTrackerDemo />
+                <HabitTrackerDemo lang={lang} />
               </div>
 
             </div>
@@ -276,10 +450,10 @@ export default function App() {
             {/* Header */}
             <div className="text-center max-w-2xl mx-auto space-y-4">
               <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-                Propulsé par <span className="gradient-text">L'Intelligence Artificielle</span>
+                {t.features.sectionTitle}
               </h2>
               <p className="text-sm sm:text-base text-slate-400">
-                Abyss IA intègre des fonctionnalités révolutionnaires conçues pour maximiser votre temps de travail et éliminer la procrastination.
+                {t.features.sectionSubtitle}
               </p>
             </div>
 
@@ -291,9 +465,9 @@ export default function App() {
                 <div className="size-11 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
                   <Brain size={22} className="animate-pulse" />
                 </div>
-                <h3 className="text-lg font-bold text-white">Gestion Intelligente des Tâches</h3>
+                <h3 className="text-lg font-bold text-white">{t.features.feat1Title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">
-                  L'assistant IA d'Abyss analyse vos tâches et crée automatiquement des sous-tâches gérables, estime la durée et priorise intelligemment selon vos objectifs SMART.
+                  {t.features.feat1Desc}
                 </p>
               </div>
 
@@ -302,9 +476,9 @@ export default function App() {
                 <div className="size-11 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
                   <Zap size={22} className="animate-bounce" />
                 </div>
-                <h3 className="text-lg font-bold text-white">Contrôle Anti-Procrastination</h3>
+                <h3 className="text-lg font-bold text-white">{t.features.feat2Title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">
-                  Un système de gamification engageant avec des EXP, des niveaux et un assistant personnel IA qui vous envoie des encouragements motivants au moment exact où vous en avez besoin.
+                  {t.features.feat2Desc}
                 </p>
               </div>
 
@@ -313,9 +487,9 @@ export default function App() {
                 <div className="size-11 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
                   <BarChart3 size={22} />
                 </div>
-                <h3 className="text-lg font-bold text-white">Analyses Statistiques Avancées</h3>
+                <h3 className="text-lg font-bold text-white">{t.features.feat3Title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">
-                  L'analyse de productivité IA identifie vos pics de performance cognitifs quotidiens et vous fournit des rapports hebdomadaires détaillés avec des insights actionnables.
+                  {t.features.feat3Desc}
                 </p>
               </div>
 
@@ -324,9 +498,9 @@ export default function App() {
                 <div className="size-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                   <ShieldCheck size={22} />
                 </div>
-                <h3 className="text-lg font-bold text-white">Chiffrement & Sécurité Globale</h3>
+                <h3 className="text-lg font-bold text-white">{t.features.feat4Title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">
-                  Vos données personnelles, plannings et conversations sont chiffrés de bout en bout. Nous respectons à 100% votre vie privée et ne revendons aucune information.
+                  {t.features.feat4Desc}
                 </p>
               </div>
 
@@ -335,9 +509,9 @@ export default function App() {
                 <div className="size-11 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400">
                   <Users size={22} />
                 </div>
-                <h3 className="text-lg font-bold text-white">Communauté Discord Active</h3>
+                <h3 className="text-lg font-bold text-white">{t.features.feat5Title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">
-                  Rejoignez des milliers d'étudiants, d'entrepreneurs et de passionnés sur notre serveur Discord pour poser vos questions, échanger des astuces et progresser ensemble.
+                  {t.features.feat5Desc}
                 </p>
               </div>
 
@@ -347,9 +521,9 @@ export default function App() {
                   <div className="size-11 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
                     <Sparkles size={22} />
                   </div>
-                  <h3 className="text-lg font-bold text-white">Nouveautés en Avant-Première</h3>
+                  <h3 className="text-lg font-bold text-white">{t.features.feat6Title}</h3>
                   <p className="text-sm text-slate-400 leading-relaxed">
-                    Notre équipe travaille chaque jour sur de nouvelles extensions intelligentes. Rejoignez nos canaux pour voter pour les prochaines fonctionnalités !
+                    {t.features.feat6Desc}
                   </p>
                 </div>
                 <a
@@ -358,7 +532,7 @@ export default function App() {
                   rel="noreferrer"
                   className="w-full mt-4 flex items-center justify-center gap-2 py-3 rounded-xl border border-white/10 hover:border-pink-500/30 text-xs font-bold text-slate-300 hover:text-white transition-all duration-300 bg-white/5"
                 >
-                  Installer Abyss IA
+                  {t.nav.install}
                   <ArrowRight size={14} />
                 </a>
               </div>
@@ -377,20 +551,20 @@ export default function App() {
                 {/* Left Columns - Text content */}
                 <div className="lg:col-span-5 space-y-6">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/15 border border-violet-500/20 text-xs font-semibold text-violet-300">
-                    Séries d'Habitudes & Rapports
+                    {t.dashboard.microBadge}
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
-                    Suivez Votre Progression <br /> Avec Des Statistiques Claires
+                    {t.dashboard.title}
                   </h2>
                   <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
-                    Notre tracker d'habitudes avec IA analyse vos routines hebdomadaires et vous propose des insights pertinents pour anticiper les baisses de régime et optimiser vos pics d'attention.
+                    {t.dashboard.subtitle}
                   </p>
                   <ul className="space-y-3.5 pt-2">
                     {[
-                      "Recommandations de routines durables",
-                      "Détection intelligente des baisses de rythme",
-                      "Planification adaptative de sessions Pomodoro",
-                      "EXP bonus pour la complétion des objectifs"
+                      t.dashboard.bullet1,
+                      t.dashboard.bullet2,
+                      t.dashboard.bullet3,
+                      t.dashboard.bullet4
                     ].map(item => (
                       <li key={item} className="flex items-center gap-2.5 text-sm text-slate-300">
                         <CheckCircle2 size={16} className="text-pink-500 shrink-0" />
@@ -402,7 +576,7 @@ export default function App() {
 
                 {/* Right Columns - Premium Interactive React Dashboard Widget */}
                 <div className="lg:col-span-7 flex flex-col items-stretch justify-center w-full">
-                  <InteractiveDashboardDemo />
+                  <InteractiveDashboardDemo lang={lang} />
                 </div>
 
               </div>
@@ -415,16 +589,16 @@ export default function App() {
             {/* Header */}
             <div className="text-center max-w-2xl mx-auto space-y-4">
               <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-                Vos Questions, <span className="gradient-text">Nos Réponses</span>
+                {t.faq.sectionTitle}
               </h2>
               <p className="text-sm sm:text-base text-slate-400">
-                Tout ce que vous devez savoir sur notre assistant IA de productivité.
+                {t.faq.sectionSubtitle}
               </p>
             </div>
 
             {/* Accordion List */}
             <div className="max-w-3xl mx-auto space-y-3.5">
-              {faqData.map((faq, index) => {
+              {currentFaqData.map((faq, index) => {
                 const isActive = activeFaq === index;
                 return (
                   <div 
@@ -472,10 +646,14 @@ export default function App() {
                 <Sparkles size={28} />
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-                Optimisez Votre Temps Dès <span className="gradient-text">Aujourd'hui</span>
+                {lang === 'fr' ? <>Optimisez Votre Temps Dès <span className="gradient-text">Aujourd'hui</span></> : 
+                 lang === 'en' ? <>Optimize Your Time <span className="gradient-text">Today</span></> :
+                 <>Optimice su tiempo <span className="gradient-text">hoy mismo</span></>}
               </h2>
               <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed">
-                Téléchargez dès maintenant l'application Abyss IA et intégrez la puissance de l'intelligence artificielle au service de votre réussite.
+                {lang === 'fr' ? "Téléchargez dès maintenant l'application Abyss IA et intégrez la puissance de l'intelligence artificielle au service de votre réussite." :
+                 lang === 'en' ? "Download the Abyss IA app now and integrate the power of artificial intelligence to support your success." :
+                 "Descargue la aplicación Abyss IA ahora e integre el poder de la inteligencia artificial al servicio de su éxito."}
               </p>
               
               <div className="pt-2">
@@ -486,7 +664,7 @@ export default function App() {
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4.5 rounded-2xl font-bold text-white gradient-button shadow-xl shadow-pink-500/20 text-base cursor-pointer"
                 >
                   <Smartphone size={18} />
-                  Installer l'application mobile
+                  {t.hero.ctaInstall}
                   <ArrowRight size={18} />
                 </a>
               </div>
@@ -494,7 +672,7 @@ export default function App() {
               <div className="flex justify-center items-center gap-4 text-xs text-slate-500">
                 <span className="flex items-center gap-1">
                   <ShieldCheck size={14} className="text-emerald-400" />
-                  Google Play Protect Certifié
+                  {t.hero.trustBadge2}
                 </span>
                 <span className="h-3 w-px bg-white/10" />
                 <span>Version 1.0.4 - Premium</span>
@@ -506,13 +684,13 @@ export default function App() {
           <section id="contact" className="space-y-12 scroll-mt-20">
             <div className="text-center max-w-2xl mx-auto space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/15 border border-violet-500/20 text-xs font-semibold text-violet-300">
-                Support & Assistance
+                {t.contact.microBadge}
               </div>
               <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-                Un Problème ? <span className="gradient-text">Contactez-nous</span>
+                {t.contact.sectionTitle}
               </h2>
               <p className="text-sm sm:text-base text-slate-400">
-                Notre équipe est à votre entière disposition pour résoudre vos soucis techniques ou répondre à vos suggestions.
+                {t.contact.sectionSubtitle}
               </p>
             </div>
 
@@ -524,9 +702,9 @@ export default function App() {
                   <div className="size-12 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 group-hover:scale-105 transition-all duration-300">
                     <Mail size={24} />
                   </div>
-                  <h3 className="text-lg font-bold text-white">Par E-mail</h3>
+                  <h3 className="text-lg font-bold text-white">{t.contact.emailTitle}</h3>
                   <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                    Envoyez-nous un e-mail à tout moment. Nous répondons généralement en moins de 24 heures aux demandes d'assistance technique ou de suggestions pour l'application.
+                    {t.contact.emailDesc}
                   </p>
                 </div>
                 <a 
@@ -545,9 +723,9 @@ export default function App() {
                   <div className="size-12 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 group-hover:scale-105 transition-all duration-300">
                     <Phone size={24} />
                   </div>
-                  <h3 className="text-lg font-bold text-white">Par Téléphone</h3>
+                  <h3 className="text-lg font-bold text-white">{t.contact.phoneTitle}</h3>
                   <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                    Besoin d'une réponse directe ? Notre support par téléphone est joignable du lundi au vendredi de 9h à 18h pour toute urgence technique.
+                    {t.contact.phoneDesc}
                   </p>
                 </div>
                 <a 
@@ -569,7 +747,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-white/5">
             
-            {/* Column 1 - Brand Info */}
+            {/* Column 1 - Brand Info & Newsletter */}
             <div className="lg:col-span-4 space-y-4 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-2.5">
                 <img 
@@ -582,38 +760,67 @@ export default function App() {
                 </span>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed max-w-sm mx-auto md:mx-0">
-                L'assistant de productivité intelligent nouvelle génération. Notre écosystème intègre des trackers d'habitudes, des outils Pomodoro et de l'intelligence artificielle pour maximiser votre temps et éliminer la procrastination.
+                {t.footer.brandDesc}
               </p>
-              {/* Dynamic Newsletter Simulation */}
+              
+              {/* Highly Operational Newsletter system */}
               <div className="pt-2">
-                <form className="flex gap-2 max-w-xs mx-auto md:mx-0" onSubmit={(e) => e.preventDefault()}>
-                  <input 
-                    type="email" 
-                    placeholder="Votre email..." 
-                    className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-pink-500 transition-all duration-300 w-full"
-                  />
-                  <button className="bg-white/5 border border-white/10 hover:bg-white/10 text-xs px-3 rounded-lg text-white font-bold transition-all duration-300">
-                    S'abonner
-                  </button>
-                </form>
-                <p className="text-[10px] text-slate-600 mt-1.5 text-center md:text-left">Inscrivez-vous à nos newsletters pour recevoir nos astuces de productivité.</p>
+                {newsletterStatus === 'success' ? (
+                  <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-3.5 text-xs text-emerald-400 leading-relaxed text-left animate-fade-in flex gap-2 items-start max-w-sm mx-auto md:mx-0">
+                    <CheckCircle2 size={16} className="shrink-0 text-emerald-400 mt-0.5" />
+                    <div>
+                      <span className="font-extrabold block text-white mb-0.5">{t.footer.subscribeBtn} OK</span>
+                      {newsletterMessage}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="space-y-2">
+                    <form className="flex gap-2 max-w-xs mx-auto md:mx-0" onSubmit={handleNewsletterSubmit}>
+                      <input 
+                        type="email" 
+                        value={newsletterEmail}
+                        onChange={(e) => setNewsletterEmail(e.target.value)}
+                        placeholder={t.footer.newsletterPlaceholder} 
+                        disabled={newsletterStatus === 'submitting'}
+                        className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-pink-500 transition-all duration-300 w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                      />
+                      <button 
+                        type="submit"
+                        disabled={newsletterStatus === 'submitting'}
+                        className="bg-white/5 border border-white/10 hover:border-pink-500/30 text-xs px-3 rounded-lg text-white font-bold transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed min-w-[80px] flex items-center justify-center"
+                      >
+                        {newsletterStatus === 'submitting' ? (
+                          <div className="size-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        ) : t.footer.subscribeBtn}
+                      </button>
+                    </form>
+                    
+                    {/* Error or Already subscribed message */}
+                    {newsletterMessage && (
+                      <p className={`text-[10px] text-left max-w-xs mx-auto md:mx-0 ${
+                        newsletterStatus === 'error' ? 'text-pink-500 font-bold' : 'text-yellow-400'
+                      }`}>{newsletterMessage}</p>
+                    )}
+
+                    <p className="text-[10px] text-slate-600 mt-1.5 text-center md:text-left">{t.footer.newsletterSubNote}</p>
+                  </div>
+                )}
               </div>
             </div>
 
             {/* Column 2 - Product quick links */}
             <div className="lg:col-span-2 text-center md:text-left space-y-3.5">
-              <h4 className="text-xs font-black text-white uppercase tracking-wider">Produit</h4>
+              <h4 className="text-xs font-black text-white uppercase tracking-wider">{t.footer.colProduct}</h4>
               <ul className="space-y-2 text-xs">
-                <li><a href="#features" className="hover:text-white transition-colors duration-300">Fonctionnalités</a></li>
-                <li><a href="#pomodoro" className="hover:text-white transition-colors duration-300">Chronomètre Focus</a></li>
-                <li><a href="#habits" className="hover:text-white transition-colors duration-300">Suivi d'Habitudes</a></li>
-                <li><a href="#demo" className="hover:text-white transition-colors duration-300">Démo Interactive</a></li>
+                <li><a href="#features" className="hover:text-white transition-colors duration-300">{t.nav.features}</a></li>
+                <li><a href="#pomodoro" className="hover:text-white transition-colors duration-300">{t.nav.demos} (Pomodoro)</a></li>
+                <li><a href="#habits" className="hover:text-white transition-colors duration-300">{t.nav.demos} (Habit Tracker)</a></li>
               </ul>
             </div>
 
             {/* Column 3 - Community links */}
             <div className="lg:col-span-3 text-center md:text-left space-y-3.5">
-              <h4 className="text-xs font-black text-white uppercase tracking-wider">Communauté</h4>
+              <h4 className="text-xs font-black text-white uppercase tracking-wider">{t.footer.colCommunity}</h4>
               <ul className="space-y-2 text-xs">
                 <li>
                   <a 
@@ -629,13 +836,12 @@ export default function App() {
                 </li>
                 <li><a href="#" className="hover:text-white transition-colors duration-300">Twitter / X</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-300">Blog Abyss IA</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-300">Guide de Productivité</a></li>
               </ul>
             </div>
 
             {/* Column 4 - Support & Legal info */}
             <div className="lg:col-span-3 text-center md:text-left space-y-3.5">
-              <h4 className="text-xs font-black text-white uppercase tracking-wider">Contact & Support</h4>
+              <h4 className="text-xs font-black text-white uppercase tracking-wider">{t.footer.colSupport}</h4>
               <ul className="space-y-2 text-xs">
                 <li>
                   <a href={`mailto:${SUPPORT_EMAIL}`} className="inline-flex items-center gap-1.5 hover:text-white transition-colors duration-300">
@@ -652,7 +858,7 @@ export default function App() {
                 <li>
                   <a href="#" className="inline-flex items-center gap-1.5 hover:text-white transition-colors duration-300">
                     <Shield size={13} />
-                    <span>Mentions Légales</span>
+                    <span>{t.footer.legal}</span>
                   </a>
                 </li>
               </ul>
@@ -660,7 +866,7 @@ export default function App() {
               <div className="pt-2 flex justify-center md:justify-start">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/5 border border-emerald-500/10 text-[10px] text-emerald-400 font-bold">
                   <ShieldCheck size={14} />
-                  <span>Google Play Protect Activé</span>
+                  <span>Google Play Protect Certifié</span>
                 </div>
               </div>
             </div>
@@ -670,13 +876,12 @@ export default function App() {
           {/* Bottom row copyrights */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center text-[10px] text-slate-500">
             <div className="space-y-1">
-              <p>© {new Date().getFullYear()} Abyss IA. Tous droits réservés.</p>
-              <p className="text-[9px] text-slate-600">Application IA productivité France - Système de concentration et d'habitudes intelligent.</p>
+              <p>© {new Date().getFullYear()} {t.footer.copyright}</p>
+              <p className="text-[9px] text-slate-600">{t.footer.subNote}</p>
             </div>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-slate-300 transition-colors duration-300">Conditions Générales</a>
-              <a href="#" className="hover:text-slate-300 transition-colors duration-300">Données Personnelles</a>
-              <a href="#" className="hover:text-slate-300 transition-colors duration-300">Cookies</a>
+              <a href="#" className="hover:text-slate-300 transition-colors duration-300">{t.footer.legal}</a>
+              <a href="#" className="hover:text-slate-300 transition-colors duration-300">{t.footer.cgu}</a>
             </div>
           </div>
         </div>

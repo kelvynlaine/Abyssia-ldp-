@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   BarChart3, 
   Brain, 
@@ -12,31 +12,142 @@ import {
   Sparkles 
 } from 'lucide-react';
 
-const WEEKLY_DATA = [
-  { day: "L", hrs: 4, label: "Lundi", details: "Début de semaine calme. 4 heures concentrées, principalement sur les tâches de routine." },
-  { day: "M", hrs: 6, label: "Mardi", details: "Excellente régularité. 6 heures de focus. Session Pomodoro intense en fin d'après-midi." },
-  { day: "M", hrs: 5, label: "Mercredi", details: "Planification de milieu de semaine. 5 heures. Session IA d'optimisation des objectifs." },
-  { day: "J", hrs: 7, label: "Jeudi", details: "Pic d'attention optimal ! 7 heures. Utilisation maximale du créneau recommandé par l'IA (14h-16h30)." },
-  { day: "V", hrs: 8, label: "Vendredi", details: "Productivité maximale ! 8 heures. Déblocage du succès hebdomadaire 'Productivité Élite'." },
-  { day: "S", hrs: 3, label: "Samedi", details: "Journée de repos actif. 3 heures. Routine matinale complétée, détente l'après-midi." },
-  { day: "D", hrs: 2, label: "Dimanche", details: "Préparation et planification. 2 heures. Revue hebdomadaire et ajustements de l'IA." }
-];
+const LABELS = {
+  fr: {
+    headerTitle: "Abyss IA - Centre d'Analyses",
+    headerSubtitle: "Tableau de bord de progression interactif",
+    tabStats: "Statistiques",
+    tabHabits: "Défis & EXP",
+    chartTitle: "Heures de Focus cette semaine",
+    chartSubtitle: "+15% vs Moyenne",
+    detailPrefix: "Détails du ",
+    aiBadge: "Recommandation IA",
+    aiRecText: "Votre attention culmine à 15h. Prévoyez vos sessions de focus à cette heure pour maximiser l'attention.",
+    totalFocus: "Temps focalisé total",
+    dailyStreaks: "Séries quotidiennes",
+    levelTitle: "NIVEAU ACTUEL",
+    levelNames: ["Savant du Focus", "Maître de la Productivité"],
+    progressSub: "Plus que {exp} EXP pour passer au Niveau 5",
+    progressMax: "Niveau Max Démo !",
+    dailyChallenges: "Défis quotidiens de l'IA",
+    toastTitle: "NIVEAU SUPÉRIEUR ACCUMULÉ !",
+    toastSub: "Félicitations, vous êtes passé Niveau 5 !",
+    toastDesc: "Votre assistant IA Abyss a mis à jour vos défis et votre vitesse de recharge cognitive.",
+    toastClose: "Fermer",
+    note: "* Essayez le widget ! Sélectionnez des jours ou cochez des objectifs pour simuler la gamification.",
+    suffixHours: "Heures",
+    suffixDays: "Jours",
+    weeklyData: [
+      { day: "L", hrs: 4, label: "Lundi", details: "Début de semaine calme. 4 heures concentrées, principalement sur les tâches de routine." },
+      { day: "M", hrs: 6, label: "Mardi", details: "Excellente régularité. 6 heures de focus. Session Pomodoro intense en fin d'après-midi." },
+      { day: "M", hrs: 5, label: "Mercredi", details: "Planification de milieu de semaine. 5 heures. Session IA d'optimisation des objectifs." },
+      { day: "J", hrs: 7, label: "Jeudi", details: "Pic d'attention optimal ! 7 heures. Utilisation maximale du créneau recommandé par l'IA (14h-16h30)." },
+      { day: "V", hrs: 8, label: "Vendredi", details: "Productivité maximale ! 8 heures. Déblocage du succès hebdomadaire 'Productivité Élite'." },
+      { day: "S", hrs: 3, label: "Samedi", details: "Journée de repos actif. 3 heures. Routine matinale complétée, détente l'après-midi." },
+      { day: "D", hrs: 2, label: "Dimanche", details: "Préparation et planification. 2 heures. Revue hebdomadaire et ajustements de l'IA." }
+    ],
+    habits: [
+      { id: 1, text: "Activer le focus Pomodoro Abyss IA", exp: 150, checked: false },
+      { id: 2, text: "Compléter 3 tâches prioritaires", exp: 200, checked: false },
+      { id: 3, text: "Faire 15 minutes de méditation cognitive", exp: 100, checked: false }
+    ]
+  },
+  en: {
+    headerTitle: "Abyss IA - Analytics Center",
+    headerSubtitle: "Interactive progress dashboard",
+    tabStats: "Statistics",
+    tabHabits: "Challenges & EXP",
+    chartTitle: "Focus Hours this week",
+    chartSubtitle: "+15% vs Average",
+    detailPrefix: "Details of ",
+    aiBadge: "AI Recommendation",
+    aiRecText: "Your focus peaks at 3:00 PM. Schedule your core tasks at this time to maximize concentration.",
+    totalFocus: "Total Focus Time",
+    dailyStreaks: "Daily Streaks",
+    levelTitle: "CURRENT LEVEL",
+    levelNames: ["Focus Scholar", "Absolute Productivity Master"],
+    progressSub: "Only {exp} EXP left to reach Level 5",
+    progressMax: "Demo Max Level reached!",
+    dailyChallenges: "Daily AI Challenges",
+    toastTitle: "LEVEL UP ACCUMULATED!",
+    toastSub: "Congratulations, you reached Level 5!",
+    toastDesc: "Your Abyss IA assistant has updated your challenges and cognitive recharge speeds.",
+    toastClose: "Close",
+    note: "* Try the widget! Select days or check off habits to simulate gamification.",
+    suffixHours: "Hours",
+    suffixDays: "Days",
+    weeklyData: [
+      { day: "M", hrs: 4, label: "Monday", details: "Calm start of the week. 4 hours focused, mostly on administrative tasks." },
+      { day: "T", hrs: 6, label: "Tuesday", details: "Excellent consistency. 6 hours focused. Intensive Pomodoro session in late afternoon." },
+      { day: "W", hrs: 5, label: "Wednesday", details: "Midweek planning. 5 hours. AI goals optimization session." },
+      { day: "T", hrs: 7, label: "Thursday", details: "Optimal focus peak! 7 hours. Maximum use of the slot recommended by the AI (2-4:30 PM)." },
+      { day: "F", hrs: 8, label: "Friday", details: "Maximum productivity! 8 hours. Unlocked 'Elite Productivity' weekly badge." },
+      { day: "S", hrs: 3, label: "Saturday", details: "Active recovery. 3 hours. Morning routine completed, relaxation in afternoon." },
+      { day: "S", hrs: 2, label: "Sunday", details: "Weekly review and planning. 2 hours. Review and AI routine adjustments." }
+    ],
+    habits: [
+      { id: 1, text: "Activate Abyss IA Pomodoro focus", exp: 150, checked: false },
+      { id: 2, text: "Complete 3 high priority tasks", exp: 200, checked: false },
+      { id: 3, text: "Do 15 minutes of cognitive meditation", exp: 100, checked: false }
+    ]
+  },
+  es: {
+    headerTitle: "Abyss IA - Centro de Análisis",
+    headerSubtitle: "Panel de progreso interactivo",
+    tabStats: "Estadísticas",
+    tabHabits: "Desafíos y EXP",
+    chartTitle: "Horas de Enfoque esta semana",
+    chartSubtitle: "+15% vs Promedio",
+    detailPrefix: "Detalles del ",
+    aiBadge: "Recomendación IA",
+    aiRecText: "Su atención alcanza su punto máximo a las 15:00. Programe sus tareas clave en este horario para maximizar el enfoque.",
+    totalFocus: "Tiempo total de enfoque",
+    dailyStreaks: "Rachas diarias",
+    levelTitle: "NIVEL ACTUAL",
+    levelNames: ["Erudito del Enfoque", "Maestro Absoluto de Productividad"],
+    progressSub: "Faltan {exp} EXP para llegar al Nivel 5",
+    progressMax: "¡Nivel Máximo Demo!",
+    dailyChallenges: "Desafíos diarios de IA",
+    toastTitle: "¡NIVEL SUPERIOR ACUMULADO!",
+    toastSub: "¡Felicidades, ha subido al Nivel 5!",
+    toastDesc: "Su asistente Abyss IA ha actualizado sus desafíos y la velocidad de recarga cognitiva.",
+    toastClose: "Cerrar",
+    note: "* ¡Pruebe el widget! Seleccione días o marque metas para simular la gamificación.",
+    suffixHours: "Horas",
+    suffixDays: "Días",
+    weeklyData: [
+      { day: "L", hrs: 4, label: "Lunes", details: "Inicio de semana tranquilo. 4 horas enfocado, principalmente en tareas rutinarias." },
+      { day: "M", hrs: 6, label: "Martes", details: "Excelente consistencia. 6 horas. Sesión Pomodoro intensa al final de la tarde." },
+      { day: "M", hrs: 5, label: "Miércoles", details: "Planificación de mitad de semana. 5 horas. Sesión de optimización de objetivos por IA." },
+      { day: "J", hrs: 7, label: "Jueves", details: "¡Pico de atención óptimo! 7 horas. Máximo uso del horario recomendado por IA (14h-16h30)." },
+      { day: "V", hrs: 8, label: "Viernes", details: "¡Productividad máxima! 8 horas. Desbloqueo de insignia 'Productividad Élite'." },
+      { day: "S", hrs: 3, label: "Sábado", details: "Recuperación activa. 3 horas. Rutina matutina completada, descanso por la tarde." },
+      { day: "D", hrs: 2, label: "Domingo", details: "Revisión semanal y planificación. 2 horas. Ajustes de rutina por la IA." }
+    ],
+    habits: [
+      { id: 1, text: "Activar el foco Pomodoro Abyss IA", exp: 150, checked: false },
+      { id: 2, text: "Completar 3 tareas prioritarias", exp: 200, checked: false },
+      { id: 3, text: "Hacer 15 minutos de meditación cognitiva", exp: 100, checked: false }
+    ]
+  }
+};
 
-const INITIAL_HABITS = [
-  { id: 1, text: "Activer le focus Pomodoro Abyss IA", exp: 150, checked: false },
-  { id: 2, text: "Compléter 3 tâches prioritaires", exp: 200, checked: false },
-  { id: 3, text: "Faire 15 minutes de méditation cognitive", exp: 100, checked: false }
-];
+export default function InteractiveDashboardDemo({ lang = 'fr' }) {
+  const labels = LABELS[lang] || LABELS.fr;
 
-export default function InteractiveDashboardDemo() {
   const [activeTab, setActiveTab] = useState('stats'); // 'stats' | 'habits'
-  const [selectedDayIdx, setSelectedDayIdx] = useState(4); // Default to Friday (Vendredi, index 4)
-  const [habits, setHabits] = useState(INITIAL_HABITS);
-  const [currentExp, setCurrentExp] = useState(720); // Out of 1000 for Level 4
+  const [selectedDayIdx, setSelectedDayIdx] = useState(4); // Friday
+  const [habits, setHabits] = useState(labels.habits);
+  const [currentExp, setCurrentExp] = useState(720);
   const [level, setLevel] = useState(4);
   const [showLevelUpToast, setShowLevelUpToast] = useState(false);
 
-  const selectedDay = WEEKLY_DATA[selectedDayIdx];
+  // Sync state when language changes
+  useEffect(() => {
+    setHabits(labels.habits);
+  }, [lang]);
+
+  const selectedDay = labels.weeklyData[selectedDayIdx] || labels.weeklyData[0];
 
   const handleToggleHabit = (id) => {
     setHabits(habits.map(habit => {
@@ -58,7 +169,7 @@ export default function InteractiveDashboardDemo() {
         } else if (newExp < 0) {
           newExp = 0;
         } else if (newExp >= 1000 && level === 5) {
-          newExp = 1000; // Cap for demo
+          newExp = 1000; // Cap
         }
 
         setCurrentExp(newExp);
@@ -70,7 +181,7 @@ export default function InteractiveDashboardDemo() {
     }));
   };
 
-  const totalWeeklyHours = WEEKLY_DATA.reduce((sum, item) => sum + item.hrs, 0);
+  const totalWeeklyHours = labels.weeklyData.reduce((sum, item) => sum + item.hrs, 0);
 
   return (
     <div className="w-full flex flex-col bg-black/40 border border-white/10 rounded-3xl p-5 sm:p-6 shadow-2xl relative overflow-hidden transition-all duration-300 hover:border-pink-500/20 backdrop-blur-md">
@@ -85,16 +196,16 @@ export default function InteractiveDashboardDemo() {
           <div className="size-16 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 flex items-center justify-center shadow-[0_0_20px_rgba(236,72,153,0.5)] animate-bounce mb-3">
             <Award size={32} className="text-white" />
           </div>
-          <h4 className="text-xl font-black text-white text-center">NIVEAU SUPÉRIEUR ACCUMULÉ !</h4>
-          <p className="text-sm text-pink-400 font-bold mb-2 animate-pulse">Félicitations, vous êtes passé Niveau 5 !</p>
+          <h4 className="text-xl font-black text-white text-center">{labels.toastTitle}</h4>
+          <p className="text-sm text-pink-400 font-bold mb-2 animate-pulse">{labels.toastSub}</p>
           <p className="text-xs text-slate-400 text-center max-w-xs leading-relaxed">
-            Votre assistant IA Abyss a mis à jour vos défis et votre vitesse de recharge cognitive.
+            {labels.toastDesc}
           </p>
           <button 
             onClick={() => setShowLevelUpToast(false)}
             className="mt-4 px-4 py-1.5 bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-bold text-white rounded-lg transition-all duration-300"
           >
-            Fermer
+            {labels.toastClose}
           </button>
         </div>
       )}
@@ -104,9 +215,9 @@ export default function InteractiveDashboardDemo() {
         <div>
           <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-1.5">
             <Sparkles size={16} className="text-pink-500 animate-pulse" />
-            Abyss IA - Centre d'Analyses
+            {labels.headerTitle}
           </h3>
-          <p className="text-xs text-slate-500 font-medium">Tableau de bord de progression interactif</p>
+          <p className="text-xs text-slate-500 font-medium">{labels.headerSubtitle}</p>
         </div>
         
         {/* Navigation Tabs */}
@@ -120,7 +231,7 @@ export default function InteractiveDashboardDemo() {
             }`}
           >
             <BarChart3 size={14} />
-            Statistiques
+            {labels.tabStats}
           </button>
           <button
             onClick={() => setActiveTab('habits')}
@@ -131,7 +242,7 @@ export default function InteractiveDashboardDemo() {
             }`}
           >
             <CheckCircle2 size={14} />
-            Défis & EXP
+            {labels.tabHabits}
           </button>
         </div>
       </div>
@@ -142,15 +253,15 @@ export default function InteractiveDashboardDemo() {
           {/* Main Chart Card */}
           <div className="bg-black/30 border border-white/5 rounded-2xl p-4">
             <div className="flex items-center justify-between mb-4">
-              <span className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Heures de Focus cette semaine</span>
+              <span className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">{labels.chartTitle}</span>
               <span className="text-[11px] font-bold text-violet-400 bg-violet-500/10 px-2 py-0.5 rounded-full flex items-center gap-1">
-                <TrendingUp size={10} /> +15% vs Moyenne
+                <TrendingUp size={10} /> {labels.chartSubtitle}
               </span>
             </div>
 
             {/* Simulated Bar Chart */}
             <div className="flex items-end justify-between gap-2.5 h-36 pt-2 pb-2 border-b border-white/5">
-              {WEEKLY_DATA.map((item, idx) => {
+              {labels.weeklyData.map((item, idx) => {
                 const isSelected = selectedDayIdx === idx;
                 const percent = (item.hrs / 8) * 100 + "%";
                 return (
@@ -182,10 +293,10 @@ export default function InteractiveDashboardDemo() {
               })}
             </div>
 
-            {/* Daily detail pane updating on selectedDay state */}
+            {/* Daily detail pane */}
             <div className="pt-3 min-h-[4rem] transition-all duration-300">
               <span className="text-[9px] uppercase tracking-wider font-extrabold text-pink-400 block mb-0.5">
-                Détails du {selectedDay.label}
+                {labels.detailPrefix}{selectedDay.label}
               </span>
               <p className="text-xs text-slate-300 leading-relaxed italic">
                 "{selectedDay.details}"
@@ -200,28 +311,28 @@ export default function InteractiveDashboardDemo() {
               <div className="absolute top-0 right-0 w-16 h-16 bg-cyan-500/5 rounded-full blur-xl pointer-events-none" />
               <div className="flex items-center gap-1.5">
                 <Brain size={14} className="text-cyan-400" />
-                <span className="text-[9px] uppercase tracking-widest font-black text-cyan-400">Recommandation IA</span>
+                <span className="text-[9px] uppercase tracking-widest font-black text-cyan-400">{labels.aiBadge}</span>
               </div>
               <p className="text-[11px] text-slate-400 leading-relaxed">
-                Votre attention culmine à <strong className="text-white">15h</strong>. Prévoyez vos sessions de focus à cette heure pour maximiser l'attention.
+                {labels.aiRecText}
               </p>
             </div>
 
             {/* Quick summary totals */}
             <div className="bg-black/30 border border-white/5 rounded-2xl p-4 flex flex-col justify-between">
               <div className="flex items-center justify-between text-xs text-slate-400">
-                <span>Temps focalisé total</span>
+                <span>{labels.totalFocus}</span>
                 <span className="font-extrabold text-white flex items-center gap-1">
                   <Flame size={12} className="text-pink-500 fill-current animate-pulse" />
-                  {totalWeeklyHours} Heures
+                  {totalWeeklyHours} {labels.suffixHours}
                 </span>
               </div>
               <div className="h-px bg-white/5 my-2" />
               <div className="flex items-center justify-between text-xs text-slate-400">
-                <span>Séries quotidiennes</span>
+                <span>{labels.dailyStreaks}</span>
                 <span className="font-extrabold text-pink-400 flex items-center gap-1">
                   <Flame size={12} className="fill-current text-pink-500" />
-                  15 Jours
+                  15 {labels.suffixDays}
                 </span>
               </div>
             </div>
@@ -241,9 +352,9 @@ export default function InteractiveDashboardDemo() {
                   {level}
                 </div>
                 <div>
-                  <span className="text-[9px] uppercase tracking-wider font-extrabold text-slate-500 block">NIVEAU ACTUEL</span>
+                  <span className="text-[9px] uppercase tracking-wider font-extrabold text-slate-500 block">{labels.levelTitle}</span>
                   <span className="text-xs font-black text-white">
-                    {level === 4 ? "Savant du Focus" : "Maître Absolu de la Productivité"}
+                    {level === 4 ? labels.levelNames[0] : labels.levelNames[1]}
                   </span>
                 </div>
               </div>
@@ -258,12 +369,12 @@ export default function InteractiveDashboardDemo() {
               />
             </div>
             <div className="flex justify-between items-center text-[10px] text-slate-500 font-medium">
-              <span>Niveau {level}</span>
+              <span>{labels.suffixHours} {level}</span>
               {level === 4 ? (
-                <span>Plus que {1000 - currentExp} EXP pour passer au Niveau 5</span>
+                <span>{labels.progressSub.replace("{exp}", 1000 - currentExp)}</span>
               ) : (
                 <span className="text-yellow-400 font-bold flex items-center gap-1">
-                  <Star size={10} className="fill-current" /> Niveau Max Démo !
+                  <Star size={10} className="fill-current" /> {labels.progressMax}
                 </span>
               )}
             </div>
@@ -271,7 +382,7 @@ export default function InteractiveDashboardDemo() {
 
           {/* Interactive challenges checklist */}
           <div className="space-y-2.5">
-            <span className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500 block">Défis quotidiens de l'IA</span>
+            <span className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500 block">{labels.dailyChallenges}</span>
             
             {habits.map((habit) => (
               <button
@@ -311,7 +422,7 @@ export default function InteractiveDashboardDemo() {
 
       {/* Footer tiny notice */}
       <p className="text-[10px] text-slate-500 text-center mt-5 italic select-none">
-        * Essayez le widget ! {activeTab === 'stats' ? 'Sélectionnez des jours' : 'Cochez des objectifs'} pour simuler la gamification d'Abyss IA.
+        {labels.note}
       </p>
 
     </div>
