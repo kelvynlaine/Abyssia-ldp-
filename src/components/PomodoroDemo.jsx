@@ -22,6 +22,34 @@ const LABELS = {
     workTitle: "Tiempo de trabajo",
     breakTitle: "Tiempo de descanso",
     note: "* ¡Pruebe el cronómetro! Este componente es 100% interactivo."
+  },
+  zh: {
+    work: "专注工作",
+    break: "休息放松",
+    workTitle: "工作时间",
+    breakTitle: "休息时间",
+    note: "* 试试计时器！此组件是100%互动的。"
+  },
+  it: {
+    work: "Lavoro Focalizzato",
+    break: "Pausa Recupero",
+    workTitle: "Tempo di lavoro",
+    breakTitle: "Tempo di pausa",
+    note: "* Prova il timer! Questo componente è al 100% interattivo."
+  },
+  ru: {
+    work: "Фокус-работа",
+    break: "Перерыв",
+    workTitle: "Время работы",
+    breakTitle: "Время отдыха",
+    note: "* Попробуйте таймер! Этот компонент полностью интерактивен."
+  },
+  uk: {
+    work: "Фокус-робота",
+    break: "Перерва",
+    workTitle: "Час роботи",
+    breakTitle: "Час відпочинку",
+    note: "* Спробуйте таймер! Цей компонент повністю інтерактивний."
   }
 };
 

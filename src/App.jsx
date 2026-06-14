@@ -143,6 +143,142 @@ export default function App() {
         question: "¿Están seguros mis datos en esta solución de IA de productividad?",
         answer: "Absolutamente. Sus consultas y datos personales están cifrados de extremo a extremo y no vendemos ninguna información a terceros. La privacidad es nuestra máxima prioridad. Todos los análisis de productividad de IA se realizan de forma segura y respetando su privacidad."
       }
+    ],
+    zh: [
+      {
+        question: "什么是 Abyss IA？这个个人人工智能助手是如何工作的？",
+        answer: "Abyss IA 是一款由生成式人工智能驱动的高级智能助手，旨在个性化您的效率体验。它结合了智能任务管理、习惯跟踪和优化的番茄钟技术，通过不断学习您的使用模式，帮助您更快地实现 SMART 目标。"
+      },
+      {
+        question: "如何有效利用 Abyss IA 提高我的工作效率？",
+        answer: "为了最大化您的效率，首先在应用程序中设定您的 SMART 目标。利用我们的 AI 习惯跟踪器建立可持续的日常习惯，并启动番茄工作钟进行专注工作。随后，人工智能效率分析将识别您的最佳表现时刻，为您建议最合理的日程安排。"
+      },
+      {
+        question: "如何利用 Abyss IA 习惯跟踪器培养良好的习惯？",
+        answer: "我们的 AI 习惯跟踪器会分析您的行为模式，并提供个性化的 AI 建议，以帮助您建立可持续的日常习惯。该应用还能检测您的潜在障碍（例如疲劳、累计延迟），并自动调整您的每日目标，以最大程度地提高成功几率。"
+      },
+      {
+        question: "Abyss IA 与其他效率应用相比有什么区别？",
+        answer: "得益于其全能生态系统，Abyss IA 脱颖而出，成为 2024 年最佳人工智能应用。我们的解决方案无需您使用多个工具来分别处理任务、习惯和番茄钟，而是通过一个智能助手将您的日常任务与认知健康联系起来，将所有功能融为一体。"
+      },
+      {
+        question: "如何使用 Abyss IA 助手来停止拖延？",
+        answer: "我们的应用采用了多种经 AI 强化的行之有效的技术。番茄钟技术将您的任务拆分为可管理的会话，游戏化使工作更具吸引力，个人人工智能助手还会向您发送定制的激励语言。此外，行为分析还可以识别您的拖延诱因，帮助您克服它们。"
+      },
+      {
+        question: "如何在我的安卓设备上安装 Abyss IA？",
+        answer: "您可以通过点击我们网站上的任何“安装应用”按钮来安装该应用。您将被直接重定向到我们的官方 Google Play 商店测试页面，从而保证 100% 安全下载和由 Google Play Protect 认证的安装。"
+      },
+      {
+        question: "此效率 AI 应用的系统要求是什么？",
+        answer: "Abyss IA 应用程序非常轻量，适用于任何运行 Android 8.0 或更高版本且至少有 50 MB 可用存储空间的安卓设备。我们的 AI 软件经过优化，非常省电。"
+      },
+      {
+        question: "在此效率 AI 解决方案中，我的数据安全吗？",
+        answer: "绝对安全。您的查询和个人数据均采用端到端加密，我们不会向第三方出售任何信息。隐私是我们的重中之重。所有 AI 效率分析均在安全且尊重您隐私的前提下进行。"
+      }
+    ],
+    it: [
+      {
+        question: "Cos'è Abyss IA e come funziona questo assistente personale IA?",
+        answer: "Abyss IA è un assistente intelligente premium potenziato dall'IA generativa per personalizzare la tua esperienza di produttività. Combina la gestione intelligente delle attività, il tracciamento delle abitudini e la tecnica Pomodoro ottimizzata per aiutarti a raggiungere i tuoi obiettivi SMART più velocemente, apprendendo continuamente dai tuoi schemi di utilizzo."
+      },
+      {
+        question: "Come utilizzare Abyss IA in modo efficace per migliorare la mia produttività?",
+        answer: "Per massimizzare la tua produttività, inizia impostando i tuoi obiettivi SMART nell'applicazione. Usa il nostro tracker di abitudini basato sull'IA per sviluppare routine sostenibili e avvia il timer Pomodoro per sessioni di lavoro focalizzate. L'analisi della produttività dell'IA identificherà quindi i tuoi momenti di massimo rendimento per suggerirti programmi ottimali."
+      },
+      {
+        question: "Come sviluppare buone abitudini con il tracker di abitudini Abyss IA?",
+        answer: "Il nostro tracker di abitudini basato sull'IA analizza i tuoi schemi comportamentali e fornisce raccomandazioni IA personalizzate per creare routine sostenibili. L'app rileva anche i tuoi potenziali ostacoli (es. fatica, ritardi accumulati) e regola automaticamente i tuoi obiettivi quotidiani per massimizzare le tue possibilità di successo."
+      },
+      {
+        question: "Abyss IA rispetto ad altre app di produttività: qual è la differenza?",
+        answer: "Abyss IA si distingue come la migliore applicazione IA del 2024 grazie al suo ecosistema all-in-one. Invece di avere uno strumento per i compiti, uno per le abitudini e un terzo per il Pomodoro, la nostra soluzione unifica tutto attraverso un assistente intelligente che fa da ponte tra i tuoi compiti quotidiani e la tua salute cognitiva."
+      },
+      {
+        question: "Come smettere di procrastinare con l'assistente di Abyss IA?",
+        answer: "La nostra applicazione utilizza diverse tecniche collaudate amplificate dall'IA. La tecnica Pomodoro suddivide i tuoi compiti in sessioni gestibili, la gamification rende il lavoro stimolante e l'assistente IA personale ti invia incoraggiamenti motivazionali personalizzati. Inoltre, l'analisi comportamentale identifica i fattori scatenanti della tua procrastinazione per aiutarti a superarli."
+      },
+      {
+        question: "Come installare Abyss IA sul mio dispositivo Android?",
+        answer: "Puoi installare l'applicazione cliccando su qualsiasi pulsante 'Installa App' sul nostro sito. Verrai reindirizzato direttamente alla nostra pagina ufficiale di test del Google Play Store, garantendo un download e un'installazione sicuri al 100% e certificati da Google Play Protect."
+      },
+      {
+        question: "Quali sono i requisiti di sistema per questa app di produttività IA?",
+        answer: "L'applicazione Abyss IA è estremamente leggera e funziona su qualsiasi dispositivo Android dotato di Android 8.0 o versioni successive, con un minimo di 50 MB di spazio di archiviazione disponibile. Il nostro software IA è ottimizzato per consumare pochissima batteria."
+      },
+      {
+        question: "I miei dati sono al sicuro in questa soluzione IA per la produttività?",
+        answer: "Assolutamente sì. Le tue richieste e i tuoi dati personali sono crittografati end-to-end e non vendiamo alcuna informazione a terzi. La privacy è la nostra massima priorità. Tutte le analisi di produttività dell'IA vengono eseguite in modo sicuro e nel rispetto della tua privacy."
+      }
+    ],
+    ru: [
+      {
+        question: "Что такое Abyss IA и как работает этот персональный ИИ-ассистент?",
+        answer: "Abyss IA — это умный помощник премиум-класса на базе генеративного искусственного интеллекта для персонализации вашей продуктивности. Он сочетает в себе умное управление задачами, трекер привычек и оптимизированную технику Pomodoro, помогая вам быстрее достигать целей SMART и постоянно обучаясь на основе ваших шаблонов использования."
+      },
+      {
+        question: "Как эффективно использовать Abyss IA для повышения продуктивности?",
+        answer: "Чтобы максимизировать продуктивность, начните с постановки SMART-целей в приложении. Используйте наш ИИ-трекер привычек для выработки устойчивых рутин и запускайте таймер Pomodoro для сфокусированной работы. ИИ-анализ продуктивности определит пики вашей активности и предложит оптимальное расписание."
+      },
+      {
+        question: "Как выработать полезные привычки с помощью трекера привычек Abyss IA?",
+        answer: "Наш ИИ-трекер привычек анализирует ваше поведение и предлагает персональные рекомендации для создания устойчивых рутин. Приложение также обнаруживает потенциальные препятствия (например, усталость или накопленные задержки) и автоматически корректирует ежедневные цели для достижения успеха."
+      },
+      {
+        question: "Abyss IA по сравнению с другими приложениями для продуктивности — в чем разница?",
+        answer: "Abyss IA выделяется как лучшее ИИ-приложение 2024 года благодаря своей экосистеме «все в одном». Вместо того чтобы использовать отдельные инструменты для задач, привычек и Pomodoro, наше решение объединяет все функции с помощью умного ассистента, связывающего ваши повседневные дела с когнитивным здоровьем."
+      },
+      {
+        question: "Как перестать прокрастинировать с помощью ассистента Abyss IA?",
+        answer: "Наше приложение использует проверенные техники, усиленные ИИ. Метод Pomodoro разбивает задачи на управляемые сессии, геймификация делает процесс увлекательным, а личный ИИ-ассистент отправляет вам индивидуальные слова поддержки. Кроме того, поведенческий анализ выявляет триггеры прокрастинации, помогая вам справиться с ними."
+      },
+      {
+        question: "Как установить Abyss IA на мое устройство Android?",
+        answer: "Вы можете установить приложение, нажав на любую кнопку «Установить» на нашем сайте. Вы будете перенаправлены на официальную страницу тестирования в Google Play Store, что гарантирует 100% безопасную загрузку и установку, сертифицированную Google Play Protect."
+      },
+      {
+        question: "Каковы системные требования для этого ИИ-приложения продуктивности?",
+        answer: "Приложение Abyss IA чрезвычайно легкое и работает на любом устройстве Android с версией Android 8.0 или выше при наличии не менее 50 МБ свободного места. Наше ПО оптимизировано для экономии заряда батареи."
+      },
+      {
+        question: "Безопасны ли мои данные в этом ИИ-решении для продуктивности?",
+        answer: "Абсолютно. Ваши запросы и личные данные шифруются сквозным методом, и мы не продаем информацию третьим лицам. Конфиденциальность — наш главный приоритет. Все анализы продуктивности выполняются безопасно и с уважением к вашей частной жизни."
+      }
+    ],
+    uk: [
+      {
+        question: "Що таке Abyss IA і як працює цей персональний ШІ-асистент?",
+        answer: "Abyss IA — це розумний помічник преміумкласу на базі генеративного штучного інтелекту для персоналізації вашої продуктивності. Він поєднує в собі розумне керування завданнями, трекер звичок та оптимізовану техніку Pomodoro, допомагаючи вам швидше досягати цілей SMART та постійно навчаючись на основі ваших шаблонів використання."
+      },
+      {
+        question: "Як ефективно використовувати Abyss IA для покращення продуктивності?",
+        answer: "Щоб максимізувати продуктивність, почніть із встановлення SMART-цілей у додатку. Використовуйте наш ШІ-трекер звичок для формування стійких рутин та запускайте таймер Pomodoro для сфокусованої роботи. ШІ-аналіз продуктивності визначить піки вашої активності та запропонує оптимальний розклад."
+      },
+      {
+        question: "Як розвинути корисні звички за допомогою трекера звичок Abyss IA?",
+        answer: "Наш ШІ-трекер звичок аналізує вашу поведінку та надає персоналізовані рекомендації для створення стійких рутин. Додаток також виявляє потенційні перешкоди (наприклад, втому чи накопичені затримки) і автоматично коригує щоденні цілі для досягнення успіху."
+      },
+      {
+        question: "Abyss IA порівняно з іншими додатками для продуктивності — в чому різниця?",
+        answer: "Abyss IA виділяється як найкращий ШІ-додаток 2024 року завдяки своїй екосистемі «все в одному». Замість використання окремих інструментів для завдань, звичок та Pomodoro, наше рішення об'єднує всі функції за допомогою розумного асистента, який пов'язує ваші повсякденні справи з когнітивним здоров'ям."
+      },
+      {
+        question: "Як перестати прокрастинувати за допомогою асистента Abyss IA?",
+        answer: "Наш додаток використовує перевірені техніки, підсилені ШІ. Метод Pomodoro розбиває завдання на керовані сесії, гейміфікація робить процес захопливим, а особистісний ШІ-асистент надсилає вам індивідуальні слова підтримки. Крім того, поведінковий аналіз виявляє тригери прокрастинації, допомагаючи вам впоратися з ними."
+      },
+      {
+        question: "Як встановити Abyss IA на мій пристрій Android?",
+        answer: "Ви можете встановити додаток, натиснувши на будь-яку кнопку «Встановити» на нашому сайті. Вас буде перенаправлено безпосередньо на офіційну сторінку тестування в Google Play Store, що гарантує 100% безпечне завантаження та встановлення, сертифіковане Google Play Protect."
+      },
+      {
+        question: "Які системні вимоги для цього ШІ-додатка продуктивності?",
+        answer: "Додаток Abyss IA надзвичайно легкий і працює на будь-кому пристрої Android із версією Android 8.0 або вище за наявності не менше 50 МБ вільного місця. Наше програмне забезпечення оптимізоване для економії заряду батареї."
+      },
+      {
+        question: "Чи безпечні мої дані в цьому ШІ-рішенні для продуктивності?",
+        answer: "Абсолютно. Ваші запити та особисті дані шифруються наскрізним методом, і ми не продаємо інформацію третім особам. Конфіденційність — наш головний пріоритет. Усі аналізи продуктивності виконуються безпечно та з повагою до вашого приватного життя."
+      }
     ]
   };
 
@@ -392,7 +528,7 @@ export default function App() {
 
             {/* Right Mockup Display */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
-              <AppMockupShowcase />
+              <AppMockupShowcase lang={lang} />
             </div>
 
           </section>
@@ -777,12 +913,12 @@ export default function App() {
                     className="inline-flex items-center gap-1 hover:text-white transition-colors duration-300"
                   >
                     <MessageSquare size={13} />
-                    <span>Discord Officiel</span>
+                    <span>{t.footer.officialDiscord}</span>
                     <ExternalLink size={10} className="text-slate-600" />
                   </a>
                 </li>
                 <li><a href="#" className="hover:text-white transition-colors duration-300">Twitter / X</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-300">Blog Abyss IA</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-300">{t.footer.blog}</a></li>
               </ul>
             </div>
 
@@ -813,7 +949,7 @@ export default function App() {
               <div className="pt-2 flex justify-center md:justify-start">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/5 border border-emerald-500/10 text-[10px] text-emerald-400 font-bold">
                   <ShieldCheck size={14} />
-                  <span>Google Play Protect Certifié</span>
+                  <span>{t.hero.trustBadge2}</span>
                 </div>
               </div>
             </div>

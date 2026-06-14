@@ -61,6 +61,86 @@ const LABELS = {
       { id: 3, name: "Beber 2L de agua pura", category: "Santé", streak: 8, days: [true, true, true, true, false, false, false] },
       { id: 4, name: "Lectura constructiva (15 p.)", category: "Apprendre", streak: 3, days: [true, true, true, false, false, false, false] }
     ]
+  },
+  zh: {
+    title: "智能习惯跟踪",
+    subtitle: "由人工智能提供的个性化推荐",
+    level: "等级 4",
+    perfect: "达成每周完美连击！已更新人工智能推荐（+50 EXP）。",
+    note: "* 点击工作日以模拟您的日常活动并增加连击！",
+    days: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+    categories: {
+      Mental: "心理",
+      Focus: "专注",
+      Santé: "健康",
+      Apprendre: "学习"
+    },
+    habits: [
+      { id: 1, name: "使用AI助手冥想", category: "Mental", streak: 5, days: [true, true, true, true, true, false, false] },
+      { id: 2, name: "25分钟番茄钟会话", category: "Focus", streak: 12, days: [true, true, true, true, true, true, false] },
+      { id: 3, name: "饮用2升纯净水", category: "Santé", streak: 8, days: [true, true, true, true, false, false, false] },
+      { id: 4, name: "建设性阅读（15页）", category: "Apprendre", streak: 3, days: [true, true, true, false, false, false, false] }
+    ]
+  },
+  it: {
+    title: "Tracker di Abitudini Intelligente",
+    subtitle: "Raccomandazioni personalizzate dall'IA",
+    level: "LIVELLO 4",
+    perfect: "Serie perfetta settimanale completata! Raccomandazioni IA aggiornate (+50 EXP).",
+    note: "* Clicca sui giorni della settimana per simulare la tua routine e aumentare le tue serie!",
+    days: ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"],
+    categories: {
+      Mental: "Mentale",
+      Focus: "Focus",
+      Santé: "Salute",
+      Apprendre: "Imparare"
+    },
+    habits: [
+      { id: 1, name: "Meditare con l'assistente IA", category: "Mental", streak: 5, days: [true, true, true, true, true, false, false] },
+      { id: 2, name: "Sessione Pomodoro di 25 min", category: "Focus", streak: 12, days: [true, true, true, true, true, true, false] },
+      { id: 3, name: "Bere 2L di acqua pura", category: "Santé", streak: 8, days: [true, true, true, true, false, false, false] },
+      { id: 4, name: "Lettura costruttiva (15 p.)", category: "Apprendre", streak: 3, days: [true, true, true, false, false, false, false] }
+    ]
+  },
+  ru: {
+    title: "Умный трекер привычек",
+    subtitle: "Персональные рекомендации от ИИ",
+    level: "УРОВЕНЬ 4",
+    perfect: "Недельная серия выполнена! Рекомендации ИИ обновлены (+50 EXP).",
+    note: "* Нажимайте на дни недели, чтобы симулировать рутину и увеличивать серии!",
+    days: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+    categories: {
+      Mental: "Ментальное",
+      Focus: "Фокус",
+      Santé: "Здоровье",
+      Apprendre: "Обучение"
+    },
+    habits: [
+      { id: 1, name: "Медитировать с ИИ-помощником", category: "Mental", streak: 5, days: [true, true, true, true, true, false, false] },
+      { id: 2, name: "25-минутная сессия Pomodoro", category: "Focus", streak: 12, days: [true, true, true, true, true, true, false] },
+      { id: 3, name: "Пить 2 л чистой воды", category: "Santé", streak: 8, days: [true, true, true, true, false, false, false] },
+      { id: 4, name: "Полезное чтение (15 стр.)", category: "Apprendre", streak: 3, days: [true, true, true, false, false, false, false] }
+    ]
+  },
+  uk: {
+    title: "Розумний трекер звичок",
+    subtitle: "Персоналізовані рекомендації від ШІ",
+    level: "РІВЕНЬ 4",
+    perfect: "Тижнева ідеальна серія виконана! Рекомендації ШІ оновлено (+50 EXP).",
+    note: "* Натискайте на дні тижня, щоб симулювати рутину та збільшувати серії!",
+    days: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"],
+    categories: {
+      Mental: "Ментальні",
+      Focus: "Фокус",
+      Santé: "Здоров'я",
+      Apprendre: "Навчання"
+    },
+    habits: [
+      { id: 1, name: "Медітувати з ШІ-помічником", category: "Mental", streak: 5, days: [true, true, true, true, true, false, false] },
+      { id: 2, name: "25-хвилинна сесія Pomodoro", category: "Focus", streak: 12, days: [true, true, true, true, true, true, false] },
+      { id: 3, name: "Пити 2 л чистої води", category: "Santé", streak: 8, days: [true, true, true, true, false, false, false] },
+      { id: 4, name: "Корисне читання (15 стор.)", category: "Apprendre", streak: 3, days: [true, true, true, false, false, false, false] }
+    ]
   }
 };
 
