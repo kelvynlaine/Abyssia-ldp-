@@ -939,7 +939,7 @@ export default function App() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="inline-flex items-center gap-1.5 hover:text-white transition-colors duration-300">
+                  <a href="/privacy.html" className="inline-flex items-center gap-1.5 hover:text-white transition-colors duration-300">
                     <Shield size={13} />
                     <span>{t.footer.legal}</span>
                   </a>
@@ -963,8 +963,8 @@ export default function App() {
               <p className="text-[9px] text-slate-600">{t.footer.subNote}</p>
             </div>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-slate-300 transition-colors duration-300">{t.footer.legal}</a>
-              <a href="#" className="hover:text-slate-300 transition-colors duration-300">{t.footer.cgu}</a>
+              <a href="/privacy.html" className="hover:text-slate-300 transition-colors duration-300">{t.footer.legal}</a>
+              <a href="/terms.html" className="hover:text-slate-300 transition-colors duration-300">{t.footer.cgu}</a>
             </div>
           </div>
         </div>
