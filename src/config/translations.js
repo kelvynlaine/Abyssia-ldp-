@@ -45,6 +45,16 @@ export const TRANSLATIONS = {
       bullet3: "Planification adaptative de sessions Pomodoro",
       bullet4: "EXP bonus pour la complétion des objectifs"
     },
+    appstore: {
+      microBadge: "Maintenant sur l'App Store",
+      title: "Téléchargez Abyss IA sur iPhone & iPad",
+      subtitle: "Abyss IA est officiellement disponible sur l'App Store. Installez l'application en un clic et profitez de votre assistant de productivité IA, parfaitement optimisé pour iOS, où que vous soyez.",
+      bullet1: "Optimisé pour iPhone et iPad",
+      bullet2: "Installation rapide et 100% sécurisée",
+      bullet3: "Synchronisation iCloud et mises à jour automatiques",
+      badgeTop: "Télécharger dans l'",
+      cta: "Télécharger sur l'App Store"
+    },
     faq: {
       sectionTitle: "Vos Questions, Nos Réponses",
       sectionSubtitle: "Tout ce que vous devez savoir sur notre assistant IA de productivité."
@@ -118,6 +128,16 @@ export const TRANSLATIONS = {
       bullet2: "Intelligent fatigue & rhythm drop detection",
       bullet3: "Adaptive Pomodoro session scheduling",
       bullet4: "Bonus EXP for completing major milestones"
+    },
+    appstore: {
+      microBadge: "Now on the App Store",
+      title: "Download Abyss IA on iPhone & iPad",
+      subtitle: "Abyss IA is officially available on the App Store. Install the app in one tap and enjoy your AI productivity assistant, perfectly optimized for iOS, wherever you are.",
+      bullet1: "Optimized for iPhone and iPad",
+      bullet2: "Fast and 100% secure installation",
+      bullet3: "iCloud sync and automatic updates",
+      badgeTop: "Download on the",
+      cta: "Download on the App Store"
     },
     faq: {
       sectionTitle: "Your Questions, Our Answers",
@@ -193,6 +213,16 @@ export const TRANSLATIONS = {
       bullet3: "Programación adaptativa de sesiones de Pomodoro",
       bullet4: "EXP extra al completar hitos importantes"
     },
+    appstore: {
+      microBadge: "Ahora en la App Store",
+      title: "Descarga Abyss IA en iPhone y iPad",
+      subtitle: "Abyss IA ya está disponible oficialmente en la App Store. Instala la aplicación con un solo toque y disfruta de tu asistente de productividad con IA, perfectamente optimizado para iOS, estés donde estés.",
+      bullet1: "Optimizado para iPhone y iPad",
+      bullet2: "Instalación rápida y 100% segura",
+      bullet3: "Sincronización con iCloud y actualizaciones automáticas",
+      badgeTop: "Descárgalo en la",
+      cta: "Descargar en la App Store"
+    },
     faq: {
       sectionTitle: "Sus Preguntas, Nuestras Respuestas",
       sectionSubtitle: "Todo lo que necesita saber sobre nuestro asistente de productividad con IA."
@@ -266,6 +296,16 @@ export const TRANSLATIONS = {
       bullet2: "智能疲劳与节奏下降检测",
       bullet3: "自适应番茄钟会话规划",
       bullet4: "完成主要里程碑的额外 EXP 奖金"
+    },
+    appstore: {
+      microBadge: "现已上架 App Store",
+      title: "在 iPhone 和 iPad 上下载 Abyss IA",
+      subtitle: "Abyss IA 现已正式登陆 App Store。一键安装，随时随地享受专为 iOS 优化的 AI 效率助手。",
+      bullet1: "专为 iPhone 和 iPad 优化",
+      bullet2: "快速且 100% 安全的安装",
+      bullet3: "iCloud 同步与自动更新",
+      badgeTop: "下载",
+      cta: "在 App Store 下载"
     },
     faq: {
       sectionTitle: "您的问题，我们的解答",
@@ -341,6 +381,16 @@ export const TRANSLATIONS = {
       bullet3: "Pianificazione adattiva delle sessioni Pomodoro",
       bullet4: "EXP bonus per il completamento di traguardi importanti"
     },
+    appstore: {
+      microBadge: "Ora su App Store",
+      title: "Scarica Abyss IA su iPhone e iPad",
+      subtitle: "Abyss IA è ufficialmente disponibile su App Store. Installa l'app con un tocco e goditi il tuo assistente di produttività IA, perfettamente ottimizzato per iOS, ovunque tu sia.",
+      bullet1: "Ottimizzato per iPhone e iPad",
+      bullet2: "Installazione rapida e sicura al 100%",
+      bullet3: "Sincronizzazione iCloud e aggiornamenti automatici",
+      badgeTop: "Scarica su",
+      cta: "Scarica su App Store"
+    },
     faq: {
       sectionTitle: "Le Tue Domande, Le Nostre Risposte",
       sectionSubtitle: "Tutto quello che c'è da sapere sul nostro assistente alla produttività IA."
@@ -415,6 +465,16 @@ export const TRANSLATIONS = {
       bullet3: "Адаптивное планирование сессий Pomodoro",
       bullet4: "Бонусные EXP за достижение ключевых этапов"
     },
+    appstore: {
+      microBadge: "Уже в App Store",
+      title: "Скачайте Abyss IA на iPhone и iPad",
+      subtitle: "Abyss IA официально доступно в App Store. Установите приложение в одно касание и пользуйтесь ИИ-ассистентом продуктивности, идеально оптимизированным для iOS, где бы вы ни были.",
+      bullet1: "Оптимизировано для iPhone и iPad",
+      bullet2: "Быстрая и на 100% безопасная установка",
+      bullet3: "Синхронизация с iCloud и автообновления",
+      badgeTop: "Загрузите в",
+      cta: "Загрузить в App Store"
+    },
     faq: {
       sectionTitle: "Вопросы и ответы",
       sectionSubtitle: "Все, что вам нужно знать о нашем ИИ-помощнике для продуктивности."
@@ -488,6 +548,16 @@ export const TRANSLATIONS = {
       bullet2: "Розумне виявлення спадів ритму та втоми",
       bullet3: "Адаптивне планування сесій Pomodoro",
       bullet4: "Бонусні EXP за досягнення ключових етапів"
+    },
+    appstore: {
+      microBadge: "Вже в App Store",
+      title: "Завантажте Abyss IA на iPhone та iPad",
+      subtitle: "Abyss IA офіційно доступний в App Store. Встановіть додаток одним дотиком та користуйтеся ШІ-асистентом продуктивності, ідеально оптимізованим для iOS, де б ви не були.",
+      bullet1: "Оптимізовано для iPhone та iPad",
+      bullet2: "Швидке та на 100% безпечне встановлення",
+      bullet3: "Синхронізація з iCloud та автооновлення",
+      badgeTop: "Завантажити в",
+      cta: "Завантажити в App Store"
     },
     faq: {
       sectionTitle: "Запитання та відповіді",

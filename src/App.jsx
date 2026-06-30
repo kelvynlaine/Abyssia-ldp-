@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { 
   Sparkles, 
   Flame, 
@@ -29,7 +29,7 @@ import HabitTrackerDemo from './components/HabitTrackerDemo';
 import AppMockupShowcase from './components/AppMockupShowcase';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
 import { TRANSLATIONS } from './config/translations';
-import { INSTALL_DEEPLINK_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
+import { getSmartInstallUrl, APP_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
 
 export default function App() {
   const [lang, setLang] = useState('fr');
@@ -37,7 +37,9 @@ export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
 
-
+  // Lien intelligent : résolu côté client selon l'appareil du visiteur
+  // (iPhone/iPad -> App Store, Android -> Google Play, sinon -> App Store).
+  const INSTALL_DEEPLINK_URL = useMemo(() => getSmartInstallUrl(), []);
 
   const t = TRANSLATIONS[lang] || TRANSLATIONS.fr;
 
@@ -753,6 +755,79 @@ export default function App() {
               })}
             </div>
 
+          </section>
+
+          {/* 6.5 App Store Section */}
+          <section id="appstore" className="relative scroll-mt-20">
+            <div className="glass-card rounded-[2.5rem] p-8 sm:p-12 relative overflow-hidden border border-white/10">
+              {/* Decorative glow */}
+              <div className="absolute -top-10 -left-10 w-72 h-72 bg-sky-500/10 rounded-full blur-[110px] pointer-events-none" />
+              <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-violet-600/10 rounded-full blur-[110px] pointer-events-none" />
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+
+                {/* Left - Text content */}
+                <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">
+                    {/* Apple logo */}
+                    <svg viewBox="0 0 384 512" width="13" height="13" fill="currentColor" aria-hidden="true">
+                      <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+                    </svg>
+                    {t.appstore.microBadge}
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+                    {t.appstore.title}
+                  </h2>
+                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    {t.appstore.subtitle}
+                  </p>
+
+                  {/* Bullets */}
+                  <ul className="space-y-3 pt-1 inline-block text-left">
+                    {[t.appstore.bullet1, t.appstore.bullet2, t.appstore.bullet3].map(item => (
+                      <li key={item} className="flex items-center gap-2.5 text-sm text-slate-300">
+                        <CheckCircle2 size={16} className="text-sky-400 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* App Store badge button */}
+                  <div className="pt-4 flex justify-center lg:justify-start">
+                    <a
+                      href={APP_STORE_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={t.appstore.cta}
+                      className="group inline-flex items-center gap-3 pl-4 pr-6 py-3 rounded-2xl bg-black border border-white/15 hover:border-white/40 shadow-xl transition-all duration-300"
+                    >
+                      <svg viewBox="0 0 384 512" width="26" height="26" fill="currentColor" className="text-white shrink-0" aria-hidden="true">
+                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+                      </svg>
+                      <span className="flex flex-col leading-none text-left">
+                        <span className="text-[10px] text-slate-300 font-medium">{t.appstore.badgeTop}</span>
+                        <span className="text-lg font-bold text-white -mt-0.5 tracking-tight">App Store</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right - Visual */}
+                <div className="lg:col-span-5 flex justify-center">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-violet-600/20 blur-3xl rounded-full" />
+                    <div className="relative size-44 sm:size-52 rounded-[2rem] bg-gradient-to-br from-[#0a0c14] to-[#15101f] border border-white/10 flex items-center justify-center shadow-2xl">
+                      <img
+                        src="/logo.png"
+                        alt="Abyss IA"
+                        className="size-28 sm:size-32 rounded-[1.5rem] border border-white/10 shadow-lg animate-glow"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </section>
 
           {/* 7. Bottom Installation CTA Section */}
