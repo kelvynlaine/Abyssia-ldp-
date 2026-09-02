@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { 
   Sparkles, 
   Flame, 
@@ -29,17 +29,13 @@ import HabitTrackerDemo from './components/HabitTrackerDemo';
 import AppMockupShowcase from './components/AppMockupShowcase';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
 import { TRANSLATIONS } from './config/translations';
-import { getSmartInstallUrl, APP_STORE_URL, PLAY_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
+import { APP_STORE_URL, PLAY_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
 
 export default function App() {
   const [lang, setLang] = useState('fr');
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
-
-  // Lien intelligent : résolu côté client selon l'appareil du visiteur
-  // (iPhone/iPad -> App Store, Android -> Google Play, sinon -> App Store).
-  const INSTALL_DEEPLINK_URL = useMemo(() => getSmartInstallUrl(), []);
 
   const t = TRANSLATIONS[lang] || TRANSLATIONS.fr;
 
@@ -881,9 +877,7 @@ export default function App() {
               
               <div className="pt-2">
                 <a
-                  href={INSTALL_DEEPLINK_URL}
-                  target="_blank"
-                  rel="noreferrer"
+                  href="#appstore"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4.5 rounded-2xl font-bold text-white gradient-button shadow-xl shadow-pink-500/20 text-base cursor-pointer"
                 >
                   <Smartphone size={18} />
