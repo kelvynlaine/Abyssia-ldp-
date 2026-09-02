@@ -362,11 +362,9 @@ export default function App() {
               )}
             </div>
 
-            {/* Install Button */}
-            <a 
-              href={INSTALL_DEEPLINK_URL}
-              target="_blank"
-              rel="noreferrer"
+            {/* Install Button -> section de choix du store */}
+            <a
+              href="#appstore"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white gradient-button shadow-lg shadow-pink-500/10 cursor-pointer"
             >
               <Smartphone size={14} />
@@ -447,10 +445,9 @@ export default function App() {
               ))}
             </div>
 
-            <a 
-              href={INSTALL_DEEPLINK_URL}
-              target="_blank"
-              rel="noreferrer"
+            <a
+              href="#appstore"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold text-white gradient-button mt-2 shadow-lg"
             >
               <Smartphone size={16} />
@@ -494,9 +491,7 @@ export default function App() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <a
-                  href={INSTALL_DEEPLINK_URL}
-                  target="_blank"
-                  rel="noreferrer"
+                  href="#appstore"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-white gradient-button shadow-xl shadow-pink-500/15 cursor-pointer text-base"
                 >
                   <Smartphone size={18} />
@@ -648,9 +643,7 @@ export default function App() {
                   </p>
                 </div>
                 <a
-                  href={INSTALL_DEEPLINK_URL}
-                  target="_blank"
-                  rel="noreferrer"
+                  href="#appstore"
                   className="w-full mt-4 flex items-center justify-center gap-2 py-3 rounded-xl border border-white/10 hover:border-pink-500/30 text-xs font-bold text-slate-300 hover:text-white transition-all duration-300 bg-white/5"
                 >
                   {t.nav.install}
