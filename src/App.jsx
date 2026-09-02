@@ -29,7 +29,7 @@ import HabitTrackerDemo from './components/HabitTrackerDemo';
 import AppMockupShowcase from './components/AppMockupShowcase';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
 import { TRANSLATIONS } from './config/translations';
-import { getSmartInstallUrl, APP_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
+import { getSmartInstallUrl, APP_STORE_URL, PLAY_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
 
 export default function App() {
   const [lang, setLang] = useState('fr');
@@ -770,8 +770,15 @@ export default function App() {
                 <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-200">
                     {/* Apple logo */}
-                    <svg viewBox="0 0 384 512" width="13" height="13" fill="currentColor" aria-hidden="true">
+                    <svg viewBox="0 0 384 512" width="12" height="12" fill="currentColor" aria-hidden="true">
                       <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+                    </svg>
+                    {/* Google Play logo */}
+                    <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true">
+                      <path fill="#00A0FF" d="M.614 2.454v19.03L10.15 12 .614 2.454z" />
+                      <path fill="#00E676" d="M1.337.924a1.86 1.86 0 0 0-.633.483l10.846 10.784 3.16-3.14L1.337.924z" />
+                      <path fill="#FFCE00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202c1.302.771 1.302 2.052 0 2.594z" />
+                      <path fill="#FF3A44" d="M1.36 23.077l13.373-7.575-3.19-3.17L.72 23.11c.196.19.42.34.64.44z" />
                     </svg>
                     {t.appstore.microBadge}
                   </div>
@@ -792,14 +799,15 @@ export default function App() {
                     ))}
                   </ul>
 
-                  {/* App Store badge button */}
-                  <div className="pt-4 flex justify-center lg:justify-start">
+                  {/* Store badges (App Store + Google Play) */}
+                  <div className="pt-4 flex flex-wrap justify-center lg:justify-start gap-3">
+                    {/* App Store badge */}
                     <a
                       href={APP_STORE_URL}
                       target="_blank"
                       rel="noreferrer"
                       aria-label={t.appstore.cta}
-                      className="group inline-flex items-center gap-3 pl-4 pr-6 py-3 rounded-2xl bg-black border border-white/15 hover:border-white/40 shadow-xl transition-all duration-300"
+                      className="group inline-flex items-center gap-3 pl-4 pr-6 py-3 rounded-2xl bg-black border border-white/15 hover:border-white/40 hover:-translate-y-0.5 shadow-xl transition-all duration-300"
                     >
                       <svg viewBox="0 0 384 512" width="26" height="26" fill="currentColor" className="text-white shrink-0" aria-hidden="true">
                         <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
@@ -807,6 +815,26 @@ export default function App() {
                       <span className="flex flex-col leading-none text-left">
                         <span className="text-[10px] text-slate-300 font-medium">{t.appstore.badgeTop}</span>
                         <span className="text-lg font-bold text-white -mt-0.5 tracking-tight">App Store</span>
+                      </span>
+                    </a>
+
+                    {/* Google Play badge */}
+                    <a
+                      href={PLAY_STORE_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={t.appstore.ctaPlay}
+                      className="group inline-flex items-center gap-3 pl-4 pr-6 py-3 rounded-2xl bg-black border border-white/15 hover:border-white/40 hover:-translate-y-0.5 shadow-xl transition-all duration-300"
+                    >
+                      <svg viewBox="0 0 24 24" width="24" height="24" className="shrink-0" aria-hidden="true">
+                        <path fill="#00A0FF" d="M.614 2.454v19.03L10.15 12 .614 2.454z" />
+                        <path fill="#00E676" d="M1.337.924a1.86 1.86 0 0 0-.633.483l10.846 10.784 3.16-3.14L1.337.924z" />
+                        <path fill="#FFCE00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202c1.302.771 1.302 2.052 0 2.594z" />
+                        <path fill="#FF3A44" d="M1.36 23.077l13.373-7.575-3.19-3.17L.72 23.11c.196.19.42.34.64.44z" />
+                      </svg>
+                      <span className="flex flex-col leading-none text-left">
+                        <span className="text-[10px] text-slate-300 font-medium">{t.appstore.badgeTopPlay}</span>
+                        <span className="text-lg font-bold text-white -mt-0.5 tracking-tight">Google Play</span>
                       </span>
                     </a>
                   </div>
