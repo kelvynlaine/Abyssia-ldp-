@@ -16,27 +16,9 @@
         Android         -> Google Play
         Ordinateur      -> landing page, section #appstore
 
-      Le script est inline dans <head> : il part avant tout rendu, sans attendre
-      React ni aucun autre fichier. location.replace() évite que le bouton
-      « retour » du téléphone ne ramène sur cette page.
-
+      Le script de redirection est en fin de <body> : voir l'explication là-bas.
       ⚠️ Liens dupliqués depuis src/config/deeplink.js : garder les deux synchronisés.
     -->
-    <script>
-      (function () {
-        var APP_STORE_URL = "https://apps.apple.com/app/id6776822178";
-        var PLAY_STORE_URL = "https://play.google.com/apps/testing/com.kelvyn.abyss_ia";
-        var FALLBACK_URL = "/#appstore";
-
-        var ua = navigator.userAgent || "";
-        // iPadOS s'annonce comme un Mac : on le reconnaît à son écran tactile.
-        var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-        var isAndroid = /Android/i.test(ua);
-
-        document.documentElement.setAttribute("data-platform", isIOS ? "ios" : isAndroid ? "android" : "desktop");
-        location.replace(isIOS ? APP_STORE_URL : isAndroid ? PLAY_STORE_URL : FALLBACK_URL);
-      })();
-    </script>
 
     <style>
       :root { color-scheme: dark; }
@@ -137,11 +119,28 @@
       <a class="back" href="/" data-t="back">Découvrir Abyss IA →</a>
     </main>
 
+    <!--
+      Script volontairement placé APRÈS le contenu, et non dans <head>.
+      Lancer une navigation interrompt le chargement de la page en cours : depuis
+      <head>, le contenu ci-dessus n'était jamais construit. Quand la redirection
+      n'aboutissait pas (Google Play qui ne s'ouvre pas sur Android…), le visiteur
+      restait devant une page noire. Ici, la page est déjà prête : si la
+      redirection échoue, les badges restent affichés et cliquables.
+    -->
     <script>
-      // Page de secours, visible seulement si la redirection n'aboutit pas.
-      // Français par défaut, anglais pour les autres langues.
       (function () {
-        var platform = document.documentElement.getAttribute("data-platform");
+        var APP_STORE_URL = "https://apps.apple.com/app/id6776822178";
+        var PLAY_STORE_URL = "https://play.google.com/apps/testing/com.kelvyn.abyss_ia";
+        var FALLBACK_URL = "/#appstore";
+
+        var ua = navigator.userAgent || "";
+        // iPadOS s'annonce comme un Mac : on le reconnaît à son écran tactile.
+        var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+        var isAndroid = /Android/i.test(ua);
+        var platform = isIOS ? "ios" : isAndroid ? "android" : "desktop";
+        document.documentElement.setAttribute("data-platform", platform);
+
+        // Page de secours : français par défaut, anglais pour les autres langues.
         var fr = /^fr/i.test(navigator.language || "");
         var t = fr
           ? {
@@ -165,7 +164,7 @@
 
         if (!fr) document.documentElement.lang = "en";
         var statusText = document.getElementById("status-text");
-        statusText.textContent = t[platform] || t.desktop;
+        statusText.textContent = t[platform];
 
         var nodes = document.querySelectorAll("[data-t]");
         for (var i = 0; i < nodes.length; i++) nodes[i].textContent = t[nodes[i].getAttribute("data-t")];
@@ -174,6 +173,9 @@
           document.getElementById("status").className += " done";
           statusText.textContent = t.stuck;
         }, 2500);
+
+        // location.replace() : le bouton « retour » ne ramène pas sur cette page.
+        location.replace(isIOS ? APP_STORE_URL : isAndroid ? PLAY_STORE_URL : FALLBACK_URL);
       })();
     </script>
   </body>
