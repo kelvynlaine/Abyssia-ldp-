@@ -519,7 +519,7 @@ export default function App() {
                 </div>
                 <div className="h-4 w-px bg-white/10 hidden sm:block" />
                 <div className="flex items-center gap-1.5">
-                  <ShieldCheck size={16} className="text-emerald-400" />
+                  <Smartphone size={16} className="text-emerald-400" />
                   <span>{t.hero.trustBadge2}</span>
                 </div>
               </div>
@@ -920,12 +920,12 @@ export default function App() {
                 </a>
               </div>
 
-              <div className="flex justify-center items-center gap-4 text-xs text-slate-500">
+              <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-xs text-slate-500">
                 <span className="flex items-center gap-1">
-                  <ShieldCheck size={14} className="text-emerald-400" />
+                  <Smartphone size={14} className="text-emerald-400" />
                   {t.hero.trustBadge2}
                 </span>
-                <span className="h-3 w-px bg-white/10" />
+                <span className="h-3 w-px bg-white/10 hidden sm:block" />
                 <span>Version 1.0.4 - Premium</span>
               </div>
             </div>
@@ -1069,10 +1069,10 @@ export default function App() {
                   </a>
                 </li>
               </ul>
-              {/* Play Store Certification icon */}
+              {/* Store availability badge */}
               <div className="pt-2 flex justify-center md:justify-start">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/5 border border-emerald-500/10 text-[10px] text-emerald-400 font-bold">
-                  <ShieldCheck size={14} />
+                  <Smartphone size={14} />
                   <span>{t.hero.trustBadge2}</span>
                 </div>
               </div>

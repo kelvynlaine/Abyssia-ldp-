@@ -14,7 +14,7 @@ export const TRANSLATIONS = {
       ctaInstall: "Installer l'application",
       ctaDemo: "Découvrir la démo interactive",
       trustBadge1: "Meilleure App IA 2024",
-      trustBadge2: "Google Play Protect Certifié"
+      trustBadge2: "Disponible sur l'App Store et Google Play"
     },
     demos: {
       sectionTitle: "Essayez l'Expérience Abyss IA en Direct",
@@ -102,7 +102,7 @@ export const TRANSLATIONS = {
       ctaInstall: "Install application",
       ctaDemo: "Try the live demo",
       trustBadge1: "Best AI App 2024",
-      trustBadge2: "Google Play Protect Certified"
+      trustBadge2: "Available on the App Store and Google Play"
     },
     demos: {
       sectionTitle: "Try the Abyss IA Experience Live",
@@ -190,7 +190,7 @@ export const TRANSLATIONS = {
       ctaInstall: "Instalar aplicación",
       ctaDemo: "Probar la demo interactiva",
       trustBadge1: "Mejor App de IA 2024",
-      trustBadge2: "Certificado por Google Play Protect"
+      trustBadge2: "Disponible en la App Store y Google Play"
     },
     demos: {
       sectionTitle: "Pruebe la Experiencia de Abyss IA en Vivo",
@@ -278,7 +278,7 @@ export const TRANSLATIONS = {
       ctaInstall: "安装应用程序",
       ctaDemo: "试用实时演示",
       trustBadge1: "2024年最佳 AI 应用",
-      trustBadge2: "Google Play Protect 认证"
+      trustBadge2: "App Store 与 Google Play 均可下载"
     },
     demos: {
       sectionTitle: "亲身体验 Abyss IA 实时演示",
@@ -366,7 +366,7 @@ export const TRANSLATIONS = {
       ctaInstall: "Installa l'applicazione",
       ctaDemo: "Scopri la demo interattiva",
       trustBadge1: "Migliore App IA 2024",
-      trustBadge2: "Certificato Google Play Protect"
+      trustBadge2: "Disponibile su App Store e Google Play"
     },
     demos: {
       sectionTitle: "Prova l'Esperienza di Abyss IA dal Vivo",
@@ -454,7 +454,7 @@ export const TRANSLATIONS = {
       ctaInstall: "Установить приложение",
       ctaDemo: "Попробовать интерактивное демо",
       trustBadge1: "Лучшее ИИ-приложение 2024",
-      trustBadge2: "Сертифицировано Google Play Protect"
+      trustBadge2: "Доступно в App Store и Google Play"
     },
     demos: {
       sectionTitle: "Попробуйте Abyss IA в действии",
@@ -542,7 +542,7 @@ export const TRANSLATIONS = {
       ctaInstall: "Встановити додаток",
       ctaDemo: "Спробувати інтерактивне демо",
       trustBadge1: "Найкращий ШІ-додаток 2024",
-      trustBadge2: "Сертифіковано Google Play Protect"
+      trustBadge2: "Доступно в App Store та Google Play"
     },
     demos: {
       sectionTitle: "Спробуйте Abyss IA в дії",
