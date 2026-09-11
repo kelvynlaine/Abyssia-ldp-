@@ -69,12 +69,12 @@ export default function App() {
         answer: "Notre application utilise plusieurs techniques éprouvées amplifiées par l'IA. La technique Pomodoro découpe vos tâches en sessions gérables, la gamification rend le travail engageant, et l'assistant IA personnel vous envoie des encouragements motivants personnalisés. De plus, l'analyse comportementale identifie vos déclencheurs de procrastination pour vous aider à les surmonter."
       },
       {
-        question: "Comment installer Abyss IA sur mon appareil Android ?",
-        answer: "Vous pouvez installer l'application en cliquant sur n'importe quel bouton 'Installer l'application' de notre site. Vous serez alors redirigé directement vers notre page officielle de test Google Play Store, garantissant un téléchargement et une installation 100% sécurisés et certifiés par Google Play Protect."
+        question: "Comment installer Abyss IA sur iPhone, iPad ou Android ?",
+        answer: "Abyss IA est téléchargeable gratuitement sur l'App Store pour iPhone et iPad, et disponible sur Google Play pour Android. Cliquez sur n'importe quel bouton « Installer l'application » du site pour accéder aux deux stores, puis choisissez le vôtre. Depuis un ordinateur, scannez simplement le QR code avec votre téléphone : vous serez redirigé automatiquement vers l'App Store ou Google Play selon votre appareil. Sur Android, l'application est actuellement proposée via le programme de test officiel de Google Play."
       },
       {
         question: "Quels sont les prérequis système pour cette application IA productivité ?",
-        answer: "L'application Abyss IA est extrêmement légère et fonctionne sur n'importe quel appareil Android équipé d'Android 8.0 ou supérieur, avec un minimum de 50 Mo d'espace de stockage disponible. Notre logiciel IA est optimisé pour être extrêmement économe en batterie."
+        answer: "L'application Abyss IA est légère et optimisée pour être économe en batterie. Sur iPhone et iPad, elle nécessite iOS 15.0 ou une version ultérieure (environ 70 Mo d'espace de stockage). Sur Android, elle fonctionne sur tout appareil équipé d'Android 8.0 ou supérieur, avec un minimum de 50 Mo d'espace disponible."
       },
       {
         question: "Mes données sont-elles sécurisées dans cette solution IA pour la productivité ?",
@@ -103,12 +103,12 @@ export default function App() {
         answer: "Our app uses several proven techniques amplified by AI. The Pomodoro technique cuts your tasks into manageable sessions, gamification makes work engaging, and the personal AI assistant sends you customized motivational encouragement. Additionally, behavioral analysis identifies your procrastination triggers to help you overcome them."
       },
       {
-        question: "How to install Abyss IA on my Android device?",
-        answer: "You can install the app by clicking any 'Install App' button on our site. You will be redirected directly to our official Google Play Store testing page, guaranteeing a 100% secure download and installation certified by Google Play Protect."
+        question: "How to install Abyss IA on iPhone, iPad or Android?",
+        answer: "Abyss IA is free to download on the App Store for iPhone and iPad, and available on Google Play for Android. Click any 'Install App' button on our site to reach both stores, then pick yours. On a computer, simply scan the QR code with your phone: you'll be taken automatically to the App Store or Google Play depending on your device. On Android, the app is currently offered through Google Play's official testing program."
       },
       {
         question: "What are the system requirements for this productivity AI app?",
-        answer: "The Abyss IA app is extremely lightweight and works on any Android device running Android 8.0 or higher, with a minimum of 50 MB of available storage space. Our AI software is optimized to be extremely battery-efficient."
+        answer: "The Abyss IA app is lightweight and optimized to be battery-efficient. On iPhone and iPad, it requires iOS 15.0 or later (about 70 MB of storage). On Android, it runs on any device with Android 8.0 or higher and at least 50 MB of available storage."
       },
       {
         question: "Is my data secure in this productivity AI solution?",
@@ -137,12 +137,12 @@ export default function App() {
         answer: "Nuestra aplicación utiliza varias técnicas probadas amplificadas por IA. La técnica Pomodoro divide sus tareas en sesiones manejables, la gamificación hace que el trabajo sea atractivo y el asistente de IA personal le envía mensajes motivacionales personalizados. Además, el análisis de comportamiento identifica sus desencadenantes de procrastinación para ayudarle a deponerlos."
       },
       {
-        question: "¿Cómo instalar Abyss IA en mi dispositivo Android?",
-        answer: "Puede instalar la aplicación haciendo clic en cualquier botón 'Instalar App' de nuestro sitio. Se le redirigirá directamente a nuestra página oficial de pruebas de Google Play Store, lo que garantiza una descarga e instalación 100% seguras y certificadas por Google Play Protect."
+        question: "¿Cómo instalar Abyss IA en iPhone, iPad o Android?",
+        answer: "Abyss IA se puede descargar gratis en la App Store para iPhone y iPad, y está disponible en Google Play para Android. Haga clic en cualquier botón 'Instalar App' de nuestro sitio para acceder a las dos tiendas y elija la suya. Desde un ordenador, basta con escanear el código QR con su teléfono: se le redirigirá automáticamente a la App Store o a Google Play según su dispositivo. En Android, la aplicación se ofrece actualmente a través del programa oficial de pruebas de Google Play."
       },
       {
         question: "¿Cuáles son los requisitos del sistema para esta aplicación de IA de productividad?",
-        answer: "La aplicación Abyss IA es extremadamente ligera y funciona en cualquier dispositivo Android con Android 8.0 o superior, con un mínimo de 50 MB de espacio de almacenamiento disponible. Nuestro software de IA está optimizado para ser muy eficiente en el consumo de batería."
+        answer: "La aplicación Abyss IA es ligera y está optimizada para consumir poca batería. En iPhone y iPad requiere iOS 15.0 o posterior (unos 70 MB de almacenamiento). En Android funciona en cualquier dispositivo con Android 8.0 o superior y un mínimo de 50 MB de espacio disponible."
       },
       {
         question: "¿Están seguros mis datos en esta solución de IA de productividad?",
@@ -171,12 +171,12 @@ export default function App() {
         answer: "我们的应用采用了多种经 AI 强化的行之有效的技术。番茄钟技术将您的任务拆分为可管理的会话，游戏化使工作更具吸引力，个人人工智能助手还会向您发送定制的激励语言。此外，行为分析还可以识别您的拖延诱因，帮助您克服它们。"
       },
       {
-        question: "如何在我的安卓设备上安装 Abyss IA？",
-        answer: "您可以通过点击我们网站上的任何“安装应用”按钮来安装该应用。您将被直接重定向到我们的官方 Google Play 商店测试页面，从而保证 100% 安全下载和由 Google Play Protect 认证的安装。"
+        question: "如何在 iPhone、iPad 或安卓设备上安装 Abyss IA？",
+        answer: "Abyss IA 可在 App Store 免费下载，支持 iPhone 和 iPad；安卓用户可通过 Google Play 获取。点击我们网站上任意“安装应用”按钮即可看到两个商店，选择适合您的即可。在电脑上浏览时，只需用手机扫描二维码，系统会根据您的设备自动跳转至 App Store 或 Google Play。目前，安卓版本通过 Google Play 官方测试计划提供。"
       },
       {
         question: "此效率 AI 应用的系统要求是什么？",
-        answer: "Abyss IA 应用程序非常轻量，适用于任何运行 Android 8.0 或更高版本且至少有 50 MB 可用存储空间的安卓设备。我们的 AI 软件经过优化，非常省电。"
+        answer: "Abyss IA 应用非常轻量，并经过优化，十分省电。在 iPhone 和 iPad 上，需要 iOS 15.0 或更高版本（约 70 MB 存储空间）。在安卓设备上，需运行 Android 8.0 或更高版本，并至少有 50 MB 可用存储空间。"
       },
       {
         question: "在此效率 AI 解决方案中，我的数据安全吗？",
@@ -205,12 +205,12 @@ export default function App() {
         answer: "La nostra applicazione utilizza diverse tecniche collaudate amplificate dall'IA. La tecnica Pomodoro suddivide i tuoi compiti in sessioni gestibili, la gamification rende il lavoro stimolante e l'assistente IA personale ti invia incoraggiamenti motivazionali personalizzati. Inoltre, l'analisi comportamentale identifica i fattori scatenanti della tua procrastinazione per aiutarti a superarli."
       },
       {
-        question: "Come installare Abyss IA sul mio dispositivo Android?",
-        answer: "Puoi installare l'applicazione cliccando su qualsiasi pulsante 'Installa App' sul nostro sito. Verrai reindirizzato direttamente alla nostra pagina ufficiale di test del Google Play Store, garantendo un download e un'installazione sicuri al 100% e certificati da Google Play Protect."
+        question: "Come installare Abyss IA su iPhone, iPad o Android?",
+        answer: "Abyss IA si scarica gratuitamente dall'App Store per iPhone e iPad ed è disponibile su Google Play per Android. Clicca su qualsiasi pulsante 'Installa App' del nostro sito per raggiungere i due store, poi scegli il tuo. Da computer, ti basta scansionare il codice QR con il telefono: verrai reindirizzato automaticamente ad App Store o Google Play in base al tuo dispositivo. Su Android, l'app è attualmente offerta tramite il programma di test ufficiale di Google Play."
       },
       {
         question: "Quali sono i requisiti di sistema per questa app di produttività IA?",
-        answer: "L'applicazione Abyss IA è estremamente leggera e funziona su qualsiasi dispositivo Android dotato di Android 8.0 o versioni successive, con un minimo di 50 MB di spazio di archiviazione disponibile. Il nostro software IA è ottimizzato per consumare pochissima batteria."
+        answer: "L'applicazione Abyss IA è leggera e ottimizzata per consumare pochissima batteria. Su iPhone e iPad richiede iOS 15.0 o versioni successive (circa 70 MB di spazio). Su Android funziona su qualsiasi dispositivo con Android 8.0 o versioni successive e almeno 50 MB di spazio di archiviazione disponibile."
       },
       {
         question: "I miei dati sono al sicuro in questa soluzione IA per la produttività?",
@@ -239,12 +239,12 @@ export default function App() {
         answer: "Наше приложение использует проверенные техники, усиленные ИИ. Метод Pomodoro разбивает задачи на управляемые сессии, геймификация делает процесс увлекательным, а личный ИИ-ассистент отправляет вам индивидуальные слова поддержки. Кроме того, поведенческий анализ выявляет триггеры прокрастинации, помогая вам справиться с ними."
       },
       {
-        question: "Как установить Abyss IA на мое устройство Android?",
-        answer: "Вы можете установить приложение, нажав на любую кнопку «Установить» на нашем сайте. Вы будете перенаправлены на официальную страницу тестирования в Google Play Store, что гарантирует 100% безопасную загрузку и установку, сертифицированную Google Play Protect."
+        question: "Как установить Abyss IA на iPhone, iPad или Android?",
+        answer: "Abyss IA можно бесплатно скачать в App Store для iPhone и iPad, а для Android приложение доступно в Google Play. Нажмите любую кнопку «Установить» на нашем сайте, чтобы перейти к обоим магазинам, и выберите свой. На компьютере достаточно отсканировать QR-код телефоном — вы автоматически попадёте в App Store или Google Play в зависимости от устройства. На Android приложение сейчас распространяется через официальную программу тестирования Google Play."
       },
       {
         question: "Каковы системные требования для этого ИИ-приложения продуктивности?",
-        answer: "Приложение Abyss IA чрезвычайно легкое и работает на любом устройстве Android с версией Android 8.0 или выше при наличии не менее 50 МБ свободного места. Наше ПО оптимизировано для экономии заряда батареи."
+        answer: "Приложение Abyss IA лёгкое и оптимизировано для экономии заряда батареи. На iPhone и iPad требуется iOS 15.0 или новее (около 70 МБ свободного места). На Android оно работает на любом устройстве с Android 8.0 или выше при наличии не менее 50 МБ свободного места."
       },
       {
         question: "Безопасны ли мои данные в этом ИИ-решении для продуктивности?",
@@ -273,12 +273,12 @@ export default function App() {
         answer: "Наш додаток використовує перевірені техніки, підсилені ШІ. Метод Pomodoro розбиває завдання на керовані сесії, гейміфікація робить процес захопливим, а особистісний ШІ-асистент надсилає вам індивідуальні слова підтримки. Крім того, поведінковий аналіз виявляє тригери прокрастинації, допомагаючи вам впоратися з ними."
       },
       {
-        question: "Як встановити Abyss IA на мій пристрій Android?",
-        answer: "Ви можете встановити додаток, натиснувши на будь-яку кнопку «Встановити» на нашому сайті. Вас буде перенаправлено безпосередньо на офіційну сторінку тестування в Google Play Store, що гарантує 100% безпечне завантаження та встановлення, сертифіковане Google Play Protect."
+        question: "Як встановити Abyss IA на iPhone, iPad або Android?",
+        answer: "Abyss IA можна безкоштовно завантажити в App Store для iPhone та iPad, а для Android додаток доступний у Google Play. Натисніть будь-яку кнопку «Встановити» на нашому сайті, щоб перейти до обох магазинів, і оберіть свій. На комп'ютері достатньо відсканувати QR-код телефоном — вас автоматично буде переспрямовано до App Store або Google Play залежно від пристрою. На Android додаток наразі поширюється через офіційну програму тестування Google Play."
       },
       {
         question: "Які системні вимоги для цього ШІ-додатка продуктивності?",
-        answer: "Додаток Abyss IA надзвичайно легкий і працює на будь-кому пристрої Android із версією Android 8.0 або вище за наявності не менше 50 МБ вільного місця. Наше програмне забезпечення оптимізоване для економії заряду батареї."
+        answer: "Додаток Abyss IA легкий та оптимізований для економії заряду батареї. На iPhone та iPad потрібна iOS 15.0 або новіша (близько 70 МБ вільного місця). На Android він працює на будь-якому пристрої з Android 8.0 або вище за наявності не менше 50 МБ вільного місця."
       },
       {
         question: "Чи безпечні мої дані в цьому ШІ-рішенні для продуктивності?",
@@ -739,7 +739,7 @@ export default function App() {
                     
                     <div 
                       className={`overflow-hidden transition-all duration-300 ${
-                        isActive ? 'max-h-[300px] border-t border-white/5' : 'max-h-0'
+                        isActive ? 'max-h-[600px] border-t border-white/5' : 'max-h-0'
                       }`}
                     >
                       <p className="p-5 text-xs sm:text-sm text-slate-400 leading-relaxed">
