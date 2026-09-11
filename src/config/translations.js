@@ -13,7 +13,7 @@ export const TRANSLATIONS = {
       subtitle: "Découvrez Abyss IA, votre application de productivité intelligente tout-en-un. Gérez vos tâches quotidiennes, optimisez votre temps avec le Pomodoro intelligent et suivez vos habitudes pour pulvériser tous vos objectifs.",
       ctaInstall: "Installer l'application",
       ctaDemo: "Découvrir la démo interactive",
-      trustBadge1: "Meilleure App IA 2024",
+      trustBadge1: "Meilleure App IA 2026",
       trustBadge2: "Disponible sur l'App Store et Google Play"
     },
     demos: {
@@ -101,7 +101,7 @@ export const TRANSLATIONS = {
       subtitle: "Discover Abyss IA, your all-in-one smart productivity application. Manage your daily tasks, optimize your time with smart Pomodoro, and track habits to shatter all your goals.",
       ctaInstall: "Install application",
       ctaDemo: "Try the live demo",
-      trustBadge1: "Best AI App 2024",
+      trustBadge1: "Best AI App 2026",
       trustBadge2: "Available on the App Store and Google Play"
     },
     demos: {
@@ -189,7 +189,7 @@ export const TRANSLATIONS = {
       subtitle: "Descubra Abyss IA, su aplicación de productividad inteligente todo en uno. Gestione sus tareas diarias, optimice su tiempo con el Pomodoro inteligente y siga sus hábitos para superar todas sus metas.",
       ctaInstall: "Instalar aplicación",
       ctaDemo: "Probar la demo interactiva",
-      trustBadge1: "Mejor App de IA 2024",
+      trustBadge1: "Mejor App de IA 2026",
       trustBadge2: "Disponible en la App Store y Google Play"
     },
     demos: {
@@ -277,7 +277,7 @@ export const TRANSLATIONS = {
       subtitle: "探索 Abyss IA，您的全能智能高效应用。管理日常任务，用智能番茄钟优化时间，跟踪习惯，粉碎所有目标。",
       ctaInstall: "安装应用程序",
       ctaDemo: "试用实时演示",
-      trustBadge1: "2024年最佳 AI 应用",
+      trustBadge1: "2026年最佳 AI 应用",
       trustBadge2: "App Store 与 Google Play 均可下载"
     },
     demos: {
@@ -365,7 +365,7 @@ export const TRANSLATIONS = {
       subtitle: "Scopri Abyss IA, la tua applicazione intelligente per la produttività tutto in uno. Gestisci le tue attività quotidiane, ottimizza il tuo tempo con il Pomodoro intelligente e monitora le tue abitudini per raggiungere tutti i tuoi obiettivi.",
       ctaInstall: "Installa l'applicazione",
       ctaDemo: "Scopri la demo interattiva",
-      trustBadge1: "Migliore App IA 2024",
+      trustBadge1: "Migliore App IA 2026",
       trustBadge2: "Disponibile su App Store e Google Play"
     },
     demos: {
@@ -453,7 +453,7 @@ export const TRANSLATIONS = {
       subtitle: "Откройте для себя Abyss IA — ваше умное универсальное приложение для продуктивности. Управляйте задачами, оптимизируйте время с помощью Pomodoro и отслеживайте привычки для достижения всех целей.",
       ctaInstall: "Установить приложение",
       ctaDemo: "Попробовать интерактивное демо",
-      trustBadge1: "Лучшее ИИ-приложение 2024",
+      trustBadge1: "Лучшее ИИ-приложение 2026",
       trustBadge2: "Доступно в App Store и Google Play"
     },
     demos: {
@@ -541,7 +541,7 @@ export const TRANSLATIONS = {
       subtitle: "Відкрийте для себе Abyss IA — ваш розумний універсальний додаток для продуктивності. Керуйте щоденними завданнями, оптимізуйте час за допомогою Pomodoro та відстежуйте звички для досягнення цілей.",
       ctaInstall: "Встановити додаток",
       ctaDemo: "Спробувати інтерактивне демо",
-      trustBadge1: "Найкращий ШІ-додаток 2024",
+      trustBadge1: "Найкращий ШІ-додаток 2026",
       trustBadge2: "Доступно в App Store та Google Play"
     },
     demos: {

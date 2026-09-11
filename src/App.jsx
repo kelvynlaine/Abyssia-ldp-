@@ -62,7 +62,7 @@ export default function App() {
       },
       {
         question: "Abyss IA vs autres applications de productivité - Quelle est la différence ?",
-        answer: "Abyss IA se distingue comme meilleure application IA 2024 grâce à son écosystème tout-en-un. Au lieu d'avoir un outil pour vos tâches, un autre pour vos habitudes, et un troisième pour le Pomodoro, notre solution unifie l'ensemble grâce à un assistant intelligent qui fait le pont entre vos tâches quotidiennes et votre santé cognitive."
+        answer: "Abyss IA se distingue comme meilleure application IA 2026 grâce à son écosystème tout-en-un. Au lieu d'avoir un outil pour vos tâches, un autre pour vos habitudes, et un troisième pour le Pomodoro, notre solution unifie l'ensemble grâce à un assistant intelligent qui fait le pont entre vos tâches quotidiennes et votre santé cognitive."
       },
       {
         question: "Comment arrêter la procrastination avec l'assistant IA d'Abyss IA ?",
@@ -96,7 +96,7 @@ export default function App() {
       },
       {
         question: "Abyss IA vs other productivity apps - What is the difference?",
-        answer: "Abyss IA stands out as the best 2024 AI application thanks to its all-in-one ecosystem. Instead of having one tool for your tasks, another for your habits, and a third for Pomodoro, our solution unifies everything through a smart assistant that bridges the gap between your daily tasks and your cognitive health."
+        answer: "Abyss IA stands out as the best 2026 AI application thanks to its all-in-one ecosystem. Instead of having one tool for your tasks, another for your habits, and a third for Pomodoro, our solution unifies everything through a smart assistant that bridges the gap between your daily tasks and your cognitive health."
       },
       {
         question: "How to stop procrastinating with the Abyss IA assistant?",
@@ -130,7 +130,7 @@ export default function App() {
       },
       {
         question: "Abyss IA vs otras aplicaciones de productividad - ¿Cuál es la diferencia?",
-        answer: "Abyss IA se destaca como la mejor aplicación de IA de 2024 gracias a su ecosistema todo en uno. En lugar de tener una herramienta para sus tareas, otra para sus hábitos y una tercera para Pomodoro, nuestra solución unifica todo a través de un asistente inteligente que une sus tareas diarias y su salud cognitiva."
+        answer: "Abyss IA se destaca como la mejor aplicación de IA de 2026 gracias a su ecosistema todo en uno. En lugar de tener una herramienta para sus tareas, otra para sus hábitos y una tercera para Pomodoro, nuestra solución unifica todo a través de un asistente inteligente que une sus tareas diarias y su salud cognitiva."
       },
       {
         question: "¿Cómo dejar de procrastinar con el asistente de Abyss IA?",
@@ -164,7 +164,7 @@ export default function App() {
       },
       {
         question: "Abyss IA 与其他效率应用相比有什么区别？",
-        answer: "得益于其全能生态系统，Abyss IA 脱颖而出，成为 2024 年最佳人工智能应用。我们的解决方案无需您使用多个工具来分别处理任务、习惯和番茄钟，而是通过一个智能助手将您的日常任务与认知健康联系起来，将所有功能融为一体。"
+        answer: "得益于其全能生态系统，Abyss IA 脱颖而出，成为 2026 年最佳人工智能应用。我们的解决方案无需您使用多个工具来分别处理任务、习惯和番茄钟，而是通过一个智能助手将您的日常任务与认知健康联系起来，将所有功能融为一体。"
       },
       {
         question: "如何使用 Abyss IA 助手来停止拖延？",
@@ -198,7 +198,7 @@ export default function App() {
       },
       {
         question: "Abyss IA rispetto ad altre app di produttività: qual è la differenza?",
-        answer: "Abyss IA si distingue come la migliore applicazione IA del 2024 grazie al suo ecosistema all-in-one. Invece di avere uno strumento per i compiti, uno per le abitudini e un terzo per il Pomodoro, la nostra soluzione unifica tutto attraverso un assistente intelligente che fa da ponte tra i tuoi compiti quotidiani e la tua salute cognitiva."
+        answer: "Abyss IA si distingue come la migliore applicazione IA del 2026 grazie al suo ecosistema all-in-one. Invece di avere uno strumento per i compiti, uno per le abitudini e un terzo per il Pomodoro, la nostra soluzione unifica tutto attraverso un assistente intelligente che fa da ponte tra i tuoi compiti quotidiani e la tua salute cognitiva."
       },
       {
         question: "Come smettere di procrastinare con l'assistente di Abyss IA?",
@@ -232,7 +232,7 @@ export default function App() {
       },
       {
         question: "Abyss IA по сравнению с другими приложениями для продуктивности — в чем разница?",
-        answer: "Abyss IA выделяется как лучшее ИИ-приложение 2024 года благодаря своей экосистеме «все в одном». Вместо того чтобы использовать отдельные инструменты для задач, привычек и Pomodoro, наше решение объединяет все функции с помощью умного ассистента, связывающего ваши повседневные дела с когнитивным здоровьем."
+        answer: "Abyss IA выделяется как лучшее ИИ-приложение 2026 года благодаря своей экосистеме «все в одном». Вместо того чтобы использовать отдельные инструменты для задач, привычек и Pomodoro, наше решение объединяет все функции с помощью умного ассистента, связывающего ваши повседневные дела с когнитивным здоровьем."
       },
       {
         question: "Как перестать прокрастинировать с помощью ассистента Abyss IA?",
@@ -266,7 +266,7 @@ export default function App() {
       },
       {
         question: "Abyss IA порівняно з іншими додатками для продуктивності — в чому різниця?",
-        answer: "Abyss IA виділяється як найкращий ШІ-додаток 2024 року завдяки своїй екосистемі «все в одному». Замість використання окремих інструментів для завдань, звичок та Pomodoro, наше рішення об'єднує всі функції за допомогою розумного асистента, який пов'язує ваші повсякденні справи з когнітивним здоров'ям."
+        answer: "Abyss IA виділяється як найкращий ШІ-додаток 2026 року завдяки своїй екосистемі «все в одному». Замість використання окремих інструментів для завдань, звичок та Pomodoro, наше рішення об'єднує всі функції за допомогою розумного асистента, який пов'язує ваші повсякденні справи з когнітивним здоров'ям."
       },
       {
         question: "Як перестати прокрастинувати за допомогою асистента Abyss IA?",
