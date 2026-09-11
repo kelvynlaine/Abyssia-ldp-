@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Sparkles, 
   Flame, 
@@ -36,6 +36,13 @@ export default function App() {
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
+
+  // Arrivée avec une ancre (ex: /install/ sur ordinateur -> /#appstore) : la section
+  // n'existe qu'après le rendu React, le navigateur ne peut donc pas y défiler seul.
+  useEffect(() => {
+    const target = window.location.hash && document.getElementById(window.location.hash.slice(1));
+    target?.scrollIntoView();
+  }, []);
 
   const t = TRANSLATIONS[lang] || TRANSLATIONS.fr;
 
@@ -829,9 +836,36 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Right - Visual */}
+                {/* Right - Visual : QR code sur ordinateur, logo sur mobile */}
                 <div className="lg:col-span-5 flex justify-center">
-                  <div className="relative">
+                  {/* QR code d'installation -> /install/ (masqué sur mobile : on ne scanne pas son propre écran) */}
+                  <div className="hidden lg:flex flex-col items-center gap-5 text-center">
+                    <div className="relative">
+                      <div className="absolute -inset-4 bg-gradient-to-br from-sky-500/25 to-violet-600/25 blur-2xl rounded-[2.5rem]" />
+                      <div className="relative p-2 rounded-[1.75rem] bg-white shadow-2xl">
+                        <img
+                          src="/qr-install.svg"
+                          alt={t.appstore.qrTitle}
+                          width="208"
+                          height="208"
+                          className="size-52 block"
+                        />
+                        <img
+                          src="/logo.png"
+                          alt=""
+                          aria-hidden="true"
+                          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-10 rounded-xl ring-4 ring-white"
+                        />
+                      </div>
+                    </div>
+                    <div className="space-y-1.5 max-w-60">
+                      <p className="text-sm font-bold text-white">{t.appstore.qrTitle}</p>
+                      <p className="text-xs text-slate-400 leading-relaxed">{t.appstore.qrDesc}</p>
+                    </div>
+                  </div>
+
+                  {/* Logo (mobile / tablette) */}
+                  <div className="relative lg:hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-violet-600/20 blur-3xl rounded-full" />
                     <div className="relative size-44 sm:size-52 rounded-[2rem] bg-gradient-to-br from-[#0a0c14] to-[#15101f] border border-white/10 flex items-center justify-center shadow-2xl">
                       <img

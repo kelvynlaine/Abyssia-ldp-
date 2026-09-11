@@ -2,17 +2,22 @@
  * Configuration centralisée pour Abyss IA
  * Vous pouvez insérer ici les liens vers les stores (App Store / Google Play).
  *
- * Le site utilise un "lien intelligent" (smart link) : il détecte automatiquement
- * la plateforme du visiteur et le redirige vers le bon store :
+ * La redirection automatique par appareil (cible du QR code) est assurée par
+ * la page statique public/install/index.html :
  *   - iPhone / iPad         -> App Store
  *   - Android               -> Google Play
- *   - Ordinateur / autre    -> App Store (par défaut)
+ *   - Ordinateur / autre    -> landing page, section #appstore
+ *
+ * ⚠️ Les deux liens ci-dessous y sont dupliqués (la page n'embarque aucun JS
+ * externe pour rediriger instantanément) : toute modification doit être reportée.
  */
 
-// Lien officiel App Store (iOS)
-export const APP_STORE_URL = "https://apps.apple.com/fr/app/abyssia/id6776822178";
+// Lien officiel App Store (iOS). Sans code pays : Apple envoie chaque visiteur
+// sur la vitrine de son propre pays.
+export const APP_STORE_URL = "https://apps.apple.com/app/id6776822178";
 
-// Lien Google Play (Android)
+// Lien Google Play (Android). L'app est en test fermé, sans fiche publique :
+// c'est le lien d'inscription au programme de test.
 export const PLAY_STORE_URL = "https://play.google.com/apps/testing/com.kelvyn.abyss_ia";
 
 /**

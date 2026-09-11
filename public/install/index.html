@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#05060b" />
+    <title>Installer Abyss IA</title>
+    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <!--
+      Redirection intelligente d'installation — page cible du QR code.
+      URL : https://abyssia.eu/install/
+
+        iPhone / iPad   -> App Store (vitrine du pays du visiteur)
+        Android         -> Google Play
+        Ordinateur      -> landing page, section #appstore
+
+      Le script est inline dans <head> : il part avant tout rendu, sans attendre
+      React ni aucun autre fichier. location.replace() évite que le bouton
+      « retour » du téléphone ne ramène sur cette page.
+
+      ⚠️ Liens dupliqués depuis src/config/deeplink.js : garder les deux synchronisés.
+    -->
+    <script>
+      (function () {
+        var APP_STORE_URL = "https://apps.apple.com/app/id6776822178";
+        var PLAY_STORE_URL = "https://play.google.com/apps/testing/com.kelvyn.abyss_ia";
+        var FALLBACK_URL = "/#appstore";
+
+        var ua = navigator.userAgent || "";
+        // iPadOS s'annonce comme un Mac : on le reconnaît à son écran tactile.
+        var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+        var isAndroid = /Android/i.test(ua);
+
+        document.documentElement.setAttribute("data-platform", isIOS ? "ios" : isAndroid ? "android" : "desktop");
+        location.replace(isIOS ? APP_STORE_URL : isAndroid ? PLAY_STORE_URL : FALLBACK_URL);
+      })();
+    </script>
+
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; }
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background:
+          radial-gradient(circle at 30% 20%, rgba(124, 58, 237, 0.18), transparent 55%),
+          radial-gradient(circle at 70% 80%, rgba(236, 72, 153, 0.14), transparent 55%),
+          #05060b;
+        color: #f8fafc;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        text-align: center;
+      }
+      main { width: 100%; max-width: 360px; }
+      .logo { width: 72px; height: 72px; border-radius: 18px; border: 1px solid rgba(255, 255, 255, 0.15); }
+      h1 { margin: 16px 0 6px; font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+      h1 span { color: #ec4899; }
+      .status {
+        margin: 0 0 28px;
+        min-height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #94a3b8;
+        font-size: 14px;
+      }
+      .spinner {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-top-color: #ec4899;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .badges { display: grid; gap: 12px; }
+      .badge {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 20px;
+        border-radius: 16px;
+        background: #000;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #fff;
+        text-decoration: none;
+        text-align: left;
+        transition: border-color 0.2s;
+      }
+      .badge:hover, .badge:focus-visible { border-color: rgba(255, 255, 255, 0.45); }
+      .badge svg { flex-shrink: 0; }
+      .badge small { display: block; font-size: 10px; color: #cbd5e1; }
+      .badge strong { display: block; font-size: 18px; line-height: 1.15; }
+      /* Le store de l'appareil détecté passe en premier et en évidence. */
+      [data-platform="android"] .badge-play { order: -1; }
+      [data-platform="ios"] .badge-apple,
+      [data-platform="android"] .badge-play { border-color: rgba(236, 72, 153, 0.6); }
+      .back { display: inline-block; margin-top: 24px; color: #94a3b8; font-size: 13px; text-decoration: none; }
+      .back:hover { color: #fff; }
+      .done .spinner { display: none; }
+      @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img class="logo" src="/logo.png" alt="" width="72" height="72" />
+      <h1>Abyss <span>IA</span></h1>
+      <p class="status" id="status" role="status">
+        <span class="spinner" aria-hidden="true"></span>
+        <span id="status-text">Redirection en cours…</span>
+      </p>
+
+      <div class="badges">
+        <a class="badge badge-apple" href="https://apps.apple.com/app/id6776822178">
+          <svg viewBox="0 0 384 512" width="26" height="26" fill="currentColor" aria-hidden="true">
+            <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+          </svg>
+          <span><small data-t="apple">Télécharger dans l'</small><strong>App Store</strong></span>
+        </a>
+        <a class="badge badge-play" href="https://play.google.com/apps/testing/com.kelvyn.abyss_ia">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path fill="#00A0FF" d="M.614 2.454v19.03L10.15 12 .614 2.454z" />
+            <path fill="#00E676" d="M1.337.924a1.86 1.86 0 0 0-.633.483l10.846 10.784 3.16-3.14L1.337.924z" />
+            <path fill="#FFCE00" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202c1.302.771 1.302 2.052 0 2.594z" />
+            <path fill="#FF3A44" d="M1.36 23.077l13.373-7.575-3.19-3.17L.72 23.11c.196.19.42.34.64.44z" />
+          </svg>
+          <span><small data-t="play">DISPONIBLE SUR</small><strong>Google Play</strong></span>
+        </a>
+      </div>
+
+      <a class="back" href="/" data-t="back">Découvrir Abyss IA →</a>
+    </main>
+
+    <script>
+      // Page de secours, visible seulement si la redirection n'aboutit pas.
+      // Français par défaut, anglais pour les autres langues.
+      (function () {
+        var platform = document.documentElement.getAttribute("data-platform");
+        var fr = /^fr/i.test(navigator.language || "");
+        var t = fr
+          ? {
+              ios: "Ouverture de l'App Store…",
+              android: "Ouverture de Google Play…",
+              desktop: "Redirection vers le site…",
+              stuck: "Rien ne se passe ? Choisissez votre store :",
+              apple: "Télécharger dans l'",
+              play: "DISPONIBLE SUR",
+              back: "Découvrir Abyss IA →"
+            }
+          : {
+              ios: "Opening the App Store…",
+              android: "Opening Google Play…",
+              desktop: "Redirecting to the website…",
+              stuck: "Nothing happening? Pick your store:",
+              apple: "Download on the",
+              play: "GET IT ON",
+              back: "Discover Abyss IA →"
+            };
+
+        if (!fr) document.documentElement.lang = "en";
+        var statusText = document.getElementById("status-text");
+        statusText.textContent = t[platform] || t.desktop;
+
+        var nodes = document.querySelectorAll("[data-t]");
+        for (var i = 0; i < nodes.length; i++) nodes[i].textContent = t[nodes[i].getAttribute("data-t")];
+
+        setTimeout(function () {
+          document.getElementById("status").className += " done";
+          statusText.textContent = t.stuck;
+        }, 2500);
+      })();
+    </script>
+  </body>
+</html>

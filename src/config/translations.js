@@ -55,7 +55,9 @@ export const TRANSLATIONS = {
       badgeTop: "Télécharger dans l'",
       cta: "Télécharger sur l'App Store",
       badgeTopPlay: "DISPONIBLE SUR",
-      ctaPlay: "Disponible sur Google Play"
+      ctaPlay: "Disponible sur Google Play",
+      qrTitle: "Scannez pour installer",
+      qrDesc: "Visez ce QR code avec l'appareil photo de votre téléphone : vous serez redirigé automatiquement vers l'App Store ou Google Play."
     },
     faq: {
       sectionTitle: "Vos Questions, Nos Réponses",
@@ -141,7 +143,9 @@ export const TRANSLATIONS = {
       badgeTop: "Download on the",
       cta: "Download on the App Store",
       badgeTopPlay: "GET IT ON",
-      ctaPlay: "Get it on Google Play"
+      ctaPlay: "Get it on Google Play",
+      qrTitle: "Scan to install",
+      qrDesc: "Point your phone's camera at this QR code: you'll be taken straight to the App Store or Google Play."
     },
     faq: {
       sectionTitle: "Your Questions, Our Answers",
@@ -227,7 +231,9 @@ export const TRANSLATIONS = {
       badgeTop: "Descárgalo en la",
       cta: "Descargar en la App Store",
       badgeTopPlay: "DISPONIBLE EN",
-      ctaPlay: "Disponible en Google Play"
+      ctaPlay: "Disponible en Google Play",
+      qrTitle: "Escanea para instalar",
+      qrDesc: "Apunta la cámara de tu teléfono a este código QR: se te redirigirá automáticamente a la App Store o a Google Play."
     },
     faq: {
       sectionTitle: "Sus Preguntas, Nuestras Respuestas",
@@ -313,7 +319,9 @@ export const TRANSLATIONS = {
       badgeTop: "下载",
       cta: "在 App Store 下载",
       badgeTopPlay: "前往",
-      ctaPlay: "在 Google Play 下载"
+      ctaPlay: "在 Google Play 下载",
+      qrTitle: "扫码安装",
+      qrDesc: "用手机相机扫描此二维码，将自动为您跳转至 App Store 或 Google Play。"
     },
     faq: {
       sectionTitle: "您的问题，我们的解答",
@@ -399,7 +407,9 @@ export const TRANSLATIONS = {
       badgeTop: "Scarica su",
       cta: "Scarica su App Store",
       badgeTopPlay: "DISPONIBILE SU",
-      ctaPlay: "Disponibile su Google Play"
+      ctaPlay: "Disponibile su Google Play",
+      qrTitle: "Scansiona per installare",
+      qrDesc: "Inquadra questo codice QR con la fotocamera del telefono: verrai reindirizzato automaticamente ad App Store o Google Play."
     },
     faq: {
       sectionTitle: "Le Tue Domande, Le Nostre Risposte",
@@ -485,7 +495,9 @@ export const TRANSLATIONS = {
       badgeTop: "Загрузите в",
       cta: "Загрузить в App Store",
       badgeTopPlay: "ДОСТУПНО В",
-      ctaPlay: "Доступно в Google Play"
+      ctaPlay: "Доступно в Google Play",
+      qrTitle: "Отсканируйте для установки",
+      qrDesc: "Наведите камеру телефона на этот QR-код — вы автоматически перейдёте в App Store или Google Play."
     },
     faq: {
       sectionTitle: "Вопросы и ответы",
@@ -571,7 +583,9 @@ export const TRANSLATIONS = {
       badgeTop: "Завантажити в",
       cta: "Завантажити в App Store",
       badgeTopPlay: "ДОСТУПНО В",
-      ctaPlay: "Доступно в Google Play"
+      ctaPlay: "Доступно в Google Play",
+      qrTitle: "Скануйте, щоб встановити",
+      qrDesc: "Наведіть камеру телефона на цей QR-код — вас автоматично буде переспрямовано до App Store або Google Play."
     },
     faq: {
       sectionTitle: "Запитання та відповіді",
