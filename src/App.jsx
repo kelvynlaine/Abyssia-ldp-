@@ -37,7 +37,7 @@ export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
 
-  // Arrivée avec une ancre (ex: /install/ sur ordinateur -> /#appstore) : la section
+  // Arrivée avec une ancre (ex: un lien partagé vers /#appstore) : la section
   // n'existe qu'après le rendu React, le navigateur ne peut donc pas y défiler seul.
   useEffect(() => {
     const target = window.location.hash && document.getElementById(window.location.hash.slice(1));
@@ -70,7 +70,7 @@ export default function App() {
       },
       {
         question: "Comment installer Abyss IA sur iPhone, iPad ou Android ?",
-        answer: "Abyss IA est téléchargeable gratuitement sur l'App Store pour iPhone et iPad, et disponible sur Google Play pour Android. Cliquez sur n'importe quel bouton « Installer l'application » du site pour accéder aux deux stores, puis choisissez le vôtre. Depuis un ordinateur, scannez simplement le QR code avec votre téléphone : vous serez redirigé automatiquement vers l'App Store ou Google Play selon votre appareil. Sur Android, l'application est actuellement proposée via le programme de test officiel de Google Play."
+        answer: "Abyss IA est téléchargeable gratuitement sur l'App Store pour iPhone et iPad, et disponible sur Google Play pour Android. Cliquez sur n'importe quel bouton « Installer l'application » du site pour accéder aux deux stores, puis choisissez le vôtre. Sur Android, l'application est actuellement proposée via le programme de test officiel de Google Play."
       },
       {
         question: "Quels sont les prérequis système pour cette application IA productivité ?",
@@ -104,7 +104,7 @@ export default function App() {
       },
       {
         question: "How to install Abyss IA on iPhone, iPad or Android?",
-        answer: "Abyss IA is free to download on the App Store for iPhone and iPad, and available on Google Play for Android. Click any 'Install App' button on our site to reach both stores, then pick yours. On a computer, simply scan the QR code with your phone: you'll be taken automatically to the App Store or Google Play depending on your device. On Android, the app is currently offered through Google Play's official testing program."
+        answer: "Abyss IA is free to download on the App Store for iPhone and iPad, and available on Google Play for Android. Click any 'Install App' button on our site to reach both stores, then pick yours. On Android, the app is currently offered through Google Play's official testing program."
       },
       {
         question: "What are the system requirements for this productivity AI app?",
@@ -138,7 +138,7 @@ export default function App() {
       },
       {
         question: "¿Cómo instalar Abyss IA en iPhone, iPad o Android?",
-        answer: "Abyss IA se puede descargar gratis en la App Store para iPhone y iPad, y está disponible en Google Play para Android. Haga clic en cualquier botón 'Instalar App' de nuestro sitio para acceder a las dos tiendas y elija la suya. Desde un ordenador, basta con escanear el código QR con su teléfono: se le redirigirá automáticamente a la App Store o a Google Play según su dispositivo. En Android, la aplicación se ofrece actualmente a través del programa oficial de pruebas de Google Play."
+        answer: "Abyss IA se puede descargar gratis en la App Store para iPhone y iPad, y está disponible en Google Play para Android. Haga clic en cualquier botón 'Instalar App' de nuestro sitio para acceder a las dos tiendas y elija la suya. En Android, la aplicación se ofrece actualmente a través del programa oficial de pruebas de Google Play."
       },
       {
         question: "¿Cuáles son los requisitos del sistema para esta aplicación de IA de productividad?",
@@ -172,7 +172,7 @@ export default function App() {
       },
       {
         question: "如何在 iPhone、iPad 或安卓设备上安装 Abyss IA？",
-        answer: "Abyss IA 可在 App Store 免费下载，支持 iPhone 和 iPad；安卓用户可通过 Google Play 获取。点击我们网站上任意“安装应用”按钮即可看到两个商店，选择适合您的即可。在电脑上浏览时，只需用手机扫描二维码，系统会根据您的设备自动跳转至 App Store 或 Google Play。目前，安卓版本通过 Google Play 官方测试计划提供。"
+        answer: "Abyss IA 可在 App Store 免费下载，支持 iPhone 和 iPad；安卓用户可通过 Google Play 获取。点击我们网站上任意“安装应用”按钮即可看到两个商店，选择适合您的即可。目前，安卓版本通过 Google Play 官方测试计划提供。"
       },
       {
         question: "此效率 AI 应用的系统要求是什么？",
@@ -206,7 +206,7 @@ export default function App() {
       },
       {
         question: "Come installare Abyss IA su iPhone, iPad o Android?",
-        answer: "Abyss IA si scarica gratuitamente dall'App Store per iPhone e iPad ed è disponibile su Google Play per Android. Clicca su qualsiasi pulsante 'Installa App' del nostro sito per raggiungere i due store, poi scegli il tuo. Da computer, ti basta scansionare il codice QR con il telefono: verrai reindirizzato automaticamente ad App Store o Google Play in base al tuo dispositivo. Su Android, l'app è attualmente offerta tramite il programma di test ufficiale di Google Play."
+        answer: "Abyss IA si scarica gratuitamente dall'App Store per iPhone e iPad ed è disponibile su Google Play per Android. Clicca su qualsiasi pulsante 'Installa App' del nostro sito per raggiungere i due store, poi scegli il tuo. Su Android, l'app è attualmente offerta tramite il programma di test ufficiale di Google Play."
       },
       {
         question: "Quali sono i requisiti di sistema per questa app di produttività IA?",
@@ -240,7 +240,7 @@ export default function App() {
       },
       {
         question: "Как установить Abyss IA на iPhone, iPad или Android?",
-        answer: "Abyss IA можно бесплатно скачать в App Store для iPhone и iPad, а для Android приложение доступно в Google Play. Нажмите любую кнопку «Установить» на нашем сайте, чтобы перейти к обоим магазинам, и выберите свой. На компьютере достаточно отсканировать QR-код телефоном — вы автоматически попадёте в App Store или Google Play в зависимости от устройства. На Android приложение сейчас распространяется через официальную программу тестирования Google Play."
+        answer: "Abyss IA можно бесплатно скачать в App Store для iPhone и iPad, а для Android приложение доступно в Google Play. Нажмите любую кнопку «Установить» на нашем сайте, чтобы перейти к обоим магазинам, и выберите свой. На Android приложение сейчас распространяется через официальную программу тестирования Google Play."
       },
       {
         question: "Каковы системные требования для этого ИИ-приложения продуктивности?",
@@ -274,7 +274,7 @@ export default function App() {
       },
       {
         question: "Як встановити Abyss IA на iPhone, iPad або Android?",
-        answer: "Abyss IA можна безкоштовно завантажити в App Store для iPhone та iPad, а для Android додаток доступний у Google Play. Натисніть будь-яку кнопку «Встановити» на нашому сайті, щоб перейти до обох магазинів, і оберіть свій. На комп'ютері достатньо відсканувати QR-код телефоном — вас автоматично буде переспрямовано до App Store або Google Play залежно від пристрою. На Android додаток наразі поширюється через офіційну програму тестування Google Play."
+        answer: "Abyss IA можна безкоштовно завантажити в App Store для iPhone та iPad, а для Android додаток доступний у Google Play. Натисніть будь-яку кнопку «Встановити» на нашому сайті, щоб перейти до обох магазинів, і оберіть свій. На Android додаток наразі поширюється через офіційну програму тестування Google Play."
       },
       {
         question: "Які системні вимоги для цього ШІ-додатка продуктивності?",
@@ -836,36 +836,9 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Right - Visual : QR code sur ordinateur, logo sur mobile */}
+                {/* Right - Visual */}
                 <div className="lg:col-span-5 flex justify-center">
-                  {/* QR code d'installation -> /install/ (masqué sur mobile : on ne scanne pas son propre écran) */}
-                  <div className="hidden lg:flex flex-col items-center gap-5 text-center">
-                    <div className="relative">
-                      <div className="absolute -inset-4 bg-gradient-to-br from-sky-500/25 to-violet-600/25 blur-2xl rounded-[2.5rem]" />
-                      <div className="relative p-2 rounded-[1.75rem] bg-white shadow-2xl">
-                        <img
-                          src="/qr-install.svg"
-                          alt={t.appstore.qrTitle}
-                          width="208"
-                          height="208"
-                          className="size-52 block"
-                        />
-                        <img
-                          src="/logo.png"
-                          alt=""
-                          aria-hidden="true"
-                          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-10 rounded-xl ring-4 ring-white"
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-1.5 max-w-60">
-                      <p className="text-sm font-bold text-white">{t.appstore.qrTitle}</p>
-                      <p className="text-xs text-slate-400 leading-relaxed">{t.appstore.qrDesc}</p>
-                    </div>
-                  </div>
-
-                  {/* Logo (mobile / tablette) */}
-                  <div className="relative lg:hidden">
+                  <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-violet-600/20 blur-3xl rounded-full" />
                     <div className="relative size-44 sm:size-52 rounded-[2rem] bg-gradient-to-br from-[#0a0c14] to-[#15101f] border border-white/10 flex items-center justify-center shadow-2xl">
                       <img

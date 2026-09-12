@@ -2,14 +2,11 @@
  * Configuration centralisée pour Abyss IA
  * Vous pouvez insérer ici les liens vers les stores (App Store / Google Play).
  *
- * La redirection automatique par appareil (cible du QR code) est assurée par
- * la page statique public/install/index.html :
- *   - iPhone / iPad         -> App Store
- *   - Android               -> Google Play
- *   - Ordinateur / autre    -> landing page, section #appstore
+ * Ces liens alimentent les badges de la section #appstore, vers laquelle pointent
+ * tous les boutons « Installer » : le visiteur choisit lui-même son store.
  *
- * ⚠️ Les deux liens ci-dessous y sont dupliqués (la page n'embarque aucun JS
- * externe pour rediriger instantanément) : toute modification doit être reportée.
+ * getSmartInstallUrl() ci-dessous sait déduire le store depuis l'appareil, mais
+ * n'est branché sur aucun bouton : il reste disponible en cas de besoin.
  */
 
 // Lien officiel App Store (iOS). Sans code pays : Apple envoie chaque visiteur
