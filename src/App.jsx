@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   Sparkles, 
   Flame, 
@@ -36,13 +36,6 @@ export default function App() {
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
-
-  // Arrivée avec une ancre (ex: un lien partagé vers /#appstore) : la section
-  // n'existe qu'après le rendu React, le navigateur ne peut donc pas y défiler seul.
-  useEffect(() => {
-    const target = window.location.hash && document.getElementById(window.location.hash.slice(1));
-    target?.scrollIntoView();
-  }, []);
 
   const t = TRANSLATIONS[lang] || TRANSLATIONS.fr;
 
