@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 
-const MOCKUP_CATEGORIES = {
+export const MOCKUP_CATEGORIES = {
   fr: [
     {
       title: "Tableau de Bord",

@@ -27,6 +27,7 @@ import {
 import PomodoroDemo from './components/PomodoroDemo';
 import HabitTrackerDemo from './components/HabitTrackerDemo';
 import AppMockupShowcase from './components/AppMockupShowcase';
+import MockupGallery from './components/MockupGallery';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
 import { TRANSLATIONS } from './config/translations';
 import { APP_STORE_URL, PLAY_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
@@ -692,6 +693,9 @@ export default function App() {
               </div>
             </div>
           </section>
+
+          {/* 5.5 Galerie complète des captures de l'application */}
+          <MockupGallery lang={lang} />
 
           {/* 6. Extensive FAQ Section */}
           <section id="faq" className="space-y-12 scroll-mt-20">
