@@ -89,6 +89,7 @@ verifier(
   liens.some((h) => h.includes('apps.apple.com')) && liens.some((h) => h.includes('play.google.com')),
   'les liens App Store et Google Play sont présents',
 );
+verifier(!!doc.getElementById('video'), 'la section du film de présentation est présente');
 verifier(erreurs.length === 0, `aucune erreur JavaScript${erreurs.length ? ` : ${erreurs.slice(0, 3).join(' | ').slice(0, 300)}` : ''}`);
 
 dom.window.close();
@@ -111,6 +112,14 @@ verifier(
   !!bundleFichier && fs.existsSync(bundleFichier) && fs.statSync(bundleFichier).size > 50_000,
   'ce fichier existe et a une taille plausible',
 );
+
+// Les fichiers du film sont volumineux et servis depuis public/ : on vérifie
+// qu'ils sont bien présents dans le site construit, sans quoi la section
+// n'afficherait qu'un rectangle noir.
+for (const fichier of ['video/keynote-1080.mp4', 'video/keynote-720.mp4', 'video/keynote-poster.webp']) {
+  const chemin = path.join(DIST, fichier);
+  verifier(fs.existsSync(chemin) && fs.statSync(chemin).size > 5_000, `${fichier} est publié`);
+}
 
 console.log(echecs ? `\n❌ ${echecs} échec(s)` : "\n✅ le site s'affiche correctement");
 process.exit(echecs ? 1 : 0);

@@ -26,6 +26,7 @@ import PomodoroDemo from './components/PomodoroDemo';
 import HabitTrackerDemo from './components/HabitTrackerDemo';
 import AppScreenCarousel from './components/AppScreenCarousel';
 import MockupGallery from './components/MockupGallery';
+import KeynoteVideo from './components/KeynoteVideo';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
 import { TRANSLATIONS } from './config/translations';
 import { APP_STORE_URL, PLAY_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
@@ -522,6 +523,9 @@ export default function App() {
             </div>
 
           </section>
+
+          {/* 2.5 Film de présentation (juste après le héros) */}
+          <KeynoteVideo lang={lang} />
 
           {/* 3. Interactive Demos Segment (Pomodoro & Habits) */}
           <section id="demo" className="space-y-10 sm:space-y-12 scroll-mt-20">
