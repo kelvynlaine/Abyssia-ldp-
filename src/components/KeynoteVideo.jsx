@@ -81,9 +81,8 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
   // dès qu'elle est réellement visible. Une personne qui a demandé moins
   // d'animations garde la main : on charge, mais on ne démarre pas.
   useEffect(() => {
-    const section = sectionRef.current;
     const video = videoRef.current;
-    if (!section || !video) return undefined;
+    if (!video) return undefined;
 
     // matchMedia manque dans certains environnements (rendu hors navigateur,
     // navigateurs anciens) : sans garde, toute la page tomberait.
@@ -112,6 +111,10 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
 
     if (typeof IntersectionObserver !== 'function') return undefined;
 
+    // On observe la vidéo elle-même, pas la section, et on se déclenche dès
+    // qu'elle entre dans la bande centrale de l'écran. Un seuil en pourcentage
+    // de visibilité ne marcherait pas sur les fenêtres courtes : un élément
+    // plus haut que l'écran n'atteint jamais le seuil.
     const observateur = new IntersectionObserver(
       ([entree]) => {
         if (entree.isIntersecting) {
@@ -121,10 +124,10 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
           video.pause();
         }
       },
-      { threshold: 0.45 },
+      { rootMargin: '-15% 0px -15% 0px', threshold: 0 },
     );
 
-    observateur.observe(section);
+    observateur.observe(video);
     return () => observateur.disconnect();
   }, [terminee]);
 
