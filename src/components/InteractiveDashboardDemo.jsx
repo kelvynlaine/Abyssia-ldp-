@@ -14,7 +14,7 @@ import {
 
 const LABELS = {
   fr: {
-    headerTitle: "Abyss IA - Centre d'Analyses",
+    headerTitle: "Abyssia - Centre d'Analyses",
     headerSubtitle: "Tableau de bord de progression interactif",
     tabStats: "Statistiques",
     tabHabits: "Défis & EXP",
@@ -47,13 +47,13 @@ const LABELS = {
       { day: "D", hrs: 2, label: "Dimanche", details: "Préparation et planification. 2 heures. Revue hebdomadaire et ajustements de l'IA." }
     ],
     habits: [
-      { id: 1, text: "Activer le focus Pomodoro Abyss IA", exp: 150, checked: false },
+      { id: 1, text: "Activer le focus Pomodoro Abyssia", exp: 150, checked: false },
       { id: 2, text: "Compléter 3 tâches prioritaires", exp: 200, checked: false },
       { id: 3, text: "Faire 15 minutes de méditation cognitive", exp: 100, checked: false }
     ]
   },
   en: {
-    headerTitle: "Abyss IA - Analytics Center",
+    headerTitle: "Abyssia - Analytics Center",
     headerSubtitle: "Interactive progress dashboard",
     tabStats: "Statistics",
     tabHabits: "Challenges & EXP",
@@ -71,7 +71,7 @@ const LABELS = {
     dailyChallenges: "Daily AI Challenges",
     toastTitle: "LEVEL UP ACCUMULATED!",
     toastSub: "Congratulations, you reached Level 5!",
-    toastDesc: "Your Abyss IA assistant has updated your challenges and cognitive recharge speeds.",
+    toastDesc: "Your Abyssia assistant has updated your challenges and cognitive recharge speeds.",
     toastClose: "Close",
     note: "* Try the widget! Select days or check off habits to simulate gamification.",
     suffixHours: "Hours",
@@ -86,13 +86,13 @@ const LABELS = {
       { day: "S", hrs: 2, label: "Sunday", details: "Weekly review and planning. 2 hours. Review and AI routine adjustments." }
     ],
     habits: [
-      { id: 1, text: "Activate Abyss IA Pomodoro focus", exp: 150, checked: false },
+      { id: 1, text: "Activate Abyssia Pomodoro focus", exp: 150, checked: false },
       { id: 2, text: "Complete 3 high priority tasks", exp: 200, checked: false },
       { id: 3, text: "Do 15 minutes of cognitive meditation", exp: 100, checked: false }
     ]
   },
   es: {
-    headerTitle: "Abyss IA - Centro de Análisis",
+    headerTitle: "Abyssia - Centro de Análisis",
     headerSubtitle: "Panel de progreso interactivo",
     tabStats: "Estadísticas",
     tabHabits: "Desafíos y EXP",
@@ -110,7 +110,7 @@ const LABELS = {
     dailyChallenges: "Desafíos diarios de IA",
     toastTitle: "¡NIVEL SUPERIOR ACUMULADO!",
     toastSub: "¡Felicidades, ha subido al Nivel 5!",
-    toastDesc: "Su asistente Abyss IA ha actualizado sus desafíos y la velocidad de recarga cognitiva.",
+    toastDesc: "Su asistente Abyssia ha actualizado sus desafíos y la velocidad de recarga cognitiva.",
     toastClose: "Cerrar",
     note: "* ¡Pruebe el widget! Seleccione días o marque metas para simular la gamificación.",
     suffixHours: "Horas",
@@ -125,13 +125,13 @@ const LABELS = {
       { day: "D", hrs: 2, label: "Domingo", details: "Revisión semanal y planificación. 2 horas. Ajustes de rutina por la IA." }
     ],
     habits: [
-      { id: 1, text: "Activar el foco Pomodoro Abyss IA", exp: 150, checked: false },
+      { id: 1, text: "Activar el foco Pomodoro Abyssia", exp: 150, checked: false },
       { id: 2, text: "Completar 3 tareas prioritarias", exp: 200, checked: false },
       { id: 3, text: "Hacer 15 minutos de meditación cognitiva", exp: 100, checked: false }
     ]
   },
   zh: {
-    headerTitle: "Abyss IA - 分析中心",
+    headerTitle: "Abyssia - 分析中心",
     headerSubtitle: "交互式进度仪表板",
     tabStats: "数据统计",
     tabHabits: "挑战与 EXP",
@@ -149,7 +149,7 @@ const LABELS = {
     dailyChallenges: "每日人工智能挑战",
     toastTitle: "获得等级提升！",
     toastSub: "恭喜，您已升至 5 级！",
-    toastDesc: "您的 Abyss IA 助手已更新您的挑战和认知恢复速度。",
+    toastDesc: "您的 Abyssia 助手已更新您的挑战和认知恢复速度。",
     toastClose: "关闭",
     note: "* 试试这个小组件！选择日期或勾选习惯以模拟游戏化体验。",
     suffixHours: "小时",
@@ -164,13 +164,13 @@ const LABELS = {
       { day: "日", hrs: 2, label: "周日", details: "周度回顾与规划。专注了 2 小时。回顾并由人工智能进行常规调整。" }
     ],
     habits: [
-      { id: 1, text: "激活 Abyss IA 番茄专注钟", exp: 150, checked: false },
+      { id: 1, text: "激活 Abyssia 番茄专注钟", exp: 150, checked: false },
       { id: 2, text: "完成 3 项高优先级任务", exp: 200, checked: false },
       { id: 3, text: "进行 15 分钟认知冥想", exp: 100, checked: false }
     ]
   },
   it: {
-    headerTitle: "Abyss IA - Centro Analisi",
+    headerTitle: "Abyssia - Centro Analisi",
     headerSubtitle: "Dashboard di progressione interattiva",
     tabStats: "Statistiche",
     tabHabits: "Sfide & EXP",
@@ -203,13 +203,13 @@ const LABELS = {
       { day: "D", hrs: 2, label: "Domenica", details: "Preparazione e pianificazione. 2 ore. Revisione settimanale e modifiche dell'IA." }
     ],
     habits: [
-      { id: 1, text: "Attiva il focus Pomodoro Abyss IA", exp: 150, checked: false },
+      { id: 1, text: "Attiva il focus Pomodoro Abyssia", exp: 150, checked: false },
       { id: 2, text: "Completa 3 compiti prioritari", exp: 200, checked: false },
       { id: 3, text: "Fai 15 minuti di meditazione cognitiva", exp: 100, checked: false }
     ]
   },
   ru: {
-    headerTitle: "Abyss IA - Центр аналитики",
+    headerTitle: "Abyssia - Центр аналитики",
     headerSubtitle: "Интерактивная панель прогресса",
     tabStats: "Статистика",
     tabHabits: "Испытания и EXP",
@@ -242,13 +242,13 @@ const LABELS = {
       { day: "В", hrs: 2, label: "Воскресенье", details: "Подготовка и планирование. 2 часа. Еженедельный обзор и корректировки ИИ." }
     ],
     habits: [
-      { id: 1, text: "Активировать фокус Pomodoro Abyss IA", exp: 150, checked: false },
+      { id: 1, text: "Активировать фокус Pomodoro Abyssia", exp: 150, checked: false },
       { id: 2, text: "Выполнить 3 приоритетные задачи", exp: 200, checked: false },
       { id: 3, text: "Сделать 15-минутную когнитивную медитацию", exp: 100, checked: false }
     ]
   },
   uk: {
-    headerTitle: "Abyss IA - Центр аналітики",
+    headerTitle: "Abyssia - Центр аналітики",
     headerSubtitle: "Інтерактивна панель прогресу",
     tabStats: "Статистика",
     tabHabits: "Випробування та EXP",
@@ -281,7 +281,7 @@ const LABELS = {
       { day: "Н", hrs: 2, label: "Неділя", details: "Підготовка та планування. 2 години. Щотижневий огляд та коригування ШІ." }
     ],
     habits: [
-      { id: 1, text: "Активувати фокус Pomodoro Abyss IA", exp: 150, checked: false },
+      { id: 1, text: "Активувати фокус Pomodoro Abyssia", exp: 150, checked: false },
       { id: 2, text: "Виконати 3 пріоритетні завдання", exp: 200, checked: false },
       { id: 3, text: "Зробити 15-хвилинну когнітивну медитацію", exp: 100, checked: false }
     ]

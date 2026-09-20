@@ -8,33 +8,33 @@ export const TRANSLATIONS = {
       install: "Installer l'App"
     },
     hero: {
-      microBadge: "Assistant Personnel IA Révolutionnaire",
-      headline: "Visez l'excellence avec",
-      subtitle: "Découvrez Abyss IA, votre application de productivité intelligente tout-en-un. Gérez vos tâches quotidiennes, optimisez votre temps avec le Pomodoro intelligent et suivez vos habitudes pour pulvériser tous vos objectifs.",
-      ctaInstall: "Installer l'application",
-      ctaDemo: "Découvrir la démo interactive",
-      trustBadge1: "Meilleure App IA 2026",
-      trustBadge2: "Disponible sur l'App Store et Google Play"
+      microBadge: "Chat IA + 25 outils · Version 4.1",
+      headline: "Apprenez, créez et avancez avec",
+      subtitle: "Chat IA, cours rédigés par l'IA, fiches, quiz, notes, Pomodoro et plus de 25 outils réunis dans une seule application. Interface sombre soignée, synchronisation cloud, gratuite sur l'App Store.",
+      ctaInstall: "Télécharger l'application",
+      ctaDemo: "Essayer la démo interactive",
+      trustBadge1: "Gratuit · iOS 15+ · 70 Mo",
+      trustBadge2: "Plus de 25 outils IA dans une seule app"
     },
     demos: {
-      sectionTitle: "Essayez l'Expérience Abyss IA en Direct",
+      sectionTitle: "Essayez l'Expérience Abyssia en Direct",
       sectionSubtitle: "Découvrez la fluidité de nos outils avec ces composants de démonstration interactifs en temps réel."
     },
     features: {
-      sectionTitle: "Propulsé par L'Intelligence Artificielle",
-      sectionSubtitle: "Abyss IA intègre des fonctionnalités révolutionnaires conçues pour maximiser votre temps de travail et éliminer la procrastination.",
-      feat1Title: "Gestion Intelligente des Tâches",
-      feat1Desc: "L'assistant IA d'Abyss analyse vos tâches et crée automatiquement des sous-tâches gérables, estime la durée et priorise intelligemment selon vos objectifs SMART.",
-      feat2Title: "Tracker d'Habitudes Gamifié",
-      feat2Desc: "Transformez vos routines en un jeu de rôle captivant. Gagnez de l'EXP, passez des niveaux et débloquez des récompenses exclusives en complétant vos habitudes quotidiennes.",
-      feat3Title: "Pomodoro Connecté & Intelligent",
-      feat3Desc: "Associez vos sessions de concentration directement à vos tâches en cours. L'IA ajuste automatiquement les pauses pour préserver votre santé mentale.",
-      feat4Title: "Statistiques & Insights IA",
-      feat4Desc: "Visualisez clairement votre progression grâce à des rapports générés par IA. Découvrez vos pics de productivité et recevez des conseils sur mesure pour vous améliorer.",
-      feat5Title: "Sécurité & Cloud Sync",
-      feat5Desc: "Vos données de progression, tâches et habitudes sont chiffrées de bout en bout et synchronisées en temps réel sur tous vos appareils en toute sécurité.",
-      feat6Title: "Nouveautés en Avant-Première",
-      feat6Desc: "Notre équipe travaille chaque jour sur de nouvelles extensions intelligentes. Rejoignez nos canaux pour voter pour les prochaines fonctionnalités !"
+      sectionTitle: "Tout ce que fait Abyssia",
+      sectionSubtitle: "Une seule application pour apprendre, écrire, s'organiser et avancer — au lieu de jongler entre dix services.",
+      feat1Title: "Chat IA multi-personnalités",
+      feat1Desc: "Discutez avec une IA qui gère le code et le markdown, ou basculez sur un agent spécialisé : développeur, rédacteur, coach, marketing, psychologue. Dictée et conversation vocale incluses.",
+      feat2Title: "Cours et révisions générés",
+      feat2Desc: "Demandez un cours complet : leçons, exemples traités, démonstrations et fiches méthode. Révisez ensuite avec des flashcards et des quiz corrigés instantanément.",
+      feat3Title: "Skills directement dans le chat",
+      feat3Desc: "Tapez « / » pour lancer une action : /cours, /fiche, /exercices, /explique. L'IA produit un document structuré, pas seulement une réponse.",
+      feat4Title: "Notes intelligentes et tâches",
+      feat4Desc: "Un éditeur façon Notion, des listes de tâches dont l'IA découpe les sous-étapes, un journal de bien-être et un brief quotidien qui résume votre journée.",
+      feat5Title: "Concentration et progression",
+      feat5Desc: "Un Pomodoro synchronisé avec la Dynamic Island, le suivi d'habitudes et d'objectifs, l'XP, les séries actives et douze badges à débloquer.",
+      feat6Title: "Vingt-cinq outils du quotidien",
+      feat6Desc: "Traducteur, chef IA à partir de vos ingrédients, planificateur de voyage, conseiller budget, lecteur PDF, navigateur intégré, forum en temps réel et parties d'échecs contre l'IA."
     },
     dashboard: {
       microBadge: "Séries d'Habitudes & Rapports",
@@ -46,12 +46,12 @@ export const TRANSLATIONS = {
       bullet4: "EXP bonus pour la complétion des objectifs"
     },
     appstore: {
-      microBadge: "Disponible sur iOS & Android",
-      title: "Téléchargez Abyss IA sur tous vos appareils",
-      subtitle: "Abyss IA est officiellement disponible sur l'App Store et sur Google Play. Installez l'application en un clic et profitez de votre assistant de productivité IA, parfaitement optimisé pour iOS et Android, où que vous soyez.",
-      bullet1: "Optimisé pour iPhone, iPad et Android",
-      bullet2: "Installation rapide et 100% sécurisée",
-      bullet3: "Synchronisation cloud et mises à jour automatiques",
+      microBadge: "Sur l'App Store · en test sur Android",
+      title: "Téléchargez Abyssia gratuitement",
+      subtitle: "Abyssia est disponible gratuitement sur l'App Store pour iPhone et iPad. La version Android est pour l'instant proposée via le programme de test de Google Play.",
+      bullet1: "Gratuit, classé 4+, sans compte payant obligatoire",
+      bullet2: "iPhone et iPad, iOS 15.0 ou plus récent (70 Mo)",
+      bullet3: "Synchronisation cloud entre tous vos appareils",
       badgeTop: "Télécharger dans l'",
       cta: "Télécharger sur l'App Store",
       badgeTopPlay: "DISPONIBLE SUR",
@@ -73,16 +73,16 @@ export const TRANSLATIONS = {
       emailBtn: "Envoyer un e-mail"
     },
     footer: {
-      brandDesc: "L'assistant de productivité intelligent nouvelle génération. Notre écosystème intègre des trackers d'habitudes, des outils Pomodoro et de l'intelligence artificielle pour maximiser votre temps.",
+      brandDesc: "L'assistant IA tout-en-un : chat, cours, fiches, quiz, notes, Pomodoro et plus de 25 outils réunis dans une seule application soignée.",
       colProduct: "Produit",
       colCommunity: "Communauté",
       officialDiscord: "Discord Officiel",
-      blog: "Blog Abyss IA",
+      blog: "Blog Abyssia",
       colSupport: "Contact & Support",
-      copyright: "Abyss IA. Tous droits réservés.",
+      copyright: "Abyssia. Tous droits réservés.",
       legal: "Mentions Légales",
       cgu: "CGU & Confidentialité",
-      subNote: "Application IA productivité France - Système de concentration et d'habitudes intelligent."
+      subNote: "Application IA de chat, d'apprentissage et de productivité — disponible gratuitement sur l'App Store."
     }
   },
   en: {
@@ -94,33 +94,33 @@ export const TRANSLATIONS = {
       install: "Install App"
     },
     hero: {
-      microBadge: "Revolutionary AI Personal Assistant",
-      headline: "Aim for excellence with",
-      subtitle: "Discover Abyss IA, your all-in-one smart productivity application. Manage your daily tasks, optimize your time with smart Pomodoro, and track habits to shatter all your goals.",
-      ctaInstall: "Install application",
+      microBadge: "AI chat + 25 tools · Version 4.1",
+      headline: "Learn, create and get things done with",
+      subtitle: "AI chat, AI-written courses, summaries, quizzes, notes, Pomodoro and over 25 tools in a single app. Polished dark interface, cloud sync, free on the App Store.",
+      ctaInstall: "Download the app",
       ctaDemo: "Try the live demo",
-      trustBadge1: "Best AI App 2026",
-      trustBadge2: "Available on the App Store and Google Play"
+      trustBadge1: "Free · iOS 15+ · 70 MB",
+      trustBadge2: "Over 25 AI tools in a single app"
     },
     demos: {
-      sectionTitle: "Try the Abyss IA Experience Live",
+      sectionTitle: "Try the Abyssia Experience Live",
       sectionSubtitle: "Discover the fluidity of our tools with these interactive real-time demo components."
     },
     features: {
-      sectionTitle: "Powered by Artificial Intelligence",
-      sectionSubtitle: "Abyss IA integrates revolutionary features designed to maximize your work time and eliminate procrastination.",
-      feat1Title: "Smart Task Management",
-      feat1Desc: "Abyss's AI assistant analyzes your tasks and automatically creates manageable sub-tasks, estimates duration, and prioritizes smartly according to your SMART goals.",
-      feat2Title: "Gamified Habit Tracker",
-      feat2Desc: "Turn your routines into a captivating role-playing game. Earn EXP, level up, and unlock exclusive rewards by completing your daily habits.",
-      feat3Title: "Smart Connected Pomodoro",
-      feat3Desc: "Link your focus sessions directly to your ongoing tasks. The AI automatically adjusts breaks to preserve your mental focus and well-being.",
-      feat4Title: "AI Statistics & Insights",
-      feat4Desc: "Clearly visualize your progress with AI-generated reports. Discover your productivity peaks and receive tailored advice to improve.",
-      feat5Title: "Security & Cloud Sync",
-      feat5Desc: "Your progress data, tasks, and habits are end-to-end encrypted and synced in real time across all your devices with complete security.",
-      feat6Title: "Sneak Peeks & Beta Extensions",
-      feat6Desc: "Our team works daily on new intelligent extensions. Join our channels to vote on the next major features!"
+      sectionTitle: "Everything Abyssia does",
+      sectionSubtitle: "One app to learn, write, organize and move forward — instead of juggling ten different services.",
+      feat1Title: "AI chat with many personalities",
+      feat1Desc: "Talk to an AI that handles code and markdown, or switch to a specialized agent: developer, writer, coach, marketing, psychologist. Voice input and voice chat included.",
+      feat2Title: "Generated courses and revision",
+      feat2Desc: "Ask for a full course: lessons, worked examples, proofs and method sheets. Then revise with flashcards and quizzes graded instantly.",
+      feat3Title: "Skills right inside the chat",
+      feat3Desc: "Type « / » to trigger an action: course, summary, exercises, plain explanation. The AI returns a structured document, not just a reply.",
+      feat4Title: "Smart notes and tasks",
+      feat4Desc: "A Notion-style editor, to-do lists whose subtasks the AI breaks down for you, a wellbeing journal and a daily brief that sums up your day.",
+      feat5Title: "Focus and progress",
+      feat5Desc: "A Pomodoro synced with the Dynamic Island, habit and goal tracking, XP, active streaks and twelve badges to unlock.",
+      feat6Title: "Twenty-five everyday tools",
+      feat6Desc: "Translator, AI chef based on your ingredients, travel planner, budget advisor, PDF viewer, built-in browser, real-time forum and chess games against the AI."
     },
     dashboard: {
       microBadge: "Habit Streaks & Reports",
@@ -132,12 +132,12 @@ export const TRANSLATIONS = {
       bullet4: "Bonus EXP for completing major milestones"
     },
     appstore: {
-      microBadge: "Available on iOS & Android",
-      title: "Download Abyss IA on all your devices",
-      subtitle: "Abyss IA is officially available on the App Store and on Google Play. Install the app in one tap and enjoy your AI productivity assistant, perfectly optimized for iOS and Android, wherever you are.",
-      bullet1: "Optimized for iPhone, iPad and Android",
-      bullet2: "Fast and 100% secure installation",
-      bullet3: "Cloud sync and automatic updates",
+      microBadge: "On the App Store · Android in testing",
+      title: "Download Abyssia for free",
+      subtitle: "Abyssia is free on the App Store for iPhone and iPad. The Android version is currently offered through the Google Play testing programme.",
+      bullet1: "Free, rated 4+, no paid account required",
+      bullet2: "iPhone and iPad, iOS 15.0 or later (70 MB)",
+      bullet3: "Cloud sync across all your devices",
       badgeTop: "Download on the",
       cta: "Download on the App Store",
       badgeTopPlay: "GET IT ON",
@@ -159,16 +159,16 @@ export const TRANSLATIONS = {
       emailBtn: "Send Email"
     },
     footer: {
-      brandDesc: "The next-generation smart productivity assistant. Our ecosystem integrates habit trackers, Pomodoro tools, and AI to maximize your time.",
+      brandDesc: "The all-in-one AI assistant: chat, courses, summaries, quizzes, notes, Pomodoro and over 25 tools in a single polished app.",
       colProduct: "Product",
       colCommunity: "Community",
       officialDiscord: "Official Discord",
-      blog: "Abyss IA Blog",
+      blog: "Abyssia Blog",
       colSupport: "Contact & Support",
-      copyright: "Abyss IA. All rights reserved.",
+      copyright: "Abyssia. All rights reserved.",
       legal: "Legal Notice",
       cgu: "TOS & Privacy",
-      subNote: "Productivity AI application - Smart concentration and habit tracking system."
+      subNote: "AI chat, learning and productivity app — free on the App Store."
     }
   },
   es: {
@@ -180,33 +180,33 @@ export const TRANSLATIONS = {
       install: "Instalar App"
     },
     hero: {
-      microBadge: "Asistente Personal de IA Revolucionario",
-      headline: "Busque la excelencia con",
-      subtitle: "Descubra Abyss IA, su aplicación de productividad inteligente todo en uno. Gestione sus tareas diarias, optimice su tiempo con el Pomodoro inteligente y siga sus hábitos para superar todas sus metas.",
-      ctaInstall: "Instalar aplicación",
+      microBadge: "Chat con IA + 25 herramientas · Versión 4.1",
+      headline: "Aprende, crea y avanza con",
+      subtitle: "Chat con IA, cursos redactados por la IA, fichas, test, notas, Pomodoro y más de 25 herramientas en una sola aplicación. Interfaz oscura cuidada, sincronización en la nube, gratis en el App Store.",
+      ctaInstall: "Descargar la aplicación",
       ctaDemo: "Probar la demo interactiva",
-      trustBadge1: "Mejor App de IA 2026",
-      trustBadge2: "Disponible en la App Store y Google Play"
+      trustBadge1: "Gratis · iOS 15+ · 70 MB",
+      trustBadge2: "Más de 25 herramientas de IA en una sola app"
     },
     demos: {
-      sectionTitle: "Pruebe la Experiencia de Abyss IA en Vivo",
+      sectionTitle: "Pruebe la Experiencia de Abyssia en Vivo",
       sectionSubtitle: "Descubra la fluidez de nuestras herramientas con estos componentes interactivos de demostración en tiempo real."
     },
     features: {
-      sectionTitle: "Impulsado por Inteligencia Artificial",
-      sectionSubtitle: "Abyss IA integra características revolucionarias diseñadas para maximizar su tiempo de trabajo y eliminar la procrastinación.",
-      feat1Title: "Gestión Inteligente de Tareas",
-      feat1Desc: "El asistente de IA de Abyss analiza sus tareas y crea automáticamente subtareas manejables, estima la duración y prioriza de forma inteligente según sus objetivos SMART.",
-      feat2Title: "Seguimiento de Hábitos Gamificado",
-      feat2Desc: "Convierta sus rutinas en un juego de rol cautivador. Gane EXP, suba de nivel y desbloquee recompensas exclusivas completando sus hábitos diarios.",
-      feat3Title: "Pomodoro Inteligente Conectado",
-      feat3Desc: "Vincule sus sesiones de concentración directamente a sus tareas en curso. La IA ajusta automáticamente los descansos para preservar su bienestar mental.",
-      feat4Title: "Estadísticas e Insights de IA",
-      feat4Desc: "Visualice claramente su progreso con informes generados por IA. Descubra sus picos de productividad y reciba consejos personalizados para mejorar.",
-      feat5Title: "Seguridad y Sincronización en la Nube",
-      feat5Desc: "Sus datos de progreso, tareas y hábitos están encriptados de extremo a extremo y se sincronizan en tiempo real en todos sus dispositivos de forma segura.",
-      feat6Title: "Novedades y Extensiones Beta",
-      feat6Desc: "Nuestro equipo trabaja a diario en nuevas extensiones inteligentes. ¡Únase a nuestros canales para votar por las próximas características!"
+      sectionTitle: "Todo lo que hace Abyssia",
+      sectionSubtitle: "Una sola aplicación para aprender, escribir, organizarte y avanzar, en lugar de alternar entre diez servicios.",
+      feat1Title: "Chat con IA y varias personalidades",
+      feat1Desc: "Conversa con una IA que domina el código y el markdown, o cambia a un agente especializado: desarrollador, redactor, coach, marketing, psicólogo. Dictado y conversación por voz incluidos.",
+      feat2Title: "Cursos y repasos generados",
+      feat2Desc: "Pide un curso completo: lecciones, ejemplos resueltos, demostraciones y fichas de método. Después repasa con flashcards y test corregidos al instante.",
+      feat3Title: "Skills dentro del chat",
+      feat3Desc: "Escribe «/» para lanzar una acción: curso, ficha, ejercicios, explicación sencilla. La IA devuelve un documento estructurado, no solo una respuesta.",
+      feat4Title: "Notas inteligentes y tareas",
+      feat4Desc: "Un editor al estilo Notion, listas de tareas cuyas subtareas divide la IA, un diario de bienestar y un resumen diario de tu jornada.",
+      feat5Title: "Concentración y progreso",
+      feat5Desc: "Un Pomodoro sincronizado con la Dynamic Island, seguimiento de hábitos y objetivos, XP, rachas activas y doce medallas por desbloquear.",
+      feat6Title: "Veinticinco herramientas diarias",
+      feat6Desc: "Traductor, chef con IA a partir de tus ingredientes, planificador de viajes, asesor de presupuesto, lector de PDF, navegador integrado, foro en tiempo real y partidas de ajedrez contra la IA."
     },
     dashboard: {
       microBadge: "Rachas de Hábitos e Informes",
@@ -218,12 +218,12 @@ export const TRANSLATIONS = {
       bullet4: "EXP extra al completar hitos importantes"
     },
     appstore: {
-      microBadge: "Disponible en iOS y Android",
-      title: "Descarga Abyss IA en todos tus dispositivos",
-      subtitle: "Abyss IA ya está disponible oficialmente en la App Store y en Google Play. Instala la aplicación con un solo toque y disfruta de tu asistente de productividad con IA, perfectamente optimizado para iOS y Android, estés donde estés.",
-      bullet1: "Optimizado para iPhone, iPad y Android",
-      bullet2: "Instalación rápida y 100% segura",
-      bullet3: "Sincronización en la nube y actualizaciones automáticas",
+      microBadge: "En el App Store · Android en pruebas",
+      title: "Descarga Abyssia gratis",
+      subtitle: "Abyssia está disponible gratis en el App Store para iPhone y iPad. La versión Android se ofrece por ahora mediante el programa de pruebas de Google Play.",
+      bullet1: "Gratis, clasificación 4+, sin cuenta de pago obligatoria",
+      bullet2: "iPhone y iPad, iOS 15.0 o posterior (70 MB)",
+      bullet3: "Sincronización en la nube entre todos tus dispositivos",
       badgeTop: "Descárgalo en la",
       cta: "Descargar en la App Store",
       badgeTopPlay: "DISPONIBLE EN",
@@ -245,16 +245,16 @@ export const TRANSLATIONS = {
       emailBtn: "Enviar Correo"
     },
     footer: {
-      brandDesc: "El asistente de productividad inteligente de próxima generación. Nuestro ecosistema integra rastreadores de hábitos, herramientas de Pomodoro e IA para maximizar su tiempo.",
+      brandDesc: "El asistente de IA todo en uno: chat, cursos, fichas, test, notas, Pomodoro y más de 25 herramientas en una sola aplicación cuidada.",
       colProduct: "Producto",
       colCommunity: "Comunidad",
       officialDiscord: "Discord Oficial",
-      blog: "Blog de Abyss IA",
+      blog: "Blog de Abyssia",
       colSupport: "Contacto y Soporte",
-      copyright: "Abyss IA. Todos los derechos reservados.",
+      copyright: "Abyssia. Todos los derechos reservados.",
       legal: "Aviso Legal",
       cgu: "TOS y Privacidad",
-      subNote: "Aplicación de IA de productividad - Sistema inteligente de concentración y seguimiento de hábitos."
+      subNote: "Aplicación de chat con IA, aprendizaje y productividad: gratis en el App Store."
     }
   },
   zh: {
@@ -266,33 +266,33 @@ export const TRANSLATIONS = {
       install: "安装应用"
     },
     hero: {
-      microBadge: "革命性 AI 个人助手",
-      headline: "与我们一起追求卓越",
-      subtitle: "探索 Abyss IA，您的全能智能高效应用。管理日常任务，用智能番茄钟优化时间，跟踪习惯，粉碎所有目标。",
-      ctaInstall: "安装应用程序",
-      ctaDemo: "试用实时演示",
-      trustBadge1: "2026年最佳 AI 应用",
-      trustBadge2: "App Store 与 Google Play 均可下载"
+      microBadge: "AI 聊天 + 25 款工具 · 4.1 版",
+      headline: "学习、创作、前进，与",
+      subtitle: "AI 聊天、AI 撰写的课程、讲义、测验、笔记、番茄钟，以及 25 款以上工具，全部集中在一个应用中。精致的深色界面，云端同步，App Store 免费下载。",
+      ctaInstall: "下载应用",
+      ctaDemo: "体验互动演示",
+      trustBadge1: "免费 · iOS 15+ · 70 MB",
+      trustBadge2: "一个应用，25 款以上 AI 工具"
     },
     demos: {
-      sectionTitle: "亲身体验 Abyss IA 实时演示",
+      sectionTitle: "亲身体验 Abyssia 实时演示",
       sectionSubtitle: "通过这些交互式实时演示组件，探索我们工具的流畅性。"
     },
     features: {
-      sectionTitle: "由人工智能驱动",
-      sectionSubtitle: "Abyss IA 集成了旨在最大化工作时间并消除拖延的革命性功能。",
-      feat1Title: "智能任务管理",
-      feat1Desc: "Abyss 的 AI 助手会分析您的任务并自动创建可管理的子任务，估计持续时间，并根据您的 SMART 目标进行智能优先级排序。",
-      feat2Title: "游戏化习惯 tracking",
-      feat2Desc: "将您的日常习惯变成一场迷人的角色扮演游戏。通过完成日常习惯赚取 EXP、升级并解锁独家奖励。",
-      feat3Title: "智能连接番茄钟",
-      feat3Desc: "将您的专注会话直接链接到正在进行的任务。AI 会自动调整休息时间，以保持您的心理专注和健康。",
-      feat4Title: "AI 统计与洞察",
-      feat4Desc: "通过 AI 生成的报告清晰地查看您的进度。发现您的效率高峰并接收量身定制的改进建议。",
-      feat5Title: "安全与云同步",
-      feat5Desc: "您的进度数据、任务和习惯都经过端端加密，并与完全安全的云端在所有设备上实时同步。",
-      feat6Title: "预告与测试版扩展",
-      feat6Desc: "我们的团队每天都在开发新的智能扩展。加入我们的渠道，对下一项主要功能进行投票！"
+      sectionTitle: "Abyssia 能做的一切",
+      sectionSubtitle: "一个应用即可学习、写作、整理与推进，无需在十个服务之间来回切换。",
+      feat1Title: "多人格 AI 聊天",
+      feat1Desc: "与支持代码和 Markdown 的 AI 对话，或切换到专业助手：开发者、写作、教练、市场、心理咨询。支持语音输入与语音对话。",
+      feat2Title: "自动生成课程与复习",
+      feat2Desc: "索取一份完整课程：讲解、例题、推导与方法卡片。随后用闪卡和即时批改的测验复习。",
+      feat3Title: "聊天中的技能指令",
+      feat3Desc: "输入「/」即可触发操作：课程、讲义、练习、通俗解释。AI 返回的是结构化文档，而不只是一段回复。",
+      feat4Title: "智能笔记与任务",
+      feat4Desc: "Notion 风格的编辑器、由 AI 拆分子任务的待办清单、心情日记，以及总结你一天的每日简报。",
+      feat5Title: "专注与进度",
+      feat5Desc: "与灵动岛同步的番茄钟、习惯与目标跟踪、经验值、连续记录，以及十二枚可解锁徽章。",
+      feat6Title: "二十五款日常工具",
+      feat6Desc: "翻译器、依据现有食材的 AI 主厨、旅行规划、预算顾问、PDF 阅读器、内置浏览器、实时论坛，以及与 AI 对弈的国际象棋。"
     },
     dashboard: {
       microBadge: "习惯连击与报告",
@@ -304,12 +304,12 @@ export const TRANSLATIONS = {
       bullet4: "完成主要里程碑的额外 EXP 奖金"
     },
     appstore: {
-      microBadge: "iOS 与 Android 均可下载",
-      title: "在您的所有设备上下载 Abyss IA",
-      subtitle: "Abyss IA 现已正式登陆 App Store 与 Google Play。一键安装，随时随地享受专为 iOS 和 Android 优化的 AI 效率助手。",
-      bullet1: "专为 iPhone、iPad 和 Android 优化",
-      bullet2: "快速且 100% 安全的安装",
-      bullet3: "云端同步与自动更新",
+      microBadge: "已上架 App Store · Android 测试中",
+      title: "免费下载 Abyssia",
+      subtitle: "Abyssia 已在 App Store 免费提供，支持 iPhone 与 iPad。Android 版本目前通过 Google Play 测试计划发布。",
+      bullet1: "免费，分级 4+，无需付费账户",
+      bullet2: "iPhone 与 iPad，需 iOS 15.0 或更高版本（70 MB）",
+      bullet3: "所有设备之间云端同步",
       badgeTop: "下载",
       cta: "在 App Store 下载",
       badgeTopPlay: "前往",
@@ -331,16 +331,16 @@ export const TRANSLATIONS = {
       emailBtn: "发送电子邮件"
     },
     footer: {
-      brandDesc: "下一代智能效率助手。我们的生态系统整合了习惯跟踪器、番茄钟工具和 AI，以最大化您的时间。",
+      brandDesc: "一体化 AI 助手：聊天、课程、讲义、测验、笔记、番茄钟，以及 25 款以上工具，集中于一个精致的应用。",
       colProduct: "产品",
       colCommunity: "社区",
       officialDiscord: "官方 Discord",
-      blog: "Abyss IA 博客",
+      blog: "Abyssia 博客",
       colSupport: "联系与支持",
-      copyright: "Abyss IA. 保留所有权利。",
+      copyright: "Abyssia. 保留所有权利。",
       legal: "法律声明",
       cgu: "服务条款与隐私",
-      subNote: "效率 AI 应用程序 - 智能专注与习惯跟踪系统。"
+      subNote: "AI 聊天、学习与效率应用 —— App Store 免费下载。"
     }
   },
   it: {
@@ -352,33 +352,33 @@ export const TRANSLATIONS = {
       install: "Installa App"
     },
     hero: {
-      microBadge: "Rivoluzionario Assistente Personale IA",
-      headline: "Punta all'eccellenza con",
-      subtitle: "Scopri Abyss IA, la tua applicazione intelligente per la produttività tutto in uno. Gestisci le tue attività quotidiane, ottimizza il tuo tempo con il Pomodoro intelligente e monitora le tue abitudini per raggiungere tutti i tuoi obiettivi.",
-      ctaInstall: "Installa l'applicazione",
-      ctaDemo: "Scopri la demo interattiva",
-      trustBadge1: "Migliore App IA 2026",
-      trustBadge2: "Disponibile su App Store e Google Play"
+      microBadge: "Chat IA + 25 strumenti · Versione 4.1",
+      headline: "Impara, crea e avanza con",
+      subtitle: "Chat con IA, corsi scritti dall'IA, schede, quiz, note, Pomodoro e oltre 25 strumenti in una sola applicazione. Interfaccia scura curata, sincronizzazione cloud, gratis sull'App Store.",
+      ctaInstall: "Scarica l'applicazione",
+      ctaDemo: "Prova la demo interattiva",
+      trustBadge1: "Gratis · iOS 15+ · 70 MB",
+      trustBadge2: "Oltre 25 strumenti IA in una sola app"
     },
     demos: {
-      sectionTitle: "Prova l'Esperienza di Abyss IA dal Vivo",
+      sectionTitle: "Prova l'Esperienza di Abyssia dal Vivo",
       sectionSubtitle: "Scopri la fluidità dei nostri strumenti con questi componenti dimostrativi interattivi in tempo reale."
     },
     features: {
-      sectionTitle: "Alimentato da Intelligenza Artificiale",
-      sectionSubtitle: "Abyss IA integra funzionalità rivoluzionarie progettate per massimizzare il tempo di lavoro ed eliminare la procrastinazione.",
-      feat1Title: "Gestione Intelligente dei Compiti",
-      feat1Desc: "L'assistente IA di Abyss analizza i tuoi compiti e crea automaticamente sotto-compiti gestibili, stima la durata e stabilisce le priorità in modo intelligente in base ai tuoi obiettivi SMART.",
-      feat2Title: "Rilevatore di Abitudini Gamificato",
-      feat2Desc: "Trasforma le tue routine in un avvincente gioco di ruolo. Guadagna EXP, sali di livello e sblocca ricompense esclusive completando le tue abitudini quotidiane.",
-      feat3Title: "Pomodoro Connesso e Intelligente",
-      feat3Desc: "Associa le tue sessioni di concentrazione direttamente alle tue attività in corso. L'IA regola automaticamente le pause per preservare la tua salute mentale.",
-      feat4Title: "Statistiche e Approfondimenti IA",
-      feat4Desc: "Visualizza chiaramente i tuoi progressi con i report generati dall'IA. Scopri i tuoi picchi di produttività e ricevi consigli su misura per migliorare.",
-      feat5Title: "Sicurezza e Sincronizzazione Cloud",
-      feat5Desc: "I dati sui progressi, le attività e le abitudini sono crittografati end-to-end e sincronizzati in tempo reale su tutti i dispositivi in totale sicurezza.",
-      feat6Title: "Anteprime ed Estensioni Beta",
-      feat6Desc: "Il nostro team lavora ogni giorno a nuove estensioni intelligenti. Unisciti ai nostri canali per votare le prossime funzionalità!"
+      sectionTitle: "Tutto quello che fa Abyssia",
+      sectionSubtitle: "Una sola applicazione per imparare, scrivere, organizzarti e avanzare, invece di passare da un servizio all'altro.",
+      feat1Title: "Chat IA con più personalità",
+      feat1Desc: "Parla con un'IA che gestisce codice e markdown, oppure passa a un agente specializzato: sviluppatore, redattore, coach, marketing, psicologo. Dettatura e conversazione vocale incluse.",
+      feat2Title: "Corsi e ripasso generati",
+      feat2Desc: "Chiedi un corso completo: lezioni, esempi svolti, dimostrazioni e schede di metodo. Poi ripassa con flashcard e quiz corretti all'istante.",
+      feat3Title: "Skills dentro la chat",
+      feat3Desc: "Digita «/» per avviare un'azione: corso, scheda, esercizi, spiegazione semplice. L'IA restituisce un documento strutturato, non solo una risposta.",
+      feat4Title: "Note intelligenti e attività",
+      feat4Desc: "Un editor in stile Notion, liste di attività di cui l'IA suddivide i passaggi, un diario del benessere e un riepilogo quotidiano della tua giornata.",
+      feat5Title: "Concentrazione e progressi",
+      feat5Desc: "Un Pomodoro sincronizzato con la Dynamic Island, il monitoraggio di abitudini e obiettivi, XP, serie attive e dodici badge da sbloccare.",
+      feat6Title: "Venticinque strumenti quotidiani",
+      feat6Desc: "Traduttore, chef IA a partire dai tuoi ingredienti, pianificatore di viaggi, consulente di budget, lettore PDF, browser integrato, forum in tempo reale e partite a scacchi contro l'IA."
     },
     dashboard: {
       microBadge: "Strisce di Abitudini e Report",
@@ -390,12 +390,12 @@ export const TRANSLATIONS = {
       bullet4: "EXP bonus per il completamento di traguardi importanti"
     },
     appstore: {
-      microBadge: "Disponibile su iOS e Android",
-      title: "Scarica Abyss IA su tutti i tuoi dispositivi",
-      subtitle: "Abyss IA è ufficialmente disponibile su App Store e su Google Play. Installa l'app con un tocco e goditi il tuo assistente di produttività IA, perfettamente ottimizzato per iOS e Android, ovunque tu sia.",
-      bullet1: "Ottimizzato per iPhone, iPad e Android",
-      bullet2: "Installazione rapida e sicura al 100%",
-      bullet3: "Sincronizzazione cloud e aggiornamenti automatici",
+      microBadge: "Sull'App Store · Android in test",
+      title: "Scarica Abyssia gratuitamente",
+      subtitle: "Abyssia è disponibile gratis sull'App Store per iPhone e iPad. La versione Android è per ora distribuita tramite il programma di test di Google Play.",
+      bullet1: "Gratis, classificazione 4+, senza account a pagamento obbligatorio",
+      bullet2: "iPhone e iPad, iOS 15.0 o successivo (70 MB)",
+      bullet3: "Sincronizzazione cloud su tutti i tuoi dispositivi",
       badgeTop: "Scarica su",
       cta: "Scarica su App Store",
       badgeTopPlay: "DISPONIBILE SU",
@@ -417,16 +417,16 @@ export const TRANSLATIONS = {
       emailBtn: "Invia E-mail"
     },
     footer: {
-      brandDesc: "L'assistente alla produttività intelligente di nuova generazione. Il nostro ecosistema integra tracker di abitudini, strumenti Pomodoro e IA per massimizzare il tuo tempo.",
+      brandDesc: "L'assistente IA tutto in uno: chat, corsi, schede, quiz, note, Pomodoro e oltre 25 strumenti in una sola applicazione curata.",
       colProduct: "Prodotto",
       colCommunity: "Comunità",
       officialDiscord: "Discord Ufficiale",
-      blog: "Blog Abyss IA",
+      blog: "Blog Abyssia",
       colSupport: "Contatto e Supporto",
-      copyright: "Abyss IA. Tutti i diritti riservati.",
+      copyright: "Abyssia. Tutti i diritti riservati.",
       legal: "Note Legali",
       cgu: "CGU & Privacy",
-      subNote: "Applicazione IA per la produttività - Sistema intelligente di concentrazione e tracciamento delle abitudini."
+      subNote: "Applicazione di chat IA, apprendimento e produttività: gratis sull'App Store."
     }
   },
   ru: {
@@ -438,33 +438,33 @@ export const TRANSLATIONS = {
       install: "Установить"
     },
     hero: {
-      microBadge: "Революционный персональный ИИ-ассистент",
-      headline: "Стремитесь к совершенству с",
-      subtitle: "Откройте для себя Abyss IA — ваше умное универсальное приложение для продуктивности. Управляйте задачами, оптимизируйте время с помощью Pomodoro и отслеживайте привычки для достижения всех целей.",
-      ctaInstall: "Установить приложение",
-      ctaDemo: "Попробовать интерактивное демо",
-      trustBadge1: "Лучшее ИИ-приложение 2026",
-      trustBadge2: "Доступно в App Store и Google Play"
+      microBadge: "ИИ-чат + 25 инструментов · Версия 4.1",
+      headline: "Учитесь, создавайте и двигайтесь вперёд с",
+      subtitle: "ИИ-чат, курсы, написанные ИИ, конспекты, тесты, заметки, Помодоро и более 25 инструментов в одном приложении. Продуманный тёмный интерфейс, облачная синхронизация, бесплатно в App Store.",
+      ctaInstall: "Скачать приложение",
+      ctaDemo: "Попробовать демо",
+      trustBadge1: "Бесплатно · iOS 15+ · 70 МБ",
+      trustBadge2: "Более 25 ИИ-инструментов в одном приложении"
     },
     demos: {
-      sectionTitle: "Попробуйте Abyss IA в действии",
+      sectionTitle: "Попробуйте Abyssia в действии",
       sectionSubtitle: "Оцените плавность работы наших инструментов с помощью интерактивных компонентов в реальном времени."
     },
     features: {
-      sectionTitle: "На базе искусственного интеллекта",
-      sectionSubtitle: "Abyss IA объединяет в себе революционные функции для максимального использования рабочего времени и борьбы с прокрастинацией.",
-      feat1Title: "Умное управление задачами",
-      feat1Desc: "ИИ-помощник Abyss анализирует ваши задачи и автоматически разбивает их на управляемые подзадачи, оценивает длительность и расставляет приоритеты согласно целям SMART.",
-      feat2Title: "Геймифицированный трекер привычек",
-      feat2Desc: "Превратите свои рутинные дела в увлекательную ролевую игру. Зарабатывайте EXP, повышайте уровень и открывайте эксклюзивные награды за выполнение привычек.",
-      feat3Title: "Интегрированный умный Pomodoro",
-      feat3Desc: "Связывайте сессии концентрации с текущими задачами. ИИ автоматически регулирует перерывы для поддержания вашей ментальной свежести.",
-      feat4Title: "ИИ-статистика и аналитика",
-      feat4Desc: "Наглядно отслеживайте свой прогресс с помощью отчетов ИИ. Узнайте пики своей продуктивности и получайте персонализированные советы.",
-      feat5Title: "Безопасность и облачная синхронизация",
-      feat5Desc: "Данные вашего прогресса, задачи и привычки защищены сквозным шифрованием и синхронизируются на всех устройствах в реальном времени.",
-      feat6Title: "Анонсы и бета-расширения",
-      feat6Desc: "Наша команда ежедневно работает над новыми интеллектуальными расширениями. Присоединяйтесь к нашим каналам, чтобы голосовать за новые функции!"
+      sectionTitle: "Всё, что умеет Abyssia",
+      sectionSubtitle: "Одно приложение, чтобы учиться, писать, наводить порядок и двигаться вперёд, вместо десятка разных сервисов.",
+      feat1Title: "ИИ-чат с разными личностями",
+      feat1Desc: "Общайтесь с ИИ, который понимает код и markdown, или переключитесь на специализированного агента: разработчик, редактор, коуч, маркетолог, психолог. Голосовой ввод и разговор включены.",
+      feat2Title: "Готовые курсы и повторение",
+      feat2Desc: "Попросите полный курс: уроки, разобранные примеры, доказательства и методические карточки. Затем повторяйте с флеш-картами и тестами с мгновенной проверкой.",
+      feat3Title: "Навыки прямо в чате",
+      feat3Desc: "Введите «/», чтобы запустить действие: курс, конспект, упражнения, простое объяснение. ИИ выдаёт структурированный документ, а не просто ответ.",
+      feat4Title: "Умные заметки и задачи",
+      feat4Desc: "Редактор в стиле Notion, списки задач, подшаги которых разбивает ИИ, дневник самочувствия и ежедневная сводка вашего дня.",
+      feat5Title: "Концентрация и прогресс",
+      feat5Desc: "Помодоро, связанный с Dynamic Island, отслеживание привычек и целей, опыт, активные серии и двенадцать значков для разблокировки.",
+      feat6Title: "Двадцать пять повседневных инструментов",
+      feat6Desc: "Переводчик, ИИ-повар по вашим продуктам, планировщик поездок, советник по бюджету, просмотр PDF, встроенный браузер, форум в реальном времени и шахматы против ИИ."
     },
     dashboard: {
       microBadge: "Серии привычек и отчеты",
@@ -476,12 +476,12 @@ export const TRANSLATIONS = {
       bullet4: "Бонусные EXP за достижение ключевых этапов"
     },
     appstore: {
-      microBadge: "Доступно на iOS и Android",
-      title: "Скачайте Abyss IA на все свои устройства",
-      subtitle: "Abyss IA официально доступно в App Store и в Google Play. Установите приложение в одно касание и пользуйтесь ИИ-ассистентом продуктивности, идеально оптимизированным для iOS и Android, где бы вы ни были.",
-      bullet1: "Оптимизировано для iPhone, iPad и Android",
-      bullet2: "Быстрая и на 100% безопасная установка",
-      bullet3: "Облачная синхронизация и автообновления",
+      microBadge: "В App Store · Android в тестировании",
+      title: "Скачайте Abyssia бесплатно",
+      subtitle: "Abyssia доступна бесплатно в App Store для iPhone и iPad. Версия для Android пока распространяется через программу тестирования Google Play.",
+      bullet1: "Бесплатно, рейтинг 4+, без обязательной платной подписки",
+      bullet2: "iPhone и iPad, iOS 15.0 или новее (70 МБ)",
+      bullet3: "Облачная синхронизация между всеми устройствами",
       badgeTop: "Загрузите в",
       cta: "Загрузить в App Store",
       badgeTopPlay: "ДОСТУПНО В",
@@ -503,16 +503,16 @@ export const TRANSLATIONS = {
       emailBtn: "Написать письмо"
     },
     footer: {
-      brandDesc: "Умный помощник для продуктивности нового поколения. Наша экосистема объединяет трекеры привычек, Pomodoro и ИИ для максимальной эффективности.",
+      brandDesc: "Универсальный ИИ-помощник: чат, курсы, конспекты, тесты, заметки, Помодоро и более 25 инструментов в одном продуманном приложении.",
       colProduct: "Продукт",
       colCommunity: "Сообщество",
       officialDiscord: "Официальный Discord",
-      blog: "Блог Abyss IA",
+      blog: "Блог Abyssia",
       colSupport: "Контакты и поддержка",
-      copyright: "Abyss IA. Все права защищены.",
+      copyright: "Abyssia. Все права защищены.",
       legal: "Правовая информация",
       cgu: "Пользовательское соглашение",
-      subNote: "ИИ-приложение для продуктивности - Интеллектуальная система концентрации и отслеживания привычек."
+      subNote: "Приложение для ИИ-чата, обучения и продуктивности — бесплатно в App Store."
     }
   },
   uk: {
@@ -524,33 +524,33 @@ export const TRANSLATIONS = {
       install: "Встановити"
     },
     hero: {
-      microBadge: "Революційний персональний ШІ-асистент",
-      headline: "Прагніть до досконалості з",
-      subtitle: "Відкрийте для себе Abyss IA — ваш розумний універсальний додаток для продуктивності. Керуйте щоденними завданнями, оптимізуйте час за допомогою Pomodoro та відстежуйте звички для досягнення цілей.",
-      ctaInstall: "Встановити додаток",
-      ctaDemo: "Спробувати інтерактивне демо",
-      trustBadge1: "Найкращий ШІ-додаток 2026",
-      trustBadge2: "Доступно в App Store та Google Play"
+      microBadge: "ШІ-чат + 25 інструментів · Версія 4.1",
+      headline: "Навчайтеся, творіть і рухайтеся вперед із",
+      subtitle: "ШІ-чат, курси, написані ШІ, конспекти, тести, нотатки, Помодоро та понад 25 інструментів в одному застосунку. Продуманий темний інтерфейс, хмарна синхронізація, безкоштовно в App Store.",
+      ctaInstall: "Завантажити застосунок",
+      ctaDemo: "Спробувати демо",
+      trustBadge1: "Безкоштовно · iOS 15+ · 70 МБ",
+      trustBadge2: "Понад 25 ШІ-інструментів в одному застосунку"
     },
     demos: {
-      sectionTitle: "Спробуйте Abyss IA в дії",
+      sectionTitle: "Спробуйте Abyssia в дії",
       sectionSubtitle: "Оцініть плавність роботи наших інструментів за допомогою інтерактивних компонентів у реальному часі."
     },
     features: {
-      sectionTitle: "На базі штучного інтелекту",
-      sectionSubtitle: "Abyss IA об'єднує в собі революційні функції, створені для максимального використання робочого часу та боротьби з прокрастинацією.",
-      feat1Title: "Розумне керування завданнями",
-      feat1Desc: "ШІ-помічник Abyss аналізує ваші завдання й автоматично розбиває їх на керовані підзавдання, оцінює тривалість та розставляє пріоритети відповідно до SMART-цілей.",
-      feat2Title: "Гейміфікований трекер звичок",
-      feat2Desc: "Перетворіть свої рутинні справи на захоплюючу рольову гру. Заробляйте EXP, підвищуйте рівень та відкривайте ексклюзивні нагороди за виконання звичок.",
-      feat3Title: "Інтегрований розумний Pomodoro",
-      feat3Desc: "Пов'язуйте сесії концентрації з поточними завданнями. ШІ автоматично регулює перерви для підтримки вашої ментальної свіжості.",
-      feat4Title: "ШІ-статистика та аналітика",
-      feat4Desc: "Наочно відстежуйте свій прогрес за допомогою звітів ШІ. Дізнайтеся піки своєї продуктивності та отримуйте персоналізовані поради.",
-      feat5Title: "Безпека та хмарна синхронізація",
-      feat5Desc: "Дані вашого прогресу, завдання та звички захищені наскрізным шифруванням та синхронізуються на всіх пристроях у реальному часі.",
-      feat6Title: "Анонси та бета-розширення",
-      feat6Desc: "Наша команда щодня працює над новими інтелектуальними розширеннями. Приєднуйтесь до наших каналів, щоб голосувати за нові функції!"
+      sectionTitle: "Усе, що вміє Abyssia",
+      sectionSubtitle: "Один застосунок, щоб навчатися, писати, впорядковувати справи й рухатися вперед, замість десятка різних сервісів.",
+      feat1Title: "ШІ-чат із різними особистостями",
+      feat1Desc: "Спілкуйтеся зі ШІ, який розуміє код і markdown, або перемкніться на спеціалізованого агента: розробник, редактор, коуч, маркетолог, психолог. Голосове введення та розмова включені.",
+      feat2Title: "Готові курси та повторення",
+      feat2Desc: "Попросіть повний курс: уроки, розібрані приклади, доведення та методичні картки. Потім повторюйте з флеш-картками й тестами з миттєвою перевіркою.",
+      feat3Title: "Навички просто в чаті",
+      feat3Desc: "Введіть «/», щоб запустити дію: курс, конспект, вправи, просте пояснення. ШІ повертає структурований документ, а не лише відповідь.",
+      feat4Title: "Розумні нотатки та завдання",
+      feat4Desc: "Редактор у стилі Notion, списки завдань, підкроки яких розбиває ШІ, щоденник самопочуття та щоденне зведення вашого дня.",
+      feat5Title: "Концентрація та прогрес",
+      feat5Desc: "Помодоро, синхронізований із Dynamic Island, відстеження звичок і цілей, досвід, активні серії та дванадцять значків для розблокування.",
+      feat6Title: "Двадцять п'ять щоденних інструментів",
+      feat6Desc: "Перекладач, ШІ-кухар за вашими продуктами, планувальник подорожей, порадник із бюджету, перегляд PDF, вбудований браузер, форум у реальному часі та шахи проти ШІ."
     },
     dashboard: {
       microBadge: "Серії звичок та звіти",
@@ -562,12 +562,12 @@ export const TRANSLATIONS = {
       bullet4: "Бонусні EXP за досягнення ключових етапів"
     },
     appstore: {
-      microBadge: "Доступно на iOS та Android",
-      title: "Завантажте Abyss IA на всі свої пристрої",
-      subtitle: "Abyss IA офіційно доступний в App Store та в Google Play. Встановіть додаток одним дотиком та користуйтеся ШІ-асистентом продуктивності, ідеально оптимізованим для iOS та Android, де б ви не були.",
-      bullet1: "Оптимізовано для iPhone, iPad та Android",
-      bullet2: "Швидке та на 100% безпечне встановлення",
-      bullet3: "Хмарна синхронізація та автооновлення",
+      microBadge: "В App Store · Android у тестуванні",
+      title: "Завантажте Abyssia безкоштовно",
+      subtitle: "Abyssia доступна безкоштовно в App Store для iPhone та iPad. Версія для Android наразі поширюється через програму тестування Google Play.",
+      bullet1: "Безкоштовно, рейтинг 4+, без обов'язкової платної підписки",
+      bullet2: "iPhone та iPad, iOS 15.0 або новіша (70 МБ)",
+      bullet3: "Хмарна синхронізація між усіма пристроями",
       badgeTop: "Завантажити в",
       cta: "Завантажити в App Store",
       badgeTopPlay: "ДОСТУПНО В",
@@ -589,16 +589,16 @@ export const TRANSLATIONS = {
       emailBtn: "Написати листа"
     },
     footer: {
-      brandDesc: "Розумний помічник для продуктивності нового покоління. Наша екосистема об'єднує трекери звичок, Pomodoro та ШІ для максимальної ефективності.",
+      brandDesc: "Універсальний ШІ-помічник: чат, курси, конспекти, тести, нотатки, Помодоро та понад 25 інструментів в одному продуманому застосунку.",
       colProduct: "Продукт",
       colCommunity: "Спільнота",
       officialDiscord: "Офіційний Discord",
-      blog: "Блог Abyss IA",
+      blog: "Блог Abyssia",
       colSupport: "Контакти та підтримка",
-      copyright: "Abyss IA. Всі права захищені.",
+      copyright: "Abyssia. Всі права захищені.",
       legal: "Правова інформація",
       cgu: "Умови використання",
-      subNote: "ШІ-додаток для продуктивності - Інтелектуальна система концентрації та відстеження звичок."
+      subNote: "Застосунок для ШІ-чату, навчання та продуктивності — безкоштовно в App Store."
     }
   }
 };

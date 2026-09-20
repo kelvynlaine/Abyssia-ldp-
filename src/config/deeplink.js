@@ -1,5 +1,5 @@
 /**
- * Configuration centralisée pour Abyss IA
+ * Configuration centralisée pour Abyssia
  * Vous pouvez insérer ici les liens vers les stores (App Store / Google Play).
  *
  * Ces liens alimentent les badges de la section #appstore, vers laquelle pointent
