@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Play, Pause, Volume2, VolumeX, RotateCcw, ArrowRight } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX, RotateCcw, ArrowRight, Maximize } from 'lucide-react';
 
 /**
  * Film de présentation, façon keynote.
@@ -19,49 +19,49 @@ const LABELS = {
     title: "Abyssia en trente secondes",
     subtitle: "Le chat, les révisions, le focus : un aperçu de l'application avant de l'installer.",
     play: 'Lancer la vidéo', pause: 'Mettre en pause', replay: 'Revoir',
-    sound: 'Activer le son', mute: 'Couper le son', cta: "Télécharger l'application",
+    sound: 'Activer le son', mute: 'Couper le son', fullscreen: 'Plein écran', cta: "Télécharger l'application",
   },
   en: {
     microBadge: 'Product film · 31 s',
     title: 'Abyssia in thirty seconds',
     subtitle: 'Chat, revision, focus: a look at the app before you install it.',
     play: 'Play the video', pause: 'Pause', replay: 'Watch again',
-    sound: 'Turn the sound on', mute: 'Mute', cta: 'Download the app',
+    sound: 'Turn the sound on', mute: 'Mute', fullscreen: 'Full screen', cta: 'Download the app',
   },
   es: {
     microBadge: 'Vídeo de presentación · 31 s',
     title: 'Abyssia en treinta segundos',
     subtitle: 'Chat, repaso, concentración: un vistazo a la app antes de instalarla.',
     play: 'Reproducir el vídeo', pause: 'Pausar', replay: 'Volver a ver',
-    sound: 'Activar el sonido', mute: 'Silenciar', cta: 'Descargar la aplicación',
+    sound: 'Activar el sonido', mute: 'Silenciar', fullscreen: 'Pantalla completa', cta: 'Descargar la aplicación',
   },
   zh: {
     microBadge: '产品短片 · 31 秒',
     title: '三十秒看懂 Abyssia',
     subtitle: '聊天、复习、专注：安装前先看看这款应用。',
     play: '播放视频', pause: '暂停', replay: '重新播放',
-    sound: '开启声音', mute: '静音', cta: '下载应用',
+    sound: '开启声音', mute: '静音', fullscreen: '全屏', cta: '下载应用',
   },
   it: {
     microBadge: 'Video di presentazione · 31 s',
     title: 'Abyssia in trenta secondi',
     subtitle: "Chat, ripasso, concentrazione: uno sguardo all'app prima di installarla.",
     play: 'Riproduci il video', pause: 'Metti in pausa', replay: 'Rivedi',
-    sound: 'Attiva l’audio', mute: 'Disattiva l’audio', cta: "Scarica l'applicazione",
+    sound: 'Attiva l’audio', mute: 'Disattiva l’audio', fullscreen: 'Schermo intero', cta: "Scarica l'applicazione",
   },
   ru: {
     microBadge: 'Ролик о продукте · 31 с',
     title: 'Abyssia за тридцать секунд',
     subtitle: 'Чат, повторение, концентрация — взгляд на приложение до установки.',
     play: 'Воспроизвести', pause: 'Пауза', replay: 'Смотреть снова',
-    sound: 'Включить звук', mute: 'Выключить звук', cta: 'Скачать приложение',
+    sound: 'Включить звук', mute: 'Выключить звук', fullscreen: 'Во весь экран', cta: 'Скачать приложение',
   },
   uk: {
     microBadge: 'Ролик про продукт · 31 с',
     title: 'Abyssia за тридцять секунд',
     subtitle: 'Чат, повторення, концентрація — погляд на застосунок до встановлення.',
     play: 'Відтворити', pause: 'Пауза', replay: 'Дивитися знову',
-    sound: 'Увімкнути звук', mute: 'Вимкнути звук', cta: 'Завантажити застосунок',
+    sound: 'Увімкнути звук', mute: 'Вимкнути звук', fullscreen: 'На весь екран', cta: 'Завантажити застосунок',
   },
 };
 
@@ -74,6 +74,7 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
   const [enLecture, setEnLecture] = useState(false);
   const [muet, setMuet] = useState(true);
   const [terminee, setTerminee] = useState(false);
+  const [pleinEcran, setPleinEcran] = useState(false);
 
   const labels = LABELS[lang] || LABELS.fr;
 
@@ -120,7 +121,7 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
         if (entree.isIntersecting) {
           charger();
           if (!mouvementReduit && !terminee) demarrer();
-        } else if (!video.paused) {
+        } else if (!video.paused && document.fullscreenElement !== video) {
           video.pause();
         }
       },
@@ -130,6 +131,47 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
     observateur.observe(video);
     return () => observateur.disconnect();
   }, [terminee]);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+    const surChangement = () => setPleinEcran(document.fullscreenElement === video);
+    const entreeIos = () => setPleinEcran(true);
+    const sortieIos = () => setPleinEcran(false);
+    document.addEventListener('fullscreenchange', surChangement);
+    video.addEventListener('webkitbeginfullscreen', entreeIos);
+    video.addEventListener('webkitendfullscreen', sortieIos);
+    return () => {
+      document.removeEventListener('fullscreenchange', surChangement);
+      video.removeEventListener('webkitbeginfullscreen', entreeIos);
+      video.removeEventListener('webkitendfullscreen', sortieIos);
+    };
+  }, []);
+
+  // Passer en plein écran est un geste explicite : on rétablit le son et on
+  // lance la lecture. L'iPhone n'accepte le plein écran que sur la vidéo, via
+  // son lecteur natif (webkitEnterFullscreen) ; les autres navigateurs
+  // passent par l'API standard.
+  const ouvrirPleinEcran = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (!video.src) video.src = window.innerWidth <= 768 ? SOURCE_MOBILE : SOURCE_DESKTOP;
+    video.dataset.chargee = 'oui';
+    video.muted = false;
+    setMuet(false);
+    if (terminee) {
+      video.currentTime = 0;
+      setTerminee(false);
+    }
+    video.play().catch(() => {});
+    if (typeof video.requestFullscreen === 'function') {
+      video.requestFullscreen().catch(() => {});
+    } else if (typeof video.webkitEnterFullscreen === 'function') {
+      video.webkitEnterFullscreen();
+    } else if (typeof video.webkitRequestFullscreen === 'function') {
+      video.webkitRequestFullscreen();
+    }
+  };
 
   const basculerLecture = () => {
     const video = videoRef.current;
@@ -184,7 +226,9 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
             onPlay={() => { setEnLecture(true); setTerminee(false); }}
             onPause={() => setEnLecture(false)}
             onEnded={() => { setEnLecture(false); setTerminee(true); }}
-            className="w-full h-auto aspect-video object-cover cursor-pointer"
+            onDoubleClick={ouvrirPleinEcran}
+            controls={pleinEcran}
+            className="w-full h-auto aspect-video cursor-pointer"
           />
 
           {/* Commandes : lisibles au pouce sur mobile, discrètes sur grand écran */}
@@ -198,6 +242,7 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
               <IconeLecture size={18} />
             </button>
 
+            <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={basculerSon}
@@ -207,6 +252,17 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
               {muet ? <VolumeX size={16} /> : <Volume2 size={16} />}
               <span className="hidden sm:inline">{muet ? labels.sound : labels.mute}</span>
             </button>
+
+            <button
+              type="button"
+              onClick={ouvrirPleinEcran}
+              aria-label={labels.fullscreen}
+              title={labels.fullscreen}
+              className="size-11 flex items-center justify-center rounded-full bg-white/10 border border-white/15 backdrop-blur-md text-white hover:bg-white/20 transition-colors cursor-pointer"
+            >
+              <Maximize size={17} />
+            </button>
+            </div>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ export default function AppScreenCarousel({ lang = 'fr' }) {
 
   return (
     <div
-      className="relative w-full max-w-[300px]"
+      className="relative w-full max-w-[250px] sm:max-w-[300px]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >

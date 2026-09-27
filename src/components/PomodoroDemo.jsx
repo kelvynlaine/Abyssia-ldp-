@@ -128,7 +128,7 @@ export default function PomodoroDemo({ lang = 'fr' }) {
       <div className="flex gap-2 mb-6 z-10">
         <button
           onClick={() => setTimerMode('work')}
-          className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 ${
+          className={`flex items-center gap-1.5 px-4 min-h-11 rounded-full text-xs font-bold transition-all duration-300 ${
             mode === 'work'
               ? 'bg-violet-500/20 text-violet-300 border border-violet-500/40'
               : 'bg-white/5 text-slate-400 border border-transparent hover:bg-white/10'
@@ -139,7 +139,7 @@ export default function PomodoroDemo({ lang = 'fr' }) {
         </button>
         <button
           onClick={() => setTimerMode('break')}
-          className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 ${
+          className={`flex items-center gap-1.5 px-4 min-h-11 rounded-full text-xs font-bold transition-all duration-300 ${
             mode === 'break'
               ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
               : 'bg-white/5 text-slate-400 border border-transparent hover:bg-white/10'

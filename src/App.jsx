@@ -299,7 +299,7 @@ export default function App() {
               className="size-9 rounded-xl border border-white/20 group-hover:scale-105 transition-all duration-300 animate-glow"
             />
             <span className="text-xl font-black tracking-tight text-white font-heading">
-              Abys<span className="text-pink-500">sia</span>
+              Abyss<span className="text-pink-500">ia</span>
             </span>
           </a>
 
@@ -371,7 +371,7 @@ export default function App() {
           {/* Hamburger Menu Toggle - Mobile */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white transition-all duration-300 focus:outline-none"
+            className="md:hidden size-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white transition-all duration-300 focus:outline-none"
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -571,10 +571,10 @@ export default function App() {
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               
               {/* Feature 1 */}
-              <div className="glass-card rounded-2xl p-6 flex flex-col space-y-4">
+              <div className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col space-y-3 sm:space-y-4">
                 <div className="size-11 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
                   <MessageSquare size={22} className="animate-pulse" />
                 </div>
@@ -585,7 +585,7 @@ export default function App() {
               </div>
 
               {/* Feature 2 */}
-              <div className="glass-card rounded-2xl p-6 flex flex-col space-y-4">
+              <div className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col space-y-3 sm:space-y-4">
                 <div className="size-11 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
                   <GraduationCap size={22} />
                 </div>
@@ -596,7 +596,7 @@ export default function App() {
               </div>
 
               {/* Feature 3 */}
-              <div className="glass-card rounded-2xl p-6 flex flex-col space-y-4">
+              <div className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col space-y-3 sm:space-y-4">
                 <div className="size-11 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
                   <Zap size={22} />
                 </div>
@@ -607,7 +607,7 @@ export default function App() {
               </div>
 
               {/* Feature 4 */}
-              <div className="glass-card rounded-2xl p-6 flex flex-col space-y-4">
+              <div className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col space-y-3 sm:space-y-4">
                 <div className="size-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                   <NotebookPen size={22} />
                 </div>
@@ -618,7 +618,7 @@ export default function App() {
               </div>
 
               {/* Feature 5 */}
-              <div className="glass-card rounded-2xl p-6 flex flex-col space-y-4">
+              <div className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col space-y-3 sm:space-y-4">
                 <div className="size-11 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400">
                   <Timer size={22} />
                 </div>
@@ -629,7 +629,7 @@ export default function App() {
               </div>
 
               {/* Feature 6 */}
-              <div className="glass-card rounded-2xl p-6 flex flex-col space-y-4 justify-between border-dashed border-white/20 bg-transparent hover:border-pink-500/30 transition-all duration-300">
+              <div className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col space-y-3 sm:space-y-4 justify-between border-dashed border-white/20 bg-transparent hover:border-pink-500/30 transition-all duration-300">
                 <div className="space-y-4">
                   <div className="size-11 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
                     <Sparkles size={22} />
@@ -977,7 +977,7 @@ export default function App() {
                   className="size-7 rounded-lg border border-white/10 shadow-md"
                 />
                 <span className="text-lg font-black text-white tracking-tight font-heading">
-                  Abys<span className="text-pink-500">sia</span>
+                  Abyss<span className="text-pink-500">ia</span>
                 </span>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed max-w-sm mx-auto md:mx-0">

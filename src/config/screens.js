@@ -135,3 +135,13 @@ export const CAROUSEL_LABELS = {
   ru: { prev: 'Предыдущий скриншот', next: 'Следующий скриншот' },
   uk: { prev: 'Попередній знімок', next: 'Наступний знімок' },
 };
+
+export const GALLERY_CONTROLS = {
+  fr: { swipe: 'Glissez pour voir les 10 écrans', open: 'Agrandir', close: 'Fermer', prev: 'Écran précédent', next: 'Écran suivant' },
+  en: { swipe: 'Swipe to see all 10 screens', open: 'Enlarge', close: 'Close', prev: 'Previous screen', next: 'Next screen' },
+  es: { swipe: 'Desliza para ver las 10 pantallas', open: 'Ampliar', close: 'Cerrar', prev: 'Pantalla anterior', next: 'Pantalla siguiente' },
+  zh: { swipe: '滑动查看全部 10 个界面', open: '放大', close: '关闭', prev: '上一个界面', next: '下一个界面' },
+  it: { swipe: 'Scorri per vedere le 10 schermate', open: 'Ingrandisci', close: 'Chiudi', prev: 'Schermata precedente', next: 'Schermata successiva' },
+  ru: { swipe: 'Листайте, чтобы увидеть все 10 экранов', open: 'Увеличить', close: 'Закрыть', prev: 'Предыдущий экран', next: 'Следующий экран' },
+  uk: { swipe: 'Гортайте, щоб побачити всі 10 екранів', open: 'Збільшити', close: 'Закрити', prev: 'Попередній екран', next: 'Наступний екран' },
+};

@@ -150,3 +150,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
+
+/* Film de présentation en plein écran : l'image entière, sans recadrage. */
+#video video:fullscreen { object-fit: contain; background: #000; }
+#video video:-webkit-full-screen { object-fit: contain; background: #000; }
