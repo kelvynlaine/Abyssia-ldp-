@@ -28,7 +28,9 @@ import AppScreenCarousel from './components/AppScreenCarousel';
 import MockupGallery from './components/MockupGallery';
 import KeynoteVideo from './components/KeynoteVideo';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
+import WhatsNew from './components/WhatsNew';
 import { TRANSLATIONS } from './config/translations';
+import { WHATS_NEW } from './config/whatsnew';
 import { APP_STORE_URL, PLAY_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
 
 export default function App() {
@@ -38,6 +40,7 @@ export default function App() {
   const [activeFaq, setActiveFaq] = useState(null);
 
   const t = TRANSLATIONS[lang] || TRANSLATIONS.fr;
+  const whatsNewLabel = (WHATS_NEW[lang] || WHATS_NEW.fr).microBadge;
 
   const faqData = {
     fr: [
@@ -294,7 +297,7 @@ export default function App() {
           {/* Logo brand */}
           <a href="#" className="flex items-center gap-2.5 group">
             <img 
-              src="/logo.png" 
+              src="/logo-abyssia.png" 
               alt="Abyssia Logo" 
               className="size-9 rounded-xl border border-white/20 group-hover:scale-105 transition-all duration-300 animate-glow"
             />
@@ -306,6 +309,8 @@ export default function App() {
           {/* Nav links - Desktop */}
           <nav className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">{t.nav.features}</a>
+            {/* Masqué entre md et lg : avec cinq liens, l'en-tête déborde en dessous de 1024 px. */}
+            <a href="#nouveautes" className="hidden lg:inline text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">{whatsNewLabel}</a>
             <a href="#demo" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">{t.nav.demos}</a>
             <a href="#faq" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">{t.nav.faq}</a>
             <a href="#contact" className="text-sm font-semibold text-slate-300 hover:text-white transition-all duration-300">{t.nav.contact}</a>
@@ -390,6 +395,13 @@ export default function App() {
               className="text-sm font-semibold text-slate-300 hover:text-white py-2 border-b border-white/5"
             >
               {t.nav.features}
+            </a>
+            <a 
+              href="#nouveautes" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-sm font-semibold text-slate-300 hover:text-white py-2 border-b border-white/5"
+            >
+              {whatsNewLabel}
             </a>
             <a 
               href="#demo" 
@@ -652,6 +664,9 @@ export default function App() {
 
           </section>
 
+          {/* 4.5 Nouveautés de l'application */}
+          <WhatsNew lang={lang} />
+
           {/* 5. Dashboard Preview Mockups Section */}
           <section className="space-y-12">
             <div className="glass-card rounded-[2.5rem] p-6 sm:p-10 lg:p-12 relative overflow-hidden">
@@ -839,7 +854,7 @@ export default function App() {
                     <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-violet-600/20 blur-3xl rounded-full" />
                     <div className="relative size-44 sm:size-52 rounded-[2rem] bg-gradient-to-br from-[#0a0c14] to-[#15101f] border border-white/10 flex items-center justify-center shadow-2xl">
                       <img
-                        src="/logo.png"
+                        src="/logo-abyssia.png"
                         alt="Abyssia"
                         className="size-28 sm:size-32 rounded-[1.5rem] border border-white/10 shadow-lg animate-glow"
                       />
@@ -972,7 +987,7 @@ export default function App() {
             <div className="lg:col-span-4 space-y-4 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-2.5">
                 <img 
-                  src="/logo.png" 
+                  src="/logo-abyssia.png" 
                   alt="Abyssia Logo" 
                   className="size-7 rounded-lg border border-white/10 shadow-md"
                 />

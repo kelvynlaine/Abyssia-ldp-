@@ -90,6 +90,10 @@ verifier(
   'les liens App Store et Google Play sont présents',
 );
 verifier(!!doc.getElementById('video'), 'la section du film de présentation est présente');
+verifier(
+  !!doc.getElementById('nouveautes') && !!doc.querySelector('a[href="#nouveautes"]'),
+  'la section Nouveautés est présente et reliée au menu',
+);
 verifier(erreurs.length === 0, `aucune erreur JavaScript${erreurs.length ? ` : ${erreurs.slice(0, 3).join(' | ').slice(0, 300)}` : ''}`);
 
 dom.window.close();
@@ -119,6 +123,19 @@ verifier(
 for (const fichier of ['video/keynote-1080.mp4', 'video/keynote-720.mp4', 'video/keynote-poster.webp']) {
   const chemin = path.join(DIST, fichier);
   verifier(fs.existsSync(chemin) && fs.statSync(chemin).size > 5_000, `${fichier} est publié`);
+}
+
+// Images de la section Nouveautés et logo du site : une image absente
+// laisserait un cadre vide ou un logo cassé dans l'en-tête.
+const imagesDuSite = [
+  'logo-abyssia.png',
+  'nouveautes/logo.webp',
+  'nouveautes/logo-halloween.webp',
+  ...['purple', 'cyan', 'pink', 'green', 'orange', 'amoled'].map((c) => `nouveautes/icone-${c}.webp`),
+];
+for (const fichier of imagesDuSite) {
+  const chemin = path.join(DIST, fichier);
+  verifier(fs.existsSync(chemin) && fs.statSync(chemin).size > 1_000, `${fichier} est publié`);
 }
 
 console.log(echecs ? `\n❌ ${echecs} échec(s)` : "\n✅ le site s'affiche correctement");
