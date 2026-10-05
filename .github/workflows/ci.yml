@@ -1,19 +1,20 @@
-name: Deploy GitHub Pages
+name: CI
+
+# Le site est publié par Vercel (projet abyssia-ldp) à chaque push sur main.
+# Ce workflow ne publie rien : il vérifie que le site se construit et ne
+# s'affiche pas vide, pour repérer une régression avant ou après le déploiement.
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,14 +32,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Garde-fou : bloque la publication si le site construit affiche une page vide.
+      # Garde-fou : échoue si le site construit affiche une page vide.
       - name: Smoke test
         run: npm run test:smoke
-
-      - name: Publish gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          force_orphan: true
