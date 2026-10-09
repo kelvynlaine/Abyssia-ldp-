@@ -15,58 +15,58 @@ import { Play, Pause, Volume2, VolumeX, RotateCcw, ArrowRight, Maximize } from '
  */
 const LABELS = {
   fr: {
-    microBadge: 'Film de présentation · 31 s',
-    title: "Abyssia en trente secondes",
-    subtitle: "Le chat, les révisions, le focus : un aperçu de l'application avant de l'installer.",
+    microBadge: 'Film de présentation · 1 min',
+    title: "Abyssia en une minute",
+    subtitle: "Un plan de révision, quatre techniques qui marchent et tous les outils au même endroit : l'application en une minute.",
     play: 'Lancer la vidéo', pause: 'Mettre en pause', replay: 'Revoir',
     sound: 'Activer le son', mute: 'Couper le son', fullscreen: 'Plein écran', cta: "Télécharger l'application",
   },
   en: {
-    microBadge: 'Product film · 31 s',
-    title: 'Abyssia in thirty seconds',
-    subtitle: 'Chat, revision, focus: a look at the app before you install it.',
+    microBadge: 'Product film · 1 min · in French',
+    title: 'Abyssia in one minute',
+    subtitle: 'A revision plan, four techniques that work and every tool in one place: the app in one minute.',
     play: 'Play the video', pause: 'Pause', replay: 'Watch again',
     sound: 'Turn the sound on', mute: 'Mute', fullscreen: 'Full screen', cta: 'Download the app',
   },
   es: {
-    microBadge: 'Vídeo de presentación · 31 s',
-    title: 'Abyssia en treinta segundos',
-    subtitle: 'Chat, repaso, concentración: un vistazo a la app antes de instalarla.',
+    microBadge: 'Vídeo de presentación · 1 min · en francés',
+    title: 'Abyssia en un minuto',
+    subtitle: 'Un plan de repaso, cuatro técnicas que funcionan y todas las herramientas en un mismo lugar: la app en un minuto.',
     play: 'Reproducir el vídeo', pause: 'Pausar', replay: 'Volver a ver',
     sound: 'Activar el sonido', mute: 'Silenciar', fullscreen: 'Pantalla completa', cta: 'Descargar la aplicación',
   },
   zh: {
-    microBadge: '产品短片 · 31 秒',
-    title: '三十秒看懂 Abyssia',
-    subtitle: '聊天、复习、专注：安装前先看看这款应用。',
+    microBadge: '产品短片 · 1 分钟 · 法语',
+    title: '一分钟看懂 Abyssia',
+    subtitle: '复习计划、四种有效方法、所有工具集于一处：一分钟了解这款应用。',
     play: '播放视频', pause: '暂停', replay: '重新播放',
     sound: '开启声音', mute: '静音', fullscreen: '全屏', cta: '下载应用',
   },
   it: {
-    microBadge: 'Video di presentazione · 31 s',
-    title: 'Abyssia in trenta secondi',
-    subtitle: "Chat, ripasso, concentrazione: uno sguardo all'app prima di installarla.",
+    microBadge: 'Video di presentazione · 1 min · in francese',
+    title: 'Abyssia in un minuto',
+    subtitle: "Un piano di ripasso, quattro tecniche che funzionano e tutti gli strumenti in un unico posto: l'app in un minuto.",
     play: 'Riproduci il video', pause: 'Metti in pausa', replay: 'Rivedi',
     sound: 'Attiva l’audio', mute: 'Disattiva l’audio', fullscreen: 'Schermo intero', cta: "Scarica l'applicazione",
   },
   ru: {
-    microBadge: 'Ролик о продукте · 31 с',
-    title: 'Abyssia за тридцать секунд',
-    subtitle: 'Чат, повторение, концентрация — взгляд на приложение до установки.',
+    microBadge: 'Ролик о продукте · 1 мин · на французском',
+    title: 'Abyssia за одну минуту',
+    subtitle: 'План повторения, четыре рабочие техники и все инструменты в одном месте — приложение за минуту.',
     play: 'Воспроизвести', pause: 'Пауза', replay: 'Смотреть снова',
     sound: 'Включить звук', mute: 'Выключить звук', fullscreen: 'Во весь экран', cta: 'Скачать приложение',
   },
   uk: {
-    microBadge: 'Ролик про продукт · 31 с',
-    title: 'Abyssia за тридцять секунд',
-    subtitle: 'Чат, повторення, концентрація — погляд на застосунок до встановлення.',
+    microBadge: 'Ролик про продукт · 1 хв · французькою',
+    title: 'Abyssia за одну хвилину',
+    subtitle: 'План повторення, чотири дієві техніки й усі інструменти в одному місці — застосунок за хвилину.',
     play: 'Відтворити', pause: 'Пауза', replay: 'Дивитися знову',
     sound: 'Увімкнути звук', mute: 'Вимкнути звук', fullscreen: 'На весь екран', cta: 'Завантажити застосунок',
   },
 };
 
-const SOURCE_MOBILE = '/video/keynote-720.mp4';
-const SOURCE_DESKTOP = '/video/keynote-1080.mp4';
+const SOURCE_MOBILE = '/video/film-720.mp4';
+const SOURCE_DESKTOP = '/video/film-1080.mp4';
 
 export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
   const videoRef = useRef(null);
@@ -215,7 +215,7 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
         <div className="relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-black">
           <video
             ref={videoRef}
-            poster="/video/keynote-poster.webp"
+            poster="/video/film-poster.webp"
             muted
             playsInline
             preload="none"
