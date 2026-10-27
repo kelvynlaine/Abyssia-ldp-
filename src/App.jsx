@@ -27,6 +27,7 @@ import HabitTrackerDemo from './components/HabitTrackerDemo';
 import AppScreenCarousel from './components/AppScreenCarousel';
 import MockupGallery from './components/MockupGallery';
 import KeynoteVideo from './components/KeynoteVideo';
+import { HALLOWEEN } from './components/halloweenTrailer';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
 import WhatsNew from './components/WhatsNew';
 import { TRANSLATIONS } from './config/translations';
@@ -535,6 +536,9 @@ export default function App() {
             </div>
 
           </section>
+
+          {/* 2.4 Bande-annonce Halloween (saisonnière, à retirer après le 2 novembre) */}
+          <KeynoteVideo lang={lang} variante={HALLOWEEN} />
 
           {/* 2.5 Film de présentation (juste après le héros) */}
           <KeynoteVideo lang={lang} />

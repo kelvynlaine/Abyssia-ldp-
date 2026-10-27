@@ -65,10 +65,13 @@ const LABELS = {
   },
 };
 
-const SOURCE_MOBILE = '/video/film-720.mp4';
-const SOURCE_DESKTOP = '/video/film-1080.mp4';
+const FILM = { mobile: '/video/film-720.mp4', desktop: '/video/film-1080.mp4', poster: '/video/film-poster.webp' };
 
-export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
+const BADGE = 'bg-violet-500/15 border-violet-500/20 text-violet-300';
+const GLOW = 'from-violet-600/20 via-fuchsia-500/10 to-sky-500/20';
+
+export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore', variante = null }) {
+  const { id = 'video', mobile, desktop, poster, badgeClass = BADGE, glowClass = GLOW, textes } = { ...FILM, ...variante };
   const videoRef = useRef(null);
   const sectionRef = useRef(null);
   const [enLecture, setEnLecture] = useState(false);
@@ -76,7 +79,7 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
   const [terminee, setTerminee] = useState(false);
   const [pleinEcran, setPleinEcran] = useState(false);
 
-  const labels = LABELS[lang] || LABELS.fr;
+  const labels = { ...(LABELS[lang] || LABELS.fr), ...(textes && (textes[lang] || textes.fr)) };
 
   // Pose la source au moment où la section approche, puis lance la lecture
   // dès qu'elle est réellement visible. Une personne qui a demandé moins
@@ -95,7 +98,7 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
       if (video.dataset.chargee) return;
       // Largeur réelle de la fenêtre : matchMedia suit mal les viewports
       // émulés, et c'est cette largeur qui détermine la taille d'affichage.
-      video.src = window.innerWidth <= 768 ? SOURCE_MOBILE : SOURCE_DESKTOP;
+      video.src = window.innerWidth <= 768 ? mobile : desktop;
       video.dataset.chargee = 'oui';
     };
 
@@ -130,7 +133,7 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
 
     observateur.observe(video);
     return () => observateur.disconnect();
-  }, [terminee]);
+  }, [terminee, mobile, desktop]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -155,7 +158,7 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
   const ouvrirPleinEcran = () => {
     const video = videoRef.current;
     if (!video) return;
-    if (!video.src) video.src = window.innerWidth <= 768 ? SOURCE_MOBILE : SOURCE_DESKTOP;
+    if (!video.src) video.src = window.innerWidth <= 768 ? mobile : desktop;
     video.dataset.chargee = 'oui';
     video.muted = false;
     setMuet(false);
@@ -198,10 +201,10 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
   const libelleLecture = terminee ? labels.replay : enLecture ? labels.pause : labels.play;
 
   return (
-    <section id="video" ref={sectionRef} className="space-y-10 scroll-mt-20">
+    <section id={id} ref={sectionRef} className="space-y-10 scroll-mt-20">
 
       <div className="text-center max-w-2xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/15 border border-violet-500/20 text-xs font-semibold text-violet-300">
+        <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-semibold ${badgeClass}`}>
           {labels.microBadge}
         </div>
         <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">{labels.title}</h2>
@@ -210,12 +213,12 @@ export default function KeynoteVideo({ lang = 'fr', ctaHref = '#appstore' }) {
 
       <div className="relative max-w-5xl mx-auto">
         {/* Lueur d'ambiance, purement décorative */}
-        <div className="absolute -inset-6 sm:-inset-10 rounded-[3rem] bg-gradient-to-br from-violet-600/20 via-fuchsia-500/10 to-sky-500/20 blur-3xl pointer-events-none" />
+        <div className={`absolute -inset-6 sm:-inset-10 rounded-[3rem] bg-gradient-to-br ${glowClass} blur-3xl pointer-events-none`} />
 
         <div className="relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-black">
           <video
             ref={videoRef}
-            poster="/video/film-poster.webp"
+            poster={poster}
             muted
             playsInline
             preload="none"
