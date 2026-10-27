@@ -27,12 +27,13 @@ import HabitTrackerDemo from './components/HabitTrackerDemo';
 import AppScreenCarousel from './components/AppScreenCarousel';
 import MockupGallery from './components/MockupGallery';
 import KeynoteVideo from './components/KeynoteVideo';
+import AndroidBetaForm from './components/AndroidBetaForm';
 import { HALLOWEEN } from './components/halloweenTrailer';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
 import WhatsNew from './components/WhatsNew';
 import { TRANSLATIONS } from './config/translations';
 import { WHATS_NEW } from './config/whatsnew';
-import { APP_STORE_URL, PLAY_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
+import { APP_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from './config/deeplink';
 
 export default function App() {
   const [lang, setLang] = useState('fr');
@@ -832,9 +833,7 @@ export default function App() {
 
                     {/* Google Play badge */}
                     <a
-                      href={PLAY_STORE_URL}
-                      target="_blank"
-                      rel="noreferrer"
+                      href="#beta-android"
                       aria-label={t.appstore.ctaPlay}
                       className="group inline-flex items-center gap-3 pl-4 pr-6 py-3 rounded-2xl bg-black border border-white/15 hover:border-white/40 hover:-translate-y-0.5 shadow-xl transition-all duration-300"
                     >
@@ -850,6 +849,9 @@ export default function App() {
                       </span>
                     </a>
                   </div>
+
+                  {/* Test fermé Android : le badge Google Play mène ici */}
+                  <AndroidBetaForm lang={lang} />
                 </div>
 
                 {/* Right - Visual */}
