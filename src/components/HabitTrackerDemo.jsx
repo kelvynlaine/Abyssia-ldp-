@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Check, Flame, Award, Sparkles } from 'lucide-react';
 
 const LABELS = {

@@ -1,241 +1,77 @@
-/** Questions fréquentes de la landing (7 langues). Aussi lues par scripts/prerender.mjs pour le JSON-LD FAQPage. */
+/**
+ * Questions fréquentes de la landing (7 langues). Aussi lues par scripts/prerender.mjs pour le JSON-LD FAQPage.
+ * Faits vérifiés dans le code de l'app le 28 oct. 2026 (quotas ai_access_service.dart, prix paywall_screen.dart,
+ * Android 8.0 = minSdk 26, IA hors ligne local_model_manager.dart) : à revoir si l'un d'eux change.
+ */
 export const FAQ_DATA = {
   fr: [
-    {
-      question: "Qu'est-ce qu'Abyssia et comment fonctionne cet assistant IA personnel ?",
-      answer: "Abyssia réunit une IA conversationnelle et une suite de plus de 25 outils dans une seule application. Vous pouvez discuter avec un assistant ou un agent spécialisé, lui faire rédiger un cours complet, générer des flashcards et des quiz, prendre des notes, lancer un Pomodoro, suivre vos habitudes et vos objectifs, traduire, planifier un voyage ou lire un PDF — sans quitter l'app."
-    },
-    {
-      question: "Comment utiliser Abyssia efficacement pour améliorer ma productivité ?",
-      answer: "Pour maximiser votre productivité, commencez par définir vos objectifs SMART dans l'application. Utilisez notre tracker d'habitudes avec IA pour développer des routines durables et lancez notre chronomètre Pomodoro pour des sessions de travail focalisées. L'analyse de productivité IA identifiera ensuite vos moments les plus performants pour vous suggérer des plannings optimaux."
-    },
-    {
-      question: "Comment développer de bonnes habitudes avec le tracker d'habitudes Abyssia ?",
-      answer: "Notre tracker d'habitudes avec IA analyse vos patterns comportementaux et vous propose des recommandations personnalisées IA pour créer des routines durables. L'application détecte également vos obstacles potentiels (ex: fatigue, retards cumulés) et ajuste automatiquement vos objectifs quotidiens pour maximiser vos chances de réussite."
-    },
-    {
-      question: "Abyssia vs autres applications de productivité - Quelle est la différence ?",
-      answer: "La différence tient à l'étendue : au lieu d'une app pour le chat IA, une autre pour les révisions, une troisième pour les tâches et une quatrième pour le focus, Abyssia réunit les 25 outils dans une même interface sombre, avec une progression commune (XP, séries, badges) et une synchronisation cloud entre vos appareils."
-    },
-    {
-      question: "Comment arrêter la procrastination avec l'assistant IA d'Abyssia ?",
-      answer: "Notre application utilise plusieurs techniques éprouvées amplifiées par l'IA. La technique Pomodoro découpe vos tâches en sessions gérables, la gamification rend le travail engageant, et l'assistant IA personnel vous envoie des encouragements motivants personnalisés. De plus, l'analyse comportementale identifie vos déclencheurs de procrastination pour vous aider à les surmonter."
-    },
-    {
-      question: "Comment installer Abyssia sur iPhone, iPad ou Android ?",
-      answer: "Abyssia est téléchargeable gratuitement sur l'App Store pour iPhone et iPad, et disponible sur Google Play pour Android. Cliquez sur n'importe quel bouton « Installer l'application » du site pour accéder aux deux stores, puis choisissez le vôtre. Sur Android, l'application est actuellement proposée via le programme de test officiel de Google Play."
-    },
-    {
-      question: "Quels sont les prérequis système pour cette application IA productivité ?",
-      answer: "L'application Abyssia est légère et optimisée pour être économe en batterie. Sur iPhone et iPad, elle nécessite iOS 15.0 ou une version ultérieure (environ 70 Mo d'espace de stockage). Sur Android, elle fonctionne sur tout appareil équipé d'Android 8.0 ou supérieur, avec un minimum de 50 Mo d'espace disponible."
-    },
-    {
-      question: "Mes données sont-elles sécurisées dans cette solution IA pour la productivité ?",
-      answer: "Absolument. Vos requêtes et données personnelles sont chiffrées de bout en bout et nous ne revendons aucune information à des tiers. La confidentialité est notre priorité absolue. Toutes les analyses de productivité IA sont effectuées de manière sécurisée et respectueuse de votre vie privée."
-    }
+    { question: "Qu'est-ce qu'Abyssia ?", answer: "Abyssia est une application qui aide les élèves et les étudiants à réviser avec l'intelligence artificielle. Elle réunit un chat IA et plus de 25 outils : cours rédigés par l'IA, fiches, QCM, flashcards, apprentissage des langues, traduction, notes, Pomodoro, habitudes et objectifs. Tout se trouve dans une seule app, sans passer d'un service à l'autre." },
+    { question: "Abyssia est-elle gratuite ?", answer: "Oui. Abyssia se télécharge et s'utilise gratuitement, avec chaque jour 15 messages au chat IA, 3 générations de flashcards ou de QCM, 10 traductions ou recherches de dictionnaire et un premier cours IA offert. L'abonnement Premium optionnel (4,99 € par mois ou 39,99 € par an) retire ces limites et débloque les outils d'écriture, le chat vocal et les autres fonctions IA avancées." },
+    { question: "Quels outils propose Abyssia pour réviser un examen ?", answer: "Abyssia rédige un cours complet adapté à votre niveau scolaire, puis génère des QCM corrigés et des flashcards à partir d'un sujet, d'un texte collé ou d'un fichier. Le minuteur Pomodoro découpe les révisions en sessions de concentration, et le brief du jour résume votre progression. Les parcours de langues et le traducteur couvrent les langues vivantes." },
+    { question: "Sur quels appareils fonctionne Abyssia ?", answer: "Abyssia est disponible gratuitement sur l'App Store pour iPhone et iPad (iOS 15.0 ou ultérieur, environ 70 Mo) et sur Mac. La version Android (Android 8.0 ou ultérieur) est en test fermé sur Google Play : inscrivez-vous avec votre adresse Gmail grâce au formulaire « Android : rejoindre la bêta » de ce site. Votre compte se synchronise entre vos appareils." },
+    { question: "Abyssia fonctionne-t-elle hors connexion ?", answer: "En partie. Les notes, les tâches, les habitudes, le Pomodoro et les jeux fonctionnent sans connexion. Sur iPhone et Android, un modèle d'IA hors ligne peut être téléchargé dans l'application pour discuter sans internet. Les autres fonctions IA, comme les cours, les QCM et les flashcards, ont besoin d'une connexion." },
+    { question: "Pour quel niveau Abyssia est-elle adaptée ?", answer: "Abyssia s'adresse aux collégiens, aux lycéens, aux étudiants et à toute personne qui apprend. Les cours IA se règlent sur la matière, le chapitre et le niveau scolaire, et les QCM comme les flashcards suivent le contenu que vous fournissez." },
+    { question: "Mes données sont-elles protégées ?", answer: "Votre compte et sa synchronisation reposent sur Supabase, avec des connexions chiffrées et des règles d'accès qui limitent chaque utilisateur à ses propres données. Les textes que vous envoyez à l'IA sont transmis à des fournisseurs d'IA uniquement pour générer la réponse. Abyssia ne revend aucune donnée, et vous pouvez supprimer votre compte depuis Paramètres > Données > Supprimer mon compte." },
+    { question: "En quoi Abyssia est-elle différente des autres applications ?", answer: "Au lieu d'une application pour le chat IA, une autre pour les révisions, une troisième pour les tâches et une quatrième pour la concentration, Abyssia réunit plus de 25 outils dans la même interface. La progression est commune à tous les outils (XP, séries, badges), et vos données se synchronisent entre vos appareils." },
   ],
   en: [
-    {
-      question: "What is Abyssia and how does this personal AI assistant work?",
-      answer: "Abyssia combines a conversational AI with a suite of over 25 tools in one app. You can talk to an assistant or a specialized agent, have it write a full course, generate flashcards and quizzes, take notes, start a Pomodoro, track habits and goals, translate, plan a trip or read a PDF — without leaving the app."
-    },
-    {
-      question: "How to use Abyssia effectively to improve my productivity?",
-      answer: "To maximize your productivity, start by setting your SMART goals in the application. Use our AI-powered habit tracker to build sustainable routines and launch our Pomodoro timer for focused work sessions. The AI productivity analysis will then identify your peak performance moments to suggest optimal schedules."
-    },
-    {
-      question: "How to develop good habits with the Abyssia habit tracker?",
-      answer: "Our AI-powered habit tracker analyzes your behavioral patterns and provides personalized AI recommendations to create sustainable routines. The app also detects your potential obstacles (e.g., fatigue, cumulative delays) and automatically adjusts your daily goals to maximize your chances of success."
-    },
-    {
-      question: "Abyssia vs other productivity apps - What is the difference?",
-      answer: "The difference is scope: instead of one app for AI chat, another for revision, a third for tasks and a fourth for focus, Abyssia brings all 25 tools into the same dark interface, with shared progress (XP, streaks, badges) and cloud sync across your devices."
-    },
-    {
-      question: "How to stop procrastinating with the Abyssia assistant?",
-      answer: "Our app uses several proven techniques amplified by AI. The Pomodoro technique cuts your tasks into manageable sessions, gamification makes work engaging, and the personal AI assistant sends you customized motivational encouragement. Additionally, behavioral analysis identifies your procrastination triggers to help you overcome them."
-    },
-    {
-      question: "How to install Abyssia on iPhone, iPad or Android?",
-      answer: "Abyssia is free to download on the App Store for iPhone and iPad, and available on Google Play for Android. Click any 'Install App' button on our site to reach both stores, then pick yours. On Android, the app is currently offered through Google Play's official testing program."
-    },
-    {
-      question: "What are the system requirements for this productivity AI app?",
-      answer: "The Abyssia app is lightweight and optimized to be battery-efficient. On iPhone and iPad, it requires iOS 15.0 or later (about 70 MB of storage). On Android, it runs on any device with Android 8.0 or higher and at least 50 MB of available storage."
-    },
-    {
-      question: "Is my data secure in this productivity AI solution?",
-      answer: "Absolutely. Your queries and personal data are end-to-end encrypted and we do not sell any information to third parties. Privacy is our top priority. All AI productivity analyses are performed securely and with respect for your privacy."
-    }
+    { question: "What is Abyssia?", answer: "Abyssia is an app that helps pupils and students revise with artificial intelligence. It brings together an AI chat and more than 25 tools: AI-written courses, summaries, quizzes, flashcards, language learning, translation, notes, Pomodoro, habits and goals. Everything sits in one app, with no switching between services." },
+    { question: "Is Abyssia free?", answer: "Yes. Abyssia is free to download and use, with 15 AI chat messages, 3 flashcard or quiz generations, 10 translations or dictionary lookups per day and a first AI course included. The optional Premium subscription (€4.99 per month or €39.99 per year in France) removes these limits and unlocks the writing tools, voice chat and the other advanced AI features." },
+    { question: "Which tools does Abyssia offer to revise for an exam?", answer: "Abyssia writes a full course at your school level, then generates corrected quizzes and flashcards from a topic, a pasted text or a file. The Pomodoro timer splits revision into focus sessions, and the daily brief sums up your progress. Language paths and the translator cover modern languages." },
+    { question: "Which devices does Abyssia run on?", answer: "Abyssia is free on the App Store for iPhone and iPad (iOS 15.0 or later, about 70 MB) and on Mac. The Android version (Android 8.0 or later) is in a closed test on Google Play: sign up with your Gmail address using the “Android: join the beta” form on this site. Your account syncs across your devices." },
+    { question: "Does Abyssia work offline?", answer: "Partly. Notes, tasks, habits, Pomodoro and games work without a connection. On iPhone and Android, an offline AI model can be downloaded in the app to chat without internet. The other AI features, such as courses, quizzes and flashcards, need a connection." },
+    { question: "Which level is Abyssia suited to?", answer: "Abyssia is for middle-school and high-school pupils, university students and anyone who is learning. AI courses are set by subject, chapter and school level, and quizzes and flashcards follow the content you provide." },
+    { question: "Is my data protected?", answer: "Your account and its sync run on Supabase, with encrypted connections and access rules that limit each user to their own data. The text you send to the AI is passed to AI providers only to generate the answer. Abyssia sells no data, and you can delete your account from Settings > Data > Delete my account." },
+    { question: "How is Abyssia different from other apps?", answer: "Instead of one app for AI chat, another for revision, a third for tasks and a fourth for focus, Abyssia brings more than 25 tools into the same interface. Progress is shared across every tool (XP, streaks, badges), and your data syncs across your devices." },
   ],
   es: [
-    {
-      question: "¿Qué es Abyssia y cómo funciona este asistente personal de IA?",
-      answer: "Abyssia reúne una IA conversacional y un conjunto de más de 25 herramientas en una sola aplicación. Puedes hablar con un asistente o un agente especializado, pedirle un curso completo, generar flashcards y test, tomar notas, lanzar un Pomodoro, seguir tus hábitos y objetivos, traducir, planificar un viaje o leer un PDF sin salir de la app."
-    },
-    {
-      question: "¿Cómo usar Abyssia de manera efectiva para mejorar mi productividad?",
-      answer: "Para maximizar su productividad, comience por definir sus objetivos SMART en la aplicación. Utilice nuestro rastreador de hábitos con IA para desarrollar rutinas sostenibles y active nuestro temporizador Pomodoro para sesiones de trabajo enfocadas. El análisis de productividad de IA identificará sus momentos de mayor rendimiento para sugerir horarios óptimos."
-    },
-    {
-      question: "¿Cómo desarrollar buenos hábitos con el rastreador de hábitos de Abyssia?",
-      answer: "Nuestro rastreador de hábitos con IA analiza sus patrones de comportamiento y ofrece recomendaciones personalizadas de IA para crear rutinas sostenibles. La aplicación también detecta sus obstáculos potenciales (por ejemplo, fatiga, retrasos acumulados) y ajusta automáticamente sus objetivos diarios para maximizar sus posibilidades de éxito."
-    },
-    {
-      question: "Abyssia vs otras aplicaciones de productividad - ¿Cuál es la diferencia?",
-      answer: "La diferencia está en el alcance: en lugar de una app para el chat con IA, otra para repasar, una tercera para las tareas y una cuarta para concentrarte, Abyssia reúne las 25 herramientas en la misma interfaz oscura, con un progreso común (XP, rachas, medallas) y sincronización en la nube entre tus dispositivos."
-    },
-    {
-      question: "¿Cómo dejar de procrastinar con el asistente de Abyssia?",
-      answer: "Nuestra aplicación utiliza varias técnicas probadas amplificadas por IA. La técnica Pomodoro divide sus tareas en sesiones manejables, la gamificación hace que el trabajo sea atractivo y el asistente de IA personal le envía mensajes motivacionales personalizados. Además, el análisis de comportamiento identifica sus desencadenantes de procrastinación para ayudarle a deponerlos."
-    },
-    {
-      question: "¿Cómo instalar Abyssia en iPhone, iPad o Android?",
-      answer: "Abyssia se puede descargar gratis en la App Store para iPhone y iPad, y está disponible en Google Play para Android. Haga clic en cualquier botón 'Instalar App' de nuestro sitio para acceder a las dos tiendas y elija la suya. En Android, la aplicación se ofrece actualmente a través del programa oficial de pruebas de Google Play."
-    },
-    {
-      question: "¿Cuáles son los requisitos del sistema para esta aplicación de IA de productividad?",
-      answer: "La aplicación Abyssia es ligera y está optimizada para consumir poca batería. En iPhone y iPad requiere iOS 15.0 o posterior (unos 70 MB de almacenamiento). En Android funciona en cualquier dispositivo con Android 8.0 o superior y un mínimo de 50 MB de espacio disponible."
-    },
-    {
-      question: "¿Están seguros mis datos en esta solución de IA de productividad?",
-      answer: "Absolutamente. Sus consultas y datos personales están cifrados de extremo a extremo y no vendemos ninguna información a terceros. La privacidad es nuestra máxima prioridad. Todos los análisis de productividad de IA se realizan de forma segura y respetando su privacidad."
-    }
+    { question: "¿Qué es Abyssia?", answer: "Abyssia es una aplicación que ayuda a alumnos y estudiantes a repasar con inteligencia artificial. Reúne un chat con IA y más de 25 herramientas: cursos redactados por la IA, fichas, tests, flashcards, aprendizaje de idiomas, traducción, notas, Pomodoro, hábitos y objetivos. Todo está en una sola app, sin saltar de un servicio a otro." },
+    { question: "¿Abyssia es gratuita?", answer: "Sí. Abyssia se descarga y se usa gratis, con 15 mensajes de chat IA, 3 generaciones de flashcards o tests, 10 traducciones o búsquedas de diccionario al día y un primer curso IA incluido. La suscripción Premium opcional (4,99 € al mes o 39,99 € al año en Francia) elimina estos límites y desbloquea las herramientas de escritura, el chat de voz y las demás funciones IA avanzadas." },
+    { question: "¿Qué herramientas ofrece Abyssia para preparar un examen?", answer: "Abyssia redacta un curso completo adaptado a tu nivel escolar y genera tests corregidos y flashcards a partir de un tema, un texto pegado o un archivo. El temporizador Pomodoro divide el repaso en sesiones de concentración, y el resumen del día muestra tu progreso. Los itinerarios de idiomas y el traductor cubren las lenguas extranjeras." },
+    { question: "¿En qué dispositivos funciona Abyssia?", answer: "Abyssia está disponible gratis en la App Store para iPhone y iPad (iOS 15.0 o posterior, unos 70 MB) y para Mac. La versión Android (Android 8.0 o posterior) está en prueba cerrada en Google Play: inscríbete con tu dirección Gmail en el formulario «Android: únete a la beta» de este sitio. Tu cuenta se sincroniza entre tus dispositivos." },
+    { question: "¿Abyssia funciona sin conexión?", answer: "En parte. Las notas, las tareas, los hábitos, el Pomodoro y los juegos funcionan sin conexión. En iPhone y Android se puede descargar en la app un modelo de IA sin conexión para chatear sin internet. Las demás funciones IA, como los cursos, los tests y las flashcards, necesitan conexión." },
+    { question: "¿Para qué nivel es Abyssia?", answer: "Abyssia está pensada para alumnos de secundaria y bachillerato, universitarios y cualquier persona que aprende. Los cursos IA se ajustan a la asignatura, el capítulo y el nivel escolar, y los tests y flashcards siguen el contenido que aportas." },
+    { question: "¿Mis datos están protegidos?", answer: "Tu cuenta y su sincronización funcionan con Supabase, con conexiones cifradas y reglas de acceso que limitan a cada usuario a sus propios datos. Los textos que envías a la IA se transmiten a proveedores de IA solo para generar la respuesta. Abyssia no vende ningún dato, y puedes eliminar tu cuenta en Ajustes > Datos > Eliminar mi cuenta." },
+    { question: "¿En qué se diferencia Abyssia de otras aplicaciones?", answer: "En lugar de una app para el chat IA, otra para repasar, una tercera para las tareas y una cuarta para la concentración, Abyssia reúne más de 25 herramientas en la misma interfaz. El progreso es común a todas (XP, rachas, medallas) y tus datos se sincronizan entre tus dispositivos." },
   ],
   zh: [
-    {
-      question: "什么是 Abyssia？这个个人人工智能助手是如何工作的？",
-      answer: "Abyssia 将对话式 AI 与 25 款以上工具集成在一个应用中。你可以与助手或专业代理对话，让它撰写完整课程、生成闪卡和测验、记笔记、启动番茄钟、跟踪习惯与目标、翻译、规划旅行或阅读 PDF，全程无需离开应用。"
-    },
-    {
-      question: "如何有效利用 Abyssia 提高我的工作效率？",
-      answer: "为了最大化您的效率，首先在应用程序中设定您的 SMART 目标。利用我们的 AI 习惯跟踪器建立可持续的日常习惯，并启动番茄工作钟进行专注工作。随后，人工智能效率分析将识别您的最佳表现时刻，为您建议最合理的日程安排。"
-    },
-    {
-      question: "如何利用 Abyssia 习惯跟踪器培养良好的习惯？",
-      answer: "我们的 AI 习惯跟踪器会分析您的行为模式，并提供个性化的 AI 建议，以帮助您建立可持续的日常习惯。该应用还能检测您的潜在障碍（例如疲劳、累计延迟），并自动调整您的每日目标，以最大程度地提高成功几率。"
-    },
-    {
-      question: "Abyssia 与其他效率应用相比有什么区别？",
-      answer: "区别在于覆盖面：无需一个应用用于 AI 聊天、另一个用于复习、第三个用于任务、第四个用于专注，Abyssia 把这 25 款工具放进同一个深色界面，共享同一套进度体系（经验值、连续记录、徽章），并在设备间云端同步。"
-    },
-    {
-      question: "如何使用 Abyssia 助手来停止拖延？",
-      answer: "我们的应用采用了多种经 AI 强化的行之有效的技术。番茄钟技术将您的任务拆分为可管理的会话，游戏化使工作更具吸引力，个人人工智能助手还会向您发送定制的激励语言。此外，行为分析还可以识别您的拖延诱因，帮助您克服它们。"
-    },
-    {
-      question: "如何在 iPhone、iPad 或安卓设备上安装 Abyssia？",
-      answer: "Abyssia 可在 App Store 免费下载，支持 iPhone 和 iPad；安卓用户可通过 Google Play 获取。点击我们网站上任意“安装应用”按钮即可看到两个商店，选择适合您的即可。目前，安卓版本通过 Google Play 官方测试计划提供。"
-    },
-    {
-      question: "此效率 AI 应用的系统要求是什么？",
-      answer: "Abyssia 应用非常轻量，并经过优化，十分省电。在 iPhone 和 iPad 上，需要 iOS 15.0 或更高版本（约 70 MB 存储空间）。在安卓设备上，需运行 Android 8.0 或更高版本，并至少有 50 MB 可用存储空间。"
-    },
-    {
-      question: "在此效率 AI 解决方案中，我的数据安全吗？",
-      answer: "绝对安全。您的查询和个人数据均采用端到端加密，我们不会向第三方出售任何信息。隐私是我们的重中之重。所有 AI 效率分析均在安全且尊重您隐私的前提下进行。"
-    }
+    { question: "Abyssia 是什么？", answer: "Abyssia 是一款借助人工智能帮助学生复习的应用。它集成了 AI 聊天和 25 种以上工具：AI 撰写的课程、讲义、测验、记忆卡、语言学习、翻译、笔记、番茄钟、习惯与目标。所有功能都在一个应用里，无需在不同服务之间切换。" },
+    { question: "Abyssia 免费吗？", answer: "免费。Abyssia 可免费下载和使用，每天包含 15 条 AI 聊天消息、3 次记忆卡或测验生成、10 次翻译或词典查询，并赠送第一门 AI 课程。可选的 Premium 订阅（法国价格为每月 4.99 欧元或每年 39.99 欧元）取消这些限制，并解锁写作工具、语音聊天和其他高级 AI 功能。" },
+    { question: "Abyssia 有哪些备考工具？", answer: "Abyssia 会按你的年级撰写完整课程，并根据主题、粘贴的文本或文件生成带解析的测验和记忆卡。番茄钟把复习分成专注时段，每日简报总结你的进度。语言课程和翻译器覆盖外语学习。" },
+    { question: "Abyssia 支持哪些设备？", answer: "Abyssia 可在 App Store 免费下载，支持 iPhone 和 iPad（iOS 15.0 或更高版本，约 70 MB）以及 Mac。Android 版（Android 8.0 或更高版本）正在 Google Play 封闭测试中：请通过本网站的“Android：加入测试版”表单用 Gmail 地址报名。你的账号会在设备之间同步。" },
+    { question: "Abyssia 可以离线使用吗？", answer: "部分可以。笔记、任务、习惯、番茄钟和游戏无需联网。在 iPhone 和 Android 上，可以在应用内下载离线 AI 模型，无网络也能聊天。课程、测验和记忆卡等其他 AI 功能需要联网。" },
+    { question: "Abyssia 适合哪个水平？", answer: "Abyssia 面向初中生、高中生、大学生以及所有正在学习的人。AI 课程可按科目、章节和年级设置，测验和记忆卡则根据你提供的内容生成。" },
+    { question: "我的数据安全吗？", answer: "你的账号和同步基于 Supabase，采用加密连接，并通过访问规则让每位用户只能访问自己的数据。你发送给 AI 的文本仅为生成回答而传给 AI 服务商。Abyssia 不出售任何数据，你可以在“设置 > 数据 > 删除我的账号”中删除账号。" },
+    { question: "Abyssia 和其他应用有什么不同？", answer: "你无需分别用一个应用聊天、一个复习、一个管理任务、一个保持专注：Abyssia 把 25 种以上工具放在同一个界面里。所有工具共享进度（经验值、连续记录、徽章），数据在设备之间同步。" },
   ],
   it: [
-    {
-      question: "Cos'è Abyssia e come funziona questo assistente personale IA?",
-      answer: "Abyssia unisce un'IA conversazionale e una raccolta di oltre 25 strumenti in una sola applicazione. Puoi parlare con un assistente o un agente specializzato, farti scrivere un corso completo, generare flashcard e quiz, prendere appunti, avviare un Pomodoro, monitorare abitudini e obiettivi, tradurre, pianificare un viaggio o leggere un PDF senza uscire dall'app."
-    },
-    {
-      question: "Come utilizzare Abyssia in modo efficace per migliorare la mia produttività?",
-      answer: "Per massimizzare la tua produttività, inizia impostando i tuoi obiettivi SMART nell'applicazione. Usa il nostro tracker di abitudini basato sull'IA per sviluppare routine sostenibili e avvia il timer Pomodoro per sessioni di lavoro focalizzate. L'analisi della produttività dell'IA identificherà quindi i tuoi momenti di massimo rendimento per suggerirti programmi ottimali."
-    },
-    {
-      question: "Come sviluppare buone abitudini con il tracker di abitudini Abyssia?",
-      answer: "Il nostro tracker di abitudini basato sull'IA analizza i tuoi schemi comportamentali e fornisce raccomandazioni IA personalizzate per creare routine sostenibili. L'app rileva anche i tuoi potenziali ostacoli (es. fatica, ritardi accumulati) e regola automaticamente i tuoi obiettivi quotidiani per massimizzare le tue possibilità di successo."
-    },
-    {
-      question: "Abyssia rispetto ad altre app di produttività: qual è la differenza?",
-      answer: "La differenza sta nell'ampiezza: invece di un'app per la chat IA, un'altra per il ripasso, una terza per le attività e una quarta per la concentrazione, Abyssia riunisce i 25 strumenti nella stessa interfaccia scura, con progressi condivisi (XP, serie, badge) e sincronizzazione cloud tra i dispositivi."
-    },
-    {
-      question: "Come smettere di procrastinare con l'assistente di Abyssia?",
-      answer: "La nostra applicazione utilizza diverse tecniche collaudate amplificate dall'IA. La tecnica Pomodoro suddivide i tuoi compiti in sessioni gestibili, la gamification rende il lavoro stimolante e l'assistente IA personale ti invia incoraggiamenti motivazionali personalizzati. Inoltre, l'analisi comportamentale identifica i fattori scatenanti della tua procrastinazione per aiutarti a superarli."
-    },
-    {
-      question: "Come installare Abyssia su iPhone, iPad o Android?",
-      answer: "Abyssia si scarica gratuitamente dall'App Store per iPhone e iPad ed è disponibile su Google Play per Android. Clicca su qualsiasi pulsante 'Installa App' del nostro sito per raggiungere i due store, poi scegli il tuo. Su Android, l'app è attualmente offerta tramite il programma di test ufficiale di Google Play."
-    },
-    {
-      question: "Quali sono i requisiti di sistema per questa app di produttività IA?",
-      answer: "L'applicazione Abyssia è leggera e ottimizzata per consumare pochissima batteria. Su iPhone e iPad richiede iOS 15.0 o versioni successive (circa 70 MB di spazio). Su Android funziona su qualsiasi dispositivo con Android 8.0 o versioni successive e almeno 50 MB di spazio di archiviazione disponibile."
-    },
-    {
-      question: "I miei dati sono al sicuro in questa soluzione IA per la produttività?",
-      answer: "Assolutamente sì. Le tue richieste e i tuoi dati personali sono crittografati end-to-end e non vendiamo alcuna informazione a terzi. La privacy è la nostra massima priorità. Tutte le analisi di produttività dell'IA vengono eseguite in modo sicuro e nel rispetto della tua privacy."
-    }
+    { question: "Che cos'è Abyssia?", answer: "Abyssia è un'applicazione che aiuta alunni e studenti a ripassare con l'intelligenza artificiale. Riunisce una chat IA e più di 25 strumenti: corsi scritti dall'IA, schede, quiz, flashcard, apprendimento delle lingue, traduzione, note, Pomodoro, abitudini e obiettivi. Tutto è in un'unica app, senza passare da un servizio all'altro." },
+    { question: "Abyssia è gratuita?", answer: "Sì. Abyssia si scarica e si usa gratis, con 15 messaggi di chat IA, 3 generazioni di flashcard o quiz, 10 traduzioni o ricerche nel dizionario al giorno e un primo corso IA incluso. L'abbonamento Premium facoltativo (4,99 € al mese o 39,99 € all'anno in Francia) toglie questi limiti e sblocca gli strumenti di scrittura, la chat vocale e le altre funzioni IA avanzate." },
+    { question: "Quali strumenti offre Abyssia per preparare un esame?", answer: "Abyssia scrive un corso completo adatto al tuo livello scolastico, poi genera quiz corretti e flashcard da un argomento, un testo incollato o un file. Il timer Pomodoro divide il ripasso in sessioni di concentrazione e il riepilogo del giorno riassume i tuoi progressi. I percorsi di lingua e il traduttore coprono le lingue straniere." },
+    { question: "Su quali dispositivi funziona Abyssia?", answer: "Abyssia è gratuita sull'App Store per iPhone e iPad (iOS 15.0 o successivo, circa 70 MB) e su Mac. La versione Android (Android 8.0 o successivo) è in test chiuso su Google Play: iscriviti con il tuo indirizzo Gmail tramite il modulo «Android: entra nella beta» di questo sito. Il tuo account si sincronizza tra i dispositivi." },
+    { question: "Abyssia funziona offline?", answer: "In parte. Note, attività, abitudini, Pomodoro e giochi funzionano senza connessione. Su iPhone e Android si può scaricare nell'app un modello di IA offline per chattare senza internet. Le altre funzioni IA, come corsi, quiz e flashcard, richiedono una connessione." },
+    { question: "Per quale livello è adatta Abyssia?", answer: "Abyssia è pensata per studenti delle medie e delle superiori, universitari e chiunque stia imparando. I corsi IA si impostano per materia, capitolo e livello scolastico, e quiz e flashcard seguono il contenuto che fornisci." },
+    { question: "I miei dati sono protetti?", answer: "Il tuo account e la sincronizzazione si basano su Supabase, con connessioni cifrate e regole di accesso che limitano ogni utente ai propri dati. I testi che invii all'IA vengono trasmessi ai fornitori di IA solo per generare la risposta. Abyssia non vende alcun dato e puoi eliminare il tuo account da Impostazioni > Dati > Elimina il mio account." },
+    { question: "In cosa Abyssia è diversa dalle altre app?", answer: "Invece di un'app per la chat IA, un'altra per il ripasso, una terza per le attività e una quarta per la concentrazione, Abyssia riunisce più di 25 strumenti nella stessa interfaccia. I progressi sono comuni a tutti gli strumenti (XP, serie, badge) e i tuoi dati si sincronizzano tra i dispositivi." },
   ],
   ru: [
-    {
-      question: "Что такое Abyssia и как работает этот персональный ИИ-ассистент?",
-      answer: "Abyssia объединяет разговорный ИИ и набор из более чем 25 инструментов в одном приложении. Вы можете общаться с ассистентом или специализированным агентом, попросить написать полный курс, создать флеш-карты и тесты, вести заметки, запустить Помодоро, отслеживать привычки и цели, переводить, планировать поездку или читать PDF, не выходя из приложения."
-    },
-    {
-      question: "Как эффективно использовать Abyssia для повышения продуктивности?",
-      answer: "Чтобы максимизировать продуктивность, начните с постановки SMART-целей в приложении. Используйте наш ИИ-трекер привычек для выработки устойчивых рутин и запускайте таймер Pomodoro для сфокусированной работы. ИИ-анализ продуктивности определит пики вашей активности и предложит оптимальное расписание."
-    },
-    {
-      question: "Как выработать полезные привычки с помощью трекера привычек Abyssia?",
-      answer: "Наш ИИ-трекер привычек анализирует ваше поведение и предлагает персональные рекомендации для создания устойчивых рутин. Приложение также обнаруживает потенциальные препятствия (например, усталость или накопленные задержки) и автоматически корректирует ежедневные цели для достижения успеха."
-    },
-    {
-      question: "Abyssia по сравнению с другими приложениями для продуктивности — в чем разница?",
-      answer: "Разница в охвате: вместо одного приложения для ИИ-чата, второго для повторения, третьего для задач и четвёртого для концентрации, Abyssia собирает все 25 инструментов в одном тёмном интерфейсе с общим прогрессом (опыт, серии, значки) и облачной синхронизацией между устройствами."
-    },
-    {
-      question: "Как перестать прокрастинировать с помощью ассистента Abyssia?",
-      answer: "Наше приложение использует проверенные техники, усиленные ИИ. Метод Pomodoro разбивает задачи на управляемые сессии, геймификация делает процесс увлекательным, а личный ИИ-ассистент отправляет вам индивидуальные слова поддержки. Кроме того, поведенческий анализ выявляет триггеры прокрастинации, помогая вам справиться с ними."
-    },
-    {
-      question: "Как установить Abyssia на iPhone, iPad или Android?",
-      answer: "Abyssia можно бесплатно скачать в App Store для iPhone и iPad, а для Android приложение доступно в Google Play. Нажмите любую кнопку «Установить» на нашем сайте, чтобы перейти к обоим магазинам, и выберите свой. На Android приложение сейчас распространяется через официальную программу тестирования Google Play."
-    },
-    {
-      question: "Каковы системные требования для этого ИИ-приложения продуктивности?",
-      answer: "Приложение Abyssia лёгкое и оптимизировано для экономии заряда батареи. На iPhone и iPad требуется iOS 15.0 или новее (около 70 МБ свободного места). На Android оно работает на любом устройстве с Android 8.0 или выше при наличии не менее 50 МБ свободного места."
-    },
-    {
-      question: "Безопасны ли мои данные в этом ИИ-решении для продуктивности?",
-      answer: "Абсолютно. Ваши запросы и личные данные шифруются сквозным методом, и мы не продаем информацию третьим лицам. Конфиденциальность — наш главный приоритет. Все анализы продуктивности выполняются безопасно и с уважением к вашей частной жизни."
-    }
+    { question: "Что такое Abyssia?", answer: "Abyssia — приложение, которое помогает школьникам и студентам готовиться к занятиям с помощью искусственного интеллекта. В нём собраны ИИ-чат и более 25 инструментов: курсы, написанные ИИ, конспекты, тесты, карточки, изучение языков, перевод, заметки, Помодоро, привычки и цели. Всё находится в одном приложении, без переходов между сервисами." },
+    { question: "Abyssia бесплатна?", answer: "Да. Abyssia можно скачать и использовать бесплатно: каждый день доступны 15 сообщений в ИИ-чате, 3 генерации карточек или тестов, 10 переводов или поисков в словаре, а первый ИИ-курс — в подарок. Необязательная подписка Premium (4,99 € в месяц или 39,99 € в год во Франции) снимает эти ограничения и открывает инструменты письма, голосовой чат и другие продвинутые функции ИИ." },
+    { question: "Какие инструменты есть в Abyssia для подготовки к экзамену?", answer: "Abyssia пишет полный курс под ваш уровень, затем создаёт тесты с разбором и карточки по теме, вставленному тексту или файлу. Таймер Помодоро делит подготовку на сессии концентрации, а ежедневная сводка показывает ваш прогресс. Курсы языков и переводчик помогают с иностранными языками." },
+    { question: "На каких устройствах работает Abyssia?", answer: "Abyssia бесплатно доступна в App Store для iPhone и iPad (iOS 15.0 или новее, около 70 МБ) и для Mac. Версия для Android (Android 8.0 или новее) проходит закрытое тестирование в Google Play: запишитесь с адресом Gmail через форму «Android: участвовать в бета-тесте» на этом сайте. Аккаунт синхронизируется между устройствами." },
+    { question: "Работает ли Abyssia без интернета?", answer: "Частично. Заметки, задачи, привычки, Помодоро и игры работают без подключения. На iPhone и Android в приложении можно скачать офлайн-модель ИИ и общаться без интернета. Остальные функции ИИ — курсы, тесты и карточки — требуют подключения." },
+    { question: "Для какого уровня подходит Abyssia?", answer: "Abyssia предназначена для школьников, студентов и всех, кто учится. ИИ-курсы настраиваются по предмету, главе и уровню, а тесты и карточки строятся по вашему материалу." },
+    { question: "Защищены ли мои данные?", answer: "Аккаунт и синхронизация работают на Supabase с зашифрованными соединениями и правилами доступа, которые ограничивают каждого пользователя его собственными данными. Тексты, которые вы отправляете ИИ, передаются поставщикам ИИ только для создания ответа. Abyssia не продаёт данные, а удалить аккаунт можно в разделе «Настройки > Данные > Удалить мой аккаунт»." },
+    { question: "Чем Abyssia отличается от других приложений?", answer: "Вместо одного приложения для ИИ-чата, другого для учёбы, третьего для задач и четвёртого для концентрации Abyssia объединяет более 25 инструментов в одном интерфейсе. Прогресс общий для всех инструментов (опыт, серии, значки), а данные синхронизируются между устройствами." },
   ],
   uk: [
-    {
-      question: "Що таке Abyssia і як працює цей персональний ШІ-асистент?",
-      answer: "Abyssia поєднує розмовний ШІ та набір із понад 25 інструментів в одному застосунку. Ви можете спілкуватися з асистентом або спеціалізованим агентом, попросити написати повний курс, створити флеш-картки й тести, вести нотатки, запустити Помодоро, відстежувати звички та цілі, перекладати, планувати подорож або читати PDF, не виходячи із застосунку."
-    },
-    {
-      question: "Як ефективно використовувати Abyssia для покращення продуктивності?",
-      answer: "Щоб максимізувати продуктивність, почніть із встановлення SMART-цілей у додатку. Використовуйте наш ШІ-трекер звичок для формування стійких рутин та запускайте таймер Pomodoro для сфокусованої роботи. ШІ-аналіз продуктивності визначить піки вашої активності та запропонує оптимальний розклад."
-    },
-    {
-      question: "Як розвинути корисні звички за допомогою трекера звичок Abyssia?",
-      answer: "Наш ШІ-трекер звичок аналізує вашу поведінку та надає персоналізовані рекомендації для створення стійких рутин. Додаток також виявляє потенційні перешкоди (наприклад, втому чи накопичені затримки) і автоматично коригує щоденні цілі для досягнення успіху."
-    },
-    {
-      question: "Abyssia порівняно з іншими додатками для продуктивності — в чому різниця?",
-      answer: "Різниця в охопленні: замість одного застосунку для ШІ-чату, другого для повторення, третього для завдань і четвертого для концентрації, Abyssia збирає всі 25 інструментів в одному темному інтерфейсі зі спільним прогресом (досвід, серії, значки) та хмарною синхронізацією між пристроями."
-    },
-    {
-      question: "Як перестати прокрастинувати за допомогою асистента Abyssia?",
-      answer: "Наш додаток використовує перевірені техніки, підсилені ШІ. Метод Pomodoro розбиває завдання на керовані сесії, гейміфікація робить процес захопливим, а особистісний ШІ-асистент надсилає вам індивідуальні слова підтримки. Крім того, поведінковий аналіз виявляє тригери прокрастинації, допомагаючи вам впоратися з ними."
-    },
-    {
-      question: "Як встановити Abyssia на iPhone, iPad або Android?",
-      answer: "Abyssia можна безкоштовно завантажити в App Store для iPhone та iPad, а для Android додаток доступний у Google Play. Натисніть будь-яку кнопку «Встановити» на нашому сайті, щоб перейти до обох магазинів, і оберіть свій. На Android додаток наразі поширюється через офіційну програму тестування Google Play."
-    },
-    {
-      question: "Які системні вимоги для цього ШІ-додатка продуктивності?",
-      answer: "Додаток Abyssia легкий та оптимізований для економії заряду батареї. На iPhone та iPad потрібна iOS 15.0 або новіша (близько 70 МБ вільного місця). На Android він працює на будь-якому пристрої з Android 8.0 або вище за наявності не менше 50 МБ вільного місця."
-    },
-    {
-      question: "Чи безпечні мої дані в цьому ШІ-рішенні для продуктивності?",
-      answer: "Абсолютно. Ваші запити та особисті дані шифруються наскрізним методом, і ми не продаємо інформацію третім особам. Конфіденційність — наш головний пріоритет. Усі аналізи продуктивності виконуються безпечно та з повагою до вашого приватного життя."
-    }
-  ]
+    { question: "Що таке Abyssia?", answer: "Abyssia — застосунок, який допомагає учням і студентам навчатися за допомогою штучного інтелекту. У ньому зібрано ШІ-чат і понад 25 інструментів: курси, написані ШІ, конспекти, тести, картки, вивчення мов, переклад, нотатки, Помодоро, звички та цілі. Усе в одному застосунку, без переходів між сервісами." },
+    { question: "Чи безкоштовна Abyssia?", answer: "Так. Abyssia можна завантажити й використовувати безкоштовно: щодня доступні 15 повідомлень у ШІ-чаті, 3 генерації карток або тестів, 10 перекладів або пошуків у словнику, а перший ШІ-курс — у подарунок. Необов'язкова підписка Premium (4,99 € на місяць або 39,99 € на рік у Франції) знімає ці обмеження й відкриває інструменти письма, голосовий чат та інші розширені функції ШІ." },
+    { question: "Які інструменти є в Abyssia для підготовки до іспиту?", answer: "Abyssia пише повний курс під ваш рівень, а потім створює тести з поясненнями й картки за темою, вставленим текстом або файлом. Таймер Помодоро ділить підготовку на сесії зосередження, а щоденне зведення показує ваш прогрес. Мовні курси й перекладач допомагають з іноземними мовами." },
+    { question: "На яких пристроях працює Abyssia?", answer: "Abyssia безкоштовно доступна в App Store для iPhone та iPad (iOS 15.0 або новіша, близько 70 МБ) і для Mac. Версія для Android (Android 8.0 або новіша) проходить закрите тестування в Google Play: запишіться з адресою Gmail через форму «Android: долучитися до бета-тесту» на цьому сайті. Обліковий запис синхронізується між пристроями." },
+    { question: "Чи працює Abyssia без інтернету?", answer: "Частково. Нотатки, завдання, звички, Помодоро та ігри працюють без підключення. На iPhone та Android у застосунку можна завантажити офлайн-модель ШІ й спілкуватися без інтернету. Інші функції ШІ — курси, тести й картки — потребують підключення." },
+    { question: "Для якого рівня підходить Abyssia?", answer: "Abyssia призначена для школярів, студентів і всіх, хто навчається. ШІ-курси налаштовуються за предметом, розділом і рівнем, а тести й картки будуються за вашим матеріалом." },
+    { question: "Чи захищені мої дані?", answer: "Обліковий запис і синхронізація працюють на Supabase із зашифрованими з'єднаннями та правилами доступу, які обмежують кожного користувача його власними даними. Тексти, які ви надсилаєте ШІ, передаються постачальникам ШІ лише для створення відповіді. Abyssia не продає даних, а видалити обліковий запис можна в «Налаштування > Дані > Видалити мій обліковий запис»." },
+    { question: "Чим Abyssia відрізняється від інших застосунків?", answer: "Замість одного застосунку для ШІ-чату, другого для навчання, третього для завдань і четвертого для зосередження Abyssia об'єднує понад 25 інструментів в одному інтерфейсі. Прогрес спільний для всіх інструментів (досвід, серії, значки), а дані синхронізуються між пристроями." },
+  ],
 };

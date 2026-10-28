@@ -4,8 +4,9 @@
 
 Faits clés :
 
-- Prix : gratuite, avec un abonnement Premium optionnel (prix affiché dans l'App Store).
-- Plateformes : iPhone et iPad via l'App Store (iOS 15.0+, environ 70 Mo). Android : test fermé sur Google Play, inscription sur https://abyssia.eu/#beta-android.
+- Prix : gratuite, avec chaque jour 15 messages au chat IA, 3 générations de flashcards ou QCM, 10 traductions et un premier cours IA offert. Abonnement Premium optionnel : 4,99 €/mois ou 39,99 €/an (prix France au 28 octobre 2026), sans période d'essai ; il retire les limites et débloque les outils d'écriture, le chat vocal et les autres fonctions IA avancées.
+- Plateformes : iPhone et iPad via l'App Store (iOS 15.0+, environ 70 Mo) et Mac. Android 8.0+ : test fermé sur Google Play, inscription avec une adresse Gmail sur https://abyssia.eu/#beta-android.
+- Hors connexion : notes, tâches, habitudes, Pomodoro et jeux ; sur iPhone et Android, un modèle d'IA hors ligne téléchargeable dans l'app permet de discuter sans internet.
 - Public : collégiens, lycéens, étudiants et toute personne qui apprend ou veut mieux s'organiser.
 - Éditeur : Kelvyn Laine, développeur indépendant basé en France. Support : kelvynwear@gmail.com.
 - Site disponible en français, anglais, espagnol, italien, chinois, russe et ukrainien.
@@ -17,6 +18,12 @@ Faits clés :
 - [À propos](https://abyssia.eu/a-propos.html): éditeur, chiffres clés, fonctionnalités et contact
 - [Télécharger sur l'App Store](https://apps.apple.com/app/id6776822178): fiche officielle « Abyssia — AI Chat & Tools »
 - [Rejoindre la bêta Android](https://abyssia.eu/#beta-android): inscription au test fermé Google Play avec une adresse Gmail
+
+## Guides
+
+- [Réviser avec l'IA : la méthode en 5 étapes](https://abyssia.eu/guides/reviser-avec-ia.html): faire expliquer le chapitre, se tester avec QCM et flashcards, espacer les révisions
+- [La méthode Pomodoro pour réviser](https://abyssia.eu/guides/methode-pomodoro-revisions.html): 25 minutes de travail, 5 de pause, pause longue après quatre cycles
+- [Flashcards et répétition espacée](https://abyssia.eu/guides/flashcards-repetition-espacee.html): faire de bonnes cartes et à quel rythme les revoir
 
 ## Fonctionnalités
 

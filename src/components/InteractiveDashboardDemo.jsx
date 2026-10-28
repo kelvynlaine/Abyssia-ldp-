@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   BarChart3, 
   Brain, 
   CheckCircle2, 
   Flame, 
   Star, 
-  Zap, 
   Check, 
   Award, 
   TrendingUp, 
