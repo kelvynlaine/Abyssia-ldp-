@@ -24,6 +24,11 @@ Faits clés :
 - [Réviser avec l'IA : la méthode en 5 étapes](https://abyssia.eu/guides/reviser-avec-ia.html): faire expliquer le chapitre, se tester avec QCM et flashcards, espacer les révisions
 - [La méthode Pomodoro pour réviser](https://abyssia.eu/guides/methode-pomodoro-revisions.html): 25 minutes de travail, 5 de pause, pause longue après quatre cycles
 - [Flashcards et répétition espacée](https://abyssia.eu/guides/flashcards-repetition-espacee.html): faire de bonnes cartes et à quel rythme les revoir
+- [Comment faire une fiche de révision efficace](https://abyssia.eu/guides/fiche-de-revision.html): contenu, méthode en 4 étapes, modèle Cornell, se tester avec ses fiches
+- [Réviser avec une carte mentale](https://abyssia.eu/guides/carte-mentale-reviser.html): faire une mind map en 5 étapes, matières adaptées, la refaire de mémoire
+- [Planning de révision pour le bac sur 4 semaines](https://abyssia.eu/guides/planning-revisions-bac.html): inventaire des chapitres, répartition, effet d'espacement, journée type
+- [Apprendre du vocabulaire en langue étrangère](https://abyssia.eu/guides/apprendre-vocabulaire-langue.html): mots en contexte, flashcards dans les deux sens, répétition espacée, réemploi
+- [Réviser la veille d'un examen](https://abyssia.eu/guides/reviser-veille-examen.html): quoi revoir, quoi éviter, rôle du sommeil, le matin de l'épreuve
 
 ## Fonctionnalités
 
