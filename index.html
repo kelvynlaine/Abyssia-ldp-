@@ -6,35 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO -->
-    <title>Abyssia — Chat IA et 25 outils dans une seule app</title>
-    <meta name="description" content="Abyssia réunit un chat IA multi-personnalités, des cours et quiz générés par l'IA, des notes intelligentes, un Pomodoro et plus de 25 outils. Gratuit sur l'App Store, iOS 15+." />
-    <meta name="keywords" content="Abyssia, chat IA, assistant IA, cours IA, flashcards, quiz, pomodoro, productivité, application iOS" />
+    <title>Abyssia — App IA gratuite pour réviser : cours, quiz, flashcards</title>
+    <meta name="description" content="Abyssia, l'app gratuite pour réviser avec l'IA : chat IA, cours, fiches, quiz, flashcards, Pomodoro et plus de 25 outils. Sur iPhone et iPad (iOS 15+)." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <link rel="canonical" href="https://abyssia.eu/" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="Résumé du site pour les IA (llms.txt)" />
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://abyssia.eu/" />
     <meta property="og:site_name" content="Abyssia" />
-    <meta property="og:title" content="Abyssia — Chat IA et 25 outils dans une seule app" />
-    <meta property="og:description" content="Chat IA, cours rédigés par l'IA, fiches, quiz, notes, Pomodoro et plus de 25 outils réunis dans une seule application. Gratuit sur l'App Store." />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Abyssia — App IA gratuite pour réviser : cours, quiz, flashcards" />
+    <meta property="og:description" content="Abyssia, l'app gratuite pour réviser avec l'IA : chat IA, cours, fiches, quiz, flashcards, Pomodoro et plus de 25 outils. Sur iPhone et iPad (iOS 15+)." />
     <meta property="og:image" content="https://abyssia.eu/screens/01-chat.webp" />
+    <meta property="og:image:alt" content="Écran du chat IA de l'application Abyssia" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Abyssia — Chat IA et 25 outils dans une seule app" />
-    <meta name="twitter:description" content="Chat IA, cours générés, fiches, quiz, notes et Pomodoro dans une seule application. Gratuit sur l'App Store." />
+    <meta name="twitter:title" content="Abyssia — App IA gratuite pour réviser : cours, quiz, flashcards" />
+    <meta name="twitter:description" content="Abyssia, l'app gratuite pour réviser avec l'IA : chat IA, cours, fiches, quiz, flashcards, Pomodoro et plus de 25 outils. Sur iPhone et iPad (iOS 15+)." />
     <meta name="twitter:image" content="https://abyssia.eu/screens/01-chat.webp" />
 
-    <!-- Fiche application (données structurées) -->
+    <!-- Éditeur, site et application (données structurées ; FAQPage ajoutée au build) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Abyssia — AI Chat & Tools",
-        "operatingSystem": "iOS 15.0 or later",
-        "applicationCategory": "ProductivityApplication",
-        "softwareVersion": "4.1.1",
-        "url": "https://abyssia.eu/",
-        "installUrl": "https://apps.apple.com/app/id6776822178",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://abyssia.eu/#editeur",
+            "name": "Abyssia",
+            "url": "https://abyssia.eu/",
+            "logo": "https://abyssia.eu/logo-abyssia.png",
+            "founder": {
+              "@type": "Person",
+              "name": "Kelvyn Laine"
+            },
+            "email": "kelvynwear@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "FR"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "kelvynwear@gmail.com",
+              "availableLanguage": [
+                "fr",
+                "en"
+              ]
+            },
+            "sameAs": [
+              "https://apps.apple.com/app/id6776822178",
+              "https://discord.gg/QtG7jnkE5G"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://abyssia.eu/#site",
+            "name": "Abyssia",
+            "url": "https://abyssia.eu/",
+            "inLanguage": "fr",
+            "publisher": {
+              "@id": "https://abyssia.eu/#editeur"
+            }
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://abyssia.eu/#app",
+            "name": "Abyssia",
+            "alternateName": "Abyssia — AI Chat & Tools",
+            "description": "Application gratuite qui aide les élèves et les étudiants à réviser avec l'IA : chat IA multi-personnalités, cours rédigés par l'IA, fiches, QCM, flashcards, apprentissage des langues, notes, Pomodoro, habitudes et objectifs, soit plus de 25 outils dans une seule app.",
+            "applicationCategory": "EducationalApplication",
+            "applicationSubCategory": "Productivité et révisions",
+            "operatingSystem": "iOS 15.0 ou ultérieur (iPhone, iPad)",
+            "inLanguage": [
+              "fr",
+              "en",
+              "es",
+              "it",
+              "zh",
+              "ru",
+              "uk"
+            ],
+            "url": "https://abyssia.eu/",
+            "installUrl": "https://apps.apple.com/app/id6776822178",
+            "downloadUrl": "https://apps.apple.com/app/id6776822178",
+            "image": "https://abyssia.eu/logo-abyssia.png",
+            "screenshot": [
+              "https://abyssia.eu/screens/01-chat.webp",
+              "https://abyssia.eu/screens/02-cours.webp",
+              "https://abyssia.eu/screens/03-qcm.webp",
+              "https://abyssia.eu/screens/04-flashcards.webp",
+              "https://abyssia.eu/screens/06-dashboard.webp"
+            ],
+            "featureList": [
+              "Chat IA avec plusieurs personnalités et chat vocal",
+              "Cours complets rédigés par l'IA, adaptés au niveau scolaire",
+              "QCM et flashcards générés à partir d'un sujet, d'un texte ou d'un fichier",
+              "Apprentissage des langues (anglais, espagnol, italien, russe…)",
+              "Traduction, aide à l'écriture et coach d'entretien",
+              "Pomodoro, habitudes, objectifs et brief quotidien par l'IA",
+              "Progression gamifiée : XP, séries, badges",
+              "Synchronisation cloud entre appareils"
+            ],
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "category": "free"
+            },
+            "author": {
+              "@id": "https://abyssia.eu/#editeur"
+            },
+            "publisher": {
+              "@id": "https://abyssia.eu/#editeur"
+            }
+          }
+        ]
       }
     </script>
 

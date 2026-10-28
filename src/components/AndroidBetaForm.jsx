@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CheckCircle2, Loader2, ArrowRight } from 'lucide-react';
 import { PLAY_STORE_URL } from '../config/deeplink';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../config/supabase';
@@ -87,7 +87,10 @@ const dejaInscrit = () => {
 export default function AndroidBetaForm({ lang = 'fr' }) {
   const labels = LABELS[lang] || LABELS.fr;
   const [email, setEmail] = useState('');
-  const [etat, setEtat] = useState(dejaInscrit() ? 'fait' : 'saisie'); // saisie | envoi | fait | invalide | erreur
+  const [etat, setEtat] = useState('saisie'); // saisie | envoi | fait | invalide | erreur
+  // Lu après l'hydratation : le HTML pré-rendu montre toujours le formulaire.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => { if (dejaInscrit()) setEtat('fait'); }, []);
 
   const envoyer = async (e) => {
     e.preventDefault();

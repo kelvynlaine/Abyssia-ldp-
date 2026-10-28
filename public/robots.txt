@@ -1,0 +1,6 @@
+# Tous les robots, moteurs de recherche et assistants IA compris, sont les bienvenus.
+User-agent: *
+Allow: /
+Disallow: /auth-confirmed.html
+
+Sitemap: https://abyssia.eu/sitemap.xml

@@ -1,0 +1,34 @@
+# Abyssia
+
+> Abyssia est une application gratuite pour iPhone et iPad (iOS 15.0 ou ultérieur) qui aide les élèves et les étudiants à réviser avec l'IA. Elle réunit un chat IA multi-personnalités et plus de 25 outils : cours rédigés par l'IA, fiches, QCM, flashcards, apprentissage des langues, notes, Pomodoro, habitudes et objectifs. Développée en France par Kelvyn Laine.
+
+Faits clés :
+
+- Prix : gratuite, avec un abonnement Premium optionnel (prix affiché dans l'App Store).
+- Plateformes : iPhone et iPad via l'App Store (iOS 15.0+, environ 70 Mo). Android : test fermé sur Google Play, inscription sur https://abyssia.eu/#beta-android.
+- Public : collégiens, lycéens, étudiants et toute personne qui apprend ou veut mieux s'organiser.
+- Éditeur : Kelvyn Laine, développeur indépendant basé en France. Support : kelvynwear@gmail.com.
+- Site disponible en français, anglais, espagnol, italien, chinois, russe et ukrainien.
+
+## Pages principales
+
+- [Accueil et fonctionnalités](https://abyssia.eu/): présentation, captures d'écran, démonstrations, bande-annonce et FAQ
+- [FAQ](https://abyssia.eu/#faq): questions fréquentes (fonctionnement, installation, prérequis, données)
+- [À propos](https://abyssia.eu/a-propos.html): éditeur, chiffres clés, fonctionnalités et contact
+- [Télécharger sur l'App Store](https://apps.apple.com/app/id6776822178): fiche officielle « Abyssia — AI Chat & Tools »
+- [Rejoindre la bêta Android](https://abyssia.eu/#beta-android): inscription au test fermé Google Play avec une adresse Gmail
+
+## Fonctionnalités
+
+- Chat IA : plusieurs personnalités, chat vocal mains libres
+- Cours IA : leçons complètes écrites au niveau de l'élève, avec exercices, QCM et flashcards
+- QCM et flashcards générés à partir d'un sujet, d'un texte ou d'un fichier
+- Apprentissage des langues et traduction
+- Écriture avec l'IA : résumer, corriger, rédiger, trouver des idées ; coach d'entretien
+- Organisation : Pomodoro, tâches, habitudes, objectifs, brief quotidien rédigé par l'IA
+- Progression gamifiée (XP, séries, badges) et synchronisation cloud
+
+## Informations légales
+
+- [Politique de confidentialité](https://abyssia.eu/privacy.html)
+- [Conditions d'utilisation](https://abyssia.eu/terms.html)
