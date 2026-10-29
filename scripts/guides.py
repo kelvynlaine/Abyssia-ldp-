@@ -7,8 +7,9 @@ import json
 import pathlib
 import re
 
+from guides_en import GUIDES_EN
+
 RACINE = pathlib.Path(__file__).resolve().parent.parent
-SORTIE = RACINE / 'public' / 'guides'
 DATE = '2026-10-28'
 APP_STORE = 'https://apps.apple.com/app/id6776822178'
 
@@ -284,17 +285,17 @@ def bloc(kind, contenu):
     return f'    <{kind}>\n{items}\n    </{kind}>'
 
 
-def page(title, desc, url, jsonld, corps):
+def page(title, desc, url, jsonld, corps, lang, alternates):
     ld = json.dumps(jsonld, ensure_ascii=False, indent=2).replace('</', '<\\/')
     return f'''<!DOCTYPE html>
-<html lang="fr">
+<html lang="{lang}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{html.escape(title)}</title>
   <meta name="description" content="{html.escape(desc)}" />
   <link rel="canonical" href="{url}" />
-  <link rel="icon" type="image/png" href="/logo-abyssia.png" />
+{alternates}  <link rel="icon" type="image/png" href="/logo-abyssia.png" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{html.escape(title)}" />
   <meta property="og:description" content="{html.escape(desc)}" />
@@ -318,58 +319,95 @@ def mots(texte):
     return len(re.sub('<[^>]+>', ' ', texte).split())
 
 
-SORTIE.mkdir(parents=True, exist_ok=True)
-for g in GUIDES:
-    url = f"https://abyssia.eu/guides/{g['slug']}.html"
-    autres = [x for x in GUIDES if x is not g]
-    corps = [
-        f'    <nav class="fil"><a href="/">Accueil</a> › <a href="/guides/">Guides</a> › {html.escape(g["titre"])}</nav>',
-        f'    <h1>{html.escape(g["titre"])}</h1>',
-        f'    <p class="meta">Par Kelvyn Laine, créateur d\'Abyssia · mis à jour le 28 octobre 2026</p>',
-        f'    <p class="resume"><strong>En bref :</strong> {g["resume"]}</p>',
-        *(bloc(k, c) for k, c in g['corps']),
-        '    <h2>Pour aller plus loin</h2>',
-        bloc('ul', [f'<a href="/guides/{x["slug"]}.html">{html.escape(x["titre"])}</a>' for x in autres]
-             + ['<a href="/#faq">Questions fréquentes sur Abyssia</a>', '<a href="/a-propos.html">Qui édite Abyssia</a>']),
-        f'    <p><a class="cta" href="{APP_STORE}" rel="noopener">Télécharger Abyssia gratuitement sur l\'App Store</a></p>',
-    ]
-    corps = '\n'.join(corps)
-    assert mots(corps) > 450, (g['slug'], mots(corps))
-    jsonld = {
-        '@context': 'https://schema.org',
-        '@graph': [
-            {'@type': 'Article', 'headline': g['titre'], 'description': g['desc'], 'inLanguage': 'fr', 'url': url,
-             'mainEntityOfPage': url, 'datePublished': DATE, 'dateModified': DATE,
-             'image': 'https://abyssia.eu/screens/02-cours.webp',
-             'author': {'@type': 'Person', 'name': 'Kelvyn Laine', 'url': 'https://abyssia.eu/a-propos.html'},
-             'publisher': {'@type': 'Organization', '@id': 'https://abyssia.eu/#editeur', 'name': 'Abyssia',
-                           'logo': {'@type': 'ImageObject', 'url': 'https://abyssia.eu/logo-abyssia.png'}},
-             'about': {'@id': 'https://abyssia.eu/#app'}},
-            {'@type': 'BreadcrumbList', 'itemListElement': [
-                {'@type': 'ListItem', 'position': 1, 'name': 'Accueil', 'item': 'https://abyssia.eu/'},
-                {'@type': 'ListItem', 'position': 2, 'name': 'Guides', 'item': 'https://abyssia.eu/guides/'},
-                {'@type': 'ListItem', 'position': 3, 'name': g['titre'], 'item': url}]},
-        ],
-    }
-    (SORTIE / f"{g['slug']}.html").write_text(page(g['title'], g['desc'], url, jsonld, corps))
-    print(g['slug'], mots(corps), 'mots')
+FR = {
+    'lang': 'fr', 'dossier': 'guides', 'guides': GUIDES, 'accueil': 'Accueil', 'guides_nom': 'Guides',
+    'signature': "Par Kelvyn Laine, créateur d'Abyssia · mis à jour le 28 octobre 2026", 'bref': 'En bref :',
+    'plus_loin': 'Pour aller plus loin', 'faq': 'Questions fréquentes sur Abyssia', 'apropos': "Qui édite Abyssia",
+    'cta': "Télécharger Abyssia gratuitement sur l'App Store",
+    'index_h1': 'Guides pour réviser efficacement', 'index_title': "Guides pour réviser efficacement avec l'IA — Abyssia",
+    'index_desc': "Méthodes de révision éprouvées expliquées simplement : réviser avec l'IA, méthode Pomodoro, flashcards et répétition espacée.",
+    'index_intro': "Des méthodes de révision simples et éprouvées — se tester, espacer les révisions, travailler par sessions courtes — et la façon de les appliquer avec l'IA.",
+    'index_auteur': "Ces guides sont écrits par Kelvyn Laine, créateur d'<a href=\"/\">Abyssia</a>, l'application gratuite pour réviser avec l'IA. <a href=\"/a-propos.html\">En savoir plus sur Abyssia</a>.",
+}
+EN = {
+    'lang': 'en', 'dossier': 'en/guides', 'guides': GUIDES_EN, 'accueil': 'Home', 'guides_nom': 'Guides',
+    'signature': 'By Kelvyn Laine, creator of Abyssia · updated October 30, 2026', 'bref': 'In short:',
+    'plus_loin': 'Further reading', 'faq': 'Frequently asked questions about Abyssia', 'apropos': 'Who makes Abyssia',
+    'cta': 'Download Abyssia free on the App Store',
+    'index_h1': 'Guides to studying effectively', 'index_title': 'Guides to Studying Effectively with AI — Abyssia',
+    'index_desc': 'Proven study methods explained simply: studying with AI, the Pomodoro technique, flashcards and spaced repetition, revision plans.',
+    'index_intro': 'Simple, proven study methods — testing yourself, spacing out your reviews, working in short sessions — and how to apply them with AI.',
+    'index_auteur': 'These guides are written by Kelvyn Laine, creator of <a href="/">Abyssia</a>, the free app for studying with AI. <a href="/a-propos.html">More about Abyssia</a> (in French).',
+}
+EN_PAR_FR = {g['fr']: g['slug'] for g in GUIDES_EN}
+assert set(EN_PAR_FR) == {g['slug'] for g in GUIDES}, 'chaque guide français doit avoir sa version anglaise'
 
-# Index des guides
-liste = '\n'.join(
-    f'      <li><a href="/guides/{g["slug"]}.html"><strong>{html.escape(g["titre"])}</strong></a><br />{html.escape(g["desc"])}</li>'
-    for g in GUIDES)
-corps = f'''    <nav class="fil"><a href="/">Accueil</a> › Guides</nav>
-    <h1>Guides pour réviser efficacement</h1>
-    <p class="resume">Des méthodes de révision simples et éprouvées — se tester, espacer les révisions, travailler par sessions courtes — et la façon de les appliquer avec l'IA.</p>
+
+def alternates(slug_fr):
+    """Balises hreflang FR/EN ; slug_fr None = pages d'index."""
+    fr = f'https://abyssia.eu/guides/{slug_fr}.html' if slug_fr else 'https://abyssia.eu/guides/'
+    en = f'https://abyssia.eu/en/guides/{EN_PAR_FR[slug_fr]}.html' if slug_fr else 'https://abyssia.eu/en/guides/'
+    return ''.join(f'  <link rel="alternate" hreflang="{l}" href="{u}" />\n' for l, u in (('fr', fr), ('en', en), ('x-default', fr)))
+
+
+def generer(L):
+    sortie = RACINE / 'public' / L['dossier']
+    base = f"https://abyssia.eu/{L['dossier']}/"
+    sortie.mkdir(parents=True, exist_ok=True)
+    for g in L['guides']:
+        url = f"{base}{g['slug']}.html"
+        autres = [x for x in L['guides'] if x is not g]
+        corps = [
+            f'    <nav class="fil"><a href="/">{L["accueil"]}</a> › <a href="/{L["dossier"]}/">{L["guides_nom"]}</a> › {html.escape(g["titre"])}</nav>',
+            f'    <h1>{html.escape(g["titre"])}</h1>',
+            f'    <p class="meta">{L["signature"]}</p>',
+            f'    <p class="resume"><strong>{L["bref"]}</strong> {g["resume"]}</p>',
+            *(bloc(k, c) for k, c in g['corps']),
+            f'    <h2>{L["plus_loin"]}</h2>',
+            bloc('ul', [f'<a href="/{L["dossier"]}/{x["slug"]}.html">{html.escape(x["titre"])}</a>' for x in autres]
+                 + [f'<a href="/#faq">{L["faq"]}</a>', f'<a href="/a-propos.html">{L["apropos"]}</a>']),
+            f'    <p><a class="cta" href="{APP_STORE}" rel="noopener">{L["cta"]}</a></p>',
+        ]
+        corps = '\n'.join(corps)
+        assert mots(corps) > 450, (g['slug'], mots(corps))
+        jsonld = {
+            '@context': 'https://schema.org',
+            '@graph': [
+                {'@type': 'Article', 'headline': g['titre'], 'description': g['desc'], 'inLanguage': L['lang'], 'url': url,
+                 'mainEntityOfPage': url, 'datePublished': DATE, 'dateModified': DATE,
+                 'image': 'https://abyssia.eu/screens/02-cours.webp',
+                 'author': {'@type': 'Person', 'name': 'Kelvyn Laine', 'url': 'https://abyssia.eu/a-propos.html'},
+                 'publisher': {'@type': 'Organization', '@id': 'https://abyssia.eu/#editeur', 'name': 'Abyssia',
+                               'logo': {'@type': 'ImageObject', 'url': 'https://abyssia.eu/logo-abyssia.png'}},
+                 'about': {'@id': 'https://abyssia.eu/#app'}},
+                {'@type': 'BreadcrumbList', 'itemListElement': [
+                    {'@type': 'ListItem', 'position': 1, 'name': L['accueil'], 'item': 'https://abyssia.eu/'},
+                    {'@type': 'ListItem', 'position': 2, 'name': L['guides_nom'], 'item': base},
+                    {'@type': 'ListItem', 'position': 3, 'name': g['titre'], 'item': url}]},
+            ],
+        }
+        slug_fr = g.get('fr', g['slug'])
+        (sortie / f"{g['slug']}.html").write_text(page(g['title'], g['desc'], url, jsonld, corps, L['lang'], alternates(slug_fr)))
+        print(L['lang'], g['slug'], mots(corps), 'mots')
+
+    # Index des guides
+    liste = '\n'.join(
+        f'      <li><a href="/{L["dossier"]}/{g["slug"]}.html"><strong>{html.escape(g["titre"])}</strong></a><br />{html.escape(g["desc"])}</li>'
+        for g in L['guides'])
+    corps = f'''    <nav class="fil"><a href="/">{L["accueil"]}</a> › {L["guides_nom"]}</nav>
+    <h1>{L["index_h1"]}</h1>
+    <p class="resume">{L["index_intro"]}</p>
     <ul>
 {liste}
     </ul>
-    <p>Ces guides sont écrits par Kelvyn Laine, créateur d'<a href="/">Abyssia</a>, l'application gratuite pour réviser avec l'IA. <a href="/a-propos.html">En savoir plus sur Abyssia</a>.</p>
-    <p><a class="cta" href="{APP_STORE}" rel="noopener">Télécharger Abyssia gratuitement sur l'App Store</a></p>'''
-jsonld = {'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'Guides pour réviser efficacement',
-          'url': 'https://abyssia.eu/guides/', 'inLanguage': 'fr', 'publisher': {'@id': 'https://abyssia.eu/#editeur'},
-          'hasPart': [{'@type': 'Article', 'headline': g['titre'], 'url': f"https://abyssia.eu/guides/{g['slug']}.html"} for g in GUIDES]}
-(SORTIE / 'index.html').write_text(page("Guides pour réviser efficacement avec l'IA — Abyssia",
-    "Méthodes de révision éprouvées expliquées simplement : réviser avec l'IA, méthode Pomodoro, flashcards et répétition espacée.",
-    'https://abyssia.eu/guides/', jsonld, corps))
-print('index ok')
+    <p>{L["index_auteur"]}</p>
+    <p><a class="cta" href="{APP_STORE}" rel="noopener">{L["cta"]}</a></p>'''
+    jsonld = {'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': L['index_h1'],
+              'url': base, 'inLanguage': L['lang'], 'publisher': {'@id': 'https://abyssia.eu/#editeur'},
+              'hasPart': [{'@type': 'Article', 'headline': g['titre'], 'url': f"{base}{g['slug']}.html"} for g in L['guides']]}
+    (sortie / 'index.html').write_text(page(L['index_title'], L['index_desc'], base, jsonld, corps, L['lang'], alternates(None)))
+    print(L['lang'], 'index ok')
+
+
+generer(FR)
+generer(EN)

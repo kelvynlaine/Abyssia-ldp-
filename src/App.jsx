@@ -796,7 +796,7 @@ export default function App() {
                     <ExternalLink size={10} className="text-slate-600" />
                   </a>
                 </li>
-                <li><a href="/guides/" className="hover:text-white transition-colors duration-300">{t.footer.guides}</a></li>
+                <li><a href={lang === 'fr' ? '/guides/' : '/en/guides/'} className="hover:text-white transition-colors duration-300">{t.footer.guides}</a></li>
                 <li><a href="/a-propos.html" className="hover:text-white transition-colors duration-300">{t.footer.about}</a></li>
                 <li><a href={APP_STORE_URL} target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-300">App Store</a></li>
               </ul>

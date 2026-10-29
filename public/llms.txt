@@ -30,6 +30,18 @@ Faits clés :
 - [Apprendre du vocabulaire en langue étrangère](https://abyssia.eu/guides/apprendre-vocabulaire-langue.html): mots en contexte, flashcards dans les deux sens, répétition espacée, réemploi
 - [Réviser la veille d'un examen](https://abyssia.eu/guides/reviser-veille-examen.html): quoi revoir, quoi éviter, rôle du sommeil, le matin de l'épreuve
 
+## Guides (English)
+
+- [Index of English guides](https://abyssia.eu/en/guides/)
+- [How to study with AI: a 5-step method](https://abyssia.eu/en/guides/study-with-ai.html): explain the chapter, test yourself with quizzes and flashcards, space out reviews
+- [The Pomodoro technique for studying](https://abyssia.eu/en/guides/pomodoro-technique-studying.html): 25 minutes of work, 5-minute breaks, a long break after four rounds
+- [Flashcards and spaced repetition](https://abyssia.eu/en/guides/flashcards-spaced-repetition.html): writing good cards and how often to review them
+- [How to make effective revision notes](https://abyssia.eu/en/guides/revision-notes.html): what to include, a 4-step method, the Cornell template, testing yourself
+- [Revising with a mind map](https://abyssia.eu/en/guides/mind-map-studying.html): making a mind map in 5 steps, which subjects suit it, redrawing it from memory
+- [A 4-week exam revision plan](https://abyssia.eu/en/guides/exam-revision-plan.html): taking stock of chapters, spreading them out, the spacing effect, a typical day
+- [Learning foreign language vocabulary](https://abyssia.eu/en/guides/learn-vocabulary-foreign-language.html): words in context, two-way flashcards, spaced repetition, using new words
+- [Revising the night before an exam](https://abyssia.eu/en/guides/night-before-exam.html): what to review, what to avoid, why sleep matters, the morning of the exam
+
 ## Fonctionnalités
 
 - Chat IA : plusieurs personnalités, chat vocal mains libres
