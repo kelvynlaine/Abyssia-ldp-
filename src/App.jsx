@@ -248,9 +248,8 @@ export default function App() {
               </div>
 
               {/* Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight sm:leading-none tracking-tight text-white">
-                {t.hero.headline} <br />
-                <span className="gradient-text">Abyssia</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white">
+                {t.hero.headline}
               </h1>
 
               {/* Subtitle */}
@@ -427,6 +426,32 @@ export default function App() {
 
             </div>
 
+          </section>
+
+          <section id="prix" className="space-y-8 scroll-mt-20">
+            <div className="text-center max-w-2xl mx-auto space-y-4">
+              <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                {t.pricing.sectionTitle}
+              </h2>
+              <p className="text-sm sm:text-base text-slate-400">
+                {t.pricing.sectionSubtitle}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
+              <article className="glass-card rounded-2xl p-5 sm:p-6 space-y-3">
+                <h3 className="text-lg font-bold text-white">{t.pricing.freeTitle}</h3>
+                <p className="text-3xl font-black text-white">{t.pricing.freePrice}</p>
+                <p className="text-sm text-slate-400 leading-relaxed">{t.pricing.freeDesc}</p>
+              </article>
+              <article className="glass-card rounded-2xl p-5 sm:p-6 space-y-3 border-pink-500/40">
+                <h3 className="text-lg font-bold text-white">{t.pricing.proTitle}</h3>
+                <p className="text-3xl font-black text-white">{t.pricing.proPrice}</p>
+                <p className="text-sm text-slate-400 leading-relaxed">{t.pricing.proDesc}</p>
+              </article>
+            </div>
+            <p className="text-sm text-slate-400 leading-relaxed max-w-3xl mx-auto text-center">
+              {t.pricing.otherPacks}
+            </p>
           </section>
 
           {/* 4.5 Nouveautés de l'application */}
@@ -646,22 +671,22 @@ export default function App() {
                 <Sparkles size={28} />
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-                {lang === 'fr' ? <>Optimisez Votre Temps Dès <span className="gradient-text">Aujourd'hui</span></> : 
-                 lang === 'en' ? <>Optimize Your Time <span className="gradient-text">Today</span></> :
-                 lang === 'es' ? <>Optimice su tiempo <span className="gradient-text">hoy mismo</span></> :
-                 lang === 'zh' ? <>从今天起 <span className="gradient-text">优化您的时间</span></> :
-                 lang === 'it' ? <>Ottimizza il tuo tempo <span className="gradient-text">oggi stesso</span></> :
-                 lang === 'ru' ? <>Оптимизируйте свое время <span className="gradient-text">уже сегодня</span></> :
-                 <>Оптимізуйте свій час <span className="gradient-text">уже сьогодні</span></>}
+                {lang === 'fr' ? "Le jour J se prépare avec votre cours" :
+                 lang === 'en' ? "Exam day starts with your course" :
+                 lang === 'es' ? "El día del examen se prepara con tu curso" :
+                 lang === 'zh' ? "考试当天，从你的课程开始" :
+                 lang === 'it' ? "Il giorno dell'esame si prepara con il tuo corso" :
+                 lang === 'ru' ? "День экзамена начинается с вашего курса" :
+                 "День іспиту починається з вашого курсу"}
               </h2>
               <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed">
-                {lang === 'fr' ? "Téléchargez dès maintenant l'application Abyssia et intégrez la puissance de l'intelligence artificielle au service de votre réussite." :
-                 lang === 'en' ? "Download the Abyssia app now and integrate the power of artificial intelligence to support your success." :
-                 lang === 'es' ? "Descargue la aplicación Abyssia ahora e integre el poder de la inteligencia artificial al servicio de su éxito." :
-                 lang === 'zh' ? "立即下载 Abyssia 应用程序，融入人工智能的力量，为您的成功提供助力。" :
-                 lang === 'it' ? "Scarica subito l'app Abyssia e integra la potenza dell'intelligenza artificiale per supportare il tuo successo." :
-                 lang === 'ru' ? "Скачайте приложение Abyssia прямо сейчас и используйте всю мощь искусственного интеллекта для достижения успеха." :
-                 "Завантажте додаток Abyssia прямо зараз та інтегруйте силу штучного інтелекту для вашого успіху."}
+                {lang === 'fr' ? "Installez Abyssia et déposez un chapitre." :
+                 lang === 'en' ? "Install Abyssia and add a chapter." :
+                 lang === 'es' ? "Instala Abyssia y deposita un capítulo." :
+                 lang === 'zh' ? "安装 Abyssia，放入一个章节。" :
+                 lang === 'it' ? "Installa Abyssia e deposita un capitolo." :
+                 lang === 'ru' ? "Установите Abyssia и добавьте одну главу." :
+                 "Встановіть Abyssia і додайте один розділ."}
               </p>
               
               <div className="pt-2">
@@ -680,8 +705,6 @@ export default function App() {
                   <Smartphone size={14} className="text-emerald-400" />
                   {t.hero.trustBadge2}
                 </span>
-                <span className="h-3 w-px bg-white/10 hidden sm:block" />
-                <span>Version 1.0.4 - Premium</span>
               </div>
             </div>
           </section>

@@ -56,7 +56,7 @@ GUIDES = [
                 "Ne jamais vérifier : une IA peut inventer une date, une formule ou une référence. Contrôlez les faits importants.",
             ]),
             ('h2', "Faire tout cela dans une seule application"),
-            ('p', "Dans <a href=\"/\">Abyssia</a>, ces étapes se suivent sans changer d'outil : l'outil Cours IA rédige le chapitre à votre niveau, les QCM et les flashcards se génèrent à partir d'un sujet, d'un texte ou d'un fichier, et le minuteur Pomodoro cadre les sessions. L'application est gratuite sur iPhone et iPad (iOS 15+), avec des quotas quotidiens d'IA ; l'abonnement Premium les retire."),
+            ('p', "Dans <a href=\"/\">Abyssia</a>, vous déposez votre cours : l'app en fait des fiches et un QCM, puis vous suit jusqu'au jour de l'examen. L'application s'ouvre sans paiement sur iPhone et iPad (iOS 15+). L'analyse des PDF, documents et photos passe par l'abonnement fichiers (4,99 €/mois ou 39,99 €/an, après 7 jours d'essai)."),
         ],
     },
     {

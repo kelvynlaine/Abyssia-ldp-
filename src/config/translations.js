@@ -8,33 +8,44 @@ export const TRANSLATIONS = {
       install: "Installer l'App"
     },
     hero: {
-      microBadge: "Chat IA + 25 outils · Version 4.1",
-      headline: "Apprenez, créez et avancez avec",
-      subtitle: "Chat IA, cours rédigés par l'IA, fiches, quiz, notes, Pomodoro et plus de 25 outils réunis dans une seule application. Interface sombre soignée, synchronisation cloud, gratuite sur l'App Store.",
+      microBadge: "Cours, fiches, QCM",
+      headline: "Révisez vos cours jusqu'au jour de l'examen",
+      subtitle: "Contrôle, brevet ou bac : vous déposez votre cours. Abyssia en fait des fiches et un QCM, puis vous suit jusqu'au jour J.",
       ctaInstall: "Télécharger l'application",
       ctaDemo: "Essayer la démo interactive",
-      trustBadge1: "Gratuit · iOS 15+ · 70 Mo",
-      trustBadge2: "Plus de 25 outils IA dans une seule app"
+      trustBadge1: "Gratuit · iOS 15+",
+      trustBadge2: "Fichiers : 4,99 €/mois ou 39,99 €/an"
     },
     demos: {
       sectionTitle: "Essayez l'Expérience Abyssia en Direct",
       sectionSubtitle: "Découvrez la fluidité de nos outils avec ces composants de démonstration interactifs en temps réel."
     },
     features: {
-      sectionTitle: "Tout ce que fait Abyssia",
-      sectionSubtitle: "Une seule application pour apprendre, écrire, s'organiser et avancer — au lieu de jongler entre dix services.",
-      feat1Title: "Chat IA multi-personnalités",
-      feat1Desc: "Discutez avec une IA qui gère le code et le markdown, ou basculez sur un agent spécialisé : développeur, rédacteur, coach, marketing, psychologue. Dictée et conversation vocale incluses.",
-      feat2Title: "Cours et révisions générés",
-      feat2Desc: "Demandez un cours complet : leçons, exemples traités, démonstrations et fiches méthode. Révisez ensuite avec des flashcards et des quiz corrigés instantanément.",
-      feat3Title: "Skills directement dans le chat",
-      feat3Desc: "Tapez « / » pour lancer une action : /cours, /fiche, /exercices, /explique. L'IA produit un document structuré, pas seulement une réponse.",
-      feat4Title: "Notes intelligentes et tâches",
-      feat4Desc: "Un éditeur façon Notion, des listes de tâches dont l'IA découpe les sous-étapes, un journal de bien-être et un brief quotidien qui résume votre journée.",
-      feat5Title: "Concentration et progression",
-      feat5Desc: "Un Pomodoro synchronisé avec la Dynamic Island, le suivi d'habitudes et d'objectifs, l'XP, les séries actives et douze badges à débloquer.",
-      feat6Title: "Vingt-cinq outils du quotidien",
-      feat6Desc: "Traducteur, chef IA à partir de vos ingrédients, planificateur de voyage, conseiller budget, lecteur PDF, navigateur intégré, forum en temps réel et parties d'échecs contre l'IA."
+      sectionTitle: "Trois étapes",
+      sectionSubtitle: "Vous déposez votre cours. L'app en fait des fiches et un QCM, puis vous suit jusqu'au jour J.",
+      feat1Title: "Vous déposez votre cours",
+      feat1Desc: "Un texte, une photo ou un PDF de votre chapitre. C'est votre cours, pas un programme générique.",
+      feat2Title: "L'app en fait des fiches et un QCM",
+      feat2Desc: "Vous révisez le même contenu sous plusieurs formes, puis vous vous testez.",
+      feat3Title: "Vous suivez jusqu'au jour J",
+      feat3Desc: "Notes, questions et épreuve restent ensemble jusqu'au contrôle, au brevet ou au bac.",
+      feat4Title: "Le chat reste dans le même geste",
+      feat4Desc: "Vous discutez à partir de votre cours. Les photos et les PDF passent par l'abonnement fichiers.",
+      feat5Title: "Hors ligne",
+      feat5Desc: "Après le téléchargement du modèle sur le téléphone, l'IA ne quitte pas l'appareil. Les fiches et les notes déjà présentes restent lisibles sans réseau.",
+      feat6Title: "D'autres packs, si besoin",
+      feat6Desc: "Aucun n'est requis pour réviser. Leur prix est écrit dans l'app avant le paiement."
+    },
+    pricing: {
+      sectionTitle: "Gratuit, et l'abonnement",
+      sectionSubtitle: "Un seul abonnement est mis en avant : l'analyse de vos fichiers. Le prix s'affiche avant le paiement.",
+      freeTitle: "Sans abonnement",
+      freePrice: "0 €",
+      freeDesc: "L'IA téléchargée sur le téléphone : hors ligne, et privée. La première épreuve est offerte. Le chat, les fiches, les QCM et les notes sont dans l'app.",
+      proTitle: "Analyse de fichiers et PDF",
+      proPrice: "4,99 €/mois ou 39,99 €/an",
+      proDesc: "L'année est payée d'avance. Essai de 7 jours, puis le tarif que vous avez choisi. Cet abonnement débloque l'analyse de vos PDF, documents et photos.",
+      otherPacks: "D'autres packs existent dans l'app, et aucun n'est requis pour réviser : modèles plus capables (9,99 €/mois, 3 000 crédits), recherche approfondie (4,99 €/mois, 50 recherches), voyage (4,99 €/mois). Une fois le plafond atteint, l'app revient aux modèles gratuits ou à la recherche standard."
     },
     dashboard: {
       microBadge: "Séries d'Habitudes & Rapports",
@@ -50,7 +61,7 @@ export const TRANSLATIONS = {
       title: "Téléchargez Abyssia gratuitement",
       subtitle: "Abyssia est disponible gratuitement sur l'App Store pour iPhone et iPad. La version Android est pour l'instant proposée via le programme de test de Google Play.",
       bullet1: "Gratuit, classé 4+, sans compte payant obligatoire",
-      bullet2: "iPhone et iPad, iOS 15.0 ou plus récent (70 Mo)",
+      bullet2: "iPhone et iPad, iOS 15.0 ou plus récent",
       bullet3: "Synchronisation cloud entre tous vos appareils",
       badgeTop: "Télécharger dans l'",
       cta: "Télécharger sur l'App Store",
@@ -59,7 +70,7 @@ export const TRANSLATIONS = {
     },
     faq: {
       sectionTitle: "Vos Questions, Nos Réponses",
-      sectionSubtitle: "Tout ce que vous devez savoir sur notre assistant IA de productivité."
+      sectionSubtitle: "Ce qu'il faut savoir avant d'installer l'application."
     },
     contact: {
       microBadge: "Support & Assistance",
@@ -73,7 +84,7 @@ export const TRANSLATIONS = {
       emailBtn: "Envoyer un e-mail"
     },
     footer: {
-      brandDesc: "L'assistant IA tout-en-un : chat, cours, fiches, quiz, notes, Pomodoro et plus de 25 outils réunis dans une seule application soignée.",
+      brandDesc: "Vous déposez votre cours. L'app en fait des fiches et un QCM, puis vous suit jusqu'au jour de l'examen.",
       colProduct: "Produit",
       colCommunity: "Communauté",
       officialDiscord: "Discord Officiel",
@@ -85,7 +96,7 @@ export const TRANSLATIONS = {
       copyright: "Abyssia. Tous droits réservés.",
       legal: "Mentions Légales",
       cgu: "CGU & Confidentialité",
-      subNote: "Application IA de chat, d'apprentissage et de productivité — disponible gratuitement sur l'App Store."
+      subNote: "Pour les lycéens et les étudiants. Gratuite sur l'App Store, avec un abonnement fichiers en option."
     }
   },
   en: {
@@ -97,33 +108,44 @@ export const TRANSLATIONS = {
       install: "Install App"
     },
     hero: {
-      microBadge: "AI chat + 25 tools · Version 4.1",
-      headline: "Learn, create and get things done with",
-      subtitle: "AI chat, AI-written courses, summaries, quizzes, notes, Pomodoro and over 25 tools in a single app. Polished dark interface, cloud sync, free on the App Store.",
+      microBadge: "Course, cards, quiz",
+      headline: "Revise your courses until exam day",
+      subtitle: "You add your course. Abyssia turns it into revision cards and a quiz, then stays with you until the exam.",
       ctaInstall: "Download the app",
       ctaDemo: "Try the live demo",
-      trustBadge1: "Free · iOS 15+ · 70 MB",
-      trustBadge2: "Over 25 AI tools in a single app"
+      trustBadge1: "Free · iOS 15+",
+      trustBadge2: "Files: €4.99/month or €39.99/year"
     },
     demos: {
       sectionTitle: "Try the Abyssia Experience Live",
       sectionSubtitle: "Discover the fluidity of our tools with these interactive real-time demo components."
     },
     features: {
-      sectionTitle: "Everything Abyssia does",
-      sectionSubtitle: "One app to learn, write, organize and move forward — instead of juggling ten different services.",
-      feat1Title: "AI chat with many personalities",
-      feat1Desc: "Talk to an AI that handles code and markdown, or switch to a specialized agent: developer, writer, coach, marketing, psychologist. Voice input and voice chat included.",
-      feat2Title: "Generated courses and revision",
-      feat2Desc: "Ask for a full course: lessons, worked examples, proofs and method sheets. Then revise with flashcards and quizzes graded instantly.",
-      feat3Title: "Skills right inside the chat",
-      feat3Desc: "Type « / » to trigger an action: course, summary, exercises, plain explanation. The AI returns a structured document, not just a reply.",
-      feat4Title: "Smart notes and tasks",
-      feat4Desc: "A Notion-style editor, to-do lists whose subtasks the AI breaks down for you, a wellbeing journal and a daily brief that sums up your day.",
-      feat5Title: "Focus and progress",
-      feat5Desc: "A Pomodoro synced with the Dynamic Island, habit and goal tracking, XP, active streaks and twelve badges to unlock.",
-      feat6Title: "Twenty-five everyday tools",
-      feat6Desc: "Translator, AI chef based on your ingredients, travel planner, budget advisor, PDF viewer, built-in browser, real-time forum and chess games against the AI."
+      sectionTitle: "Three steps",
+      sectionSubtitle: "You add your course. The app turns it into revision cards and a quiz, then stays with you until exam day.",
+      feat1Title: "You add your course",
+      feat1Desc: "A text, a photo or a PDF of your chapter. It is your course, not a generic syllabus.",
+      feat2Title: "The app makes cards and a quiz",
+      feat2Desc: "You revise the same content in more than one form, then you test yourself.",
+      feat3Title: "You keep going until exam day",
+      feat3Desc: "Notes, questions and the practice paper stay together until the exam.",
+      feat4Title: "Chat stays in the same gesture",
+      feat4Desc: "You talk from your course. Photos and PDFs go through the files subscription.",
+      feat5Title: "Offline",
+      feat5Desc: "Once the model is downloaded on the phone, that AI does not leave the device. Cards and notes already stored stay readable without a network.",
+      feat6Title: "Other packs, if you need them",
+      feat6Desc: "None of them is required to revise. Their price is written in the app before you pay."
+    },
+    pricing: {
+      sectionTitle: "Free, and the subscription",
+      sectionSubtitle: "One subscription is highlighted: analysing your files. The price is shown before you pay.",
+      freeTitle: "Without a subscription",
+      freePrice: "€0",
+      freeDesc: "The AI downloaded on the phone stays offline and private. The first practice paper is included. Chat, cards, quizzes and notes are in the app.",
+      proTitle: "File and PDF analysis",
+      proPrice: "€4.99/month or €39.99/year",
+      proDesc: "The year is paid up front. A 7-day trial, then the price you chose. This subscription unlocks analysis of your PDFs, documents and photos.",
+      otherPacks: "Other packs exist in the app, and none is required to revise: more capable models (€9.99/month, 3,000 credits), in-depth search (€4.99/month, 50 searches), travel (€4.99/month). Once the cap is reached, the app returns to the free models or to standard search."
     },
     dashboard: {
       microBadge: "Habit Streaks & Reports",
@@ -139,7 +161,7 @@ export const TRANSLATIONS = {
       title: "Download Abyssia for free",
       subtitle: "Abyssia is free on the App Store for iPhone and iPad. The Android version is currently offered through the Google Play testing programme.",
       bullet1: "Free, rated 4+, no paid account required",
-      bullet2: "iPhone and iPad, iOS 15.0 or later (70 MB)",
+      bullet2: "iPhone and iPad, iOS 15.0 or later",
       bullet3: "Cloud sync across all your devices",
       badgeTop: "Download on the",
       cta: "Download on the App Store",
@@ -162,7 +184,7 @@ export const TRANSLATIONS = {
       emailBtn: "Send Email"
     },
     footer: {
-      brandDesc: "The all-in-one AI assistant: chat, courses, summaries, quizzes, notes, Pomodoro and over 25 tools in a single polished app.",
+      brandDesc: "You add your course. The app turns it into revision cards and a quiz, then stays with you until exam day.",
       colProduct: "Product",
       colCommunity: "Community",
       officialDiscord: "Official Discord",
@@ -174,7 +196,7 @@ export const TRANSLATIONS = {
       copyright: "Abyssia. All rights reserved.",
       legal: "Legal Notice",
       cgu: "TOS & Privacy",
-      subNote: "AI chat, learning and productivity app — free on the App Store."
+      subNote: "For secondary-school pupils and students. Free on the App Store, with an optional files subscription.",
     }
   },
   es: {
@@ -186,33 +208,44 @@ export const TRANSLATIONS = {
       install: "Instalar App"
     },
     hero: {
-      microBadge: "Chat con IA + 25 herramientas · Versión 4.1",
-      headline: "Aprende, crea y avanza con",
-      subtitle: "Chat con IA, cursos redactados por la IA, fichas, test, notas, Pomodoro y más de 25 herramientas en una sola aplicación. Interfaz oscura cuidada, sincronización en la nube, gratis en el App Store.",
+      microBadge: "Curso, fichas, test",
+      headline: "Repasa tus cursos hasta el día del examen",
+      subtitle: "Depositas tu curso. Abyssia lo convierte en fichas y un test, y te acompaña hasta el día del examen.",
       ctaInstall: "Descargar la aplicación",
       ctaDemo: "Probar la demo interactiva",
-      trustBadge1: "Gratis · iOS 15+ · 70 MB",
-      trustBadge2: "Más de 25 herramientas de IA en una sola app"
+      trustBadge1: "Gratis · iOS 15+",
+      trustBadge2: "Archivos: 4,99 €/mes o 39,99 €/año"
     },
     demos: {
       sectionTitle: "Pruebe la Experiencia de Abyssia en Vivo",
       sectionSubtitle: "Descubra la fluidez de nuestras herramientas con estos componentes interactivos de demostración en tiempo real."
     },
     features: {
-      sectionTitle: "Todo lo que hace Abyssia",
-      sectionSubtitle: "Una sola aplicación para aprender, escribir, organizarte y avanzar, en lugar de alternar entre diez servicios.",
-      feat1Title: "Chat con IA y varias personalidades",
-      feat1Desc: "Conversa con una IA que domina el código y el markdown, o cambia a un agente especializado: desarrollador, redactor, coach, marketing, psicólogo. Dictado y conversación por voz incluidos.",
-      feat2Title: "Cursos y repasos generados",
-      feat2Desc: "Pide un curso completo: lecciones, ejemplos resueltos, demostraciones y fichas de método. Después repasa con flashcards y test corregidos al instante.",
-      feat3Title: "Skills dentro del chat",
-      feat3Desc: "Escribe «/» para lanzar una acción: curso, ficha, ejercicios, explicación sencilla. La IA devuelve un documento estructurado, no solo una respuesta.",
-      feat4Title: "Notas inteligentes y tareas",
-      feat4Desc: "Un editor al estilo Notion, listas de tareas cuyas subtareas divide la IA, un diario de bienestar y un resumen diario de tu jornada.",
-      feat5Title: "Concentración y progreso",
-      feat5Desc: "Un Pomodoro sincronizado con la Dynamic Island, seguimiento de hábitos y objetivos, XP, rachas activas y doce medallas por desbloquear.",
-      feat6Title: "Veinticinco herramientas diarias",
-      feat6Desc: "Traductor, chef con IA a partir de tus ingredientes, planificador de viajes, asesor de presupuesto, lector de PDF, navegador integrado, foro en tiempo real y partidas de ajedrez contra la IA."
+      sectionTitle: "Tres pasos",
+      sectionSubtitle: "Depositas tu curso. La app lo convierte en fichas y un test, y te acompaña hasta el día del examen.",
+      feat1Title: "Depositas tu curso",
+      feat1Desc: "Un texto, una foto o un PDF de tu capítulo. Es tu curso, no un programa genérico.",
+      feat2Title: "La app hace fichas y un test",
+      feat2Desc: "Repasas el mismo contenido de varias formas y luego te pones a prueba.",
+      feat3Title: "Sigues hasta el día del examen",
+      feat3Desc: "Notas, preguntas y la prueba se quedan juntas hasta el examen.",
+      feat4Title: "El chat sigue en el mismo gesto",
+      feat4Desc: "Hablas a partir de tu curso. Las fotos y los PDF pasan por la suscripción de archivos.",
+      feat5Title: "Sin conexión",
+      feat5Desc: "Cuando el modelo está descargado en el teléfono, esa IA no sale del dispositivo. Las fichas y las notas ya guardadas se leen sin red.",
+      feat6Title: "Otros packs, si hacen falta",
+      feat6Desc: "Ninguno es necesario para repasar. Su precio está escrito en la app antes de pagar."
+    },
+    pricing: {
+      sectionTitle: "Gratis, y la suscripción",
+      sectionSubtitle: "Una sola suscripción está destacada: el análisis de tus archivos. El precio se muestra antes de pagar.",
+      freeTitle: "Sin suscripción",
+      freePrice: "0 €",
+      freeDesc: "La IA descargada en el teléfono se queda sin conexión y en privado. La primera prueba está incluida. El chat, las fichas, los test y las notas están en la app.",
+      proTitle: "Análisis de archivos y PDF",
+      proPrice: "4,99 €/mes o 39,99 €/año",
+      proDesc: "El año se paga por adelantado. Prueba de 7 días y, después, la tarifa que elegiste. Esta suscripción desbloquea el análisis de tus PDF, documentos y fotos.",
+      otherPacks: "Hay otros packs en la app y ninguno es necesario para repasar: modelos más capaces (9,99 €/mes, 3 000 créditos), búsqueda en profundidad (4,99 €/mes, 50 búsquedas), viaje (4,99 €/mes). Al llegar al tope, la app vuelve a los modelos gratuitos o a la búsqueda estándar."
     },
     dashboard: {
       microBadge: "Rachas de Hábitos e Informes",
@@ -228,7 +261,7 @@ export const TRANSLATIONS = {
       title: "Descarga Abyssia gratis",
       subtitle: "Abyssia está disponible gratis en el App Store para iPhone y iPad. La versión Android se ofrece por ahora mediante el programa de pruebas de Google Play.",
       bullet1: "Gratis, clasificación 4+, sin cuenta de pago obligatoria",
-      bullet2: "iPhone y iPad, iOS 15.0 o posterior (70 MB)",
+      bullet2: "iPhone y iPad, iOS 15.0 o posterior",
       bullet3: "Sincronización en la nube entre todos tus dispositivos",
       badgeTop: "Descárgalo en la",
       cta: "Descargar en la App Store",
@@ -251,7 +284,7 @@ export const TRANSLATIONS = {
       emailBtn: "Enviar Correo"
     },
     footer: {
-      brandDesc: "El asistente de IA todo en uno: chat, cursos, fichas, test, notas, Pomodoro y más de 25 herramientas en una sola aplicación cuidada.",
+      brandDesc: "Depositas tu curso. La app lo convierte en fichas y un test, y te acompaña hasta el día del examen.",
       colProduct: "Producto",
       colCommunity: "Comunidad",
       officialDiscord: "Discord Oficial",
@@ -263,7 +296,7 @@ export const TRANSLATIONS = {
       copyright: "Abyssia. Todos los derechos reservados.",
       legal: "Aviso Legal",
       cgu: "TOS y Privacidad",
-      subNote: "Aplicación de chat con IA, aprendizaje y productividad: gratis en el App Store."
+      subNote: "Para alumnos y estudiantes. Gratis en el App Store, con una suscripción de archivos opcional.",
     }
   },
   zh: {
@@ -275,33 +308,44 @@ export const TRANSLATIONS = {
       install: "安装应用"
     },
     hero: {
-      microBadge: "AI 聊天 + 25 款工具 · 4.1 版",
-      headline: "学习、创作、前进，与",
-      subtitle: "AI 聊天、AI 撰写的课程、讲义、测验、笔记、番茄钟，以及 25 款以上工具，全部集中在一个应用中。精致的深色界面，云端同步，App Store 免费下载。",
+      microBadge: "课程、卡片、测验",
+      headline: "把课程复习到考试当天",
+      subtitle: "你放入自己的课程。Abyssia 把它做成卡片和一份测验，并陪你直到考试当天。",
       ctaInstall: "下载应用",
       ctaDemo: "体验互动演示",
-      trustBadge1: "免费 · iOS 15+ · 70 MB",
-      trustBadge2: "一个应用，25 款以上 AI 工具"
+      trustBadge1: "免费 · iOS 15+",
+      trustBadge2: "文件：4,99 €/月或 39,99 €/年"
     },
     demos: {
       sectionTitle: "亲身体验 Abyssia 实时演示",
       sectionSubtitle: "通过这些交互式实时演示组件，探索我们工具的流畅性。"
     },
     features: {
-      sectionTitle: "Abyssia 能做的一切",
-      sectionSubtitle: "一个应用即可学习、写作、整理与推进，无需在十个服务之间来回切换。",
-      feat1Title: "多人格 AI 聊天",
-      feat1Desc: "与支持代码和 Markdown 的 AI 对话，或切换到专业助手：开发者、写作、教练、市场、心理咨询。支持语音输入与语音对话。",
-      feat2Title: "自动生成课程与复习",
-      feat2Desc: "索取一份完整课程：讲解、例题、推导与方法卡片。随后用闪卡和即时批改的测验复习。",
-      feat3Title: "聊天中的技能指令",
-      feat3Desc: "输入「/」即可触发操作：课程、讲义、练习、通俗解释。AI 返回的是结构化文档，而不只是一段回复。",
-      feat4Title: "智能笔记与任务",
-      feat4Desc: "Notion 风格的编辑器、由 AI 拆分子任务的待办清单、心情日记，以及总结你一天的每日简报。",
-      feat5Title: "专注与进度",
-      feat5Desc: "与灵动岛同步的番茄钟、习惯与目标跟踪、经验值、连续记录，以及十二枚可解锁徽章。",
-      feat6Title: "二十五款日常工具",
-      feat6Desc: "翻译器、依据现有食材的 AI 主厨、旅行规划、预算顾问、PDF 阅读器、内置浏览器、实时论坛，以及与 AI 对弈的国际象棋。"
+      sectionTitle: "三步",
+      sectionSubtitle: "你放入自己的课程。应用把它做成卡片和一份测验，并陪你直到考试当天。",
+      feat1Title: "放入你的课程",
+      feat1Desc: "一章的文字、照片或 PDF。这是你的课程，不是通用大纲。",
+      feat2Title: "应用做成卡片和测验",
+      feat2Desc: "你用几种形式复习同一内容，然后自己测验。",
+      feat3Title: "一直跟到考试当天",
+      feat3Desc: "笔记、题目和练习卷放在一起，直到考试。",
+      feat4Title: "聊天还是同一次动作",
+      feat4Desc: "你从自己的课程出发来聊。照片和 PDF 走文件订阅。",
+      feat5Title: "离线",
+      feat5Desc: "模型下载到手机之后，这套 AI 不离开设备。已经在设备上的卡片和笔记没有网络也能读。",
+      feat6Title: "其他套餐，需要时再看",
+      feat6Desc: "复习并不需要它们。价格在付款前写在应用里。"
+    },
+    pricing: {
+      sectionTitle: "免费，以及订阅",
+      sectionSubtitle: "只突出一种订阅：分析你的文件。付款前会显示价格。",
+      freeTitle: "没有订阅",
+      freePrice: "0 €",
+      freeDesc: "下载到手机上的 AI 保持离线，也保持私密。第一份练习卷已包含。聊天、卡片、测验和笔记都在应用里。",
+      proTitle: "文件与 PDF 分析",
+      proPrice: "4,99 €/月或 39,99 €/年",
+      proDesc: "年费一次付清。先试用 7 天，然后按你选择的价格。此订阅解锁对 PDF、文档和照片的分析。",
+      otherPacks: "应用里还有其他套餐，复习都不需要：更强的模型（9,99 €/月，3 000 积分）、深度搜索（4,99 €/月，50 次搜索）、旅行（4,99 €/月）。达到上限后，应用回到免费模型或普通搜索。"
     },
     dashboard: {
       microBadge: "习惯连击与报告",
@@ -317,7 +361,7 @@ export const TRANSLATIONS = {
       title: "免费下载 Abyssia",
       subtitle: "Abyssia 已在 App Store 免费提供，支持 iPhone 与 iPad。Android 版本目前通过 Google Play 测试计划发布。",
       bullet1: "免费，分级 4+，无需付费账户",
-      bullet2: "iPhone 与 iPad，需 iOS 15.0 或更高版本（70 MB）",
+      bullet2: "iPhone 与 iPad，需 iOS 15.0 或更高版本",
       bullet3: "所有设备之间云端同步",
       badgeTop: "下载",
       cta: "在 App Store 下载",
@@ -340,7 +384,7 @@ export const TRANSLATIONS = {
       emailBtn: "发送电子邮件"
     },
     footer: {
-      brandDesc: "一体化 AI 助手：聊天、课程、讲义、测验、笔记、番茄钟，以及 25 款以上工具，集中于一个精致的应用。",
+      brandDesc: "你放入自己的课程。应用把它做成卡片和一份测验，并陪你直到考试当天。",
       colProduct: "产品",
       colCommunity: "社区",
       officialDiscord: "官方 Discord",
@@ -352,7 +396,7 @@ export const TRANSLATIONS = {
       copyright: "Abyssia. 保留所有权利。",
       legal: "法律声明",
       cgu: "服务条款与隐私",
-      subNote: "AI 聊天、学习与效率应用 —— App Store 免费下载。"
+      subNote: "面向中学生和大学生。App Store 免费下载，文件订阅可选。",
     }
   },
   it: {
@@ -364,33 +408,44 @@ export const TRANSLATIONS = {
       install: "Installa App"
     },
     hero: {
-      microBadge: "Chat IA + 25 strumenti · Versione 4.1",
-      headline: "Impara, crea e avanza con",
-      subtitle: "Chat con IA, corsi scritti dall'IA, schede, quiz, note, Pomodoro e oltre 25 strumenti in una sola applicazione. Interfaccia scura curata, sincronizzazione cloud, gratis sull'App Store.",
+      microBadge: "Corso, schede, quiz",
+      headline: "Ripassa i tuoi corsi fino al giorno dell'esame",
+      subtitle: "Depositi il tuo corso. Abyssia lo trasforma in schede e in un quiz, e ti segue fino al giorno dell'esame.",
       ctaInstall: "Scarica l'applicazione",
       ctaDemo: "Prova la demo interattiva",
-      trustBadge1: "Gratis · iOS 15+ · 70 MB",
-      trustBadge2: "Oltre 25 strumenti IA in una sola app"
+      trustBadge1: "Gratis · iOS 15+",
+      trustBadge2: "File: 4,99 €/mese o 39,99 €/anno"
     },
     demos: {
       sectionTitle: "Prova l'Esperienza di Abyssia dal Vivo",
       sectionSubtitle: "Scopri la fluidità dei nostri strumenti con questi componenti dimostrativi interattivi in tempo reale."
     },
     features: {
-      sectionTitle: "Tutto quello che fa Abyssia",
-      sectionSubtitle: "Una sola applicazione per imparare, scrivere, organizzarti e avanzare, invece di passare da un servizio all'altro.",
-      feat1Title: "Chat IA con più personalità",
-      feat1Desc: "Parla con un'IA che gestisce codice e markdown, oppure passa a un agente specializzato: sviluppatore, redattore, coach, marketing, psicologo. Dettatura e conversazione vocale incluse.",
-      feat2Title: "Corsi e ripasso generati",
-      feat2Desc: "Chiedi un corso completo: lezioni, esempi svolti, dimostrazioni e schede di metodo. Poi ripassa con flashcard e quiz corretti all'istante.",
-      feat3Title: "Skills dentro la chat",
-      feat3Desc: "Digita «/» per avviare un'azione: corso, scheda, esercizi, spiegazione semplice. L'IA restituisce un documento strutturato, non solo una risposta.",
-      feat4Title: "Note intelligenti e attività",
-      feat4Desc: "Un editor in stile Notion, liste di attività di cui l'IA suddivide i passaggi, un diario del benessere e un riepilogo quotidiano della tua giornata.",
-      feat5Title: "Concentrazione e progressi",
-      feat5Desc: "Un Pomodoro sincronizzato con la Dynamic Island, il monitoraggio di abitudini e obiettivi, XP, serie attive e dodici badge da sbloccare.",
-      feat6Title: "Venticinque strumenti quotidiani",
-      feat6Desc: "Traduttore, chef IA a partire dai tuoi ingredienti, pianificatore di viaggi, consulente di budget, lettore PDF, browser integrato, forum in tempo reale e partite a scacchi contro l'IA."
+      sectionTitle: "Tre passi",
+      sectionSubtitle: "Depositi il tuo corso. L'app lo trasforma in schede e in un quiz, e ti segue fino al giorno dell'esame.",
+      feat1Title: "Depositi il tuo corso",
+      feat1Desc: "Un testo, una foto o un PDF del tuo capitolo. È il tuo corso, non un programma generico.",
+      feat2Title: "L'app fa schede e un quiz",
+      feat2Desc: "Ripassi lo stesso contenuto in più forme, poi ti metti alla prova.",
+      feat3Title: "Continui fino al giorno dell'esame",
+      feat3Desc: "Note, domande e la prova restano insieme fino all'esame.",
+      feat4Title: "La chat resta nello stesso gesto",
+      feat4Desc: "Parli a partire dal tuo corso. Foto e PDF passano dall'abbonamento file.",
+      feat5Title: "Offline",
+      feat5Desc: "Dopo il download del modello sul telefono, quell'IA non lascia il dispositivo. Schede e note già presenti si leggono senza rete.",
+      feat6Title: "Altri pack, se servono",
+      feat6Desc: "Nessuno è necessario per ripassare. Il prezzo è scritto nell'app prima del pagamento."
+    },
+    pricing: {
+      sectionTitle: "Gratis, e l'abbonamento",
+      sectionSubtitle: "Un solo abbonamento è in evidenza: l'analisi dei tuoi file. Il prezzo compare prima del pagamento.",
+      freeTitle: "Senza abbonamento",
+      freePrice: "0 €",
+      freeDesc: "L'IA scaricata sul telefono resta offline e privata. La prima prova è inclusa. Chat, schede, quiz e note sono nell'app.",
+      proTitle: "Analisi di file e PDF",
+      proPrice: "4,99 €/mese o 39,99 €/anno",
+      proDesc: "L'anno si paga in anticipo. Prova di 7 giorni, poi la tariffa che hai scelto. Questo abbonamento sblocca l'analisi di PDF, documenti e foto.",
+      otherPacks: "Nell'app ci sono altri pack, e nessuno è necessario per ripassare: modelli più capaci (9,99 €/mese, 3 000 crediti), ricerca approfondita (4,99 €/mese, 50 ricerche), viaggio (4,99 €/mese). Raggiunto il tetto, l'app torna ai modelli gratuiti o alla ricerca standard."
     },
     dashboard: {
       microBadge: "Strisce di Abitudini e Report",
@@ -406,7 +461,7 @@ export const TRANSLATIONS = {
       title: "Scarica Abyssia gratuitamente",
       subtitle: "Abyssia è disponibile gratis sull'App Store per iPhone e iPad. La versione Android è per ora distribuita tramite il programma di test di Google Play.",
       bullet1: "Gratis, classificazione 4+, senza account a pagamento obbligatorio",
-      bullet2: "iPhone e iPad, iOS 15.0 o successivo (70 MB)",
+      bullet2: "iPhone e iPad, iOS 15.0 o successivo",
       bullet3: "Sincronizzazione cloud su tutti i tuoi dispositivi",
       badgeTop: "Scarica su",
       cta: "Scarica su App Store",
@@ -429,7 +484,7 @@ export const TRANSLATIONS = {
       emailBtn: "Invia E-mail"
     },
     footer: {
-      brandDesc: "L'assistente IA tutto in uno: chat, corsi, schede, quiz, note, Pomodoro e oltre 25 strumenti in una sola applicazione curata.",
+      brandDesc: "Depositi il tuo corso. L'app lo trasforma in schede e in un quiz, e ti segue fino al giorno dell'esame.",
       colProduct: "Prodotto",
       colCommunity: "Comunità",
       officialDiscord: "Discord Ufficiale",
@@ -441,7 +496,7 @@ export const TRANSLATIONS = {
       copyright: "Abyssia. Tutti i diritti riservati.",
       legal: "Note Legali",
       cgu: "CGU & Privacy",
-      subNote: "Applicazione di chat IA, apprendimento e produttività: gratis sull'App Store."
+      subNote: "Per studenti delle superiori e dell'università. Gratis sull'App Store, con un abbonamento file facoltativo.",
     }
   },
   ru: {
@@ -453,33 +508,44 @@ export const TRANSLATIONS = {
       install: "Установить"
     },
     hero: {
-      microBadge: "ИИ-чат + 25 инструментов · Версия 4.1",
-      headline: "Учитесь, создавайте и двигайтесь вперёд с",
-      subtitle: "ИИ-чат, курсы, написанные ИИ, конспекты, тесты, заметки, Помодоро и более 25 инструментов в одном приложении. Продуманный тёмный интерфейс, облачная синхронизация, бесплатно в App Store.",
+      microBadge: "Курс, карточки, тест",
+      headline: "Повторяйте свои курсы до дня экзамена",
+      subtitle: "Вы добавляете свой курс. Abyssia делает из него карточки и тест и остаётся с вами до дня экзамена.",
       ctaInstall: "Скачать приложение",
       ctaDemo: "Попробовать демо",
-      trustBadge1: "Бесплатно · iOS 15+ · 70 МБ",
-      trustBadge2: "Более 25 ИИ-инструментов в одном приложении"
+      trustBadge1: "Бесплатно · iOS 15+",
+      trustBadge2: "Файлы: 4,99 €/мес. или 39,99 €/год"
     },
     demos: {
       sectionTitle: "Попробуйте Abyssia в действии",
       sectionSubtitle: "Оцените плавность работы наших инструментов с помощью интерактивных компонентов в реальном времени."
     },
     features: {
-      sectionTitle: "Всё, что умеет Abyssia",
-      sectionSubtitle: "Одно приложение, чтобы учиться, писать, наводить порядок и двигаться вперёд, вместо десятка разных сервисов.",
-      feat1Title: "ИИ-чат с разными личностями",
-      feat1Desc: "Общайтесь с ИИ, который понимает код и markdown, или переключитесь на специализированного агента: разработчик, редактор, коуч, маркетолог, психолог. Голосовой ввод и разговор включены.",
-      feat2Title: "Готовые курсы и повторение",
-      feat2Desc: "Попросите полный курс: уроки, разобранные примеры, доказательства и методические карточки. Затем повторяйте с флеш-картами и тестами с мгновенной проверкой.",
-      feat3Title: "Навыки прямо в чате",
-      feat3Desc: "Введите «/», чтобы запустить действие: курс, конспект, упражнения, простое объяснение. ИИ выдаёт структурированный документ, а не просто ответ.",
-      feat4Title: "Умные заметки и задачи",
-      feat4Desc: "Редактор в стиле Notion, списки задач, подшаги которых разбивает ИИ, дневник самочувствия и ежедневная сводка вашего дня.",
-      feat5Title: "Концентрация и прогресс",
-      feat5Desc: "Помодоро, связанный с Dynamic Island, отслеживание привычек и целей, опыт, активные серии и двенадцать значков для разблокировки.",
-      feat6Title: "Двадцать пять повседневных инструментов",
-      feat6Desc: "Переводчик, ИИ-повар по вашим продуктам, планировщик поездок, советник по бюджету, просмотр PDF, встроенный браузер, форум в реальном времени и шахматы против ИИ."
+      sectionTitle: "Три шага",
+      sectionSubtitle: "Вы добавляете свой курс. Приложение делает из него карточки и тест и остаётся с вами до дня экзамена.",
+      feat1Title: "Вы добавляете свой курс",
+      feat1Desc: "Текст, фото или PDF вашей главы. Это ваш курс, а не общая программа.",
+      feat2Title: "Приложение делает карточки и тест",
+      feat2Desc: "Вы повторяете тот же материал в разных формах, затем проверяете себя.",
+      feat3Title: "Вы идёте до дня экзамена",
+      feat3Desc: "Заметки, вопросы и пробная работа остаются вместе до экзамена.",
+      feat4Title: "Чат остаётся в том же жесте",
+      feat4Desc: "Вы говорите от своего курса. Фото и PDF проходят через подписку на файлы.",
+      feat5Title: "Без сети",
+      feat5Desc: "После загрузки модели на телефон этот ИИ не покидает устройство. Уже сохранённые карточки и заметки читаются без сети.",
+      feat6Title: "Другие пакеты, если нужны",
+      feat6Desc: "Для повторения они не нужны. Цена написана в приложении до оплаты."
+    },
+    pricing: {
+      sectionTitle: "Бесплатно и подписка",
+      sectionSubtitle: "На виду одна подписка: анализ ваших файлов. Цена показана до оплаты.",
+      freeTitle: "Без подписки",
+      freePrice: "0 €",
+      freeDesc: "ИИ, загруженный на телефон, остаётся офлайн и приватным. Первая пробная работа включена. Чат, карточки, тесты и заметки есть в приложении.",
+      proTitle: "Анализ файлов и PDF",
+      proPrice: "4,99 €/мес. или 39,99 €/год",
+      proDesc: "Год оплачивается сразу. 7 дней пробного периода, затем выбранный тариф. Эта подписка открывает анализ PDF, документов и фото.",
+      otherPacks: "В приложении есть другие пакеты, и ни один не нужен для повторения: более способные модели (9,99 €/мес., 3 000 кредитов), углублённый поиск (4,99 €/мес., 50 поисков), путешествия (4,99 €/мес.). После предела приложение возвращается к бесплатным моделям или обычному поиску."
     },
     dashboard: {
       microBadge: "Серии привычек и отчеты",
@@ -495,7 +561,7 @@ export const TRANSLATIONS = {
       title: "Скачайте Abyssia бесплатно",
       subtitle: "Abyssia доступна бесплатно в App Store для iPhone и iPad. Версия для Android пока распространяется через программу тестирования Google Play.",
       bullet1: "Бесплатно, рейтинг 4+, без обязательной платной подписки",
-      bullet2: "iPhone и iPad, iOS 15.0 или новее (70 МБ)",
+      bullet2: "iPhone и iPad, iOS 15.0 или новее",
       bullet3: "Облачная синхронизация между всеми устройствами",
       badgeTop: "Загрузите в",
       cta: "Загрузить в App Store",
@@ -518,7 +584,7 @@ export const TRANSLATIONS = {
       emailBtn: "Написать письмо"
     },
     footer: {
-      brandDesc: "Универсальный ИИ-помощник: чат, курсы, конспекты, тесты, заметки, Помодоро и более 25 инструментов в одном продуманном приложении.",
+      brandDesc: "Вы добавляете свой курс. Приложение делает из него карточки и тест и остаётся с вами до дня экзамена.",
       colProduct: "Продукт",
       colCommunity: "Сообщество",
       officialDiscord: "Официальный Discord",
@@ -530,7 +596,7 @@ export const TRANSLATIONS = {
       copyright: "Abyssia. Все права защищены.",
       legal: "Правовая информация",
       cgu: "Пользовательское соглашение",
-      subNote: "Приложение для ИИ-чата, обучения и продуктивности — бесплатно в App Store."
+      subNote: "Для школьников и студентов. Бесплатно в App Store, с необязательной подпиской на файлы.",
     }
   },
   uk: {
@@ -542,33 +608,44 @@ export const TRANSLATIONS = {
       install: "Встановити"
     },
     hero: {
-      microBadge: "ШІ-чат + 25 інструментів · Версія 4.1",
-      headline: "Навчайтеся, творіть і рухайтеся вперед із",
-      subtitle: "ШІ-чат, курси, написані ШІ, конспекти, тести, нотатки, Помодоро та понад 25 інструментів в одному застосунку. Продуманий темний інтерфейс, хмарна синхронізація, безкоштовно в App Store.",
+      microBadge: "Курс, картки, тест",
+      headline: "Повторюйте свої курси до дня іспиту",
+      subtitle: "Ви додаєте свій курс. Abyssia робить із нього картки й тест і лишається з вами до дня іспиту.",
       ctaInstall: "Завантажити застосунок",
       ctaDemo: "Спробувати демо",
-      trustBadge1: "Безкоштовно · iOS 15+ · 70 МБ",
-      trustBadge2: "Понад 25 ШІ-інструментів в одному застосунку"
+      trustBadge1: "Безкоштовно · iOS 15+",
+      trustBadge2: "Файли: 4,99 €/міс. або 39,99 €/рік"
     },
     demos: {
       sectionTitle: "Спробуйте Abyssia в дії",
       sectionSubtitle: "Оцініть плавність роботи наших інструментів за допомогою інтерактивних компонентів у реальному часі."
     },
     features: {
-      sectionTitle: "Усе, що вміє Abyssia",
-      sectionSubtitle: "Один застосунок, щоб навчатися, писати, впорядковувати справи й рухатися вперед, замість десятка різних сервісів.",
-      feat1Title: "ШІ-чат із різними особистостями",
-      feat1Desc: "Спілкуйтеся зі ШІ, який розуміє код і markdown, або перемкніться на спеціалізованого агента: розробник, редактор, коуч, маркетолог, психолог. Голосове введення та розмова включені.",
-      feat2Title: "Готові курси та повторення",
-      feat2Desc: "Попросіть повний курс: уроки, розібрані приклади, доведення та методичні картки. Потім повторюйте з флеш-картками й тестами з миттєвою перевіркою.",
-      feat3Title: "Навички просто в чаті",
-      feat3Desc: "Введіть «/», щоб запустити дію: курс, конспект, вправи, просте пояснення. ШІ повертає структурований документ, а не лише відповідь.",
-      feat4Title: "Розумні нотатки та завдання",
-      feat4Desc: "Редактор у стилі Notion, списки завдань, підкроки яких розбиває ШІ, щоденник самопочуття та щоденне зведення вашого дня.",
-      feat5Title: "Концентрація та прогрес",
-      feat5Desc: "Помодоро, синхронізований із Dynamic Island, відстеження звичок і цілей, досвід, активні серії та дванадцять значків для розблокування.",
-      feat6Title: "Двадцять п'ять щоденних інструментів",
-      feat6Desc: "Перекладач, ШІ-кухар за вашими продуктами, планувальник подорожей, порадник із бюджету, перегляд PDF, вбудований браузер, форум у реальному часі та шахи проти ШІ."
+      sectionTitle: "Три кроки",
+      sectionSubtitle: "Ви додаєте свій курс. Застосунок робить із нього картки й тест і лишається з вами до дня іспиту.",
+      feat1Title: "Ви додаєте свій курс",
+      feat1Desc: "Текст, фото або PDF вашого розділу. Це ваш курс, а не загальна програма.",
+      feat2Title: "Застосунок робить картки й тест",
+      feat2Desc: "Ви повторюєте той самий матеріал у різних формах, потім перевіряєте себе.",
+      feat3Title: "Ви йдете до дня іспиту",
+      feat3Desc: "Нотатки, запитання й пробна робота лишаються разом до іспиту.",
+      feat4Title: "Чат лишається в тому самому жесті",
+      feat4Desc: "Ви говорите від свого курсу. Фото й PDF проходять через підписку на файли.",
+      feat5Title: "Без мережі",
+      feat5Desc: "Після завантаження моделі на телефон цей ШІ не залишає пристрій. Уже збережені картки й нотатки читаються без мережі.",
+      feat6Title: "Інші пакети, якщо потрібні",
+      feat6Desc: "Для повторення вони не потрібні. Ціна написана в застосунку до оплати."
+    },
+    pricing: {
+      sectionTitle: "Безкоштовно і підписка",
+      sectionSubtitle: "На видноті одна підписка: аналіз ваших файлів. Ціну показано до оплати.",
+      freeTitle: "Без підписки",
+      freePrice: "0 €",
+      freeDesc: "ШІ, завантажений на телефон, лишається офлайн і приватним. Першу пробну роботу включено. Чат, картки, тести й нотатки є в застосунку.",
+      proTitle: "Аналіз файлів і PDF",
+      proPrice: "4,99 €/міс. або 39,99 €/рік",
+      proDesc: "Рік оплачується одразу. 7 днів пробного періоду, потім обраний тариф. Ця підписка відкриває аналіз PDF, документів і фото.",
+      otherPacks: "У застосунку є інші пакети, і жоден не потрібен для повторення: здатніші моделі (9,99 €/міс., 3 000 кредитів), поглиблений пошук (4,99 €/міс., 50 пошуків), подорожі (4,99 €/міс.). Після межі застосунок повертається до безкоштовних моделей або звичайного пошуку."
     },
     dashboard: {
       microBadge: "Серії звичок та звіти",
@@ -584,7 +661,7 @@ export const TRANSLATIONS = {
       title: "Завантажте Abyssia безкоштовно",
       subtitle: "Abyssia доступна безкоштовно в App Store для iPhone та iPad. Версія для Android наразі поширюється через програму тестування Google Play.",
       bullet1: "Безкоштовно, рейтинг 4+, без обов'язкової платної підписки",
-      bullet2: "iPhone та iPad, iOS 15.0 або новіша (70 МБ)",
+      bullet2: "iPhone та iPad, iOS 15.0 або новіша",
       bullet3: "Хмарна синхронізація між усіма пристроями",
       badgeTop: "Завантажити в",
       cta: "Завантажити в App Store",
@@ -607,7 +684,7 @@ export const TRANSLATIONS = {
       emailBtn: "Написати листа"
     },
     footer: {
-      brandDesc: "Універсальний ШІ-помічник: чат, курси, конспекти, тести, нотатки, Помодоро та понад 25 інструментів в одному продуманому застосунку.",
+      brandDesc: "Ви додаєте свій курс. Застосунок робить із нього картки й тест і лишається з вами до дня іспиту.",
       colProduct: "Продукт",
       colCommunity: "Спільнота",
       officialDiscord: "Офіційний Discord",
@@ -619,7 +696,7 @@ export const TRANSLATIONS = {
       copyright: "Abyssia. Всі права захищені.",
       legal: "Правова інформація",
       cgu: "Умови використання",
-      subNote: "Застосунок для ШІ-чату, навчання та продуктивності — безкоштовно в App Store."
+      subNote: "Для школярів і студентів. Безкоштовно в App Store, з необов'язковою підпискою на файли.",
     }
   }
 };
