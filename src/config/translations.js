@@ -5,20 +5,20 @@ export const TRANSLATIONS = {
       demos: "Démonstrations",
       faq: "FAQ",
       contact: "Contact",
-      install: "Installer l'App"
+      install: "Installer"
     },
     hero: {
-      microBadge: "Cours, fiches, QCM",
+      microBadge: "Du cours au jour J",
       headline: "Révisez vos cours jusqu'au jour de l'examen",
-      subtitle: "Contrôle, brevet ou bac : vous déposez votre cours. Abyssia en fait des fiches et un QCM, puis vous suit jusqu'au jour J.",
-      ctaInstall: "Télécharger l'application",
-      ctaDemo: "Essayer la démo interactive",
+      subtitle: "Déposez un chapitre. Abyssia en fait des fiches et un QCM, puis reste avec vous jusqu'au contrôle, au brevet ou au bac.",
+      ctaInstall: "Installer gratuitement",
+      ctaDemo: "Voir la démo",
       trustBadge1: "Gratuit · iOS 15+",
       trustBadge2: "Fichiers : 4,99 €/mois ou 39,99 €/an"
     },
     demos: {
-      sectionTitle: "Essayez l'Expérience Abyssia en Direct",
-      sectionSubtitle: "Découvrez la fluidité de nos outils avec ces composants de démonstration interactifs en temps réel."
+      sectionTitle: "Deux outils, sans rien installer",
+      sectionSubtitle: "Le Pomodoro et les habitudes tournent ici. Touchez : c'est déjà l'app."
     },
     features: {
       sectionTitle: "Trois étapes",
@@ -49,8 +49,8 @@ export const TRANSLATIONS = {
     },
     dashboard: {
       microBadge: "Séries d'Habitudes & Rapports",
-      title: "Suivez Votre Progression Avec Des Statistiques Claires",
-      subtitle: "Notre tracker d'habitudes avec IA analyse vos routines hebdomadaires et vous propose des insights pertinents pour anticiper les baisses de régime et optimiser vos pics d'attention.",
+      title: "Votre série, sous les yeux",
+      subtitle: "L'app voit la semaine qui vient de passer et vous dit où le rythme baisse, avant que la série ne casse.",
       bullet1: "Recommandations de routines durables",
       bullet2: "Détection intelligente des baisses de rythme",
       bullet3: "Planification adaptative de sessions Pomodoro",
@@ -58,8 +58,8 @@ export const TRANSLATIONS = {
     },
     appstore: {
       microBadge: "Sur l'App Store · en test sur Android",
-      title: "Téléchargez Abyssia gratuitement",
-      subtitle: "Abyssia est disponible gratuitement sur l'App Store pour iPhone et iPad. La version Android est pour l'instant proposée via le programme de test de Google Play.",
+      title: "Installez-la, puis déposez un chapitre",
+      subtitle: "Gratuite sur l'App Store, pour iPhone et iPad. Sur Android, l'app est encore au test Google Play.",
       bullet1: "Gratuit, classé 4+, sans compte payant obligatoire",
       bullet2: "iPhone et iPad, iOS 15.0 ou plus récent",
       bullet3: "Synchronisation cloud entre tous vos appareils",
@@ -74,8 +74,8 @@ export const TRANSLATIONS = {
     },
     contact: {
       microBadge: "Support & Assistance",
-      sectionTitle: "Un Problème ? Contactez-nous",
-      sectionSubtitle: "Notre équipe est à votre entière disposition pour résoudre vos soucis techniques ou répondre à vos suggestions.",
+      sectionTitle: "Une question ? Écrivez-nous",
+      sectionSubtitle: "Un bug, une idée, un examen qui approche : on répond.",
       emailTitle: "Par E-mail",
       emailDesc: "Envoyez-nous un e-mail à tout moment. Nous répondons généralement en moins de 24 heures aux demandes d'assistance technique ou de suggestions pour l'application.",
       phoneTitle: "Par Téléphone",
@@ -105,20 +105,20 @@ export const TRANSLATIONS = {
       demos: "Live Demos",
       faq: "FAQ",
       contact: "Contact",
-      install: "Install App"
+      install: "Install"
     },
     hero: {
-      microBadge: "Course, cards, quiz",
+      microBadge: "From the course to exam day",
       headline: "Revise your courses until exam day",
-      subtitle: "You add your course. Abyssia turns it into revision cards and a quiz, then stays with you until the exam.",
-      ctaInstall: "Download the app",
-      ctaDemo: "Try the live demo",
+      subtitle: "Add one chapter. Abyssia turns it into cards and a quiz, then stays with you until the test.",
+      ctaInstall: "Install for free",
+      ctaDemo: "See the demo",
       trustBadge1: "Free · iOS 15+",
       trustBadge2: "Files: €4.99/month or €39.99/year"
     },
     demos: {
-      sectionTitle: "Try the Abyssia Experience Live",
-      sectionSubtitle: "Discover the fluidity of our tools with these interactive real-time demo components."
+      sectionTitle: "Two tools, nothing to install",
+      sectionSubtitle: "The Pomodoro and the habits run right here. Tap: this is already the app."
     },
     features: {
       sectionTitle: "Three steps",
@@ -149,8 +149,8 @@ export const TRANSLATIONS = {
     },
     dashboard: {
       microBadge: "Habit Streaks & Reports",
-      title: "Track Your Progress With Clear Statistics",
-      subtitle: "Our AI-powered habit tracker analyzes your weekly routines and provides relevant insights to anticipate energy drops and optimize focus peaks.",
+      title: "Your streak, right in front of you",
+      subtitle: "The app looks at the week you just had and tells you where the pace is slipping, before the streak breaks.",
       bullet1: "Sustainable routine recommendations",
       bullet2: "Intelligent fatigue & rhythm drop detection",
       bullet3: "Adaptive Pomodoro session scheduling",
@@ -158,8 +158,8 @@ export const TRANSLATIONS = {
     },
     appstore: {
       microBadge: "On the App Store · Android in testing",
-      title: "Download Abyssia for free",
-      subtitle: "Abyssia is free on the App Store for iPhone and iPad. The Android version is currently offered through the Google Play testing programme.",
+      title: "Install it, then add a chapter",
+      subtitle: "Free on the App Store, for iPhone and iPad. On Android, the app is still in the Google Play test.",
       bullet1: "Free, rated 4+, no paid account required",
       bullet2: "iPhone and iPad, iOS 15.0 or later",
       bullet3: "Cloud sync across all your devices",
@@ -174,8 +174,8 @@ export const TRANSLATIONS = {
     },
     contact: {
       microBadge: "Support & Assistance",
-      sectionTitle: "A Problem? Contact Us",
-      sectionSubtitle: "Our team is at your complete disposal to solve technical issues or answer your suggestions.",
+      sectionTitle: "A question? Write to us",
+      sectionSubtitle: "A bug, an idea, an exam coming up: we reply.",
       emailTitle: "By E-mail",
       emailDesc: "Send us an email at any time. We generally respond in less than 24 hours to technical support or app feedback inquiries.",
       phoneTitle: "By Phone",
@@ -205,20 +205,20 @@ export const TRANSLATIONS = {
       demos: "Demos en Vivo",
       faq: "FAQ",
       contact: "Contacto",
-      install: "Instalar App"
+      install: "Instalar"
     },
     hero: {
-      microBadge: "Curso, fichas, test",
+      microBadge: "Del curso al día del examen",
       headline: "Repasa tus cursos hasta el día del examen",
-      subtitle: "Depositas tu curso. Abyssia lo convierte en fichas y un test, y te acompaña hasta el día del examen.",
-      ctaInstall: "Descargar la aplicación",
-      ctaDemo: "Probar la demo interactiva",
+      subtitle: "Deposita un capítulo. Abyssia lo convierte en fichas y un test, y se queda contigo hasta el control.",
+      ctaInstall: "Instalar gratis",
+      ctaDemo: "Ver la demo",
       trustBadge1: "Gratis · iOS 15+",
       trustBadge2: "Archivos: 4,99 €/mes o 39,99 €/año"
     },
     demos: {
-      sectionTitle: "Pruebe la Experiencia de Abyssia en Vivo",
-      sectionSubtitle: "Descubra la fluidez de nuestras herramientas con estos componentes interactivos de demostración en tiempo real."
+      sectionTitle: "Dos herramientas, sin instalar nada",
+      sectionSubtitle: "El Pomodoro y los hábitos funcionan aquí. Toca: ya es la app."
     },
     features: {
       sectionTitle: "Tres pasos",
@@ -249,8 +249,8 @@ export const TRANSLATIONS = {
     },
     dashboard: {
       microBadge: "Rachas de Hábitos e Informes",
-      title: "Siga Su Progreso Con Estadísticas Claras",
-      subtitle: "Nuestro rastreador de hábitos con IA analiza sus rutinas semanales y ofrece información relevante para anticipar caídas de energía y optimizar picos de atención.",
+      title: "Tu racha, a la vista",
+      subtitle: "La app mira la semana que acaba de pasar y te dice dónde baja el ritmo, antes de que se rompa la racha.",
       bullet1: "Recomendaciones de rutinas sostenibles",
       bullet2: "Detección inteligente de fatiga y caídas de ritmo",
       bullet3: "Programación adaptativa de sesiones de Pomodoro",
@@ -258,8 +258,8 @@ export const TRANSLATIONS = {
     },
     appstore: {
       microBadge: "En el App Store · Android en pruebas",
-      title: "Descarga Abyssia gratis",
-      subtitle: "Abyssia está disponible gratis en el App Store para iPhone y iPad. La versión Android se ofrece por ahora mediante el programa de pruebas de Google Play.",
+      title: "Instálala y deposita un capítulo",
+      subtitle: "Gratis en el App Store, para iPhone y iPad. En Android, la app sigue en la prueba de Google Play.",
       bullet1: "Gratis, clasificación 4+, sin cuenta de pago obligatoria",
       bullet2: "iPhone y iPad, iOS 15.0 o posterior",
       bullet3: "Sincronización en la nube entre todos tus dispositivos",
@@ -274,8 +274,8 @@ export const TRANSLATIONS = {
     },
     contact: {
       microBadge: "Soporte y Asistencia",
-      sectionTitle: "¿Un Problema? Contáctenos",
-      sectionSubtitle: "Nuestro equipo está a su entera disposición para resolver problemas técnicos o responder a sus sugerencias.",
+      sectionTitle: "¿Una pregunta? Escríbenos",
+      sectionSubtitle: "Un fallo, una idea, un examen que se acerca: respondemos.",
       emailTitle: "Por Correo Electrónico",
       emailDesc: "Envíenos un correo electrónico en cualquier momento. Respondemos generalmente en menos de 24 horas a consultas de soporte técnico o comentarios sobre la app.",
       phoneTitle: "Por Teléfono",
@@ -305,20 +305,20 @@ export const TRANSLATIONS = {
       demos: "实时演示",
       faq: "常见问题",
       contact: "联系我们",
-      install: "安装应用"
+      install: "安装"
     },
     hero: {
-      microBadge: "课程、卡片、测验",
+      microBadge: "从课程到考试当天",
       headline: "把课程复习到考试当天",
-      subtitle: "你放入自己的课程。Abyssia 把它做成卡片和一份测验，并陪你直到考试当天。",
-      ctaInstall: "下载应用",
-      ctaDemo: "体验互动演示",
+      subtitle: "放入一个章节。Abyssia 把它做成卡片和测验，并陪你直到考试。",
+      ctaInstall: "免费安装",
+      ctaDemo: "看演示",
       trustBadge1: "免费 · iOS 15+",
       trustBadge2: "文件：4,99 €/月或 39,99 €/年"
     },
     demos: {
-      sectionTitle: "亲身体验 Abyssia 实时演示",
-      sectionSubtitle: "通过这些交互式实时演示组件，探索我们工具的流畅性。"
+      sectionTitle: "两个工具，不用安装",
+      sectionSubtitle: "番茄钟和习惯就在这里运行。点一下，这已经是应用本身。"
     },
     features: {
       sectionTitle: "三步",
@@ -349,8 +349,8 @@ export const TRANSLATIONS = {
     },
     dashboard: {
       microBadge: "习惯连击与报告",
-      title: "通过清晰的统计数据跟踪您的进度",
-      subtitle: "我们的 AI 驱动习惯跟踪器会分析您的每周习惯，并提供相关的洞察，以预测能量下降并优化专注高峰。",
+      title: "你的连续记录，就在眼前",
+      subtitle: "应用看刚过去的一周，并在连续记录中断之前告诉你节奏在哪里变慢。",
       bullet1: "可持续的日常习惯推荐",
       bullet2: "智能疲劳与节奏下降检测",
       bullet3: "自适应番茄钟会话规划",
@@ -358,8 +358,8 @@ export const TRANSLATIONS = {
     },
     appstore: {
       microBadge: "已上架 App Store · Android 测试中",
-      title: "免费下载 Abyssia",
-      subtitle: "Abyssia 已在 App Store 免费提供，支持 iPhone 与 iPad。Android 版本目前通过 Google Play 测试计划发布。",
+      title: "先安装，再放入一个章节",
+      subtitle: "在 App Store 免费提供，支持 iPhone 和 iPad。Android 版仍在 Google Play 测试中。",
       bullet1: "免费，分级 4+，无需付费账户",
       bullet2: "iPhone 与 iPad，需 iOS 15.0 或更高版本",
       bullet3: "所有设备之间云端同步",
@@ -374,8 +374,8 @@ export const TRANSLATIONS = {
     },
     contact: {
       microBadge: "支持与协助",
-      sectionTitle: "遇到问题？联系我们",
-      sectionSubtitle: "我们的团队将全力为您解决技术问题或解答您的建议。",
+      sectionTitle: "有问题？写信给我们",
+      sectionSubtitle: "一个故障、一个想法、一场临近的考试：我们会回复。",
       emailTitle: "通过电子邮件",
       emailDesc: "随时向我们发送电子邮件。我们通常在 24 小时内回复技术支持或应用反馈咨询。",
       phoneTitle: "通过电话",
@@ -405,20 +405,20 @@ export const TRANSLATIONS = {
       demos: "Demo in Vivo",
       faq: "FAQ",
       contact: "Contatto",
-      install: "Installa App"
+      install: "Installa"
     },
     hero: {
-      microBadge: "Corso, schede, quiz",
+      microBadge: "Dal corso al giorno dell'esame",
       headline: "Ripassa i tuoi corsi fino al giorno dell'esame",
-      subtitle: "Depositi il tuo corso. Abyssia lo trasforma in schede e in un quiz, e ti segue fino al giorno dell'esame.",
-      ctaInstall: "Scarica l'applicazione",
-      ctaDemo: "Prova la demo interattiva",
+      subtitle: "Deposita un capitolo. Abyssia lo trasforma in schede e in un quiz, e resta con te fino alla verifica.",
+      ctaInstall: "Installa gratis",
+      ctaDemo: "Vedi la demo",
       trustBadge1: "Gratis · iOS 15+",
       trustBadge2: "File: 4,99 €/mese o 39,99 €/anno"
     },
     demos: {
-      sectionTitle: "Prova l'Esperienza di Abyssia dal Vivo",
-      sectionSubtitle: "Scopri la fluidità dei nostri strumenti con questi componenti dimostrativi interattivi in tempo reale."
+      sectionTitle: "Due strumenti, senza installare nulla",
+      sectionSubtitle: "Il Pomodoro e le abitudini girano qui. Tocca: è già l'app."
     },
     features: {
       sectionTitle: "Tre passi",
@@ -449,8 +449,8 @@ export const TRANSLATIONS = {
     },
     dashboard: {
       microBadge: "Strisce di Abitudini e Report",
-      title: "Monitora i Progressi Con Statistiche Chiare",
-      subtitle: "Il nostro tracker di abitudini basato su IA analizza le tue routine settimanali e fornisce approfondimenti utili per anticipare i cali di energia e ottimizzare i picchi di attenzione.",
+      title: "La tua serie, sotto gli occhi",
+      subtitle: "L'app guarda la settimana appena passata e ti dice dove il ritmo cala, prima che la serie si rompa.",
       bullet1: "Raccomandazioni per routine sostenibili",
       bullet2: "Rilevamento intelligente di stanchezza e cali di ritmo",
       bullet3: "Pianificazione adattiva delle sessioni Pomodoro",
@@ -458,8 +458,8 @@ export const TRANSLATIONS = {
     },
     appstore: {
       microBadge: "Sull'App Store · Android in test",
-      title: "Scarica Abyssia gratuitamente",
-      subtitle: "Abyssia è disponibile gratis sull'App Store per iPhone e iPad. La versione Android è per ora distribuita tramite il programma di test di Google Play.",
+      title: "Installala, poi deposita un capitolo",
+      subtitle: "Gratis sull'App Store, per iPhone e iPad. Su Android, l'app è ancora nel test di Google Play.",
       bullet1: "Gratis, classificazione 4+, senza account a pagamento obbligatorio",
       bullet2: "iPhone e iPad, iOS 15.0 o successivo",
       bullet3: "Sincronizzazione cloud su tutti i tuoi dispositivi",
@@ -474,8 +474,8 @@ export const TRANSLATIONS = {
     },
     contact: {
       microBadge: "Supporto e Assistenza",
-      sectionTitle: "Un Problema? Contattaci",
-      sectionSubtitle: "Il nostro team è a tua completa disposizione per risolvere problemi tecnici o rispondere ai tuoi suggerimenti.",
+      sectionTitle: "Una domanda? Scrivici",
+      sectionSubtitle: "Un bug, un'idea, un esame che si avvicina: rispondiamo.",
       emailTitle: "Via E-mail",
       emailDesc: "Inviaci un'e-mail in qualsiasi momento. Rispondiamo generalmente in meno di 24 ore alle richieste di supporto tecnico o di feedback sull'app.",
       phoneTitle: "Per Telefono",
@@ -511,14 +511,14 @@ export const TRANSLATIONS = {
       microBadge: "Курс, карточки, тест",
       headline: "Повторяйте свои курсы до дня экзамена",
       subtitle: "Вы добавляете свой курс. Abyssia делает из него карточки и тест и остаётся с вами до дня экзамена.",
-      ctaInstall: "Скачать приложение",
-      ctaDemo: "Попробовать демо",
+      ctaInstall: "Установить бесплатно",
+      ctaDemo: "Смотреть демо",
       trustBadge1: "Бесплатно · iOS 15+",
       trustBadge2: "Файлы: 4,99 €/мес. или 39,99 €/год"
     },
     demos: {
-      sectionTitle: "Попробуйте Abyssia в действии",
-      sectionSubtitle: "Оцените плавность работы наших инструментов с помощью интерактивных компонентов в реальном времени."
+      sectionTitle: "Два инструмента, ничего не устанавливая",
+      sectionSubtitle: "Помодоро и привычки работают здесь. Нажмите: это уже приложение."
     },
     features: {
       sectionTitle: "Три шага",
@@ -549,8 +549,8 @@ export const TRANSLATIONS = {
     },
     dashboard: {
       microBadge: "Серии привычек и отчеты",
-      title: "Отслеживайте свой прогресс с ясной статистикой",
-      subtitle: "Наш трекер привычек на базе ИИ анализирует ваши еженедельные показатели и предлагает советы для предотвращения спадов энергии и улучшения концентрации.",
+      title: "Ваша серия, перед глазами",
+      subtitle: "Приложение смотрит на прошедшую неделю и говорит, где темп падает, пока серия ещё не прервалась.",
       bullet1: "Рекомендации по устойчивым рутинам",
       bullet2: "Умное обнаружение спадов ритма и усталости",
       bullet3: "Адаптивное планирование сессий Pomodoro",
@@ -558,8 +558,8 @@ export const TRANSLATIONS = {
     },
     appstore: {
       microBadge: "В App Store · Android в тестировании",
-      title: "Скачайте Abyssia бесплатно",
-      subtitle: "Abyssia доступна бесплатно в App Store для iPhone и iPad. Версия для Android пока распространяется через программу тестирования Google Play.",
+      title: "Установите её и добавьте одну главу",
+      subtitle: "Бесплатно в App Store, для iPhone и iPad. На Android приложение ещё в тесте Google Play.",
       bullet1: "Бесплатно, рейтинг 4+, без обязательной платной подписки",
       bullet2: "iPhone и iPad, iOS 15.0 или новее",
       bullet3: "Облачная синхронизация между всеми устройствами",
@@ -574,8 +574,8 @@ export const TRANSLATIONS = {
     },
     contact: {
       microBadge: "Поддержка и помощь",
-      sectionTitle: "Возникли проблемы? Свяжитесь с нами",
-      sectionSubtitle: "Наша команда в вашем полном распоряжении для решения технических неполадок или обсуждения ваших предложений.",
+      sectionTitle: "Есть вопрос? Напишите нам",
+      sectionSubtitle: "Ошибка, идея, экзамен на носу: мы отвечаем.",
       emailTitle: "По электронной почте",
       emailDesc: "Отправьте нам e-mail в любое время. Обычно мы отвечаем в течение 24 часов на запросы технической поддержки.",
       phoneTitle: "По телефону",
@@ -611,14 +611,14 @@ export const TRANSLATIONS = {
       microBadge: "Курс, картки, тест",
       headline: "Повторюйте свої курси до дня іспиту",
       subtitle: "Ви додаєте свій курс. Abyssia робить із нього картки й тест і лишається з вами до дня іспиту.",
-      ctaInstall: "Завантажити застосунок",
-      ctaDemo: "Спробувати демо",
+      ctaInstall: "Встановити безкоштовно",
+      ctaDemo: "Дивитися демо",
       trustBadge1: "Безкоштовно · iOS 15+",
       trustBadge2: "Файли: 4,99 €/міс. або 39,99 €/рік"
     },
     demos: {
-      sectionTitle: "Спробуйте Abyssia в дії",
-      sectionSubtitle: "Оцініть плавність роботи наших інструментів за допомогою інтерактивних компонентів у реальному часі."
+      sectionTitle: "Два інструменти, нічого не встановлюючи",
+      sectionSubtitle: "Помодоро і звички працюють тут. Торкніться: це вже застосунок."
     },
     features: {
       sectionTitle: "Три кроки",
@@ -649,8 +649,8 @@ export const TRANSLATIONS = {
     },
     dashboard: {
       microBadge: "Серії звичок та звіти",
-      title: "Відстежуйте свій прогрес із чіткою статистикою",
-      subtitle: "Наш трекер звичок на базі ШІ аналізує ваші щотижневі показники та пропонує поради для запобігання спадам енергії та покращення концентрації.",
+      title: "Ваша серія, перед очима",
+      subtitle: "Застосунок дивиться на минулий тиждень і каже, де темп падає, поки серія ще не перервалась.",
       bullet1: "Рекомендації щодо стійких рутин",
       bullet2: "Розумне виявлення спадів ритму та втоми",
       bullet3: "Адаптивне планування сесій Pomodoro",
@@ -658,8 +658,8 @@ export const TRANSLATIONS = {
     },
     appstore: {
       microBadge: "В App Store · Android у тестуванні",
-      title: "Завантажте Abyssia безкоштовно",
-      subtitle: "Abyssia доступна безкоштовно в App Store для iPhone та iPad. Версія для Android наразі поширюється через програму тестування Google Play.",
+      title: "Встановіть її і додайте один розділ",
+      subtitle: "Безкоштовно в App Store, для iPhone та iPad. На Android застосунок ще в тесті Google Play.",
       bullet1: "Безкоштовно, рейтинг 4+, без обов'язкової платної підписки",
       bullet2: "iPhone та iPad, iOS 15.0 або новіша",
       bullet3: "Хмарна синхронізація між усіма пристроями",
@@ -674,8 +674,8 @@ export const TRANSLATIONS = {
     },
     contact: {
       microBadge: "Підтримка та допомога",
-      sectionTitle: "Виникли проблеми? Зв'яжіться з нами",
-      sectionSubtitle: "Наша команда у вашому повному розпорядженні для вирішення технічних негараздів або обговорення ваших пропозицій.",
+      sectionTitle: "Є питання? Напишіть нам",
+      sectionSubtitle: "Збій, ідея, іспит на носі: ми відповідаємо.",
       emailTitle: "Електронною поштою",
       emailDesc: "Надішліть нам e-mail у будь-який час. Зазвичай ми відповідаємо протягом 24 годин на запити технічної підтримки.",
       phoneTitle: "Телефоном",

@@ -27,7 +27,7 @@ import MockupGallery from './components/MockupGallery';
 import KeynoteVideo from './components/KeynoteVideo';
 import AndroidBetaForm from './components/AndroidBetaForm';
 import { FAQ_DATA } from './config/faq';
-import { HALLOWEEN } from './components/halloweenTrailer';
+import { HALLOWEEN, isHalloweenSeason } from './components/halloweenTrailer';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
 import WhatsNew from './components/WhatsNew';
 import { TRANSLATIONS } from './config/translations';
@@ -128,7 +128,7 @@ export default function App() {
             {/* Install Button -> section de choix du store */}
             <a
               href="#appstore"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white gradient-button shadow-lg shadow-pink-500/10 cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white gradient-button shadow-lg shadow-pink-500/20 cursor-pointer"
             >
               <Smartphone size={14} />
               {t.nav.install}
@@ -269,7 +269,7 @@ export default function App() {
                 </a>
                 <a 
                   href="#demo" 
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 text-slate-300 hover:text-white transition-all duration-300 text-base"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold bg-white/5 border border-white/25 hover:bg-white/10 hover:border-white/40 text-white transition-all duration-300 text-base"
                 >
                   {t.hero.ctaDemo}
                 </a>
@@ -297,8 +297,9 @@ export default function App() {
 
           </section>
 
-          {/* 2.4 Bande-annonce Halloween (saisonnière, à retirer après le 2 novembre) */}
-          <KeynoteVideo lang={lang} variante={HALLOWEEN} />
+          {/* 2.4 Bande-annonce Halloween : visible seulement du 24 oct. au 2 nov.,
+              comme l'icône de saison dans l'app. */}
+          {isHalloweenSeason() && <KeynoteVideo lang={lang} variante={HALLOWEEN} />}
 
           {/* 2.5 Film de présentation (juste après le héros) */}
           <KeynoteVideo lang={lang} />
@@ -680,13 +681,13 @@ export default function App() {
                  "День іспиту починається з вашого курсу"}
               </h2>
               <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed">
-                {lang === 'fr' ? "Installez Abyssia et déposez un chapitre." :
-                 lang === 'en' ? "Install Abyssia and add a chapter." :
-                 lang === 'es' ? "Instala Abyssia y deposita un capítulo." :
-                 lang === 'zh' ? "安装 Abyssia，放入一个章节。" :
-                 lang === 'it' ? "Installa Abyssia e deposita un capitolo." :
-                 lang === 'ru' ? "Установите Abyssia и добавьте одну главу." :
-                 "Встановіть Abyssia і додайте один розділ."}
+                {lang === 'fr' ? "Un chapitre suffit pour commencer." :
+                 lang === 'en' ? "One chapter is enough to start." :
+                 lang === 'es' ? "Un capítulo basta para empezar." :
+                 lang === 'zh' ? "一个章节就够开始了。" :
+                 lang === 'it' ? "Un capitolo basta per iniziare." :
+                 lang === 'ru' ? "Одной главы достаточно, чтобы начать." :
+                 "Одного розділу досить, щоб почати."}
               </p>
               
               <div className="pt-2">

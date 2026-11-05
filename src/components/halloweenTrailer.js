@@ -1,4 +1,12 @@
 // Bande-annonce Halloween : même lecteur, textes et sources propres.
+// Même fenêtre que le changement d'icône dans l'app (SeasonalService) :
+// du 24 octobre au 2 novembre inclus, heure locale.
+export function isHalloweenSeason(now = new Date()) {
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  return (month === 10 && day >= 24) || (month === 11 && day <= 2);
+}
+
 export const HALLOWEEN = {
   id: 'halloween',
   mobile: '/video/halloween-720.mp4',
