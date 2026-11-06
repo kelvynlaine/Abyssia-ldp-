@@ -15,57 +15,57 @@ import { Play, Pause, Volume2, VolumeX, RotateCcw, ArrowRight, Maximize } from '
  */
 const LABELS = {
   fr: {
-    microBadge: 'Film de présentation · 1 min',
-    title: "Abyssia en une minute",
-    subtitle: "Un chapitre devient un plan, des fiches et un QCM. Le film dure une minute.",
+    microBadge: 'Bande-annonce 4.2 · 30 s',
+    title: "Abyssia 4.2 en 30 secondes",
+    subtitle: "Ton PDF devient des fiches et un QCM, plus traduction, chat IA et séries. Tout ce qui change dans la 4.2.",
     play: 'Lancer la vidéo', pause: 'Mettre en pause', replay: 'Revoir',
     sound: 'Activer le son', mute: 'Couper le son', fullscreen: 'Plein écran', cta: 'Installer gratuitement',
   },
   en: {
-    microBadge: 'Product film · 1 min · in French',
-    title: 'Abyssia in one minute',
-    subtitle: 'One chapter becomes a plan, cards and a quiz. The film lasts one minute.',
+    microBadge: '4.2 trailer · 30 s · in French',
+    title: 'Abyssia 4.2 in 30 seconds',
+    subtitle: 'Your PDF becomes flashcards and a quiz, plus translation, AI chat and streaks. Everything new in 4.2.',
     play: 'Play the video', pause: 'Pause', replay: 'Watch again',
     sound: 'Turn the sound on', mute: 'Mute', fullscreen: 'Full screen', cta: 'Install for free',
   },
   es: {
-    microBadge: 'Vídeo de presentación · 1 min · en francés',
-    title: 'Abyssia en un minuto',
-    subtitle: 'Un plan de repaso, cuatro técnicas que funcionan y todas las herramientas en un mismo lugar: la app en un minuto.',
+    microBadge: 'Tráiler 4.2 · 30 s · en francés',
+    title: 'Abyssia 4.2 en 30 segundos',
+    subtitle: 'Tu PDF se convierte en fichas y un test, además de traducción, chat con IA y rachas. Todo lo nuevo de la 4.2.',
     play: 'Reproducir el vídeo', pause: 'Pausar', replay: 'Volver a ver',
     sound: 'Activar el sonido', mute: 'Silenciar', fullscreen: 'Pantalla completa', cta: 'Instalar gratis',
   },
   zh: {
-    microBadge: '产品短片 · 1 分钟 · 法语',
-    title: '一分钟看懂 Abyssia',
-    subtitle: '复习计划、四种有效方法、所有工具集于一处：一分钟了解这款应用。',
+    microBadge: '4.2 预告片 · 30 秒 · 法语',
+    title: '30 秒看懂 Abyssia 4.2',
+    subtitle: 'PDF 变成复习卡片和测验，另有翻译、AI 对话和连续打卡。4.2 的全部更新。',
     play: '播放视频', pause: '暂停', replay: '重新播放',
     sound: '开启声音', mute: '静音', fullscreen: '全屏', cta: '免费安装',
   },
   it: {
-    microBadge: 'Video di presentazione · 1 min · in francese',
-    title: 'Abyssia in un minuto',
-    subtitle: "Un piano di ripasso, quattro tecniche che funzionano e tutti gli strumenti in un unico posto: l'app in un minuto.",
+    microBadge: 'Trailer 4.2 · 30 s · in francese',
+    title: 'Abyssia 4.2 in 30 secondi',
+    subtitle: "Il tuo PDF diventa schede e un quiz, più traduzione, chat IA e serie. Tutte le novità della 4.2.",
     play: 'Riproduci il video', pause: 'Metti in pausa', replay: 'Rivedi',
     sound: 'Attiva l’audio', mute: 'Disattiva l’audio', fullscreen: 'Schermo intero', cta: 'Installa gratis',
   },
   ru: {
-    microBadge: 'Ролик о продукте · 1 мин · на французском',
-    title: 'Abyssia за одну минуту',
-    subtitle: 'План повторения, четыре рабочие техники и все инструменты в одном месте — приложение за минуту.',
+    microBadge: 'Трейлер 4.2 · 30 с · на французском',
+    title: 'Abyssia 4.2 за 30 секунд',
+    subtitle: 'Твой PDF превращается в карточки и тест, плюс перевод, ИИ-чат и серии. Всё новое в 4.2.',
     play: 'Воспроизвести', pause: 'Пауза', replay: 'Смотреть снова',
     sound: 'Включить звук', mute: 'Выключить звук', fullscreen: 'Во весь экран', cta: 'Установить бесплатно',
   },
   uk: {
-    microBadge: 'Ролик про продукт · 1 хв · французькою',
-    title: 'Abyssia за одну хвилину',
-    subtitle: 'План повторення, чотири дієві техніки й усі інструменти в одному місці — застосунок за хвилину.',
+    microBadge: 'Трейлер 4.2 · 30 с · французькою',
+    title: 'Abyssia 4.2 за 30 секунд',
+    subtitle: 'Твій PDF стає картками й тестом, а ще переклад, ШІ-чат і серії. Усе нове у 4.2.',
     play: 'Відтворити', pause: 'Пауза', replay: 'Дивитися знову',
     sound: 'Увімкнути звук', mute: 'Вимкнути звук', fullscreen: 'На весь екран', cta: 'Встановити безкоштовно',
   },
 };
 
-const FILM = { mobile: '/video/film-720.mp4', desktop: '/video/film-1080.mp4', poster: '/video/film-poster.webp' };
+const FILM = { mobile: '/video/film42-720.mp4', desktop: '/video/film42-1080.mp4', poster: '/video/film42-poster.webp' };
 
 const BADGE = 'bg-violet-500/15 border-violet-500/20 text-violet-300';
 const GLOW = 'from-violet-600/20 via-fuchsia-500/10 to-sky-500/20';
