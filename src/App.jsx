@@ -28,6 +28,7 @@ import KeynoteVideo from './components/KeynoteVideo';
 import AndroidBetaForm from './components/AndroidBetaForm';
 import { FAQ_DATA } from './config/faq';
 import { HALLOWEEN, isHalloweenSeason } from './components/halloweenTrailer';
+import { NOEL, isChristmasSeason } from './components/noelTrailer';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
 import WhatsNew from './components/WhatsNew';
 import { TRANSLATIONS } from './config/translations';
@@ -300,6 +301,9 @@ export default function App() {
           {/* 2.4 Bande-annonce Halloween : visible seulement du 24 oct. au 2 nov.,
               comme l'icône de saison dans l'app. */}
           {isHalloweenSeason() && <KeynoteVideo lang={lang} variante={HALLOWEEN} />}
+
+          {/* 2.45 Bande-annonce de Noël : du 1er au 24 décembre, heure locale. */}
+          {isChristmasSeason() && <KeynoteVideo lang={lang} variante={NOEL} />}
 
           {/* 2.5 Film de présentation (juste après le héros) */}
           <KeynoteVideo lang={lang} />

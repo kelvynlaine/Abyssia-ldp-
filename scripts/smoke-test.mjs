@@ -120,7 +120,7 @@ verifier(
 // Les fichiers du film sont volumineux et servis depuis public/ : on vérifie
 // qu'ils sont bien présents dans le site construit, sans quoi la section
 // n'afficherait qu'un rectangle noir.
-for (const fichier of ['video/film42-1080.mp4', 'video/film42-720.mp4', 'video/film42-poster.webp']) {
+for (const fichier of ['video/film42-1080.mp4', 'video/film42-720.mp4', 'video/film42-poster.webp', 'video/noel-1080.mp4', 'video/noel-720.mp4', 'video/noel-poster.webp']) {
   const chemin = path.join(DIST, fichier);
   verifier(fs.existsSync(chemin) && fs.statSync(chemin).size > 5_000, `${fichier} est publié`);
 }
