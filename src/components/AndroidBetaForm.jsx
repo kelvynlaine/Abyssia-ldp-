@@ -108,7 +108,9 @@ export default function AndroidBetaForm({ lang = 'fr' }) {
           'Content-Type': 'application/json',
           Prefer: 'return=minimal',
         },
-        body: JSON.stringify({ email: adresse }),
+        // full_name est obligatoire en base. Le formulaire ne demande que
+        // le Gmail : on reprend la partie avant l'arobase.
+        body: JSON.stringify({ email: adresse, full_name: adresse.split('@')[0] }),
       });
       // 409 : adresse déjà inscrite (si la table a une contrainte d'unicité).
       if (!reponse.ok && reponse.status !== 409) throw new Error(String(reponse.status));
