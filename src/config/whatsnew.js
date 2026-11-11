@@ -13,7 +13,7 @@ export const WHATS_NEW_ITEMS = [
   { key: 'login', tag: '4.1.1', icon: 'login', accent: 'orange' },
 ];
 
-export const PREMIUM_ICONS = ['purple', 'cyan', 'pink', 'green', 'orange', 'amoled'];
+export const PREMIUM_ICONS = ['cyan', 'pink', 'green', 'orange', 'rgb'];
 
 export const WHATS_NEW = {
   fr: {
@@ -22,15 +22,16 @@ export const WHATS_NEW = {
     subtitle: 'Les dernières améliorations de l’application, avec la version qui les apporte.',
     tags: { '4.1.1': 'Version 4.1.1', '4.1.2': 'Version 4.1.2', next: 'Prochaine version' },
     logo: {
-      title: 'Nouveau logo, et Halloween s’invite tout seul',
-      desc: 'Un logo plus grand et sans texte : le cerveau néon des abysses. Du 24 octobre au 2 novembre, Abyssia passe d’elle-même en mode Halloween : thème citrouille, chauves-souris, logo et icône de saison. Tout redevient normal ensuite, et l’ambiance se coupe dans les réglages.',
+      title: 'Nouveau logo, Halloween et Noël s’invitent tout seuls',
+      desc: 'Le logo de verre noir, sans texte. Du 24 octobre au 2 novembre, Abyssia passe en Halloween. Du 1er au 24 décembre, elle passe en Noël. Le logo et l’icône suivent, puis tout redevient normal. L’ambiance se coupe dans les réglages.',
       normal: 'Toute l’année',
       halloween: 'Du 24 oct. au 2 nov.',
+      christmas: 'Du 1er au 24 déc.',
     },
     icons: {
       title: 'Des icônes premium qui changent vraiment',
-      desc: 'Six couleurs (Violet, Cyan, Rose, Vert, Orange, AMOLED) qui remplacent l’icône sur l’écran d’accueil de l’iPhone et d’Android, et dans le Dock sur Mac. Le logo affiché dans l’application suit votre choix.',
-      names: { purple: 'Violet', cyan: 'Cyan', pink: 'Rose', green: 'Vert', orange: 'Orange', amoled: 'AMOLED' },
+      desc: 'Cinq icônes (Cyan, Rose, Vert, Orange, Arc-en-ciel) qui remplacent l’icône sur l’écran d’accueil de l’iPhone et d’Android, et dans le Dock sur Mac. Le logo affiché dans l’application suit votre choix.',
+      names: { cyan: 'Cyan', pink: 'Rose', green: 'Vert', orange: 'Orange', rgb: 'Arc-en-ciel' },
     },
     items: {
       share: { title: 'Partagez vos réussites', desc: 'QCM réussi, fiches terminées, série d’habitudes, badge : créez une carte en story ou en publication pour Instagram, Snapchat ou WhatsApp, avec vos vrais chiffres.' },
@@ -47,15 +48,16 @@ export const WHATS_NEW = {
     subtitle: 'The latest improvements to the app, with the version that brings each one.',
     tags: { '4.1.1': 'Version 4.1.1', '4.1.2': 'Version 4.1.2', next: 'Next version' },
     logo: {
-      title: 'A new logo, and Halloween shows up on its own',
-      desc: 'A bigger logo with no text: the neon brain from the abyss. From 24 October to 2 November, Abyssia switches to Halloween mode by itself: pumpkin theme, bats, seasonal logo and icon. Everything goes back to normal afterwards, and you can turn the theme off in settings.',
+      title: 'A new logo, and Halloween and Christmas show up on their own',
+      desc: 'The black glass logo, with no text. From 24 October to 2 November, Abyssia switches to Halloween. From 1 to 24 December, it switches to Christmas. The logo and icon follow, then everything goes back to normal. You can turn the theme off in settings.',
       normal: 'All year round',
       halloween: '24 Oct. – 2 Nov.',
+      christmas: '1–24 Dec.',
     },
     icons: {
       title: 'Premium icons that really change',
-      desc: 'Six colours (Purple, Cyan, Pink, Green, Orange, AMOLED) that replace the icon on the iPhone and Android home screen, and in the Dock on Mac. The logo inside the app follows your choice.',
-      names: { purple: 'Purple', cyan: 'Cyan', pink: 'Pink', green: 'Green', orange: 'Orange', amoled: 'AMOLED' },
+      desc: 'Five icons (Cyan, Pink, Green, Orange, Rainbow) that replace the icon on the iPhone and Android home screen, and in the Dock on Mac. The logo inside the app follows your choice.',
+      names: { cyan: 'Cyan', pink: 'Pink', green: 'Green', orange: 'Orange', rgb: 'Rainbow' },
     },
     items: {
       share: { title: 'Share your achievements', desc: 'Quiz passed, flashcards finished, habit streak, badge: create a story or post card for Instagram, Snapchat or WhatsApp, with your real numbers.' },
@@ -72,15 +74,16 @@ export const WHATS_NEW = {
     subtitle: 'Las últimas mejoras de la app, con la versión que trae cada una.',
     tags: { '4.1.1': 'Versión 4.1.1', '4.1.2': 'Versión 4.1.2', next: 'Próxima versión' },
     logo: {
-      title: 'Nuevo logo, y Halloween llega solo',
-      desc: 'Un logo más grande y sin texto: el cerebro de neón del abismo. Del 24 de octubre al 2 de noviembre, Abyssia se pone sola en modo Halloween: tema calabaza, murciélagos, logo e icono de temporada. Después todo vuelve a la normalidad, y el tema se desactiva en los ajustes.',
+      title: 'Nuevo logo, y Halloween y Navidad llegan solos',
+      desc: 'El logo de cristal negro, sin texto. Del 24 de octubre al 2 de noviembre, Abyssia pasa a Halloween. Del 1 al 24 de diciembre, pasa a Navidad. El logo y el icono siguen, y después todo vuelve a la normalidad. El tema se desactiva en los ajustes.',
       normal: 'Todo el año',
       halloween: 'Del 24 oct. al 2 nov.',
+      christmas: 'Del 1 al 24 dic.',
     },
     icons: {
       title: 'Iconos premium que cambian de verdad',
-      desc: 'Seis colores (Violeta, Cian, Rosa, Verde, Naranja, AMOLED) que sustituyen el icono en la pantalla de inicio del iPhone y de Android, y en el Dock del Mac. El logo dentro de la app sigue tu elección.',
-      names: { purple: 'Violeta', cyan: 'Cian', pink: 'Rosa', green: 'Verde', orange: 'Naranja', amoled: 'AMOLED' },
+      desc: 'Cinco iconos (Cian, Rosa, Verde, Naranja, Arcoíris) que sustituyen el icono en la pantalla de inicio del iPhone y de Android, y en el Dock del Mac. El logo dentro de la app sigue tu elección.',
+      names: { cyan: 'Cian', pink: 'Rosa', green: 'Verde', orange: 'Naranja', rgb: 'Arcoíris' },
     },
     items: {
       share: { title: 'Comparte tus logros', desc: 'Test aprobado, tarjetas terminadas, racha de hábitos, insignia: crea una tarjeta en formato story o publicación para Instagram, Snapchat o WhatsApp, con tus cifras reales.' },
@@ -101,11 +104,12 @@ export const WHATS_NEW = {
       desc: '更大、不含文字的标志：来自深渊的霓虹大脑。每年 10 月 24 日至 11 月 2 日，Abyssia 会自动切换到万圣节模式：南瓜主题、蝙蝠、节日标志和图标。之后一切自动恢复，也可以在设置中关闭该主题。',
       normal: '全年',
       halloween: '10 月 24 日 – 11 月 2 日',
+      christmas: '12 月 1 日至 24 日',
     },
     icons: {
       title: '真正生效的高级图标',
-      desc: '六种颜色（紫色、青色、粉色、绿色、橙色、AMOLED）可替换 iPhone 和 Android 主屏幕上的图标，以及 Mac 程序坞中的图标。应用内显示的标志也会随之改变。',
-      names: { purple: '紫色', cyan: '青色', pink: '粉色', green: '绿色', orange: '橙色', amoled: 'AMOLED' },
+      desc: '五种图标（青色、粉色、绿色、橙色、彩虹）可替换 iPhone 和 Android 主屏幕上的图标，以及 Mac 程序坞中的图标。应用内显示的标志也会随之改变。',
+      names: { cyan: '青色', pink: '粉色', green: '绿色', orange: '橙色', rgb: '彩虹' },
     },
     items: {
       share: { title: '分享你的成就', desc: '测验通过、卡片学完、习惯连续打卡、获得徽章：为 Instagram、Snapchat 或 WhatsApp 生成快拍或帖子卡片，数据真实。' },
@@ -126,11 +130,12 @@ export const WHATS_NEW = {
       desc: 'Un logo più grande e senza testo: il cervello al neon degli abissi. Dal 24 ottobre al 2 novembre, Abyssia passa da sola in modalità Halloween: tema zucca, pipistrelli, logo e icona di stagione. Poi tutto torna normale, e il tema si disattiva nelle impostazioni.',
       normal: 'Tutto l’anno',
       halloween: 'Dal 24 ott. al 2 nov.',
+      christmas: 'Dal 1° al 24 dic.',
     },
     icons: {
       title: 'Icone premium che cambiano davvero',
-      desc: 'Sei colori (Viola, Ciano, Rosa, Verde, Arancione, AMOLED) che sostituiscono l’icona nella schermata Home di iPhone e Android, e nel Dock del Mac. Il logo dentro l’app segue la tua scelta.',
-      names: { purple: 'Viola', cyan: 'Ciano', pink: 'Rosa', green: 'Verde', orange: 'Arancione', amoled: 'AMOLED' },
+      desc: 'Cinque icone (Ciano, Rosa, Verde, Arancione, Arcobaleno) che sostituiscono l’icona nella schermata Home di iPhone e Android, e nel Dock del Mac. Il logo dentro l’app segue la tua scelta.',
+      names: { cyan: 'Ciano', pink: 'Rosa', green: 'Verde', orange: 'Arancione', rgb: 'Arcobaleno' },
     },
     items: {
       share: { title: 'Condividi i tuoi successi', desc: 'Quiz superato, flashcard completate, serie di abitudini, badge: crea una card in formato storia o post per Instagram, Snapchat o WhatsApp, con i tuoi numeri reali.' },
@@ -151,11 +156,12 @@ export const WHATS_NEW = {
       desc: 'Логотип крупнее и без текста: неоновый мозг из бездны. С 24 октября по 2 ноября Abyssia сама переходит в режим Хэллоуина: тыквенная тема, летучие мыши, сезонные логотип и значок. Потом всё возвращается как было, а тему можно отключить в настройках.',
       normal: 'Круглый год',
       halloween: '24 окт. – 2 нояб.',
+      christmas: '1–24 дек.',
     },
     icons: {
       title: 'Премиум-значки, которые действительно меняются',
-      desc: 'Шесть цветов (фиолетовый, голубой, розовый, зелёный, оранжевый, AMOLED) заменяют значок на главном экране iPhone и Android и в Dock на Mac. Логотип внутри приложения меняется вместе с выбором.',
-      names: { purple: 'Фиолетовый', cyan: 'Голубой', pink: 'Розовый', green: 'Зелёный', orange: 'Оранжевый', amoled: 'AMOLED' },
+      desc: 'Пять значков (голубой, розовый, зелёный, оранжевый, радуга) заменяют значок на главном экране iPhone и Android и в Dock на Mac. Логотип внутри приложения меняется вместе с выбором.',
+      names: { cyan: 'Голубой', pink: 'Розовый', green: 'Зелёный', orange: 'Оранжевый', rgb: 'Радуга' },
     },
     items: {
       share: { title: 'Делитесь успехами', desc: 'Тест пройден, карточки изучены, серия привычек, значок: создайте карточку для сторис или поста в Instagram, Snapchat или WhatsApp с вашими реальными цифрами.' },
@@ -176,11 +182,12 @@ export const WHATS_NEW = {
       desc: 'Більший логотип без тексту: неоновий мозок із безодні. З 24 жовтня до 2 листопада Abyssia сама переходить у режим Гелловіну: гарбузова тема, кажани, сезонні логотип і значок. Потім усе повертається як було, а тему можна вимкнути в налаштуваннях.',
       normal: 'Цілий рік',
       halloween: '24 жовт. – 2 лист.',
+      christmas: '1–24 груд.',
     },
     icons: {
       title: 'Преміум-значки, які справді змінюються',
-      desc: 'Шість кольорів (фіолетовий, блакитний, рожевий, зелений, помаранчевий, AMOLED) замінюють значок на головному екрані iPhone і Android та в Dock на Mac. Логотип у застосунку змінюється разом із вибором.',
-      names: { purple: 'Фіолетовий', cyan: 'Блакитний', pink: 'Рожевий', green: 'Зелений', orange: 'Помаранчевий', amoled: 'AMOLED' },
+      desc: 'П’ять значків (блакитний, рожевий, зелений, помаранчевий, веселка) замінюють значок на головному екрані iPhone і Android та в Dock на Mac. Логотип у застосунку змінюється разом із вибором.',
+      names: { cyan: 'Блакитний', pink: 'Рожевий', green: 'Зелений', orange: 'Помаранчевий', rgb: 'Веселка' },
     },
     items: {
       share: { title: 'Діліться успіхами', desc: 'Тест складено, картки вивчено, серія звичок, значок: створіть картку для сторіс або допису в Instagram, Snapchat чи WhatsApp зі своїми реальними цифрами.' },

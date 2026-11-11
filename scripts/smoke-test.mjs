@@ -129,9 +129,12 @@ for (const fichier of ['video/film42-1080.mp4', 'video/film42-720.mp4', 'video/f
 // laisserait un cadre vide ou un logo cassé dans l'en-tête.
 const imagesDuSite = [
   'logo-abyssia.png',
+  'logo-abyssia-halloween.png',
+  'logo-abyssia-noel.png',
   'nouveautes/logo.webp',
   'nouveautes/logo-halloween.webp',
-  ...['purple', 'cyan', 'pink', 'green', 'orange', 'amoled'].map((c) => `nouveautes/icone-${c}.webp`),
+  'nouveautes/logo-noel.webp',
+  ...['cyan', 'pink', 'green', 'orange', 'rgb'].map((c) => `nouveautes/icone-${c}.webp`),
 ];
 for (const fichier of imagesDuSite) {
   const chemin = path.join(DIST, fichier);

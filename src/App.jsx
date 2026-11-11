@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { 
   Sparkles, 
   Zap, 
@@ -29,6 +29,7 @@ import AndroidBetaForm from './components/AndroidBetaForm';
 import { FAQ_DATA } from './config/faq';
 import { HALLOWEEN, isHalloweenSeason } from './components/halloweenTrailer';
 import { NOEL, isChristmasSeason } from './components/noelTrailer';
+import SeasonalLogo, { seasonalLogoSrc } from './components/SeasonalLogo';
 import InteractiveDashboardDemo from './components/InteractiveDashboardDemo';
 import WhatsNew from './components/WhatsNew';
 import { TRANSLATIONS } from './config/translations';
@@ -37,6 +38,10 @@ import { APP_STORE_URL, SUPPORT_DISCORD_URL, SUPPORT_EMAIL, SUPPORT_PHONE } from
 
 export default function App() {
   const [lang, setLang] = useState('fr');
+  useEffect(() => {
+    const link = document.querySelector('link[rel="icon"]');
+    if (link) link.setAttribute('href', seasonalLogoSrc());
+  }, []);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
@@ -59,9 +64,8 @@ export default function App() {
           
           {/* Logo brand */}
           <a href="#" className="flex items-center gap-2.5 group">
-            <img 
-              src="/logo-abyssia.png" 
-              alt="Abyssia Logo" 
+            <SeasonalLogo
+              alt="Abyssia Logo"
               className="size-9 rounded-xl border border-white/20 group-hover:scale-105 transition-all duration-300 animate-glow"
             />
             <span className="text-xl font-black tracking-tight text-white font-heading">
@@ -653,8 +657,7 @@ export default function App() {
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-violet-600/20 blur-3xl rounded-full" />
                     <div className="relative size-44 sm:size-52 rounded-[2rem] bg-gradient-to-br from-[#0a0c14] to-[#15101f] border border-white/10 flex items-center justify-center shadow-2xl">
-                      <img
-                        src="/logo-abyssia.png"
+                      <SeasonalLogo
                         alt="Abyssia"
                         className="size-28 sm:size-32 rounded-[1.5rem] border border-white/10 shadow-lg animate-glow"
                       />
@@ -784,9 +787,8 @@ export default function App() {
             {/* Column 1 - Brand Info */}
             <div className="lg:col-span-4 space-y-4 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-2.5">
-                <img 
-                  src="/logo-abyssia.png" 
-                  alt="Abyssia Logo" 
+                <SeasonalLogo
+                  alt="Abyssia Logo"
                   className="size-7 rounded-lg border border-white/10 shadow-md"
                 />
                 <span className="text-lg font-black text-white tracking-tight font-heading">

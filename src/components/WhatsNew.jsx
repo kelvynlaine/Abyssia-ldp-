@@ -1,5 +1,7 @@
 import { ArrowRight, BellRing, LogIn, MessagesSquare, Moon, Palette, Share2, Sigma, TextSelect } from 'lucide-react';
 import { PREMIUM_ICONS, WHATS_NEW, WHATS_NEW_ITEMS } from '../config/whatsnew';
+import { isHalloweenSeason } from './halloweenTrailer';
+import { isChristmasSeason } from './noelTrailer';
 
 /**
  * Section « Nouveautés » : deux grandes cartes (nouveau logo et saison
@@ -43,6 +45,11 @@ function Tag({ tag, texts }) {
 
 export default function WhatsNew({ lang = 'fr' }) {
   const texts = WHATS_NEW[lang] || WHATS_NEW.fr;
+  const season = isChristmasSeason()
+    ? { src: '/nouveautes/logo-noel.webp', alt: 'Abyssia Noël', caption: texts.logo.christmas, glow: 'rgba(239,68,68,0.45)' }
+    : isHalloweenSeason()
+      ? { src: '/nouveautes/logo-halloween.webp', alt: 'Abyssia Halloween', caption: texts.logo.halloween, glow: 'rgba(249,115,22,0.4)' }
+      : null;
 
   return (
     <section id="nouveautes" className="space-y-10 sm:space-y-12 scroll-mt-20">
@@ -73,22 +80,27 @@ export default function WhatsNew({ lang = 'fr' }) {
               />
               <figcaption className="text-xs font-semibold text-slate-300">{texts.logo.normal}</figcaption>
             </figure>
-            <ArrowRight size={20} className="text-slate-500 shrink-0" aria-hidden="true" />
-            <figure className="flex flex-col items-center gap-2.5">
-              <img
-                src="/nouveautes/logo-halloween.webp"
-                alt="Abyssia Halloween"
-                width="384"
-                height="384"
-                loading="lazy"
-                decoding="async"
-                className="size-24 sm:size-28 drop-shadow-[0_0_24px_rgba(249,115,22,0.4)]"
-              />
-              <figcaption className="inline-flex items-center gap-1 text-xs font-semibold text-orange-300">
-                <Moon size={12} aria-hidden="true" />
-                {texts.logo.halloween}
-              </figcaption>
-            </figure>
+            {season && (
+              <>
+                <ArrowRight size={20} className="text-slate-500 shrink-0" aria-hidden="true" />
+                <figure className="flex flex-col items-center gap-2.5">
+                  <img
+                    src={season.src}
+                    alt={season.alt}
+                    width="384"
+                    height="384"
+                    loading="lazy"
+                    decoding="async"
+                    className="size-24 sm:size-28"
+                    style={{ filter: `drop-shadow(0 0 24px ${season.glow})` }}
+                  />
+                  <figcaption className="inline-flex items-center gap-1 text-xs font-semibold text-orange-300">
+                    <Moon size={12} aria-hidden="true" />
+                    {season.caption}
+                  </figcaption>
+                </figure>
+              </>
+            )}
           </div>
           <div className="space-y-3">
             <Tag tag="next" texts={texts} />
@@ -100,7 +112,7 @@ export default function WhatsNew({ lang = 'fr' }) {
         {/* Icônes premium */}
         <article className="glass-card rounded-[2rem] p-5 sm:p-7 flex flex-col gap-6 relative overflow-hidden">
           <div className="absolute -top-16 -left-16 size-56 rounded-full bg-violet-600/10 blur-[80px] pointer-events-none" />
-          <ul className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-2 py-2">
+          <ul className="grid grid-cols-3 sm:grid-cols-5 gap-3 sm:gap-2 py-2">
             {PREMIUM_ICONS.map((key) => (
               <li key={key} className="flex flex-col items-center gap-2">
                 <img
